@@ -1,47 +1,50 @@
    <!-- start footer Area -->
    <footer class="footer-area section-gap">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-4 single-footer-widget text-left">
-                    <h4>Popular News</h4>
-                    <ul>
-                        <?php foreach ($popularPosts as $popularPost) { ?>
-                        <li><a href="<?= url('show-post/' . $popularPost['id']) ?>"><?= $popularPost['title'] ?></a></li>
-                        <?php } ?>
-                    </ul>
-                </div>
-                <div class="col-lg-4 col-md-4 single-footer-widget text-left">
-                    <h4>quick link</h4>
-                    <ul>
-                        <?php foreach ($menus as $menu) { ?>
-                        <li><a href="<?= $menu['url'] ?>"><?= $menu['name'] ?></a></li>
-                        <?php } ?>
-                    </ul>
-                </div>
-                <div class="col-lg-4 col-md-4 single-footer-widget text-left">
-                    <h4>Contact us</h4>
-                    <ul>
-                            <li><a href=""><span class="lnr lnr-phone-handset"></span><span>  +1 958-787-1176</span></a></li>
-                            <li><a href=""><span class="lnr lnr-envelope"></span><span>  admin@onlinenews.com</span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom row align-items-center">
-                <p class="footer-text m-0 col-lg-8 col-md-12">
-                    Copyright &copy;
-                    <script>
-                        document.write(new Date().getFullYear());
-                    </script> All rights reserved
-                </p>
-                <div class="col-lg-4 col-md-12 footer-social">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-instagram"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                    <a href="#"><i class="fa fa-telegram"></i></a>
-                </div>
-            </div>
-        </div>
+       <div>
+           <img style=" width: 100%" src="../../../public/banner-image/footer.png">
+       </div>
+<!--        <div class="container">-->
+<!--            <div class="row">-->
+<!--                <div class="col-lg-4 col-md-4 single-footer-widget text-left">-->
+<!--                    <h4>Popular News</h4>-->
+<!--                    <ul>-->
+<!--                        --><?php //foreach ($popularPosts as $popularPost) { ?>
+<!--                        <li><a href="--><?php //= url('show-post/' . $popularPost['id']) ?><!--">--><?php //= $popularPost['title'] ?><!--</a></li>-->
+<!--                        --><?php //} ?>
+<!--                    </ul>-->
+<!--                </div>-->
+<!--                <div class="col-lg-4 col-md-4 single-footer-widget text-left">-->
+<!--                    <h4>quick link</h4>-->
+<!--                    <ul>-->
+<!--                        --><?php //foreach ($menus as $menu) { ?>
+<!--                        <li><a href="--><?php //= $menu['url'] ?><!--">--><?php //= $menu['name'] ?><!--</a></li>-->
+<!--                        --><?php //} ?>
+<!--                    </ul>-->
+<!--                </div>-->
+<!--                <div class="col-lg-4 col-md-4 single-footer-widget text-left">-->
+<!--                    <h4>Contact us</h4>-->
+<!--                    <ul>-->
+<!--                            <li><a href=""><span class="lnr lnr-phone-handset"></span><span>  +1 958-787-1176</span></a></li>-->
+<!--                            <li><a href=""><span class="lnr lnr-envelope"></span><span>  admin@onlinenews.com</span></a></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <div class="footer-bottom row align-items-center">-->
+<!--                <p class="footer-text m-0 col-lg-8 col-md-12">-->
+<!--                    Copyright &copy;-->
+<!--                    <script>-->
+<!--                        document.write(new Date().getFullYear());-->
+<!--                    </script> All rights reserved-->
+<!--                </p>-->
+<!--                <div class="col-lg-4 col-md-12 footer-social">-->
+<!--                    <a href="#"><i class="fa fa-facebook"></i></a>-->
+<!--                    <a href="#"><i class="fa fa-twitter"></i></a>-->
+<!--                    <a href="#"><i class="fa fa-instagram"></i></a>-->
+<!--                    <a href="#"><i class="fa fa-linkedin"></i></a>-->
+<!--                    <a href="#"><i class="fa fa-telegram"></i></a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
     </footer>
     <!-- End footer Area -->
     <script src="<?= asset('public/app/js/vendor/jquery-2.2.4.min.js') ?>"></script>

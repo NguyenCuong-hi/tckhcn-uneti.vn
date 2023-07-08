@@ -26,84 +26,48 @@
     <link rel="stylesheet" href="<?=asset('public/app/css/animate.min.css')?>">
     <link rel="stylesheet" href="<?=asset('public/app/css/owl.carousel.css')?>">
     <link rel="stylesheet" href="<?=asset('public/app/css/jquery-ui.css')?>">
-    <link rel="stylesheet" href="<?=asset('public/app/css/main.css')?>">
+    <link rel="stylesheet" href="<?=asset('public/app/css/main2.css')?>">
 </head>
 
 <body>
     <header>
+        <div style="width: 100%; margin-bottom: 8px">
+            <img style="width: 100%; height: 250px" src="../../../public/banner-image/banner-.png" />
+        </div>
 
-        <div class="header-top" style="padding-bottom:241px;">
-            <div class="container">
-                <div class="row text-rigth float-right mb-10">
+        <div class="header-top-right">
+            <ul class="login-register" style="display: flex; justify-content: flex-end; margin: 0">
+                <li style="list-style-type: none; margin: 8px"><a href="<?= url('login') ?>"><span class="lnr" style=" padding: 8px; width: 50px; background-color: yellow;" style="font-size:15px;">Login</span></a></li>
+                <li style="list-style-type: none; margin: 8px"><a href="<?= url('register') ?>"><span class="lnr" style="padding: 8px; width: 50px;  background-color: yellow">Register</span></a></li>
+            </ul>
+        </div>
 
-                <div class="header-top-left no-padding  ">
-                        <ul>
-                            <li><a href="<?= url('login') ?>"><span class="lnr lnr-enter-down"></span><span style="font-size:15px;">  Login</span></a></li>
-                            <li><a href="<?= url('register') ?>"><span class="lnr lnr-user"></span><span style="font-size:15px;">  Register</span></a></li>
-
-                        </ul>
-                    </div>
-
-<!--                    <div class="header-top-left no-padding text-dark">-->
-<!--                        <ul>-->
-<!--                            <li><span>ONLINE  NEWS</span></li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-                    
-                </div>
+        <div style="display: flex ; justify-content: space-between; box-sizing: border-box; padding: 8px; color: white; font-size: 12px; font-weight: 700; color: white  " >
+            <div style="width: 15%; ">
+                <a href="#" style=" color: white;font-weight: 700; border-radius: 8px; background-color: #348FDE; width: 100%; border: none ; padding: 8px 18px">Trang chủ</a>
+            </div>
+            <div style="width: 15%">
+                <a href="/khoahoccongnghe" style="color: white; font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 8px 18px">Khoa học - công nghệ</a>
+            </div>
+            <div style="width: 15%">
+                <a href="/kinhtexahoi" style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 8px 18px">Kinh tế- xã hội</a>
+            </div>
+            <div style="width: 15% ">
+                <a href="/diendankhoahoc" style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 8px 18px">Diễn đàn khoa học</a>
+            </div>
+            <div style="width: 15% ">
+                <a href="/thongtintraodoi" style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 8px 18px"> Thông tin trao đổi</a>
+            </div>
+            <div style="width: 15%">
+                <a href="/lienhe" style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 8px 18px"> Liên hệ</a>
             </div>
         </div>
 
-        <div class="container" id="main-menu">
-            <div class="row align-items-center justify-content-between">
-<!--                <div class="navbar-right">-->
-<!--                    <form class="Search">-->
-<!--                        <input type="text" class="form-control Search-box text-left" name="Search-box" id="Search-box" placeholder="Search">-->
-<!--                        <label for="Search-box" class="Search-box-label">-->
-<!--                            <span class="lnr lnr-magnifier"></span>-->
-<!--                        </label>-->
-<!--                        <span class="Search-close">-->
-<!--								<span class="lnr lnr-cross"></span>-->
-<!--                        </span>-->
-<!--                    </form>-->
-<!--                </div>-->
-
-
-                <nav id="nav-menu-container">
-                    <ul class="nav-menu">
-                        <?php foreach ($menus as $menu) {?>
-                            <li class="menu-active">
-                                <a href="<?=$menu['url']?>">
-                                    <?=$menu['name']?>
-                                </a>
-                            </li>
-                        <?php }?>
-                    </ul>
-                </nav>
-
-                <!-- #nav-menu-container -->
-
+        <div class="Frame4" style=" background-color: #ccc ; height: 40px; box-shadow: 0px 2px 2px rgba(0,0,0,0.3); width: 100%; display: flex ; justify-content: space-around; box-sizing: border-box; padding: 8px;">
+            <div class="ChNhTNgY28ThNg2NM2023" style="  color: black; font-size: 12px; font-family: Inter; font-weight: 400">Chủ nhật, ngày 28 tháng 2 năm 2023</div>
+            <div class="GiODCVOTOCNgVIKhoaHCVCNgNghLQuCSChHNgU" style="  color: #9C1A1A; font-size: 12px; font-family: Inter; font-weight: 700">Giáo dục và đào tạo cùng với khoa học và công nghệ là quốc sách hàng đầu </div>
+            <div class="TMKiM" style=" color: black; font-size: 12px; font-family: Inter; font-weight: 700">
+                <input placeholder="Tìm kiếm..."></input>
             </div>
         </div>
-
-        <div class="row align-items-center justify">
-            <span class="current-date -calendar"> Chủ nhật, ngày 20 tháng 8 năm 2023 </span>
-            <span class="text-center"> Giáo dục và đào tạo cùng khoa học công nghệ là quốc sách hàng đầu </span>
-            <span class="search -search"> </span>
-        </div>
-        <div class="logo-wrap">
-            <div class="container">
-                <div class="row justify-content-between align-items-center">
-                    <div class="col-lg-4 col-md-4 col-sm-12 logo-left no-padding">
-                        <a href="http://localhost/OnlineNewsSite/">
-                            <img class="img-fluid" src="<?=asset($setting['logo'])?>" alt="">
-                        </a>
-                    </div>
-                    <div class="col-lg-8 col-md-8 col-sm-12 logo-right no-padding ads-banner">
-                        <img class="img-fluid" src="<?=asset($bodyBanner['image'])?>" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </header>

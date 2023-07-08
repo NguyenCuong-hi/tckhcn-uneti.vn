@@ -272,6 +272,7 @@ uri('reset-password/{forgot_token}', 'Auth\Auth', 'resetPassword', "POST");
 //home
 uri('/', 'App\Home', 'index');
 uri('home', 'App\Home', 'index');
+uri('/khoahoccongnghe/', 'App\ScienceTechController', 'index');
 uri('show-post/{id}', 'App\Home', 'show');
 uri('show-category/{id}', 'App\Home', 'category');
 uri('comment-store', 'App\Home', 'commentStore', 'POST');

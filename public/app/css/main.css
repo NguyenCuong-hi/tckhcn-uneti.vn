@@ -927,6 +927,64 @@ header {
 
 }
 
+
+.banner-header{
+    height: 104px;
+    object-fit: cover;
+    width:485px;
+}
+nav {
+    background-color: #f2f2f2;
+}
+
+.menu {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 10px;
+}
+
+.menu li {
+    margin: 0 10px;
+}
+
+
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #3498db;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.menu a:hover {
+    background-color: #2980b9;
+}
+
+.header-top-left {
+    display: flex;
+    align-items: center;
+}
+
+.login-register {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.login-register li {
+    margin-right: 10px;
+}
+
+.login-register li:last-child {
+    margin-right: 0;
+}
+
+
+
 .header-top .header-top-left ul li,
 .header-top .header-top-right ul li {
     display: inline-block;
