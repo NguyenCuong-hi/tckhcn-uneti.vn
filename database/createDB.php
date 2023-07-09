@@ -38,9 +38,11 @@ class CreateDB extends DataBase
                         `status` enum('disable','enable') COLLATE utf8_persian_ci NOT NULL DEFAULT 'disable',
                         `created_at` datetime NOT NULL,
                         `updated_at` datetime DEFAULT NULL,
+                        `author_id` int(11) NOT NULL
                         PRIMARY KEY (`id`),
                         FOREIGN KEY (`cat_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-                        FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+                        FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+                        FOREIGN KEY (`author_id`) REFERENCES `author` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
                       ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;",
 
         "CREATE TABLE `comments` (
@@ -80,6 +82,16 @@ class CreateDB extends DataBase
                         FOREIGN KEY (`parent_id`) REFERENCES `menus` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
                       ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
                       ",
+
+        "CREATE TABLE `author` (
+                            `id` int(11) NOT NULL,
+                            `fullname` varchar(100) NOT NULL,
+                            `email` varchar(100) NOT NULL,
+                            `url` varchar(300) NOT NULL,
+                            `image` varchar(200) NOT NULL,
+                            PRIMARY KEY (`id`),
+        ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_persian_ci;"
+
     ];
 
     public function run()
