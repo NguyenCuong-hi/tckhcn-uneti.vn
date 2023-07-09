@@ -26,7 +26,7 @@ class Post extends Admin
         $realTimestamp = substr($request['published_at'], 0, 10);
         $request['published_at'] = date("Y-m-d H:i:s", (int) $realTimestamp);
         $db = new DataBase();
-        if ($request['cat_id'] != null) {
+        if ($request['cat_id'] !== null) {
             $request['image'] = $this->saveImage($request['image'], 'post-image');
             if ($request['image']) {
                 $request = array_merge($request, ['user_id' => 1]);
