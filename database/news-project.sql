@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1deb5ubuntu1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Jun 12, 2023 at 07:48 PM
--- Server version: 10.6.12-MariaDB-0ubuntu0.22.04.1
--- PHP Version: 8.1.2-1ubuntu2.11
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th7 09, 2023 lúc 02:10 PM
+-- Phiên bản máy phục vụ: 10.4.28-MariaDB
+-- Phiên bản PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,71 +18,105 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `news-project`
+-- Cơ sở dữ liệu: `news-project`
 --
+CREATE DATABASE IF NOT EXISTS `news-project` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE `news-project`;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `banners`
+-- Cấu trúc bảng cho bảng `author`
 --
 
-CREATE TABLE `banners` (
+DROP TABLE IF EXISTS `author`;
+CREATE TABLE IF NOT EXISTS `author` (
   `id` int(11) NOT NULL,
+  `fullname` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `url` varchar(300) NOT NULL,
+  `image` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `author`
+--
+
+INSERT INTO `author` (`id`, `fullname`, `email`, `url`, `image`) VALUES
+(1, 'Nguyen Van Cuong', 'nvc@gmail.com', '/public/', 'public/setting/logo.png');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `banners`
+--
+
+DROP TABLE IF EXISTS `banners`;
+CREATE TABLE IF NOT EXISTS `banners` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `image` varchar(191) NOT NULL,
   `url` varchar(191) NOT NULL,
   `created_at` datetime NOT NULL,
-  `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `banners`
+-- Đang đổ dữ liệu cho bảng `banners`
 --
 
 INSERT INTO `banners` (`id`, `image`, `url`, `created_at`, `updated_at`) VALUES
 (8, 'public/banner-image/2022-10-24-23-19-09.jpeg', 'http://localhost/OnlineNewsSite/', '2022-10-24 14:19:09', NULL);
--- 
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categories`
+-- Cấu trúc bảng cho bảng `categories`
 --
 
-CREATE TABLE `categories` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `categories`;
+CREATE TABLE IF NOT EXISTS `categories` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(200) NOT NULL,
   `created_at` datetime NOT NULL,
-  `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_persian_ci;
+  `updated_at` datetime DEFAULT NULL,
+  `code_name` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
--- Dumping data for table `categories`
+-- Đang đổ dữ liệu cho bảng `categories`
 --
--- 
-INSERT INTO `categories` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(14, 'Technology', '2022-10-24 09:26:37', '2022-10-24 09:26:43'),
-(15, 'Business', '2022-10-24 09:36:05', NULL),
-(16, 'Sports', '2022-10-24 09:49:39', NULL),
-(17, 'Science', '2022-10-24 10:00:18', NULL);
+
+INSERT INTO `categories` (`id`, `name`, `created_at`, `updated_at`, `code_name`) VALUES
+(14, 'Tạp chí khoa học và công nghệ Trường Đại Học Kinh Tế Kỹ Thuật Công nghiệp ', '2022-10-24 09:26:37', '2022-10-24 09:26:43', 'Số 31 (2022)'),
+(15, 'Tạp chí khoa học và công nghệ Trường Đại Học Kinh Tế Kỹ Thuật Công nghiệp ', '2022-10-24 09:36:05', NULL, 'Số 31 (2022)'),
+(16, 'Tạp chí khoa học và công nghệ Trường Đại Học Kinh Tế Kỹ Thuật Công nghiệp ', '2022-10-24 09:49:39', NULL, 'Số 31 (2022)'),
+(17, 'Science', '2022-10-24 10:00:18', NULL, 'Số 31 (2022)');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `comments`
+-- Cấu trúc bảng cho bảng `comments`
 --
 
-CREATE TABLE `comments` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `comments`;
+CREATE TABLE IF NOT EXISTS `comments` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `comment` text NOT NULL,
   `post_id` int(11) NOT NULL,
   `status` enum('unseen','seen','approved') NOT NULL DEFAULT 'unseen',
   `created_at` datetime NOT NULL,
-  `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_persian_ci;
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `article_id` (`post_id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
--- Dumping data for table `comments`
+-- Đang đổ dữ liệu cho bảng `comments`
 --
 
 INSERT INTO `comments` (`id`, `user_id`, `comment`, `post_id`, `status`, `created_at`, `updated_at`) VALUES
@@ -93,22 +127,25 @@ INSERT INTO `comments` (`id`, `user_id`, `comment`, `post_id`, `status`, `create
 -- --------------------------------------------------------
 
 --
--- Table structure for table `menus`
+-- Cấu trúc bảng cho bảng `menus`
 --
 
-CREATE TABLE `menus` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `menus`;
+CREATE TABLE IF NOT EXISTS `menus` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   `url` varchar(300) NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `created_at` datetime NOT NULL,
-  `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_persian_ci;
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `parent_id` (`parent_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
--- Dumping data for table `menus`
+-- Đang đổ dữ liệu cho bảng `menus`
 --
--- 
+
 INSERT INTO `menus` (`id`, `name`, `url`, `parent_id`, `created_at`, `updated_at`) VALUES
 (9, 'most visited', '#', NULL, '2019-07-17 12:05:11', '2022-10-24 11:33:11'),
 (12, 'about us ', 'http://localhost/OnlineNewsSite/', NULL, '2022-10-24 14:38:39', NULL),
@@ -117,11 +154,12 @@ INSERT INTO `menus` (`id`, `name`, `url`, `parent_id`, `created_at`, `updated_at
 -- --------------------------------------------------------
 
 --
--- Table structure for table `posts`
+-- Cấu trúc bảng cho bảng `posts`
 --
 
-CREATE TABLE `posts` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `posts`;
+CREATE TABLE IF NOT EXISTS `posts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(200) NOT NULL,
   `summary` text NOT NULL,
   `body` text NOT NULL,
@@ -135,11 +173,15 @@ CREATE TABLE `posts` (
   `published_at` datetime NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime DEFAULT NULL,
-	`author_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_persian_ci;
+  `author_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `cat_id` (`cat_id`),
+  KEY `user_id` (`user_id`),
+  KEY `posts_author` (`author_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
--- Dumping data for table `posts`
+-- Đang đổ dữ liệu cho bảng `posts`
 --
 
 INSERT INTO `posts` (`id`, `title`, `summary`, `body`, `view`, `user_id`, `cat_id`, `image`, `status`, `selected`, `breaking_news`, `published_at`, `created_at`, `updated_at`, `author_id`) VALUES
@@ -149,15 +191,16 @@ INSERT INTO `posts` (`id`, `title`, `summary`, `body`, `view`, `user_id`, `cat_i
 (15, 'An F1 Driver Is Not Alone in the Cockpit', 'He’s loaded with equipment, like a biometric sensor and fire-resistant overalls, to keep him safe, but please, no jewelry.', 'When a Formula 1 driver settles into his car, he is loaded with equipment. Most of it is required and designed under rules set by the F.I.A., the sport’s governing body — even their underwear.\r\n\r\nSafety dictates much of the rules, especially fire protection. Overalls, balaclavas, gloves, socks and shoes must be flame resistant.\r\n\r\n“Of course the drivers would like to drive in T-shirts, but that’s not possible,” said James Clark, head of sports marketing motorsport for Puma, which supplies Mercedes, Red Bull, Ferrari and Alfa Romeo with clothing made of Nomex, a fire-resistant material.\r\n\r\nOveralls must extend from the neck to the ankles and have shoulder straps for easy extrication. A big consideration is weight.\r\n\r\n“As lightweight as possible,” Clark said. “Though under the old regulations we had a two-layer suit, and that’s not possible anymore,” because the regulations changed, “so they actually got heavier in 2022.”\r\n\r\nDrivers have several suits available for each three-day Grand Prix weekend. “Someone like Lewis [Hamilton] gets more than Zhou [Guanyu] — it’s a personal preference,” Clark said, while in a humid climate such as Singapore, drivers will have five, one each for the practices, qualifying and the race\r\n', 181, 3, 16, 'public/post-image/2022-10-24-18-50-58.webp', 'disable', 2, 2, '1970-01-01 01:00:00', '2022-07-17 12:10:04', '2022-10-24 09:50:58', 1),
 (21, 'Sadder but Wiser? Maybe Not', 'Sadder but Wiser? Maybe Not.', 'Forty-three years ago, two young psychologists, Lauren B. Alloy and Lyn Y. Abramson, reported the results of a simple experiment that led to a seminal idea in psychology.\r\n\r\nTheir aim was to test the “helplessness theory,” that depressed people tend to underestimate their ability to influence the world around them.', 19, 3, 17, 'public/post-image/2022-10-24-19-01-31.webp', 'disable', 2, 1, '1970-01-01 01:00:00', '2022-06-19 22:37:10', '2022-10-24 16:32:51', 1),
 (22, 'Formula 1 Racing Often Comes Down to the Tires', 'Determining which of the three compounds, soft, medium and hard, to use and when, can turn a loser into a winner — or vice versa.', 'Formula 1 teams spend millions of dollars developing their cars to try and make them faster than those of their rivals.\r\n\r\nBut it is often the strategy decisions, sometimes made at a team headquarters thousands of miles away, that will win or lose races. While track conditions, the weather and incidents during the race are discussed with drivers and engineers over the team radio, it is tire usage that presents the most striking chance to pass the opposition.\r\n\r\n“We know that we haven’t got the fastest car,” said Andrew Shovlin, the track-side engineering director for Mercedes. “We’ve got to look to the opportunities in strategy.”\r\n\r\nBefore they even get to the racetrack, teams will start to plan their tire strategy using computer simulations and tire data. Teams have three types of tires to choose from, soft, medium and hard, known as compounds, with the added hurdle that two of them must be used during a race. Choosing wisely can make a car faster than the other guy’s car, and can also reduce the number of time-eating pit stops. And the strategy is constantly changing during a race.\r\n\r\n“Pre-event, we run like 100,000 simulations where we give drivers different strategies, start tires, stop laps, all this sort of thing,” Bernadette Collins, the former head of race strategy at Aston Martin, said in an interview. “We come up with a best expected finishing position for each strategy.”\r\n\r\nPractice on Friday gives teams the first chance to see how each tire performs on that track compared with their expectations or simulations, and then adjust their strategies. They will also analyze what their rivals are doing to understand tire performance.', 65, 3, 16, 'public/post-image/2022-10-24-19-27-44.webp', 'disable', 2, 1, '1970-01-01 01:00:00', '2022-06-19 22:37:55', '2022-10-24 10:27:44', 1);
--- 
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Cấu trúc bảng cho bảng `users`
 --
 
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
@@ -167,11 +210,13 @@ CREATE TABLE `users` (
   `forgot_token` varchar(191) DEFAULT NULL,
   `forgot_token_expire` datetime DEFAULT NULL,
   `created_at` datetime NOT NULL,
-  `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_persian_ci;
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
--- Dumping data for table `users`
+-- Đang đổ dữ liệu cho bảng `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `permission`, `verify_token`, `is_active`, `forgot_token`, `forgot_token_expire`, `created_at`, `updated_at`) VALUES
@@ -183,162 +228,95 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`, `permission`, `verif
 -- --------------------------------------------------------
 
 --
--- Table structure for table `websetting`
+-- Cấu trúc bảng cho bảng `websetting`
 --
 
-CREATE TABLE `websetting` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `websetting`;
+CREATE TABLE IF NOT EXISTS `websetting` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` text DEFAULT NULL,
   `description` text DEFAULT NULL,
   `keywords` text DEFAULT NULL,
   `logo` text DEFAULT NULL,
   `icon` text DEFAULT NULL,
   `created_at` datetime NOT NULL,
-  `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_persian_ci;
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
--- Dumping data for table `websetting`
+-- Đang đổ dữ liệu cho bảng `websetting`
 --
 
 INSERT INTO `websetting` (`id`, `title`, `description`, `keywords`, `logo`, `icon`, `created_at`, `updated_at`) VALUES
 (1, 'online news', 'online news', 'online news', 'public/setting/logo.png', 'public/setting/icon.jpeg', '2019-06-09 19:54:37', '2022-10-24 16:41:31');
--- 
---
--- Indexes for dumped tables
---
-
-CREATE TABLE `author` (
-  `id` int(11) NOT NULL,
-  `fullname` varchar(100) NOT NULL,
-  `email` varchar(100) NOT NULL,
-  `url` varchar(300) NOT NULL,
-  `image` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_persian_ci;
-
-INSERT INTO `author` (`id`, `fullname`, `email`, `url`, `image`) VALUES
-(1, 'Nguyen Van Cuong', 'nvc@gmail.com', '/public/', 'public/setting/logo.png');
 
 --
--- Indexes for table `banners`
---
-ALTER TABLE `banners`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `categories`
---
-ALTER TABLE `categories`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `comments`
---
-ALTER TABLE `comments`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `article_id` (`post_id`),
-  ADD KEY `user_id` (`user_id`);
-
---
--- Indexes for table `menus`
---
-ALTER TABLE `menus`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `parent_id` (`parent_id`);
-
---
--- Indexes for table `posts`
---
-ALTER TABLE `posts`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `cat_id` (`cat_id`),
-  ADD KEY `user_id` (`user_id`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email` (`email`);
-
---
--- Indexes for table `websetting`
---
-ALTER TABLE `websetting`
-  ADD PRIMARY KEY (`id`);
-
-ALTER TABLE `author`
-  ADD PRIMARY KEY (`id`);
---
--- AUTO_INCREMENT for dumped tables
+-- Các ràng buộc cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `banners`
---
-ALTER TABLE `banners`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
---
--- AUTO_INCREMENT for table `categories`
---
-ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
-
---
--- AUTO_INCREMENT for table `comments`
---
-ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
-
---
--- AUTO_INCREMENT for table `menus`
---
-ALTER TABLE `menus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
---
--- AUTO_INCREMENT for table `posts`
---
-ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
---
--- AUTO_INCREMENT for table `websetting`
---
-ALTER TABLE `websetting`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `comments`
+-- Các ràng buộc cho bảng `comments`
 --
 ALTER TABLE `comments`
   ADD CONSTRAINT `comments_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `posts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `comments_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `menus`
+-- Các ràng buộc cho bảng `menus`
 --
 ALTER TABLE `menus`
   ADD CONSTRAINT `menus_ibfk_1` FOREIGN KEY (`parent_id`) REFERENCES `menus` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `posts`
+-- Các ràng buộc cho bảng `posts`
 --
 ALTER TABLE `posts`
+  ADD CONSTRAINT `posts_author` FOREIGN KEY (`author_id`) REFERENCES `author` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`cat_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `posts_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `posts_author` FOREIGN KEY (`author_id`) REFERENCES `author` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `posts_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+
+--
+-- Siêu dữ liệu
+--
+USE `phpmyadmin`;
+
+--
+-- Siêu dữ liệu cho bảng author
+--
+
+--
+-- Siêu dữ liệu cho bảng banners
+--
+
+--
+-- Siêu dữ liệu cho bảng categories
+--
+
+--
+-- Siêu dữ liệu cho bảng comments
+--
+
+--
+-- Siêu dữ liệu cho bảng menus
+--
+
+--
+-- Siêu dữ liệu cho bảng posts
+--
+
+--
+-- Siêu dữ liệu cho bảng users
+--
+
+--
+-- Siêu dữ liệu cho bảng websetting
+--
+
+--
+-- Siêu dữ liệu cho cơ sở dữ liệu news-project
+--
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
