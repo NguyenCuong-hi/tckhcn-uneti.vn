@@ -36,113 +36,64 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
             </div>
         </div>
 
-        <div style="width: 60%; display: flex; border: 1px solid #ddd; flex-direction: column; margin: 0 64px;
-         padding: 4px; box-sizing: border-box">
-            <div style="width: 100%; display: flex; justify-content: center">
-                <form style="display: flex; margin-right: 8px">
-                    <div style=" font-size: 16px; margin-right: 8px ">
-                        <input style="padding-left: 8px" placeholder="Nhập từ khóa"/>
-                    </div>
-                    <label style="margin-right: 8px">
-                        <input type="radio" name="title" value="title"> Tiêu đề
-                    </label>
-                    <label>
-                        <input type="radio" name="author" value="author"> Tác giả
-                    </label>
-                </form>
-                <button style=" margin-left: 8px; background-color: #ddd; border: none; height: 30px;  border-radius: 4px; font-size: 16px">
-                    Tìm kiếm
-                </button>
+<!-- _________________________________________________________________________________ -->
+<div style="width: 60%; border: 1px solid #ddd; margin: 0 64px; padding: 4px; box-sizing: border-box">
+    <div style="display: flex; flex: 1; justify-content: space-between">
+        <!-- Cột giới thiệu -->
+        <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">
+
+            <h3 style="text-align: center; text-transform: uppercase; color: #3734ea;font-weight: 700; font-size: 30px;">Giới thiệu</h3>
+            <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
+                <img style="border-radius: 5px; max-width: 580px;" src="../../../public/banner-image/gt3.png" alt="Giới thiệu">
+
             </div>
-            <div>
-                <div style="font-size: 16px; font-weight: 500; border-bottom: 2px dotted red">
-                    <span><a style=" font-weight: 600; font-size: 18px" href="#">Nghiên cứ khảo sát đặc trung của vật liệu Graphene Oxit chế tạo bằng phương php điện hóa</a></span>
-                    <div style=" margin-bottom: 8px">
-                        <ul style="list-style-type: square; margin-bottom: 8px">
-                            <li>Số tạp chí: 31</li>
-                            <li>Tác giả: Hoàng Văn Tuấn, Nguyễn Văn Cường</li>
-                            <li>Tạp chí xuất bản</li>
-                            <li><a href="#">Tóm tắt</a></li>
-                        </ul>
-                    </div>
-                    <div style="text-align: end; margin-bottom: 8px">
-                        foorter
-                    </div>
-                </div>
+            <div style="margin-bottom: 70px; display: flex; justify-content:  center; align-items: center;">
+                <img style="border-radius: 5px; max-width: 580px; margin-bottom: 15px;" src="../../../public/banner-image/gt3.png" alt="Giới thiệu">
+            </div>
 
-                <div style="font-size: 16px; font-weight: 500; border-bottom: 2px dotted red">
-                    <span><a style=" font-weight: 600; font-size: 18px" href="#">Nghiên cứ khảo sát đặc trung của vật liệu Graphene Oxit chế tạo bằng phương php điện hóa</a></span>
-                    <div style=" margin-bottom: 8px">
-                        <ul style="list-style-type: square; margin-bottom: 8px">
-                            <li>Số tạp chí: 31</li>
-                            <li>Tác giả: Hoàng Văn Tuấn, Nguyễn Văn Cường</li>
-                            <li>Tạp chí xuất bản</li>
-                            <li><a href="#">Tóm tắt</a></li>
-                        </ul>
-                    </div>
-                    <div style="text-align: end; margin-bottom: 8px">
-                        foorter
-                    </div>
-                </div>
-                <div style="font-size: 16px; font-weight: 500; border-bottom: 2px dotted red">
-                    <span><a style=" font-weight: 600; font-size: 18px" href="#">Nghiên cứ khảo sát đặc trung của vật liệu Graphene Oxit chế tạo bằng phương php điện hóa</a></span>
-                    <div style=" margin-bottom: 8px">
-                        <ul style="list-style-type: square; margin-bottom: 8px">
-                            <li>Số tạp chí: 31</li>
-                            <li>Tác giả: Hoàng Văn Tuấn, Nguyễn Văn Cường</li>
-                            <li>Tạp chí xuất bản</li>
-                            <li><a href="#">Tóm tắt</a></li>
-                        </ul>
-                    </div>
-                    <div style="text-align: end; margin-bottom: 8px">
-                        foorter
-                    </div>
-                </div>
-                <div style="font-size: 16px; font-weight: 500; border-bottom: 2px dotted red">
-                    <span><a style=" font-weight: 600; font-size: 18px" href="#">Nghiên cứ khảo sát đặc trung của vật liệu Graphene Oxit chế tạo bằng phương php điện hóa</a></span>
-                    <div style=" margin-bottom: 8px">
-                        <ul style="list-style-type: square; margin-bottom: 8px">
-                            <li>Số tạp chí: 31</li>
-                            <li>Tác giả: Hoàng Văn Tuấn, Nguyễn Văn Cường</li>
-                            <li>Tạp chí xuất bản</li>
-                            <li><a href="#">Tóm tắt</a></li>
-                        </ul>
-                    </div>
-                    <div style="text-align: end; margin-bottom: 8px">
-                        foorter
-                    </div>
-                </div>
-                <div style="font-size: 16px; font-weight: 500; border-bottom: 2px dotted red">
-                    <span><a style=" font-weight: 600; font-size: 18px" href="#">Nghiên cứ khảo sát đặc trung của vật liệu Graphene Oxit chế tạo bằng phương php điện hóa</a></span>
-                    <div style=" margin-bottom: 8px">
-                        <ul style="list-style-type: square; margin-bottom: 8px">
-                            <li>Số tạp chí: 31</li>
-                            <li>Tác giả: Hoàng Văn Tuấn, Nguyễn Văn Cường</li>
-                            <li>Tạp chí xuất bản</li>
-                            <li><a href="#">Tóm tắt</a></li>
-                        </ul>
-                    </div>
-                    <div style="text-align: end; margin-bottom: 8px">
-                        foorter
-                    </div>
-                </div>
-                <div style="font-size: 16px; font-weight: 500; border-bottom: 2px dotted red">
-                    <span><a style=" font-weight: 600; font-size: 18px" href="#">Nghiên cứ khảo sát đặc trung của vật liệu Graphene Oxit chế tạo bằng phương php điện hóa</a></span>
-                    <div style=" margin-bottom: 8px">
-                        <ul style="list-style-type: square; margin-bottom: 8px">
-                            <li>Số tạp chí: 31</li>
-                            <li>Tác giả: Hoàng Văn Tuấn, Nguyễn Văn Cường</li>
-                            <li>Tạp chí xuất bản</li>
-                            <li><a href="#">Tóm tắt</a></li>
-                        </ul>
-                    </div>
-                    <div style="text-align: end; margin-bottom: 8px">
-                        foorter
-                    </div>
-                </div>
+        </div>
+        <!-- Cột thông báo -->
+        <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">
 
+            <h3 style="text-align: center; text-transform: uppercase; color: #3734ea;font-weight: 700; font-size: 30px;">Thông báo</h3>
+            <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
+                <img style="border-radius: 5px; max-width: 580px;" src="../../../public/banner-image/gt3.png" alt="Giới thiệu">
+
+            </div>
+            <div style="margin-bottom: 70px; display: flex; justify-content:  center; align-items: center;">
+                <img style="border-radius: 5px; max-width: 580px; margin-bottom: 15px;" src="../../../public/banner-image/gt3.png" alt="Giới thiệu">
+            </div>
+
+        </div>
+        <!-- Cột sự kiện -->
+        <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">
+
+            <h3 style="text-align: center; text-transform: uppercase; color: #3734ea;font-weight: 700; font-size: 30px;">Sự kiện</h3>
+            <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
+                <img style="border-radius: 5px; max-width: 580px;" src="../../../public/banner-image/gt3.png" alt="Giới thiệu">
+
+            </div>
+            <div style="margin-bottom: 70px; display: flex; justify-content:  center; align-items: center;">
+                <img style="border-radius: 5px; max-width: 580px; margin-bottom: 15px;" src="../../../public/banner-image/gt3.png" alt="Giới thiệu">
+            </div>
+
+        </div>
+    </div>
+    <div style="display: flex; flex: 1; justify-content: space-between">
+        <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">
+            <h3 style="text-align: center; text-transform: uppercase; color: #3734ea;font-weight: 700; font-size: 30px;">Gửi bài</h3>
+            <div style="display: flex; justify-content:  center; align-items: center;">
+                <img style="max-width: 580px;margin-bottom: 15px;" src="../../../public/banner-image/gt3.png" alt="Sự kiện">
             </div>
         </div>
+        <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">
+        </div>
+        <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">
+
+        </div>
+
+    </div>
+</div>
 
         <div style="width: 20%; padding-left: 32px">
             <img style="width: 100%" src="../../../public/banner-image/bo-cong-thuong.png"/>
@@ -151,6 +102,75 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
         </div>
     </div>
+
+    <!-- _________________________________________________________________________________ -->
+<div>
+    <div style="margin-left: 60px;">
+        <h3 style="text-align: left;  color: #3734ea;font-weight: 700; font-size: 30px;">Các số đã xuất bản</h3>
+    </div>
+    <div style="margin-left: 120px;">
+
+
+        <div style="   display: flex;
+    flex-wrap: wrap;
+    /*justify-content: center;*/ /* căn giữa các sản phẩm */
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: 50px;
+    margin-bottom: 50px;">
+            <div style="   flex-basis: calc(20% - 10px);">
+                <img style="max-width: 350px;
+         margin-bottom: 50px;
+        margin-right: 30px;
+        cursor: pointer;
+        transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png" alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
+            </div>
+            <div style="   flex-basis: calc(20% - 10px);">
+                <img style="max-width: 350px;
+       margin-bottom: 50px;
+      margin-right: 30px;
+      cursor: pointer;
+      transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png" alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
+            </div>
+            <div style="   flex-basis: calc(20% - 10px);">
+                <img style="max-width: 350px;
+   margin-bottom: 50px;
+  margin-right: 30px;
+  cursor: pointer;
+  transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png" alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
+            </div>
+            <div style="   flex-basis: calc(20% - 10px);">
+                <img style="max-width: 350px;
+       margin-bottom: 50px;
+      margin-right: 5px;
+      cursor: pointer;
+      transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png" alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
+            </div>
+            <div style="   flex-basis: calc(20% - 10px);">
+                <img style="max-width: 350px;
+   margin-bottom: 50px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png" alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
+            </div>
+            <div style="   flex-basis: calc(20% - 10px);">
+                <img style="max-width: 350px;
+   margin-bottom: 50px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png" alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
+            </div>
+            <div style="   flex-basis: calc(20% - 10px);">
+                <img style="max-width: 350px;
+   margin-bottom: 50px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png" alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
+            </div>
+
+        </div>
+    </div>
+</div>
 
     <!--    <div class="site-main-container">-->
     <!--         Start top-post Area -->
