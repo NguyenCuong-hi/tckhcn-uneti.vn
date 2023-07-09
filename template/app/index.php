@@ -10,7 +10,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                 </Button>
             </div>
             <div style="width: 100%; margin: 8px 0">
-                <Button style="color: white; font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
+                <Button onclick="window.location.href='<?= url('khoahoccongnghe')?>'" style="color: white; font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
                     Khoa học - công nghệ
                 </Button>
             </div>

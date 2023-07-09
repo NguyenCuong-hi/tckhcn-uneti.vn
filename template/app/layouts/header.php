@@ -47,27 +47,27 @@
                 <a href="#" style=" color: white;font-weight: 700; border-radius: 8px; background-color: #348FDE; width: 100%; border: none ; padding: 8px 18px">Trang chủ</a>
             </div>
             <div style="width: 15%">
-                <a href="/khoahoccongnghe" style="color: white; font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 8px 18px">Khoa học - công nghệ</a>
+                <a href="<?= url('khoahoccongnghe')?>" style="color: white; font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 8px 18px">Khoa học - công nghệ</a>
             </div>
             <div style="width: 15%">
-                <a href="/kinhtexahoi" style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 8px 18px">Kinh tế- xã hội</a>
+                <a href="<?= url('kinhtexahoi')?>" style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 8px 18px">Kinh tế- xã hội</a>
             </div>
             <div style="width: 15% ">
-                <a href="/diendankhoahoc" style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 8px 18px">Diễn đàn khoa học</a>
+                <a href="<?= url('diendankhoahoc')?>" style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 8px 18px">Diễn đàn khoa học</a>
             </div>
             <div style="width: 15% ">
-                <a href="/thongtintraodoi" style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 8px 18px"> Thông tin trao đổi</a>
+                <a href="<?= url('thongtintraodoi')?>" style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 8px 18px"> Thông tin trao đổi</a>
             </div>
             <div style="width: 15%">
-                <a href="/lienhe" style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 8px 18px"> Liên hệ</a>
+                <a href="<?= url('lienhe')?>" style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 8px 18px"> Liên hệ</a>
             </div>
         </div>
 
         <div class="Frame4" style=" background-color: #ccc ; height: 40px; box-shadow: 0px 2px 2px rgba(0,0,0,0.3); width: 100%; display: flex ; justify-content: space-around; box-sizing: border-box; padding: 8px;">
-            <div class="ChNhTNgY28ThNg2NM2023" style="  color: black; font-size: 12px; font-family: Inter; font-weight: 400">Chủ nhật, ngày 28 tháng 2 năm 2023</div>
-            <div class="GiODCVOTOCNgVIKhoaHCVCNgNghLQuCSChHNgU" style="  color: #9C1A1A; font-size: 12px; font-family: Inter; font-weight: 700">Giáo dục và đào tạo cùng với khoa học và công nghệ là quốc sách hàng đầu </div>
-            <div class="TMKiM" style=" color: black; font-size: 12px; font-family: Inter; font-weight: 700">
-                <input placeholder="Tìm kiếm..."></input>
+            <div class="current-date" style="  color: black; font-size: 12px; font-family: Inter; font-weight: 400">Chủ nhật, ngày 28 tháng 2 năm 2023</div>
+            <div class="title-head" style="  color: #9C1A1A; font-size: 12px; font-family: Inter; font-weight: 700">Giáo dục và đào tạo cùng với khoa học và công nghệ là quốc sách hàng đầu </div>
+            <div class="search-input" style=" color: black; font-size: 12px; font-family: Inter; font-weight: 700">
+                <input placeholder="Tìm kiếm...">
             </div>
         </div>
     </header>
