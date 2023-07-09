@@ -1,6 +1,52 @@
 <?php
 require_once(BASE_PATH . '/template/app/layouts/header.php');
 ?>
+<style>
+    .image-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.image-item {
+    flex: 0 0 180px;
+    flex-basis: calc(20% - 11px);
+    margin-right: 32px;
+    scroll-snap-align: start;
+}
+
+.image {
+    margin-top: 20px;
+    width: 180px;
+    height: 261px;
+    cursor: pointer;
+    transition: transform .2s ease-out;
+    border-radius: 25px;
+}
+
+.image:hover {
+    transform: scale(1.1);
+}
+
+.image-title {
+    width: 180px;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.image-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.image-container::-webkit-scrollbar-thumb {
+    background-color: #dddddd77;
+    border-radius: 4px;
+}
+
+.image-container::-webkit-scrollbar-thumb:hover {
+    background-color: #cccccc99;
+}
+</style>
 
     <div style="display: flex;  margin-top: 30px; margin-right: 32px">
         <div style="display: flex; padding-right: 32px; width: 20%; flex-direction: column; box-sizing: border-box; padding: 8px; color: white; font-size: 12px; font-weight: 700; color: white  ">
@@ -104,73 +150,80 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
     </div>
     <!-- _________________________________________________________________________________ -->
 <div>
-    <div style="margin-left: 60px;">
+    <div style="margin-left: 60px; margin-top: 30px;">
         <h3 style="text-align: left;  color: #3734ea;font-weight: 700; font-size: 30px;">Các số đã xuất bản</h3>
     </div>
-    <div style="margin-left: 120px;">
+    <div style="margin-left: 8%; margin-right:6%">
 
 
-        <div style="   display: flex;
+        <div style="  /* display: flex;*/
     flex-wrap: wrap;
     /*justify-content: center;*/ /* căn giữa các sản phẩm */
     margin-left: -20px;
     margin-right: -20px;
     margin-top: 50px;
     margin-bottom: 50px;">
+    <!-- ../../../public/banner-image/sach.png -->
+ <!-- <?php //foreach ($posts as $datas): ?>
             <div style="   flex-basis: calc(20% - 10px);">
-                <img style="max-width: 350px;
+                <img style="width:180px;
+                height: 261px;
          margin-bottom: 50px;
         margin-right: 30px;
         cursor: pointer;
-        transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png" alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
+        transition: border-color .2s ease-out; transform: scale(1.1);
+        border-radius: 25px;"
+         src=" <?php// echo $datas['image']?>" alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
+         <div style="width:180px;
+                height: auto; margin-bottom:50px;">
+              <p > <?php// echo  $datas['title']?></p>
+         </div>
+      
+        </div>
+        <?php //endforeach;?>        -->
+        <div class="image-container">
+    <?php foreach ($posts as $datas): ?>
+        <div class="image-item">
+            <img class="image" src="<?php echo $datas['image'] ?>" alt="Nhà xuất bản 1">
+            <div class="image-title">
+                <p style = "margin-top: 20px;"><?php echo $datas['title'] ?></p>
             </div>
-            <div style="   flex-basis: calc(20% - 10px);">
-                <img style="max-width: 350px;
-       margin-bottom: 50px;
-      margin-right: 30px;
-      cursor: pointer;
-      transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png" alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
-            </div>
-            <div style="   flex-basis: calc(20% - 10px);">
-                <img style="max-width: 350px;
-   margin-bottom: 50px;
-  margin-right: 30px;
-  cursor: pointer;
-  transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png" alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
-            </div>
-            <div style="   flex-basis: calc(20% - 10px);">
-                <img style="max-width: 350px;
-       margin-bottom: 50px;
-      margin-right: 5px;
-      cursor: pointer;
-      transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png" alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
-            </div>
-            <div style="   flex-basis: calc(20% - 10px);">
-                <img style="max-width: 350px;
-   margin-bottom: 50px;
-  margin-right: 5px;
-  cursor: pointer;
-  transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png" alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
-            </div>
-            <div style="   flex-basis: calc(20% - 10px);">
-                <img style="max-width: 350px;
-   margin-bottom: 50px;
-  margin-right: 5px;
-  cursor: pointer;
-  transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png" alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
-            </div>
-            <div style="   flex-basis: calc(20% - 10px);">
-                <img style="max-width: 350px;
-   margin-bottom: 50px;
-  margin-right: 5px;
-  cursor: pointer;
-  transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png" alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
-            </div>
+        </div>
+    <?php endforeach; ?>
+</div>
 
         </div>
     </div>
 </div>
+<script>
+const imageContainer = document.querySelector('.image-container');
+let isMouseDown = false;
+let startX = 0;
+let scrollLeft = 0;
 
+imageContainer.addEventListener('mousedown', (e) => {
+    isMouseDown = true;
+    startX = e.pageX - imageContainer.offsetLeft;
+    scrollLeft = imageContainer.scrollLeft;
+});
+
+imageContainer.addEventListener('mouseleave', () => {
+    isMouseDown = false;
+});
+
+imageContainer.addEventListener('mouseup', () => {
+    isMouseDown = false;
+});
+
+imageContainer.addEventListener('mousemove', (e) => {
+    if (!isMouseDown) return;
+    e.preventDefault();
+    const x = e.pageX - imageContainer.offsetLeft;
+    const walk = (x - startX) * 2;
+    imageContainer.scrollLeft = scrollLeft - walk;
+});
+
+</script>
     
 
     <!--    <div class="site-main-container">-->
