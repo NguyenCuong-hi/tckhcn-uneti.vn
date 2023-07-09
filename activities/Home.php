@@ -27,6 +27,7 @@ class Home{
 
                 $mostCommentsPosts =$db->select('SELECT posts.*, (SELECT COUNT(*) FROM comments WHERE comments.post_id = posts.id) AS comments_count, (SELECT username FROM users WHERE users.id = posts.user_id) AS username, (SELECT name FROM categories WHERE categories.id = posts.cat_id) AS category FROM posts  ORDER BY comments_count DESC LIMIT 0, 4')->fetchAll();
 
+                $posts = $db->select('SELECT * FROM posts')->fetchAll();
 
                 require_once (BASE_PATH . '/template/app/index.php');
         }
@@ -105,7 +106,7 @@ class Home{
     
             $sidebarBanner= $db->select("SELECT * FROM `banners` LIMIT 0,1;")->fetch();
             $bodyBanner= $db->select("SELECT * FROM `banners` ORDER BY created_at DESC LIMIT 0,1;")->fetch();
-    
+           
             require_once (BASE_PATH . "/template/app/show-category.php");
         }
 
