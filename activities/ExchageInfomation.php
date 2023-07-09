@@ -7,7 +7,7 @@ class ExchageInfomation
 
     public function index(){
 
-        require_once (BASE_PATH . 'template/app/thongtin_traodoi.php');
+        require_once (BASE_PATH . '/template/app/thongtin_traodoi.php');
     }
 
 }

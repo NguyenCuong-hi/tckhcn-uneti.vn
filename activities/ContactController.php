@@ -9,7 +9,7 @@ class ContactController
         // xu ly logic o day
 
 
-        require_once (BASE_PATH . 'template/app/lienhe.php');
+        require_once (BASE_PATH .'/template/app/lienhe.php');
     }
 
 
