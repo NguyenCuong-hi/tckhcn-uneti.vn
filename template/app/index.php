@@ -3,139 +3,175 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 ?>
 
     <div style="display: flex;  margin-top: 30px; margin-right: 32px">
-    <div style="display: flex; padding-right: 32px; width: 20%; flex-direction: column; box-sizing: border-box; padding: 8px; color: white; font-size: 12px; font-weight: 700; color: white  ">
-        <div style="width: 100%; margin: 8px 0">
-            <Button style=" color: white;font-weight: 700; border-radius: 8px; background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
-                Trang chủ
-            </Button>
-        </div>
-        <div style="width: 100%; margin: 8px 0">
-            <Button onclick="window.location.href='<?= url('khoahoccongnghe') ?>'"
-                    style="color: white; font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
-                Khoa học - công nghệ
-            </Button>
-        </div>
-        <div style="width: 100%; margin: 8px 0">
-            <Button style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
-                Kinh tế- xã hội
-            </Button>
-        </div>
-        <div style="width: 100%; margin: 8px 0 ">
-            <Button style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
-                Diễn đàn khoa học
-            </Button>
-        </div>
-        <div style="width: 100%; margin: 8px 0 ">
-            <Button style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
-                Thông tin trao đổi
-            </Button>
-        </div>
-        <div style="width: 100%; margin: 8px 0">
-            <Button style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
-                Liên hệ
-            </Button>
-        </div>
-    </div>
-
-    <div style="width: 60%; display: flex; border: 1px solid #ddd; flex-direction: column; margin: 0 64px;
-         padding: 4px; box-sizing: border-box">
-    <div style="width: 100%; display: flex; justify-content: center">
-        <form style="display: flex; margin-right: 8px">
-            <div style=" font-size: 16px; margin-right: 8px ">
-                <input style="padding-left: 8px" placeholder="Nhập từ khóa"/>
+        <div style="display: flex; padding-right: 32px; width: 20%; flex-direction: column; box-sizing: border-box; padding: 8px; color: white; font-size: 12px; font-weight: 700; color: white  ">
+            <div style="width: 100%; margin: 8px 0">
+                <Button style=" color: white;font-weight: 700; border-radius: 8px; background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
+                    Trang chủ
+                </Button>
             </div>
-            <label style="margin-right: 8px">
-                <input type="radio" name="title" value="title"> Tiêu đề
-            </label>
-            <label>
-                <input type="radio" name="author" value="author"> Tác giả
-            </label>
-        </form>
-        <button style=" margin-left: 8px; background-color: #ddd; border: none; height: 30px;  border-radius: 4px; font-size: 16px">
-            Tìm kiếm
-        </button>
+            <div style="width: 100%; margin: 8px 0">
+                <Button onclick="window.location.href='<?= url('khoahoccongnghe')?>'" style="color: white; font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
+                    Khoa học - công nghệ
+                </Button>
+            </div>
+            <div style="width: 100%; margin: 8px 0">
+                <Button style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
+                    Kinh tế- xã hội
+                </Button>
+            </div>
+            <div style="width: 100%; margin: 8px 0 ">
+                <Button style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
+                    Diễn đàn khoa học
+                </Button>
+            </div>
+            <div style="width: 100%; margin: 8px 0 ">
+                <Button style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
+                    Thông tin trao đổi
+                </Button>
+            </div>
+            <div style="width: 100%; margin: 8px 0">
+                <Button style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
+                    Liên hệ
+                </Button>
+            </div>
+        </div>
+
+<!-- _________________________________________________________________________________ -->
+<div style="width: 60%; border: 1px solid #ddd; margin: 0 64px; padding: 4px; box-sizing: border-box">
+    <div style="display: flex; flex: 1; justify-content: space-between">
+        <!-- Cột giới thiệu -->
+        <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">
+
+            <h3 style="text-align: center; text-transform: uppercase; color: #3734ea;font-weight: 700; font-size: 30px;">Giới thiệu</h3>
+            <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
+                <img style="border-radius: 5px; max-width: 580px;" src="../../../public/banner-image/gt3.png" alt="Giới thiệu">
+
+            </div>
+            <div style="margin-bottom: 70px; display: flex; justify-content:  center; align-items: center;">
+                <img style="border-radius: 5px; max-width: 580px; margin-bottom: 15px;" src="../../../public/banner-image/gt3.png" alt="Giới thiệu">
+            </div>
+
+        </div>
+        <!-- Cột thông báo -->
+        <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">
+
+            <h3 style="text-align: center; text-transform: uppercase; color: #3734ea;font-weight: 700; font-size: 30px;">Thông báo</h3>
+            <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
+                <img style="border-radius: 5px; max-width: 580px;" src="../../../public/banner-image/gt3.png" alt="Giới thiệu">
+
+            </div>
+            <div style="margin-bottom: 70px; display: flex; justify-content:  center; align-items: center;">
+                <img style="border-radius: 5px; max-width: 580px; margin-bottom: 15px;" src="../../../public/banner-image/gt3.png" alt="Giới thiệu">
+            </div>
+
+        </div>
+        <!-- Cột sự kiện -->
+        <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">
+
+            <h3 style="text-align: center; text-transform: uppercase; color: #3734ea;font-weight: 700; font-size: 30px;">Sự kiện</h3>
+            <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
+                <img style="border-radius: 5px; max-width: 580px;" src="../../../public/banner-image/gt3.png" alt="Giới thiệu">
+
+            </div>
+            <div style="margin-bottom: 70px; display: flex; justify-content:  center; align-items: center;">
+                <img style="border-radius: 5px; max-width: 580px; margin-bottom: 15px;" src="../../../public/banner-image/gt3.png" alt="Giới thiệu">
+            </div>
+
+        </div>
     </div>
-    <div>
-        <div style="font-size: 16px; font-weight: 500; border-bottom: 2px dotted red">
-            <div>
-                <div style="margin-left: 60px;">
-                    <h3 style="text-align: left;  color: #3734ea;font-weight: 700; font-size: 30px;">Các số đã xuất
-                        bản</h3>
-                </div>
-                <div style="margin-left: 120px;">
+    <div style="display: flex; flex: 1; justify-content: space-between">
+        <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">
+            <h3 style="text-align: center; text-transform: uppercase; color: #3734ea;font-weight: 700; font-size: 30px;">Gửi bài</h3>
+            <div style="display: flex; justify-content:  center; align-items: center;">
+                <img style="max-width: 580px;margin-bottom: 15px;" src="../../../public/banner-image/gt3.png" alt="Sự kiện">
+            </div>
+        </div>
+        <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">
+        </div>
+        <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">
+
+        </div>
+
+    </div>
+</div>
+
+        <div style="width: 20%; padding-left: 32px">
+            <img style="width: 100%" src="../../../public/banner-image/bo-cong-thuong.png"/>
+            <img style="width: 100%" src="../../../public/banner-image/DHKTKTCN.png"/>
+            <img style="width: 100%" src="../../public/banner-image/khcn.png"/>
+
+        </div>
+    </div>
+    <!-- _________________________________________________________________________________ -->
+<div>
+    <div style="margin-left: 60px;">
+        <h3 style="text-align: left;  color: #3734ea;font-weight: 700; font-size: 30px;">Các số đã xuất bản</h3>
+    </div>
+    <div style="margin-left: 120px;">
 
 
-                    <div style="   display: flex;flex-wrap: wrap;
+        <div style="   display: flex;
+    flex-wrap: wrap;
     /*justify-content: center;*/ /* căn giữa các sản phẩm */
     margin-left: -20px;
     margin-right: -20px;
     margin-top: 50px;
     margin-bottom: 50px;">
-
-                        <div style="   flex-basis: calc(20% - 10px);">
-                            <img style="max-width: 350px;
+            <div style="   flex-basis: calc(20% - 10px);">
+                <img style="max-width: 350px;
          margin-bottom: 50px;
         margin-right: 30px;
         cursor: pointer;
-        transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png"
-                                 alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
-                        </div>
-                        <div style="   flex-basis: calc(20% - 10px);">
-                            <img style="max-width: 350px;
+        transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png" alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
+            </div>
+            <div style="   flex-basis: calc(20% - 10px);">
+                <img style="max-width: 350px;
        margin-bottom: 50px;
       margin-right: 30px;
       cursor: pointer;
-      transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png"
-                                 alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
-                        </div>
-                        <div style="   flex-basis: calc(20% - 10px);">
-                            <img style="max-width: 350px;
+      transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png" alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
+            </div>
+            <div style="   flex-basis: calc(20% - 10px);">
+                <img style="max-width: 350px;
    margin-bottom: 50px;
   margin-right: 30px;
   cursor: pointer;
-  transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png"
-                                 alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
-                        </div>
-                        <div style="   flex-basis: calc(20% - 10px);">
-                            <img style="max-width: 350px;
+  transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png" alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
+            </div>
+            <div style="   flex-basis: calc(20% - 10px);">
+                <img style="max-width: 350px;
        margin-bottom: 50px;
       margin-right: 5px;
       cursor: pointer;
-      transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png"
-                                 alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
-                        </div>
-                        <div style="   flex-basis: calc(20% - 10px);">
-                            <img style="max-width: 350px;
-   margin-bottom: 50px;
-  margin-right: 5px;
-  cursor: pointer;
-  transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png"
-                                 alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
-                        </div>
-                        <div style="   flex-basis: calc(20% - 10px);">
-                            <img style="max-width: 350px;
-   margin-bottom: 50px;
-  margin-right: 5px;
-  cursor: pointer;
-  transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png"
-                                 alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
-                        </div>
-                        <div style="   flex-basis: calc(20% - 10px);">
-                            <img style="max-width: 350px;
-   margin-bottom: 50px;
-  margin-right: 5px;
-  cursor: pointer;
-  transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png"
-                                 alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
-                        </div>
-
-                    </div>
-                </div>
+      transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png" alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
             </div>
-        </div>
+            <div style="   flex-basis: calc(20% - 10px);">
+                <img style="max-width: 350px;
+   margin-bottom: 50px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png" alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
+            </div>
+            <div style="   flex-basis: calc(20% - 10px);">
+                <img style="max-width: 350px;
+   margin-bottom: 50px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png" alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
+            </div>
+            <div style="   flex-basis: calc(20% - 10px);">
+                <img style="max-width: 350px;
+   margin-bottom: 50px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: border-color .2s ease-out; transform: scale(1.1);" src="../../../public/banner-image/sach.png" alt="Nhà xuất bản 1" style="max-width: 215px; height: auto; margin-right: 10px;">
+            </div>
 
         </div>
     </div>
+</div>
+
+    
 
     <!--    <div class="site-main-container">-->
     <!--         Start top-post Area -->
@@ -143,22 +179,18 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
     <!--            <div class="container no-padding">-->
     <!--                <div class="row small-gutters">-->
     <!--                    <div class="col-lg-8 top-post-left">-->
-    <!--                                --><?php //if(isset($topSelectedPosts[0])) {
-    //                                    ?>
+    <!--                            --><?php //if(isset($topSelectedPosts[0])) {
+//                                    ?>
     <!--                        <div class="feature-image-thumb relative">-->
     <!--                            <div class="overlay overlay-bg"></div>-->
-    <!--                            <img class="img-fluid" src="-->
-    <?php //= asset($topSelectedPosts[0]['image']) ?><!--" alt="">-->
+    <!--                            <img class="img-fluid" src="--><?php //= asset($topSelectedPosts[0]['image']) ?><!--" alt="">-->
     <!--                        </div>-->
     <!--                        <div class="top-post-details">-->
     <!--                            <ul class="tags">-->
-    <!--                            <li><a href="-->
-    <?php //= url('show-category/' . $topSelectedPosts[0]['cat_id']) ?><!--">-->
-    <?php //= $topSelectedPosts[0]['category'] ?><!--</a></li>-->
+    <!--                            <li><a href="--><?php //= url('show-category/' . $topSelectedPosts[0]['cat_id']) ?><!--">--><?php //= $topSelectedPosts[0]['category'] ?><!--</a></li>-->
     <!--                            </ul>-->
     <!--                            <a href="--><?php //= url('show-post/' . $topSelectedPosts[0]['id']) ?><!--">-->
-    <!--                                <h3 style="color: black;">-->
-    <?php //= $topSelectedPosts[0]['title'] ?><!--</h3>-->
+    <!--                                <h3 style="color: black;">--><?php //= $topSelectedPosts[0]['title'] ?><!--</h3>-->
     <!--                            </a>-->
     <!--                            <ul class="meta">-->
     <!--                                <li><a href="#" style="color: black;"><span class="lnr lnr-user" style="color: black;"></span>--><?php //= $topSelectedPosts[0]['username'] ?><!--</a></li>-->
