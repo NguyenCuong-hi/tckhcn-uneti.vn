@@ -4,7 +4,7 @@ namespace App;
 
 class SocioEconomicController
 {
-    public function index(){
+    public function show(){
 
         // Xu ly logic o day
 

@@ -7,7 +7,7 @@ session_start();
 
 //configuration
 define('BASE_PATH', __DIR__);
-define('CURRENT_DOMAIN', current_domain() . '/OnlineNewsSite/');
+define('CURRENT_DOMAIN', current_domain());
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'news-project');
 define('DB_USERNAME', 'root');
@@ -43,6 +43,11 @@ require_once 'activities/Auth/Auth.php';
 
 //Home
 require_once "activities/Home.php";
+require_once "activities/ScienceTechController.php";
+require_once "activities/ScienceForumController.php";
+require_once "activities/ExchageInfomation.php";
+require_once "activities/ContactController.php";
+require_once "activities/SocioEconomicController.php";
 
 //helpers
 
@@ -67,12 +72,10 @@ function uri($reservedUrl, $class, $method, $requestMethod = "GET")
     $currentUrlArray = explode('/', $currentUrl);
     $currentUrlArray = array_filter($currentUrlArray);
 
-
     // reserved url array
     $reservedUrl = trim($reservedUrl, '/');
     $reservedUrlArray = explode('/', $reservedUrl);
     $reservedUrlArray = array_filter($reservedUrlArray);
-
     // admin/category/create
     // admin/category/create
 
@@ -272,10 +275,16 @@ uri('reset-password/{forgot_token}', 'Auth\Auth', 'resetPassword', "POST");
 //home
 uri('/', 'App\Home', 'index');
 uri('home', 'App\Home', 'index');
-uri('/khoahoccongnghe/', 'App\ScienceTechController', 'index');
 uri('show-post/{id}', 'App\Home', 'show');
 uri('show-category/{id}', 'App\Home', 'category');
 uri('comment-store', 'App\Home', 'commentStore', 'POST');
+
+
+uri('/khoahoccongnghe', 'App\ScienceTechController', 'index');
+uri('/kinhtexahoi', 'App\SocioEconomicController', 'show');
+uri('/diendankhoahoc', 'App\ScienceForumController', 'index');
+uri('/thongtintraodoi', 'App\ExchageInfomation', 'index');
+uri('/lienhe', 'App\ContactController', 'index');
 
 echo '404 - not found';
 exit;
