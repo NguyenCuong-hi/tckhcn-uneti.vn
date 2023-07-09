@@ -2,46 +2,100 @@
 require_once(BASE_PATH . '/template/app/layouts/header.php');
 ?>
 
+    <style>
+        .menu_right {
+            display: flex;
+            padding-right: 32px;
+            width: 20%;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding: 8px;
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .menu_right > div {
+            width: 100%;
+            margin: 8px 0;
+        }
+
+        .menu_right button {
+            color: white;
+            font-weight: 700;
+            border-radius: 8px;
+            background-color: #348FDE;
+            width: 100%;
+            border: none;
+            padding: 18px 18px;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .menu_right {
+                width: 100%;
+                padding-right: 0;
+            }
+        }
+    </style>
+
+    <style>
+        .footer-element {
+            text-align: end;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .footer-element .icon {
+            margin-left: 16px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .footer-element {
+                justify-content: center;
+            }
+
+            .footer-element .icon {
+
+                margin: 0 8px;
+            }
+        }
+    </style>
+
+
+
     <div class="body_getdata" style="display: flex;  margin-top: 30px; margin-right: 32px">
-        <div class="menu_right" style="display: flex; padding-right: 32px; width: 20%; flex-direction: column; box-sizing: border-box; padding: 8px; color: white; font-size: 12px; font-weight: 700; color: white  ">
-            <div style="width: 100%; margin: 8px 0">
-                <Button style=" color: white;font-weight: 700; border-radius: 8px; background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
-                    Trang chủ
-                </Button>
+        <div class="menu_right">
+            <div>
+                <button>Trang chủ</button>
             </div>
-            <div style="width: 100%; margin: 8px 0">
-                <Button style="color: white; font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
-                    Khoa học - công nghệ
-                </Button>
+            <div>
+                <button>Khoa học - công nghệ</button>
             </div>
-            <div style="width: 100%; margin: 8px 0">
-                <Button style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
-                    Kinh tế- xã hội
-                </Button>
+            <div>
+                <button>Kinh tế- xã hội</button>
             </div>
-            <div style="width: 100%; margin: 8px 0 ">
-                <Button style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
-                    Diễn đàn khoa học
-                </Button>
+            <div>
+                <button>Diễn đàn khoa học</button>
             </div>
-            <div style="width: 100%; margin: 8px 0 ">
-                <Button style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
-                    Thông tin trao đổi
-                </Button>
+            <div>
+                <button>Thông tin trao đổi</button>
             </div>
-            <div style="width: 100%; margin: 8px 0">
-                <Button style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
-                    Liên hệ
-                </Button>
+            <div>
+                <button>Liên hệ</button>
             </div>
         </div>
+
 
         <div class="body_data" style="width: 60%; display: flex; border: 1px solid #ddd; flex-direction: column; margin: 0 64px;
          padding: 4px; box-sizing: border-box">
             <div style="width: 100%; display: flex; justify-content: center">
-                <form style="display: flex; margin-right: 8px">
+                <form action="ScienceTechController.php" method="GET" style="display: flex; margin-right: 8px ; width: 100%;">
                     <div style=" font-size: 16px; margin-right: 8px ">
-                        <input style="padding-left: 8px" placeholder="Nhập từ khóa"/>
+                        <input type="text"  name="search" style="padding-left: 8px" placeholder="Nhập từ khóa"/>
                     </div>
                     <label style="margin-right: 8px">
                         <input type="radio" name="title" value="title"> Tiêu đề
@@ -49,10 +103,11 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                     <label>
                         <input type="radio" name="author" value="author"> Tác giả
                     </label>
+                    <button type="submit" style=" margin-left: 8px; background-color: #ddd; border: none; height: 30px;  border-radius: 4px; font-size: 16px">
+                        Tìm kiếm
+                    </button>
                 </form>
-                <button style=" margin-left: 8px; background-color: #ddd; border: none; height: 30px;  border-radius: 4px; font-size: 16px">
-                    Tìm kiếm
-                </button>
+
             </div>
             <?php foreach ($data as $datas): ?>
             <div>
@@ -69,9 +124,15 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                             <li><a href="#">Tóm tắt</a></li>
                         </ul>
                     </div>
-                    <div style="text-align: end; margin-bottom: 8px">
-                        foorter
+                    <div class="footer-element">
+                        <div class="icon">
+                            <img style="max-width: 24px; max-height: 12px" src="../../public/banner-image/dowload.png" alt="Download Icon" />
+                        </div>
+                        <div class="icon">
+                            <img style="max-width: 24px; max-height: 12px" src="../../public/banner-image/eyes.png" alt="Eyes Icon" />
+                        </div>
                     </div>
+
                 </div>
 
             </div>
