@@ -31,40 +31,105 @@
 
 <body>
     <header>
-        <div style="width: 100%; margin-bottom: 8px">
-            <img style="width: 100%; height: 250px" src="../../../public/banner-image/banner-.png" />
+
+        <style>
+            .banner img {
+                width: 100%;
+                height: 250px;
+            }
+
+            .header-top-right {
+                display: flex;
+                justify-content: flex-end;
+                margin: 0;
+            }
+
+            .header-top-right ul {
+                display: flex;
+                list-style-type: none;
+                margin: 8px;
+            }
+
+            .header-top-right ul li {
+                margin: 8px;
+            }
+
+            .menu {
+                display: flex;
+                justify-content: space-between;
+                box-sizing: border-box;
+                padding: 8px;
+                color: white;
+                font-size: 12px;
+                font-weight: 700;
+            }
+
+            .menu a {
+                color: white;
+                font-weight: 700;
+                border-radius: 8px;
+                background-color: #348FDE;
+                width: 100%;
+                border: none;
+                padding: 8px 18px;
+            }
+
+            .footer {
+                background-color: #ccc;
+                height: 40px;
+                box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                box-sizing: border-box;
+                padding: 8px;
+                border-top: 2px #9b3333 solid;
+            }
+
+            .current-date {
+                color: black;
+                font-size: 12px;
+                font-family: Inter;
+                font-weight: 400;
+            }
+
+            .title-head {
+                color: #9C1A1A;
+                font-size: 12px;
+                font-family: Inter;
+                font-weight: 700;
+            }
+
+            .search-input input {
+                color: black;
+                font-size: 12px;
+                font-family: Inter;
+                font-weight: 700;
+            }
+        </style>
+
+        <div class="banner">
+            <img src="../../../public/banner-image/banner-.png" alt="Banner" />
         </div>
 
         <div class="header-top-right">
-            <ul class="login-register" style="display: flex; justify-content: flex-end; margin: 0">
-                <li style="list-style-type: none; margin: 8px"><a href="<?= url('login') ?>"><span class="lnr" style=" padding: 8px; width: 50px; background-color: yellow;" style="font-size:15px;">Login</span></a></li>
-                <li style="list-style-type: none; margin: 8px"><a href="<?= url('register') ?>"><span class="lnr" style="padding: 8px; width: 50px;  background-color: yellow">Register</span></a></li>
+            <ul class="login-register">
+                <li><a href="<?= url('login') ?>"><span class="lnr">Login</span></a></li>
+                <li><a href="<?= url('register') ?>"><span class="lnr">Register</span></a></li>
             </ul>
         </div>
 
-        <div style="display: flex ; justify-content: space-between; box-sizing: border-box; padding: 8px; color: white; font-size: 12px; font-weight: 700; color: white  " >
-            <div style="width: 15%; ">
-                <a href="#" style=" color: white;font-weight: 700; border-radius: 8px; background-color: #348FDE; width: 100%; border: none ; padding: 8px 18px">Trang chủ</a>
-            </div>
-            <div style="width: 15%">
-                <a href="<?= url('khoahoccongnghe')?>" style="color: white; font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 8px 18px">Khoa học - công nghệ</a>
-            </div>
-            <div style="width: 15%">
-                <a href="<?= url('kinhtexahoi')?>" style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 8px 18px">Kinh tế- xã hội</a>
-            </div>
-            <div style="width: 15% ">
-                <a href="<?= url('diendankhoahoc')?>" style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 8px 18px">Diễn đàn khoa học</a>
-            </div>
-            <div style="width: 15% ">
-                <a href="<?= url('thongtintraodoi')?>" style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 8px 18px"> Thông tin trao đổi</a>
-            </div>
-            <div style="width: 15%">
-                <a href="<?= url('lienhe')?>" style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 8px 18px"> Liên hệ</a>
-            </div>
+        <div class="menu">
+            <a href="#">Trang chủ</a>
+            <a href="<?= url('khoahoccongnghe')?>">Khoa học - công nghệ</a>
+            <a href="<?= url('kinhtexahoi')?>">Kinh tế- xã hội</a>
+            <a href="<?= url('diendankhoahoc')?>">Diễn đàn khoa học</a>
+            <a href="<?= url('thongtintraodoi')?>">Thông tin trao đổi</a>
+            <a href="<?= url('lienhe')?>">Liên hệ</a>
         </div>
 
-        <div class="Frame4" style=" background-color: #ccc ; height: 40px; box-shadow: 0px 2px 2px rgba(0,0,0,0.3); width: 100%; display: flex ; justify-content: space-around; box-sizing: border-box; padding: 8px; border-top: 2px #9b3333 solid;">
-            <div id="current-date" style="  color: black; font-size: 12px; font-family: Inter; font-weight: 400">
+        <div class="footer">
+            <div class="current-date" id="date">
                 <script>
                     var daysOfWeek = ['Chủ Nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'];
                     var monthsOfYear = ['tháng 1', 'tháng 2', 'tháng 3', 'tháng 4', 'tháng 5', 'tháng 6', 'tháng 7', 'tháng 8', 'tháng 9', 'tháng 10', 'tháng 11', 'tháng 12'];
@@ -76,12 +141,13 @@
                     var year = today.getFullYear();
 
                     var formattedDate = dayOfWeek + ', ngày ' + day + ' ' + month + ' năm ' + year;
-                    document.getElementById('current-date').innerHTML = formattedDate;
+                    document.getElementById('date').innerHTML = formattedDate;
                 </script>
             </div>
-            <div class="title-head" style="  color: #9C1A1A; font-size: 12px; font-family: Inter; font-weight: 700">Giáo dục và đào tạo cùng với khoa học và công nghệ là quốc sách hàng đầu </div>
-            <div class="search-input" style=" color: black; font-size: 12px; font-family: Inter; font-weight: 700">
-                <input placeholder="Tìm kiếm...">
+            <div class="title-head">Giáo dục và đào tạo cùng với khoa học và công nghệ là quốc sách hàng đầu</div>
+            <div class="search-input">
+                <input type="text" placeholder="Tìm kiếm...">
             </div>
         </div>
+
     </header>
