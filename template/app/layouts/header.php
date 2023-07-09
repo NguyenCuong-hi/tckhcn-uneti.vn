@@ -63,8 +63,22 @@
             </div>
         </div>
 
-        <div class="Frame4" style=" background-color: #ccc ; height: 40px; box-shadow: 0px 2px 2px rgba(0,0,0,0.3); width: 100%; display: flex ; justify-content: space-around; box-sizing: border-box; padding: 8px;">
-            <div class="current-date" style="  color: black; font-size: 12px; font-family: Inter; font-weight: 400">Chủ nhật, ngày 28 tháng 2 năm 2023</div>
+        <div class="Frame4" style=" background-color: #ccc ; height: 40px; box-shadow: 0px 2px 2px rgba(0,0,0,0.3); width: 100%; display: flex ; justify-content: space-around; box-sizing: border-box; padding: 8px; border-top: 2px #9b3333 solid;">
+            <div id="current-date" style="  color: black; font-size: 12px; font-family: Inter; font-weight: 400">
+                <script>
+                    var daysOfWeek = ['Chủ Nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'];
+                    var monthsOfYear = ['tháng 1', 'tháng 2', 'tháng 3', 'tháng 4', 'tháng 5', 'tháng 6', 'tháng 7', 'tháng 8', 'tháng 9', 'tháng 10', 'tháng 11', 'tháng 12'];
+
+                    var today = new Date();
+                    var dayOfWeek = daysOfWeek[today.getDay()];
+                    var day = today.getDate();
+                    var month = monthsOfYear[today.getMonth()];
+                    var year = today.getFullYear();
+
+                    var formattedDate = dayOfWeek + ', ngày ' + day + ' ' + month + ' năm ' + year;
+                    document.getElementById('current-date').innerHTML = formattedDate;
+                </script>
+            </div>
             <div class="title-head" style="  color: #9C1A1A; font-size: 12px; font-family: Inter; font-weight: 700">Giáo dục và đào tạo cùng với khoa học và công nghệ là quốc sách hàng đầu </div>
             <div class="search-input" style=" color: black; font-size: 12px; font-family: Inter; font-weight: 700">
                 <input placeholder="Tìm kiếm...">
