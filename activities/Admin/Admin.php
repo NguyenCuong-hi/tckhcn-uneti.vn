@@ -4,7 +4,7 @@ namespace Admin;
 
 use Auth\Auth;
 
-
+#[\AllowDynamicProperties]
 
 class Admin{
 
