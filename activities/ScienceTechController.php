@@ -30,6 +30,9 @@ class ScienceTechController
 
         $result_search = $db->select($query, ['search' => $search]);
 
+
+        $get_image_sidebar = $db->select('SELECT * FROM banners WHERE id IN (10, 11, 12)');
+
         require_once (BASE_PATH . '/template/app/khoahoc_congnghe.php');
     }
 }

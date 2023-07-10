@@ -1,3 +1,8 @@
+<?php
+
+use Database\DataBase;
+
+?>
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
 
@@ -72,6 +77,8 @@
                 width: 100%;
                 border: none;
                 padding: 8px 18px;
+                text-align: center;
+                font-size: larger;
             }
 
             .footer {
@@ -109,7 +116,16 @@
         </style>
 
         <div class="banner">
-            <img src="../../../public/banner-image/banner-.png" alt="Banner" />
+            <?php
+
+            $db = new DataBase();
+            $get_image = $db->select('SELECT image, url  FROM banners WHERE id = 13')->fetchAll();
+
+            foreach ($get_image as $banner):
+            ?>
+            <img src="<?php echo $banner['image']?>" alt="Banner" />
+
+            <?php endforeach; ?>
         </div>
 
         <div class="header-top-right">
@@ -120,7 +136,7 @@
         </div>
 
         <div class="menu">
-            <a href="#">Trang chủ</a>
+            <a href="<?= url('/')?>">Trang chủ</a>
             <a href="<?= url('khoahoccongnghe')?>">Khoa học - công nghệ</a>
             <a href="<?= url('kinhtexahoi')?>">Kinh tế- xã hội</a>
             <a href="<?= url('diendankhoahoc')?>">Diễn đàn khoa học</a>

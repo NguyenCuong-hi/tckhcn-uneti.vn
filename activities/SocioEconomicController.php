@@ -17,6 +17,8 @@ class SocioEconomicController
 					 INNER JOIN categories ON posts.cat_id = categories.id
 					 WHERE  categories.type = 1 ');
 
+        $get_image_sidebar = $db->select('SELECT * FROM banners WHERE id IN (10, 11, 12)');
+
         // Xu ly logic o day
 
         require_once (BASE_PATH . '/template/app/kinhte_xahoi.php');

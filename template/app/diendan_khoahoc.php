@@ -2,38 +2,69 @@
 require_once(BASE_PATH . '/template/app/layouts/header.php');
 
 ?>
+    <style>
+        .menu_right {
+            display: flex;
+            padding-right: 32px;
+            width: 20%;
+            flex-direction: column;
+            box-sizing: border-box;
+            padding: 8px;
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .menu_right > div {
+            width: 100%;
+            margin: 8px 0;
+        }
+
+        .menu_right button {
+            color: white;
+            font-weight: 700;
+            border-radius: 8px;
+            background-color: #348FDE;
+            width: 100%;
+            border: none;
+            padding: 18px 18px;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 768px) {
+            .menu_right {
+                width: 100%;
+                padding-right: 0;
+            }
+        }
+    </style>
+
+    <style>
+        .menu_right{
+            list-style: none;
+            padding: 10px;
+        }
+        .menu_right a{
+            text-decoration: none;
+            color: #fff;
+            background-color: #3498db;
+            padding: 20px 27px;
+            border-radius: 5px;
+            margin-bottom: 2%;
+            text-align: center;
+            font-size: medium;
+        }
+
+    </style>
     <div style="display: flex;  margin-top: 30px; margin-right: 32px">
-        <div style="display: flex; padding-right: 32px; width: 20%; flex-direction: column; box-sizing: border-box; padding: 8px; color: white; font-size: 12px; font-weight: 700; color: white  ">
-            <div style="width: 100%; margin: 8px 0">
-                <Button style=" color: white;font-weight: 700; border-radius: 8px; background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
-                    Trang chủ
-                </Button>
-            </div>
-            <div style="width: 100%; margin: 8px 0">
-                <Button style="color: white; font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
-                    Khoa học - công nghệ
-                </Button>
-            </div>
-            <div style="width: 100%; margin: 8px 0">
-                <Button style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
-                    Kinh tế- xã hội
-                </Button>
-            </div>
-            <div style="width: 100%; margin: 8px 0 ">
-                <Button style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
-                    Diễn đàn khoa học
-                </Button>
-            </div>
-            <div style="width: 100%; margin: 8px 0 ">
-                <Button style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
-                    Thông tin trao đổi
-                </Button>
-            </div>
-            <div style="width: 100%; margin: 8px 0">
-                <Button style="color: white;font-weight: 700;border-radius: 8px;background-color: #348FDE; width: 100%; border: none ; padding: 18px 18px">
-                    Liên hệ
-                </Button>
-            </div>
+        <div class="menu_right">
+            <a href="<?= url('/')?>">Trang chủ</a>
+            <a href="<?= url('khoahoccongnghe')?>">Khoa học - công nghệ</a>
+            <a href="<?= url('kinhtexahoi')?>">Kinh tế- xã hội</a>
+            <a href="<?= url('diendankhoahoc')?>">Diễn đàn khoa học</a>
+            <a href="<?= url('thongtintraodoi')?>">Thông tin trao đổi</a>
+            <a href="<?= url('lienhe')?>">Liên hệ</a>
         </div>
 
         <div style="width: 60%; display: flex; border: 1px solid #ddd; flex-direction: column; margin: 0 64px;
@@ -144,11 +175,10 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
             </div>
         </div>
 
-        <div style="width: 20%; padding-left: 32px">
-            <img style="width: 100%" src="../../../public/banner-image/bo-cong-thuong.png"/>
-            <img style="width: 100%" src="../../../public/banner-image/DHKTKTCN.png"/>
-            <img style="width: 100%" src="../../public/banner-image/khcn.png"/>
-
+        <div class="img_lienket" style="width: 20%; padding-left: 32px">
+            <?php foreach ($get_image_sidebar as $image): ?>
+                <img style="width: 100%" src="<?php echo $image['image'] ;?>">
+            <?php endforeach; ?>
         </div>
     </div>
 

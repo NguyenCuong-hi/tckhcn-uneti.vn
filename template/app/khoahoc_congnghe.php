@@ -65,28 +65,33 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
         }
     </style>
 
+<style>
+    .menu_right{
+        list-style: none;
+        padding: 10px;
+    }
+    .menu_right a{
+        text-decoration: none;
+        color: #fff;
+        background-color: #3498db;
+        padding: 20px 27px;
+        border-radius: 5px;
+        margin-bottom: 2%;
+        text-align: center;
+        font-size: medium;
+    }
+
+</style>
 
 
     <div class="body_getdata" style="display: flex;  margin-top: 30px; margin-right: 32px">
         <div class="menu_right">
-            <div>
-                <button>Trang chủ</button>
-            </div>
-            <div>
-                <button>Khoa học - công nghệ</button>
-            </div>
-            <div>
-                <button>Kinh tế- xã hội</button>
-            </div>
-            <div>
-                <button>Diễn đàn khoa học</button>
-            </div>
-            <div>
-                <button>Thông tin trao đổi</button>
-            </div>
-            <div>
-                <button>Liên hệ</button>
-            </div>
+                <a href="<?= url('/')?>">Trang chủ</a>
+                <a href="<?= url('khoahoccongnghe')?>">Khoa học - công nghệ</a>
+                <a href="<?= url('kinhtexahoi')?>">Kinh tế- xã hội</a>
+                <a href="<?= url('diendankhoahoc')?>">Diễn đàn khoa học</a>
+                <a href="<?= url('thongtintraodoi')?>">Thông tin trao đổi</a>
+                <a href="<?= url('lienhe')?>">Liên hệ</a>
         </div>
 
 
@@ -140,9 +145,9 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
         </div>
 
         <div class="img_lienket" style="width: 20%; padding-left: 32px">
-            <img style="width: 100%" src="../../../public/banner-image/bo-cong-thuong.png"/>
-            <img style="width: 100%" src="../../../public/banner-image/DHKTKTCN.png"/>
-            <img style="width: 100%" src="../../public/banner-image/khcn.png"/>
+            <?php foreach ($get_image_sidebar as $image): ?>
+                <img style="width: 100%" src="<?php echo $image['image'] ;?>">
+            <?php endforeach; ?>
         </div>
 
     </div>
