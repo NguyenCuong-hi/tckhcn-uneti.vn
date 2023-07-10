@@ -98,19 +98,20 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
         <div class="body_data" style="width: 60%; display: flex; border: 1px solid #ddd; flex-direction: column; margin: 0 64px;
          padding: 4px; box-sizing: border-box">
             <div style="width: 100%; display: flex; justify-content: center">
-                <form action="ScienceTechController.php" method="GET" style="display: flex; margin-right: 8px ; width: 100%;">
+                <form  method="GET" action="<?=url('khoahoccongnghe')?>" style="display: flex; margin-right: 8px ; width: 100%;">
                     <div style=" font-size: 16px; margin-right: 8px ">
-                        <input type="text"  name="search" style="padding-left: 8px" placeholder="Nhập từ khóa"/>
+                        <input type="text" name="keyword" style="padding-left: 8px" placeholder="Nhập từ khóa"/>
                     </div>
                     <label style="margin-right: 8px">
-                        <input type="radio" name="title" value="title"> Tiêu đề
+                        <input type="radio" name="title" > Tiêu đề
                     </label>
                     <label>
-                        <input type="radio" name="author" value="author"> Tác giả
+                        <input type="radio" name="author"> Tác giả
                     </label>
                     <button type="submit" style=" margin-left: 8px; background-color: #ddd; border: none; height: 30px;  border-radius: 4px; font-size: 16px">
                         Tìm kiếm
                     </button>
+
                 </form>
 
             </div>

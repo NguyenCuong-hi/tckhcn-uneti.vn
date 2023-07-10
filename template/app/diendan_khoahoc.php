@@ -86,13 +86,14 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                 </button>
             </div>
             <div>
+                <?php foreach ($data as $datas): ?>
                 <div style="font-size: 16px; font-weight: 500; border-bottom: 2px dotted red">
-                    <span><a style=" font-weight: 600; font-size: 18px" href="#">Nghiên cứ khảo sát đặc trung của vật liệu Graphene Oxit chế tạo bằng phương php điện hóa</a></span>
+                    <span><a style=" font-weight: 600; font-size: 18px" href="#"><?php echo $datas['title']?></a></span>
                     <div style=" margin-bottom: 8px">
                         <ul style="list-style-type: square; margin-bottom: 8px">
-                            <li>Số tạp chí: 31</li>
-                            <li>Tác giả: Hoàng Văn Tuấn, Nguyễn Văn Cường</li>
-                            <li>Tạp chí xuất bản</li>
+                            <li>Số tạp chí: <?php echo $datas['code_name']?>></li>
+                            <li>Tác giả: <?php echo $datas['author_name']?></li>
+                            <li>Tạp chí xuất bản: <?php echo $datas['cat_name']?></li>
                             <li><a href="#">Tóm tắt</a></li>
                         </ul>
                     </div>
@@ -100,80 +101,11 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                         foorter
                     </div>
                 </div>
-
-                <div style="font-size: 16px; font-weight: 500; border-bottom: 2px dotted red">
-                    <span><a style=" font-weight: 600; font-size: 18px" href="#">Nghiên cứ khảo sát đặc trung của vật liệu Graphene Oxit chế tạo bằng phương php điện hóa</a></span>
-                    <div style=" margin-bottom: 8px">
-                        <ul style="list-style-type: square; margin-bottom: 8px">
-                            <li>Số tạp chí: 31</li>
-                            <li>Tác giả: Hoàng Văn Tuấn, Nguyễn Văn Cường</li>
-                            <li>Tạp chí xuất bản</li>
-                            <li><a href="#">Tóm tắt</a></li>
-                        </ul>
-                    </div>
-                    <div style="text-align: end; margin-bottom: 8px">
-                        foorter
-                    </div>
-                </div>
-                <div style="font-size: 16px; font-weight: 500; border-bottom: 2px dotted red">
-                    <span><a style=" font-weight: 600; font-size: 18px" href="#">Nghiên cứ khảo sát đặc trung của vật liệu Graphene Oxit chế tạo bằng phương php điện hóa</a></span>
-                    <div style=" margin-bottom: 8px">
-                        <ul style="list-style-type: square; margin-bottom: 8px">
-                            <li>Số tạp chí: 31</li>
-                            <li>Tác giả: Hoàng Văn Tuấn, Nguyễn Văn Cường</li>
-                            <li>Tạp chí xuất bản</li>
-                            <li><a href="#">Tóm tắt</a></li>
-                        </ul>
-                    </div>
-                    <div style="text-align: end; margin-bottom: 8px">
-                        foorter
-                    </div>
-                </div>
-                <div style="font-size: 16px; font-weight: 500; border-bottom: 2px dotted red">
-                    <span><a style=" font-weight: 600; font-size: 18px" href="#">Nghiên cứ khảo sát đặc trung của vật liệu Graphene Oxit chế tạo bằng phương php điện hóa</a></span>
-                    <div style=" margin-bottom: 8px">
-                        <ul style="list-style-type: square; margin-bottom: 8px">
-                            <li>Số tạp chí: 31</li>
-                            <li>Tác giả: Hoàng Văn Tuấn, Nguyễn Văn Cường</li>
-                            <li>Tạp chí xuất bản</li>
-                            <li><a href="#">Tóm tắt</a></li>
-                        </ul>
-                    </div>
-                    <div style="text-align: end; margin-bottom: 8px">
-                        foorter
-                    </div>
-                </div>
-                <div style="font-size: 16px; font-weight: 500; border-bottom: 2px dotted red">
-                    <span><a style=" font-weight: 600; font-size: 18px" href="#">Nghiên cứ khảo sát đặc trung của vật liệu Graphene Oxit chế tạo bằng phương php điện hóa</a></span>
-                    <div style=" margin-bottom: 8px">
-                        <ul style="list-style-type: square; margin-bottom: 8px">
-                            <li>Số tạp chí: 31</li>
-                            <li>Tác giả: Hoàng Văn Tuấn, Nguyễn Văn Cường</li>
-                            <li>Tạp chí xuất bản</li>
-                            <li><a href="#">Tóm tắt</a></li>
-                        </ul>
-                    </div>
-                    <div style="text-align: end; margin-bottom: 8px">
-                        foorter
-                    </div>
-                </div>
-                <div style="font-size: 16px; font-weight: 500; border-bottom: 2px dotted red">
-                    <span><a style=" font-weight: 600; font-size: 18px" href="#">Nghiên cứ khảo sát đặc trung của vật liệu Graphene Oxit chế tạo bằng phương php điện hóa</a></span>
-                    <div style=" margin-bottom: 8px">
-                        <ul style="list-style-type: square; margin-bottom: 8px">
-                            <li>Số tạp chí: 31</li>
-                            <li>Tác giả: Hoàng Văn Tuấn, Nguyễn Văn Cường</li>
-                            <li>Tạp chí xuất bản</li>
-                            <li><a href="#">Tóm tắt</a></li>
-                        </ul>
-                    </div>
-                    <div style="text-align: end; margin-bottom: 8px">
-                        foorter
-                    </div>
-                </div>
+                <?php endforeach; ?>
 
             </div>
-        </div>
+
+    </div>
 
         <div class="img_lienket" style="width: 20%; padding-left: 32px">
             <?php foreach ($get_image_sidebar as $image): ?>
