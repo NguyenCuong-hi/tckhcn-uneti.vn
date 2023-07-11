@@ -34,7 +34,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                     <span><a style=" font-weight: 600; font-size: 18px" href="#"><?php echo $datas['title']?></a></span>
                     <div style=" margin-bottom: 8px">
                         <ul style="list-style-type: square; margin-bottom: 8px">
-                            <li>Số tạp chí: <?php echo $datas['code_name']?>></li>
+                            <li>Số tạp chí: <?php echo $datas['code_name']?></li>
                             <li>Tác giả: <?php echo $datas['author_name']?></li>
                             <li>Tạp chí xuất bản: <?php echo $datas['cat_name']?></li>
                             <li><a href="#">Tóm tắt</a></li>

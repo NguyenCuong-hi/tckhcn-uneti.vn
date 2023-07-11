@@ -39,7 +39,7 @@ class ScienceTechController
 
         $get_image_sidebar = $db->select('SELECT * FROM banners WHERE id IN (10, 11, 12)');
 
-        $get_icon = $db->select("SELECT image FROM banners WHERE  id  = ");
+        $get_icon = $db->select("SELECT image FROM banners WHERE  id  = 18");
 
         require_once (BASE_PATH . '/template/app/khoahoc_congnghe.php');
     }
