@@ -2,6 +2,9 @@
 
 </html>
 <?php
+
+use App\SocioEconomicController;
+
 require_once(BASE_PATH . '/template/app/layouts/header.php');
 
 ?>
@@ -28,7 +31,9 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                 </form>
 
             </div>
-            <?php foreach ($data_ as $datas): ?>
+
+<!--            Hiển thị data ra màn hình -->
+            <?php foreach ($data as $datas): ?>
                 <div>
                     <div style="font-size: 16px; font-weight: 500; border-bottom: 2px dotted red">
                     <span>
@@ -38,7 +43,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                         <div style=" margin-bottom: 8px">
                             <ul style="list-style-type: square; margin-bottom: 8px">
                                 <li>Số tạp chí: <?php echo $datas['code_name'] ?></li>
-                                <li>Tác giả: <?php echo $datas['author_name']?></li>
+                                <li>Tác giả: <?php echo $datas['author_name'] ?></li>
                                 <li>Tạp chí xuất bản: <?php echo $datas['cat_name'] ?></li>
                                 <li><a href="#">Tóm tắt</a></li>
                             </ul>
@@ -55,7 +60,8 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                     </div>
 
                 </div>
-            <?php endforeach;?>
+            <?php endforeach; ?>
+
         </div>
 
         <div class="img_lienket" style="width: 20%; padding-left: 32px">
