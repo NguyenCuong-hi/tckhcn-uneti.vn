@@ -16,7 +16,7 @@ class ScienceForumController
         $data = $db->select('SELECT posts.*, author.fullname AS author_name , categories.name as cat_name, categories.code_name as code_name
                      FROM posts 
                      INNER JOIN author ON posts.author_id = author.id
-					 INNER JOIN categories ON posts.cat_id = categories.id
+					 INNER JOIN categories ON posts.cat_id = categories.id WHERE type = 3;
 					 ');
 
         require_once (BASE_PATH. '/template/app/diendan_khoahoc.php');

@@ -65,18 +65,14 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                     <h3 style="text-align: center; text-transform: uppercase; color: #3734ea;font-weight: 700; font-size: 30px;">
                         Giới thiệu</h3>
 
-<!--                    --><?php //foreach ($get_image_gioithieu as $image_gioithieu): ?>
+                    <?php foreach ($get_url_image as $image_gioithieu): ?>
                     <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
 
-                        <img style="border-radius: 5px; max-width: 580px;" src=""
+                        <img style="border-radius: 5px;max-width: 200px;max-height: 121px;" src="<?php echo $image_gioithieu['image']?>"
                              alt="Giới thiệu">
 
                     </div>
-<!--                    --><?php //endforeach; ?>
-                    <div style="margin-bottom: 70px; display: flex; justify-content:  center; align-items: center;">
-                        <img style="border-radius: 5px; max-width: 580px; margin-bottom: 15px;"
-                             src="../../../public/banner-image/gt3.png" alt="Giới thiệu">
-                    </div>
+                    <?php endforeach; ?>
 
                 </div>
                 <!-- Cột thông báo -->
@@ -84,15 +80,16 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
                     <h3 style="text-align: center; text-transform: uppercase; color: #3734ea;font-weight: 700; font-size: 30px;">
                         Thông báo</h3>
-                    <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
-                        <img style="border-radius: 5px; max-width: 580px;" src="../../../public/banner-image/gt3.png"
-                             alt="Giới thiệu">
 
-                    </div>
-                    <div style="margin-bottom: 70px; display: flex; justify-content:  center; align-items: center;">
-                        <img style="border-radius: 5px; max-width: 580px; margin-bottom: 15px;"
-                             src="../../../public/banner-image/gt3.png" alt="Giới thiệu">
-                    </div>
+                    <?php foreach ($get_url_thongbao as $image_thongbao): ?>
+                        <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
+
+                            <img style="border-radius: 5px;max-width: 200px;max-height: 121px;" src="<?php echo $image_gioithieu['image']?>"
+                                 alt="Giới thiệu">
+
+                        </div>
+                    <?php endforeach; ?>
+
 
                 </div>
                 <!-- Cột sự kiện -->
@@ -100,15 +97,14 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
                     <h3 style="text-align: center; text-transform: uppercase; color: #3734ea;font-weight: 700; font-size: 30px;">
                         Sự kiện</h3>
-                    <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
-                        <img style="border-radius: 5px; max-width: 580px;" src="../../../public/banner-image/gt3.png"
-                             alt="Giới thiệu">
+                    <?php foreach ($get_url_sukien as $image_sukien): ?>
+                        <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
 
-                    </div>
-                    <div style="margin-bottom: 70px; display: flex; justify-content:  center; align-items: center;">
-                        <img style="border-radius: 5px; max-width: 580px; margin-bottom: 15px;"
-                             src="../../../public/banner-image/gt3.png" alt="Giới thiệu">
-                    </div>
+                            <img style="border-radius: 5px;max-width: 200px;max-height: 121px;" src="<?php echo $image_sukien['image']?>"
+                                 alt="Giới thiệu">
+
+                        </div>
+                    <?php endforeach; ?>
 
                 </div>
             </div>
@@ -116,10 +112,14 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                 <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">
                     <h3 style="text-align: center; text-transform: uppercase; color: #3734ea;font-weight: 700; font-size: 30px;">
                         Gửi bài</h3>
-                    <div style="display: flex; justify-content:  center; align-items: center;">
-                        <img style="max-width: 580px;margin-bottom: 15px;" src="../../../public/banner-image/gt3.png"
-                             alt="Sự kiện">
-                    </div>
+                    <?php foreach ($get_url_guibai as $image_guibai): ?>
+                        <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
+
+                            <img style="border-radius: 5px;max-width: 200px;max-height: 121px;" src="<?php echo $image_guibai['image']?>"
+                                 alt="Giới thiệu">
+
+                        </div>
+                    <?php endforeach; ?>
                 </div>
                 <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">
                 </div>
