@@ -41,8 +41,9 @@
 
         <div class="form-group">
             <label for="published_at">published at</label>
-            <input type="text" class="form-control d-none" id="published_at" name="published_at">
-            <input type="text" class="form-control" id="published_at_view" required autofocus>
+            <input type="text" id="published_at" name="published_at" class="form-control"  autofocus>
+            <!-- <input type="text" class="form-control d-none" id="published_at" name="published_at">
+            <input type="text" class="form-control" id="published_at_view" required autofocus> -->
         </div>
 
         <div class="form-group">
