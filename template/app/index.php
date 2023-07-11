@@ -1,3 +1,4 @@
+
 <?php
 require_once(BASE_PATH . '/template/app/layouts/header.php');
 ?>
@@ -48,85 +49,27 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 }
 </style>
 
-    <style>
-        .menu_right{
-            list-style: none;
-            padding: 10px;
-        }
-        .menu_right a{
-            text-decoration: none;
-            color: #fff;
-            background-color: #3498db;
-            padding: 20px 27px;
-            border-radius: 5px;
-            margin-bottom: 2%;
-            text-align: center;
-            font-size: medium;
-        }
-
-    </style>
-
-    <style>
-        .menu_right {
-            display: flex;
-            padding-right: 32px;
-            width: 20%;
-            flex-direction: column;
-            box-sizing: border-box;
-            padding: 8px;
-            color: white;
-            font-size: 12px;
-            font-weight: 700;
-            color: white;
-        }
-
-        .menu_right > div {
-            width: 100%;
-            margin: 8px 0;
-        }
-
-        .menu_right button {
-            color: white;
-            font-weight: 700;
-            border-radius: 8px;
-            background-color: #348FDE;
-            width: 100%;
-            border: none;
-            padding: 18px 18px;
-        }
-
-        /* Responsive */
-        @media screen and (max-width: 768px) {
-            .menu_right {
-                width: 100%;
-                padding-right: 0;
-            }
-        }
-    </style>
 
     <div class="body_getdata" style="display: flex;  margin-top: 30px; margin-right: 32px">
-        <div class="menu_right">
-            <a href="<?= url('/')?>">Trang chủ</a>
-            <a href="<?= url('khoahoccongnghe')?>">Khoa học - công nghệ</a>
-            <a href="<?= url('kinhtexahoi')?>">Kinh tế- xã hội</a>
-            <a href="<?= url('diendankhoahoc')?>">Diễn đàn khoa học</a>
-            <a href="<?= url('thongtintraodoi')?>">Thông tin trao đổi</a>
-            <a href="<?= url('lienhe')?>">Liên hệ</a>
-        </div>
+        <?php require_once (BASE_PATH . '/template/app/layouts/menuleft.php')?>
 
         <!-- _________________________________________________________________________________ -->
-        <div style="width: 60%; border: 1px solid #ddd; margin: 0 64px; padding: 4px; box-sizing: border-box">
+        <div style="width: 60%; margin: 0 64px; padding: 4px; box-sizing: border-box">
             <div style="display: flex; flex: 1; justify-content: space-between">
                 <!-- Cột giới thiệu -->
                 <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">
 
                     <h3 style="text-align: center; text-transform: uppercase; color: #3734ea;font-weight: 700; font-size: 30px;">
                         Giới thiệu</h3>
+
+<!--                    --><?php //foreach ($get_image_gioithieu as $image_gioithieu): ?>
                     <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
-                        <img style="border-radius: 5px; max-width: 580px;" src="<?php echo $get_image_body_gioithieu['image'];?>>"
+
+                        <img style="border-radius: 5px; max-width: 580px;" src=""
                              alt="Giới thiệu">
 
                     </div>
+<!--                    --><?php //endforeach; ?>
                     <div style="margin-bottom: 70px; display: flex; justify-content:  center; align-items: center;">
                         <img style="border-radius: 5px; max-width: 580px; margin-bottom: 15px;"
                              src="../../../public/banner-image/gt3.png" alt="Giới thiệu">

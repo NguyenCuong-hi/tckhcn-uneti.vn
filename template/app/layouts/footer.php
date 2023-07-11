@@ -6,7 +6,7 @@
    ?>
    <style>
      .footer-area {
- background-color: #0000FF;
+ background-color: #3498db;
   padding: 60px 0;
   color: aliceblue;
   /* position: fixed;

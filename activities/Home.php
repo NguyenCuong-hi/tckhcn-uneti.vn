@@ -109,9 +109,9 @@ class Home{
     
             $sidebarBanner= $db->select("SELECT * FROM `banners` LIMIT 0,1;")->fetch();
             $bodyBanner= $db->select("SELECT * FROM `banners` ORDER BY created_at DESC LIMIT 0,1;")->fetch();
-            $get_image_body_gioithieu = $db->select('SELECT * FROM `banners` WHERE id = 10;')->fetch();
-            $get_image_body_thongbao = $db->select('SELECT * FROM `banners` WHERE id = 10;')->fetch();
-            $get_image_body_sukien = $db->select('SELECT * FROM `banners` WHERE id = 10;')->fetch();
+            $get_image_gioithieu = $db->select("SELECT * FROM `banners` WHERE id = 15 ");
+            $get_image_thongbao = $db->select('SELECT * FROM `banners` WHERE id = 18 AND banners.type = 2;')->fetch();
+            $get_image_ukien = $db->select('SELECT * FROM `banners` WHERE id = 20 AND banners.type = 2;')->fetch();
 
             require_once (BASE_PATH . "/template/app/show-category.php");
         }

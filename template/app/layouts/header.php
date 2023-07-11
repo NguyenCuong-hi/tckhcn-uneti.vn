@@ -34,7 +34,7 @@ use Database\DataBase;
     <link rel="stylesheet" href="<?=asset('public/app/css/main2.css')?>">
 </head>
 
-<body>
+<body style="width: 80%; margin: 0 auto ">
     <header>
 
         <style>
@@ -76,9 +76,10 @@ use Database\DataBase;
                 background-color: #348FDE;
                 width: 100%;
                 border: none;
-                padding: 8px 18px;
+                margin: 0 4px 0 4px;
+                padding: 16px 8px;
                 text-align: center;
-                font-size: larger;
+                font-size: 14px;
             }
 
             .footer {
@@ -112,6 +113,8 @@ use Database\DataBase;
                 font-size: 12px;
                 font-family: Inter;
                 font-weight: 700;
+
+
             }
         </style>
 
@@ -128,12 +131,12 @@ use Database\DataBase;
             <?php endforeach; ?>
         </div>
 
-        <div class="header-top-right">
-            <ul class="login-register">
-                <li><a href="<?= url('login') ?>"><span class="lnr">Login</span></a></li>
-                <li><a href="<?= url('register') ?>"><span class="lnr">Register</span></a></li>
-            </ul>
-        </div>
+<!--        <div class="header-top-right">-->
+<!--            <ul class="login-register">-->
+<!--                <li><a href="--><?php //= url('login') ?><!--"><span class="lnr">Login</span></a></li>-->
+<!--                <li><a href="--><?php //= url('register') ?><!--"><span class="lnr">Register</span></a></li>-->
+<!--            </ul>-->
+<!--        </div>-->
 
         <div class="menu">
             <a href="<?= url('/')?>">Trang chủ</a>

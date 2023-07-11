@@ -1,78 +1,20 @@
+<html>
+
+</html>
 <?php
 require_once(BASE_PATH . '/template/app/layouts/header.php');
 
 ?>
-    <style>
-        .menu_right {
-            display: flex;
-            padding-right: 32px;
-            width: 20%;
-            flex-direction: column;
-            box-sizing: border-box;
-            padding: 8px;
-            color: white;
-            font-size: 12px;
-            font-weight: 700;
-            color: white;
-        }
 
-        .menu_right > div {
-            width: 100%;
-            margin: 8px 0;
-        }
-
-        .menu_right button {
-            color: white;
-            font-weight: 700;
-            border-radius: 8px;
-            background-color: #348FDE;
-            width: 100%;
-            border: none;
-            padding: 18px 18px;
-        }
-
-        /* Responsive */
-        @media screen and (max-width: 768px) {
-            .menu_right {
-                width: 100%;
-                padding-right: 0;
-            }
-        }
-    </style>
-
-    <style>
-        .menu_right{
-            list-style: none;
-            padding: 10px;
-        }
-        .menu_right a{
-            text-decoration: none;
-            color: #fff;
-            background-color: #3498db;
-            padding: 20px 27px;
-            border-radius: 5px;
-            margin-bottom: 2%;
-            text-align: center;
-            font-size: medium;
-        }
-
-    </style>
     <div style="display: flex;  margin-top: 30px; margin-right: 32px">
-        <div class="menu_right">
-            <a href="<?= url('/')?>">Trang chủ</a>
-            <a href="<?= url('khoahoccongnghe')?>">Khoa học - công nghệ</a>
-            <a href="<?= url('kinhtexahoi')?>">Kinh tế- xã hội</a>
-            <a href="<?= url('diendankhoahoc')?>">Diễn đàn khoa học</a>
-            <a href="<?= url('thongtintraodoi')?>">Thông tin trao đổi</a>
-            <a href="<?= url('lienhe')?>">Liên hệ</a>
-        </div>
 
-        <div style="width: 60%; display: flex; border: 1px solid #ddd; flex-direction: column; margin: 0 64px;
+        <?php require_once (BASE_PATH . '/template/app/layouts/menuleft.php')?>
+        <div style="width: 60%; display: flex; border-left: 1px solid #ddd; flex-direction: column; margin: 0 64px;
          padding: 4px; box-sizing: border-box">
             <div style="width: 100%; display: flex; justify-content: center">
-                <form style="display: flex; margin-right: 8px">
+                <form method="GET" action="<?=url('diendankhoahoc')?>" style="display: flex; margin-right: 8px ; width: 100%;">
                     <div style=" font-size: 16px; margin-right: 8px ">
-                        <input style="padding-left: 8px" placeholder="Nhập từ khóa"/>
+                        <input type="text" name="keyword" style="padding-left: 8px" placeholder="Nhập từ khóa"/>
                     </div>
                     <label style="margin-right: 8px">
                         <input type="radio" name="title" value="title"> Tiêu đề
@@ -80,10 +22,11 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                     <label>
                         <input type="radio" name="author" value="author"> Tác giả
                     </label>
+                    <button style=" margin-left: 8px; background-color: #ddd; border: none; height: 30px;  border-radius: 4px; font-size: 16px">
+                        Tìm kiếm
+                    </button>
                 </form>
-                <button style=" margin-left: 8px; background-color: #ddd; border: none; height: 30px;  border-radius: 4px; font-size: 16px">
-                    Tìm kiếm
-                </button>
+
             </div>
             <div>
                 <?php foreach ($data as $datas): ?>
@@ -97,8 +40,14 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                             <li><a href="#">Tóm tắt</a></li>
                         </ul>
                     </div>
-                    <div style="text-align: end; margin-bottom: 8px">
-                        foorter
+                    <div class="footer-element" style="text-align: end; margin-bottom: 8px; display: flex;
+    justify-content: flex-end;">
+                        <div class="icon" style="margin-right: 12px;">
+                            <img style="max-width: 24px; max-height: 12px" src="../../public/banner-image/dowload.png" alt="Download Icon" />
+                        </div>
+                        <div class="icon">
+                            <img style="max-width: 24px; max-height: 12px" src="../../public/banner-image/eyes.png" alt="Eyes Icon" />
+                        </div>
                     </div>
                 </div>
                 <?php endforeach; ?>
