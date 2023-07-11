@@ -1,5 +1,9 @@
 <?php
+
+use App\SocioEconomicController;
+
 require_once(BASE_PATH . '/template/app/layouts/header.php');
+//include_once 'activities/SocioEconomicController.php';
 
 ?>
 
@@ -42,11 +46,12 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
     </style>
 
     <style>
-        .menu_right{
+        .menu_right {
             list-style: none;
             padding: 10px;
         }
-        .menu_right a{
+
+        .menu_right a {
             text-decoration: none;
             color: #fff;
             background-color: #3498db;
@@ -61,33 +66,38 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
     <div class="body_getdata" style="display: flex;  margin-top: 30px; margin-right: 32px">
         <div class="menu_right">
-            <a href="<?= url('/')?>">Trang chủ</a>
-            <a href="<?= url('khoahoccongnghe')?>">Khoa học - công nghệ</a>
-            <a href="<?= url('kinhtexahoi')?>">Kinh tế- xã hội</a>
-            <a href="<?= url('diendankhoahoc')?>">Diễn đàn khoa học</a>
-            <a href="<?= url('thongtintraodoi')?>">Thông tin trao đổi</a>
-            <a href="<?= url('lienhe')?>">Liên hệ</a>
+            <a href="<?= url('/') ?>">Trang chủ</a>
+            <a href="<?= url('khoahoccongnghe') ?>">Khoa học - công nghệ</a>
+            <a href="<?= url('kinhtexahoi') ?>">Kinh tế- xã hội</a>
+            <a href="<?= url('diendankhoahoc') ?>">Diễn đàn khoa học</a>
+            <a href="<?= url('thongtintraodoi') ?>">Thông tin trao đổi</a>
+            <a href="<?= url('lienhe') ?>">Liên hệ</a>
         </div>
 
         <div class="body_data" style="width: 60%; display: flex; border: 1px solid #ddd; flex-direction: column; margin: 0 64px;
          padding: 4px; box-sizing: border-box">
+
             <div style="width: 100%; display: flex; justify-content: center">
-                <form style="display: flex; margin-right: 8px">
+                <form method="GET" action="<?= url('kinhtexahoi') ?>" style="display: flex; margin-right: 8px">
                     <div style=" font-size: 16px; margin-right: 8px ">
-                        <input style="padding-left: 8px" placeholder="Nhập từ khóa"/>
+                        <input type="text" name="keyword" style="padding-left: 8px" placeholder="Nhập từ khóa"/>
                     </div>
                     <label style="margin-right: 8px">
-                        <input type="radio" name="title" value="title"> Tiêu đề
+                        <input type="radio" name="title"> Tiêu đề
                     </label>
                     <label>
-                        <input type="radio" name="author" value="author"> Tác giả
+                        <input type="radio" name="author"> Tác giả
                     </label>
+                    <button type="submit"
+                            style=" margin-left: 8px; background-color: #ddd; border: none; height: 30px;  border-radius: 4px; font-size: 16px">
+                        Tìm kiếm
+                    </button>
                 </form>
-                <button style=" margin-left: 8px; background-color: #ddd; border: none; height: 30px;  border-radius: 4px; font-size: 16px">
-                    Tìm kiếm
-                </button>
+
             </div>
-            <?php foreach ($data_ as $datas): ?>
+
+<!--            Hiển thị data ra màn hình -->
+            <?php foreach ($data as $datas): ?>
                 <div>
                     <div style="font-size: 16px; font-weight: 500; border-bottom: 2px dotted red">
                     <span>
@@ -97,7 +107,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                         <div style=" margin-bottom: 8px">
                             <ul style="list-style-type: square; margin-bottom: 8px">
                                 <li>Số tạp chí: <?php echo $datas['code_name'] ?></li>
-                                <li>Tác giả: <?php echo $datas['author_name']?></li>
+                                <li>Tác giả: <?php echo $datas['author_name'] ?></li>
                                 <li>Tạp chí xuất bản: <?php echo $datas['cat_name'] ?></li>
                                 <li><a href="#">Tóm tắt</a></li>
                             </ul>
@@ -108,12 +118,13 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                     </div>
 
                 </div>
-            <?php endforeach;?>
+            <?php endforeach; ?>
+
         </div>
 
         <div class="img_lienket" style="width: 20%; padding-left: 32px">
             <?php foreach ($get_image_sidebar as $image): ?>
-                <img style="width: 100%" src="<?php echo $image['image'] ;?>">
+                <img style="width: 100%" src="<?php echo $image['image']; ?>">
             <?php endforeach; ?>
         </div>
 
