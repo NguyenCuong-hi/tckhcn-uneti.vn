@@ -38,7 +38,7 @@ require_once BASE_PATH . '/template/admin/layouts/head-tag.php';
                     </select>
         </div>
 
-        <button type="submit" class="btn btn-primary btn-sm">store</button>
+        <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
         </form>
         </section>
         </section>

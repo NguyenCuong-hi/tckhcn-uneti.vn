@@ -11,10 +11,10 @@
                 <section class="col-12">
                     <form method="post" action="<?= url('admin/category/store') ?>">
                 <div class="form-group">
-                    <label for="name">Title</label>
+                    <label for="name">Thê loại</label>
                     <input type="text" class="form-control" id="name" name="name" placeholder="Enter name ...">
                 </div>
-                <button type="submit" class="btn btn-primary btn-sm">store</button>
+                <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
                 </form>
                 </section>
 

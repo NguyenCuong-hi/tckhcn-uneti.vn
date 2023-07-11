@@ -4,7 +4,7 @@
 
 ?>
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h5"><i class="fas fa-newspaper"></i> Categories</h1>
+        <h1 class="h5"><i class="fas fa-newspaper"></i> Thể loại</h1>
         <div class="btn-toolbar mb-2 mb-md-0">
             <a role="button" href="<?= url('admin/category/create') ?>" class="btn btn-sm btn-success">
                 create
@@ -13,7 +13,7 @@
     </div>
     <div class="table-responsive">
         <table class="table table-striped table-sm">
-            <caption>List of categories</caption>
+            <caption>Danh sách thể loại</caption>
             <thead>
                 <tr>
                     <th>#</th>
