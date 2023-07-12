@@ -171,8 +171,11 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                     <h3 style="text-align: center; text-transform: uppercase; color: #3734ea;font-weight: 700; font-size: 30px;">
                         Gửi bài</h3>
                     <div style="display: flex; justify-content:  center; align-items: center;">
-                        <img style="max-width: 580px;margin-bottom: 15px;" src="../../../public/banner-image/gt3.png"
-                             alt="Sự kiện">
+                        <a href="<?= url("guibai") ?>">
+                            <img style="max-width: 580px;margin-bottom: 15px;" src="../../../public/banner-image/gt3.png"
+                                 alt="Sự kiện">
+                        </a>
+
                     </div>
                 </div>
                 <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">

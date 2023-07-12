@@ -1,9 +1,6 @@
 <?php
 
-use App\SocioEconomicController;
-
 require_once(BASE_PATH . '/template/app/layouts/header.php');
-//include_once 'activities/SocioEconomicController.php';
 
 ?>
 
