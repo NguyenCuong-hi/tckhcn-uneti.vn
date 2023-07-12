@@ -17,26 +17,23 @@ class ScienceForumController
         $current_page =!empty($_GET['page']) ? $_GET['page'] : 1;
         $off_set = ( $current_page -1)* $item_per_page;
 
-        $data = $db->select('SELECT posts.*, author.fullname AS author_name , categories.name as cat_name, categories.code_name as code_name
-                     FROM posts 
+        $data = $db->select('SELECT posts.*, author.fullname AS author_name, 
+                                   categories.name as cat_name, 
+                                   categories.code_name as code_name FROM posts 
                      INNER JOIN author ON posts.author_id = author.id
-					 INNER JOIN categories ON posts.cat_id = categories.id LIMIT '.$item_per_page.' OFFSET '.$off_set.'
+					 INNER JOIN categories ON posts.cat_id = categories.id WHERE categories.type = 3 ORDER BY posts.created_at DESC 
+					 LIMIT '.$item_per_page.' OFFSET '.$off_set.'
 					 ');
 
-                     $result = $db->select('SELECT COUNT(*) AS total_count
-                     FROM posts 
+        $result = $db->select('SELECT COUNT(*) AS total_count FROM posts 
                      INNER JOIN author ON posts.author_id = author.id 
-                     INNER JOIN categories ON posts.cat_id = categories.id;');
+                     INNER JOIN categories ON posts.cat_id = categories.id WHERE categories.type = 3;');
 
-
-    $row = $result->fetch();
-
-
+        $row = $result->fetch();
         $total_count = $row['total_count'];
 
-
-               $totalRecords = $row['total_count'];
-         $totalPages = ceil($totalRecords/$item_per_page);
-        require_once (BASE_PATH. '/template/app/diendan_khoahoc.php');
+        $totalRecords = $row['total_count'];
+        $totalPages = ceil($totalRecords / $item_per_page);
+        require_once(BASE_PATH . '/template/app/diendan_khoahoc.php');
     }
 }

@@ -82,7 +82,7 @@
     <div style="width:70%; margin-left: 5%;">
           <div style = " display: flex;">
             <div >
-                <img src="https://kenh14cdn.com/203336854389633024/2022/1/23/27161008149261824141104913946148327843418738n-16429072525001405051026.jpg" alt="">
+                <img src="/OnlineNewsSite/public/banner-image/logo.png" alt="">
         </div>
         <div >
         <p style="display: flex; flex-direction: column; justify-content: center; align-items: center;">

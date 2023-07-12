@@ -12,11 +12,13 @@ class SocioEconomicController
         $db = new DataBase();
         $setting = $db->select('SELECT * FROM websetting')->fetch();
 
-        $query = 'SELECT posts.*, author.fullname AS author_name , categories.name as cat_name, categories.code_name as code_name
+        $query = 'SELECT posts.*, author.fullname AS author_name, 
+                       categories.name as cat_name, 
+                       categories.code_name as code_name
                      FROM posts
                      INNER JOIN author ON posts.author_id = author.id
 					 INNER JOIN categories ON posts.cat_id = categories.id
-					 WHERE categories.type = 2';
+					 WHERE categories.type = 2 ORDER BY posts.created_at DESC';
 
         $params = [];
 

@@ -49,10 +49,10 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                     <div class="footer-element" style="text-align: end; margin-bottom: 8px; display: flex;
     justify-content: flex-end;">
                         <div class="icon" style="margin-right: 12px;">
-                            <img style="max-width: 24px; max-height: 12px" src="../../public/banner-image/dowload.png" alt="Download Icon" />
+                            <img style="max-width: 24px; max-height: 19px ;margin: -4px 4px 2px;" src="/OnlineNewsSite/public/banner-image/dowload.png" alt="Download Icon" />
                         </div>
                         <div class="icon">
-                            <img style="max-width: 24px; max-height: 12px" src="../../public/banner-image/eyes.png" alt="Eyes Icon" />
+                            <img style="max-width: 24px; max-height: 12px" src="/OnlineNewsSite/public/banner-image/eyes.png" alt="Eyes Icon" />
                         </div>
                     </div>
 
@@ -69,7 +69,9 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
         </div>
 
     </div>
-
+<?php
+require_once (BASE_PATH . '/template/app/layouts/phantrang.php')
+?>
 
 <?php
 require_once(BASE_PATH . '/template/app/layouts/footer.php');
