@@ -48,6 +48,7 @@ require_once "activities/ScienceForumController.php";
 require_once "activities/ExchageInfomation.php";
 require_once "activities/ContactController.php";
 require_once "activities/SocioEconomicController.php";
+require_once "activities/NoticeController.php";
 
 //helpers
 
@@ -285,6 +286,7 @@ uri('/kinhtexahoi', 'App\SocioEconomicController', 'show');
 uri('/diendankhoahoc', 'App\ScienceForumController', 'index');
 uri('/thongtintraodoi', 'App\ExchageInfomation', 'index');
 uri('/lienhe', 'App\ContactController', 'index');
+uri('/thongbao', 'App\NoticeController', 'index');
 
 //uri('/khoahoccongnghe/search', 'App\ScienceTechController', 'search');
 
