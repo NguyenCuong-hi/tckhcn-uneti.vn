@@ -12,22 +12,33 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
     <div class="body_getdata" style="display: flex;  margin-top: 30px; margin-right: 32px">
         <?php require_once (BASE_PATH . '/template/app/layouts/menuleft.php')?>
 
-        <div class="body_data" style="width: 62%; display: flex; border-left: 1px solid #ddd; flex-direction: column; 
-         padding: 4px; box-sizing: border-box">
+        <div class="body_data" style="width: 62%; display: flex;  flex-direction: column;
+         padding: 10px 50px; box-sizing: border-box">
             <div style="width: 100%; display: flex; justify-content: center">
-                <form method="GET" action="<?=url('kinhtexahoi')?>" style="display: flex; margin-right: 8px ; width: 100%;">
-                    <div style=" font-size: 16px; margin-right: 8px ">
-                        <input type="text" name="keyword" style="padding-left: 8px" placeholder="Nhập từ khóa"/>
+                <form method="GET" action="<?= url('kinhtexahoi') ?>"
+                      style="display: flex; margin-right: 8px ; width: 100%;">
+                    <div style="display: flex; align-items: center; width: 80%;">
+                        <div style="font-size: 16px; margin-right: 8px; display: flex;
+                    flex-direction: column ; width: 100%">
+                            <input type="text" name="keyword"
+                                   style="padding-left: 8px ; width: 100%; margin: 1px 3px;"/>
+                            <button type="submit"
+                                    style=" margin-left: 3px; background-color: #ddd; border: none;
+                            height: 30px;  border-radius: 4px; font-size: 16px; width: 92px;">
+                                Tìm kiếm
+                            </button>
+                        </div>
                     </div>
-                    <label style="margin-right: 8px">
-                        <input type="radio" name="title" value="title"> Tiêu đề
-                    </label>
-                    <label>
-                        <input type="radio" name="author" value="author"> Tác giả
-                    </label>
-                    <button style=" margin-left: 8px; background-color: #ddd; border: none; height: 30px;  border-radius: 4px; font-size: 16px">
-                        Tìm kiếm
-                    </button>
+
+                    <div style="display: flex; width: 50%">
+                        <label style="margin-right: 8px; width: 50%">
+                            <input type="radio" name="title"> Tiêu đề
+                        </label>
+                        <label style="width: 50%">
+                            <input type="radio" name="author"> Tác giả
+                        </label>
+                    </div>
+
                 </form>
 
             </div>
@@ -35,13 +46,14 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 <!--            Hiển thị data ra màn hình -->
             <?php foreach ($data as $datas): ?>
                 <div>
-                    <div style="font-size: 16px; font-weight: 500; border-bottom: 2px dotted red">
+                    <div style="font-size: 16px; font-weight: 500; border-bottom: 2px dotted red;
+                border-left: 2px solid rgb(241,243,244); padding-left: 30px;">
                     <span>
                         <a style=" font-weight: 600; font-size: 18px" href="#"> <?php echo $datas['title']; ?>
                             </a>
                     </span>
                         <div style=" margin-bottom: 8px">
-                            <ul style="list-style-type: square; margin-bottom: 8px">
+                            <ul style="list-style-type: circle; margin-bottom: 8px">
                                 <li>Số tạp chí: <?php echo $datas['code_name'] ?></li>
                                 <li>Tác giả: <?php echo $datas['author_name'] ?></li>
                                 <li>Tạp chí xuất bản: <?php echo $datas['cat_name'] ?></li>
@@ -65,9 +77,9 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
         </div>
 
         <div class="img_lienket" style="width: 15%; ">
-            <?php foreach ($get_image_sidebar as $image): ?>
-                <img style="width: 100%" src="<?php echo $image['image'] ;?>">
-            <?php endforeach; ?>
+            <img style="width: 100%" src="/OnlineNewsSite/public/banner-image/bo-cong-thuong.png">
+            <img style="width: 100%" src="/OnlineNewsSite/public/banner-image/DHKTKTCN.png">
+            <img style="width: 100%" src="/OnlineNewsSite/public/banner-image/khcn.png">
         </div>
 
     </div>

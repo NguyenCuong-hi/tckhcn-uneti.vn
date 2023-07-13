@@ -158,9 +158,6 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                 <?php foreach ($posts as $datas): ?>
                     <div class="image-item">
                         <img class="image" src="<?php echo $datas['image'] ?>" alt="Nhà xuất bản 1">
-                        <div class="image-title">
-                            <p style="margin-top: 20px;"><?php echo $datas['title'] ?></p>
-                        </div>
                     </div>
                 <?php endforeach; ?>
             </div>
