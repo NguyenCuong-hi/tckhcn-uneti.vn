@@ -43,6 +43,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
             </div>
 
+
 <!--            Hiển thị data ra màn hình -->
             <?php foreach ($data as $datas): ?>
                 <div>
