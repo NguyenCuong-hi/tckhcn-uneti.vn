@@ -58,8 +58,8 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
     <div style="display: flex;  margin-top: 30px; margin-right: 32px">
 
         <?php require_once (BASE_PATH . '/template/app/layouts/menuleft.php')?>
-        <div style="width: 60%; display: flex; border-left: 1px solid #ddd; flex-direction: column; margin: 0 64px;
-         padding: 4px; box-sizing: border-box">
+        <div style="width: 62%; display: flex;  flex-direction: column;
+         padding: 42px 60px; box-sizing: border-box">
             <div style="width: 100%; display: flex; justify-content: center">
                 <form method="GET" action="<?=url('diendankhoahoc')?>" style="display: flex; margin-right: 8px ; width: 100%;">
                     <div style=" font-size: 16px; margin-right: 8px ">
@@ -78,41 +78,33 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
             </div>
             <div>
-                <?php
-               
-                 foreach ($data as $datas):
-                     
-                 ?>
-                 <div style="font-size: 16px; font-weight: 500; border-bottom: 2px dotted red">
-                     <span><a style="font-weight: 600; font-size: 18px" href="#"><?php echo $datas['title']?></a></span>
-                     <div style="margin-bottom: 8px">
-                         <ul style="list-style-type: square; margin-bottom: 8px">
-                             <li>Số tạp chí: <?php echo $datas['code_name']?></li>
-                             <li>Tác giả: <?php echo $datas['author_name']?></li>
-                             <li>Tạp chí xuất bản: <?php echo $datas['cat_name']?></li>
-                             <li><a href="#">Tóm tắt</a></li>
-                         </ul>
-                     </div>
-                     <div class="footer-element" style="text-align: end; margin-bottom: 8px; display: flex;
-                         justify-content: flex-end;">
-                         <div class="icon" style="margin-right: 12px;">
-                             <img style="max-width: 24px; max-height: 19px ;margin: -4px 4px 2px;" src="/OnlineNewsSite/public/banner-image/dowload.png" alt="Download Icon" />
-                         </div>
-                         <div class="icon">
-                             <img style="max-width: 24px; max-height: 12px" src="/OnlineNewsSite/public/banner-image/eyes.png" alt="Eyes Icon" />
-                         </div>
-                     </div>
-                 </div>
-                 <?php
-                 endforeach;           
-                 
-                  ?>
+                <?php foreach ($data as $datas): ?>
+                <div style="font-size: 16px; font-weight: 500; border-bottom: 2px dotted red; border-left: 2px solid rgb(241,243,244); padding-left: 30px;">
+                    <span><a style=" font-weight: 600; font-size: 18px" href="#"><?php echo $datas['title']?></a></span>
+                    <div style=" margin-bottom: 8px; ">
+                        <ul style="list-style-type: circle; margin-bottom: 8px">
+                            <li>Tác giả: <?php echo $datas['author_name']?></li>
+                            <li   >Tạp chí xuất bản: <?php echo $datas['cat_name']?></li>
+                            <li ><a href="#">Tóm tắt</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-element" style="text-align: end; margin-bottom: 8px; display: flex;
+    justify-content: flex-end;">
+                        <div class="icon" style="margin-right: 12px;">
+                            <img style="max-width: 24px; max-height: 12px" src="../../public/banner-image/dowload.png" alt="Download Icon" />
+                        </div>
+                        <div class="icon">
+                            <img style="max-width: 24px; max-height: 12px" src="../../public/banner-image/eyes.png" alt="Eyes Icon" />
+                        </div>
+                    </div>
+                </div>
+                <?php endforeach; ?>
 
             </div>
 
     </div>
 
-        <div class="img_lienket" style="width: 20%; padding-left: 32px">
+        <div class="img_lienket" style="width: 15%; ">
             <?php foreach ($get_image_sidebar as $image): ?>
                 <img style="width: 100%" src="<?php echo $image['image'] ;?>">
             <?php endforeach; ?>
@@ -196,7 +188,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
         <?php } ?>
     </ul>
 </div>
-   
+
 
 <?php
 require_once(BASE_PATH . '/template/app/layouts/footer.php');

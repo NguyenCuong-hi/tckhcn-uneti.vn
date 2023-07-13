@@ -2,9 +2,6 @@
 <html>
 
 </html>
-<?php
-require_once(BASE_PATH . '/template/app/layouts/header.php');
-?>
 <style>
     .image-container {
     display: flex;
@@ -21,8 +18,8 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
 .image {
     margin-top: 20px;
-    width: 180px;
-    height: 261px;
+    width: 160px;
+    height: 241px;
     cursor: pointer;
     transition: transform .2s ease-out;
     border-radius: 25px;
@@ -52,17 +49,21 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 }
 </style>
 
+<?php
+require_once(BASE_PATH . '/template/app/layouts/header.php');
+?>
+
 
     <div class="body_getdata" style="display: flex;  margin-top: 30px; margin-right: 32px">
         <?php require_once (BASE_PATH . '/template/app/layouts/menuleft.php')?>
 
         <!-- _________________________________________________________________________________ -->
-        <div style="width: 60%; margin: 0 64px; padding: 4px; box-sizing: border-box">
+        <div style="width: 62%; margin: 0; padding: 4px; box-sizing: border-box">
             <div style="display: flex; flex: 1; justify-content: space-between">
                 <!-- Cột giới thiệu -->
-                <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">
+                <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%; flex-grow: 1;">
 
-                    <h3 style="text-align: center; text-transform: uppercase; color: #3734ea;font-weight: 700; font-size: 30px;">
+                    <h3 style="text-align: center; text-transform: uppercase; color: #3734EA;font-weight: 700; font-size: 30px;">
                         Giới thiệu</h3>
 
                     <?php foreach ($get_url_image as $image_gioithieu): ?>
@@ -76,9 +77,9 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
                 </div>
                 <!-- Cột thông báo -->
-                <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">
+                <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%; flex-grow: 1;">
 
-                    <h3 style="text-align: center; text-transform: uppercase; color: #3734ea;font-weight: 700; font-size: 30px;">
+                    <h3 style="text-align: center; text-transform: uppercase; color:#3734EA;font-weight: 700; font-size: 30px;">
                         Thông báo</h3>
 
                     <?php foreach ($get_url_thongbao as $image_thongbao): ?>
@@ -93,9 +94,9 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
                 </div>
                 <!-- Cột sự kiện -->
-                <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">
+                <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%; flex-grow: 1;">
 
-                    <h3 style="text-align: center; text-transform: uppercase; color: #3734ea;font-weight: 700; font-size: 30px;">
+                    <h3 style="text-align: center; text-transform: uppercase; color: #3734EA;font-weight: 700; font-size: 30px; ">
                         Sự kiện</h3>
                     <?php foreach ($get_url_sukien as $image_sukien): ?>
                         <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
@@ -110,7 +111,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
             </div>
             <div style="display: flex; flex: 1; justify-content: space-between">
                 <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">
-                    <h3 style="text-align: center; text-transform: uppercase; color: #3734ea;font-weight: 700; font-size: 30px;">
+                    <h3 style="text-align: center; text-transform: uppercase; color: #3734EA;font-weight: 700; font-size: 30px;">
                         Gửi bài</h3>
                     <?php foreach ($get_url_guibai as $image_guibai): ?>
                         <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
@@ -130,7 +131,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
             </div>
         </div>
 
-        <div style="width: 20%; padding-left: 32px">
+        <div style="width: 15%;">
             <?php foreach ($get_image_sidebar as $image): ?>
                 <img style="width: 100%" src="<?php echo $image['image'] ;?>">
             <?php endforeach; ?>

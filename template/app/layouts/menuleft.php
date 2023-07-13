@@ -38,7 +38,7 @@ use Database\DataBase;
         .menu_left {
             display: flex;
             padding-right: 32px;
-            width: 20%;
+            width: 23%;
             flex-direction: column;
             box-sizing: border-box;
             padding: 8px;
@@ -80,14 +80,19 @@ use Database\DataBase;
         .menu_left a{
             text-decoration: none;
             color: #fff;
-            background-color: #3498db;
-            padding: 20px 27px;
+            background-color: #5B9BD5;
+            padding: 25px 10px;
             border-radius: 5px;
             margin-bottom: 2%;
-            text-align: center;
+            text-align: left;
             font-size: medium;
+            text-transform: uppercase;
+            font-size: 14px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         }
-
+        .menu_left a:hover {
+    transform: translateY(-2px) rotateX(8deg) rotateY(3deg);
+}
     </style>
 
     <div class="menu_left">

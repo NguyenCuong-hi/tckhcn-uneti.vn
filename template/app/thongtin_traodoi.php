@@ -12,7 +12,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
     <?php require_once (BASE_PATH . '/template/app/layouts/menuleft.php')?>
 
 <!-- _________________________________________________________________________________ -->
-    <div style="width: 60%; border-left: 1px solid #ddd; margin: 0 64px; padding: 4px; box-sizing: border-box">
+    <div style="width: 62%;  padding: 4px; box-sizing: border-box">
         <h3 style="text-transform: uppercase; color: #3734ea">Thể lệ bài gửi</h3>
         <div style="padding-left: 20px;">
             <p><span style="font-weight: 700;">
@@ -189,7 +189,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
         </div>
     </div>
 
-    <div class="img_lienket" style="width: 20%; padding-left: 32px">
+    <div class="img_lienket" style="width: 15%; ">
         <?php foreach ($get_image_sidebar as $image): ?>
             <img style="width: 100%" src="<?php echo $image['image'] ;?>">
         <?php endforeach; ?>
