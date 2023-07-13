@@ -7,7 +7,7 @@
    <style>
      .footer-area {
  background-color: #3498db;
-  padding: 60px 0;
+  padding: 25px 0;
   color: aliceblue;
   /* position: fixed;
   z-index:9999; */
@@ -40,9 +40,10 @@
 }
 
 .footer-area p {
-  font-size: 18px;
+  font-size: 14px;
   margin-bottom: 10px;
   font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .footer-area h3 {
@@ -130,6 +131,8 @@
     <script src="<?= asset('public/app/js/owl.carousel.min.js') ?>"></script>
     <script src="<?= asset('public/app/js/mail-script.js') ?>"></script>
     <script src="<?= asset('public/app/js/main.js') ?>"></script>
+    </div>
+  
 </body>
 
 </html>

@@ -12,7 +12,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
     <div class="body_getdata" style="display: flex;  margin-top: 30px; margin-right: 32px">
         <?php require_once (BASE_PATH . '/template/app/layouts/menuleft.php')?>
 
-        <div class="body_data" style="width: 60%; display: flex; border-left: 1px solid #ddd; flex-direction: column; margin: 0 64px;
+        <div class="body_data" style="width: 62%; display: flex; border-left: 1px solid #ddd; flex-direction: column; 
          padding: 4px; box-sizing: border-box">
             <div style="width: 100%; display: flex; justify-content: center">
                 <form method="GET" action="<?=url('kinhtexahoi')?>" style="display: flex; margin-right: 8px ; width: 100%;">
@@ -64,7 +64,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
         </div>
 
-        <div class="img_lienket" style="width: 20%; padding-left: 32px">
+        <div class="img_lienket" style="width: 15%; ">
             <?php foreach ($get_image_sidebar as $image): ?>
                 <img style="width: 100%" src="<?php echo $image['image'] ;?>">
             <?php endforeach; ?>
