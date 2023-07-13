@@ -111,9 +111,11 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                         Gửi bài</h3>
 
                         <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
+                            <a href="<?= url("guibai") ?>">
+                                <img style="border-radius: 5px;max-width: 200px;max-height: 121px;" src="./public/banner-image/guibai.png"
+                                     alt="Giới thiệu">
+                            </a>
 
-                            <img style="border-radius: 5px;max-width: 200px;max-height: 121px;" src="./public/banner-image/guibai.png"
-                                 alt="Giới thiệu">
 
                         </div>
 
