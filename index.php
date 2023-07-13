@@ -286,7 +286,7 @@ uri('/diendankhoahoc', 'App\ScienceForumController', 'index');
 uri('/thongtintraodoi', 'App\ExchageInfomation', 'index');
 uri('/lienhe', 'App\ContactController', 'index');
 
-//uri('/khoahoccongnghe/search', 'App\ScienceTechController', 'search');
+uri('/khcn/tap-chi/{id}', 'App\ViewCatalogController', 'index');
 
 echo '404 - not found';
 exit;
