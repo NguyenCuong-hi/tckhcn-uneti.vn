@@ -15,7 +15,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
     ?>
     <style>
         .body_data {
-            style =
+            
             width: 60%;
             display: flex;
             flex-direction: column;
