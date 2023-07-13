@@ -6,7 +6,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 ?>
 
 
-<div class="body_getdata" style="display: flex; margin-top: 30px; margin-right: 32px">
+<div class="body_getdata" style="display: flex; margin-top: 30px; margin-right: 32px;">
 
     <?php require_once(BASE_PATH . '/template/app/layouts/menuleft.php') ?>
 
@@ -62,11 +62,11 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                     display: flex; justify-content: flex-end;">
                         <div class="icon" style="margin-right: 12px;">
                             <img style="max-width: 24px; max-height: 19px ;margin: -4px 4px 2px;"
-                                 src="/OnlineNewsSite/public/banner-image/dowload.png" alt="Download Icon"/>
+                                 src="./public/banner-image/dowload.png" alt="Download Icon"/>
                         </div>
                         <div class="icon">
                             <img style="max-width: 24px; max-height: 12px"
-                                 src="/OnlineNewsSite/public/banner-image/eyes.png" alt="Eyes Icon"/>
+                                 src="./public/banner-image/eyes.png" alt="Eyes Icon"/>
                         </div>
                     </div>
 
@@ -77,9 +77,9 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
     </div>
 
     <div class="img_lienket" style="width: 15%; ">
-        <img style="width: 100%" src="/OnlineNewsSite/public/banner-image/bo-cong-thuong.png">
-        <img style="width: 100%" src="/OnlineNewsSite/public/banner-image/DHKTKTCN.png">
-        <img style="width: 100%" src="/OnlineNewsSite/public/banner-image/khcn.png">
+        <img style="width: 100%" src="./public/banner-image/bo-cong-thuong.png">
+        <img style="width: 100%" src="./public/banner-image/DHKTKTCN.png">
+        <img style="width: 100%" src="./public/banner-image/khcn.png">
 
     </div>
 

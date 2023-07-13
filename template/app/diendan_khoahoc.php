@@ -125,9 +125,9 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
     </div>
 
     <div class="img_lienket" style="width: 15%; ">
-        <img style="width: 100%" src="/OnlineNewsSite/public/banner-image/bo-cong-thuong.png">
-        <img style="width: 100%" src="/OnlineNewsSite/public/banner-image/DHKTKTCN.png">
-        <img style="width: 100%" src="/OnlineNewsSite/public/banner-image/khcn.png">
+        <img style="width: 100%" src="./public/banner-image/bo-cong-thuong.png">
+        <img style="width: 100%" src="./public/banner-image/DHKTKTCN.png">
+        <img style="width: 100%" src="./public/banner-image/khcn.png">
 
     </div>
 

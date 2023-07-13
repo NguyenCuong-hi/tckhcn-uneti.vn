@@ -37,6 +37,7 @@ require_once 'activities/Admin/User.php';
 require_once 'activities/Admin/Comment.php';
 require_once 'activities/Admin/Menu.php';
 require_once 'activities/Admin/WebSetting.php';
+require_once 'activities/ViewCatalogController.php';
 
 //auth
 require_once 'activities/Auth/Auth.php';

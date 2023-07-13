@@ -34,10 +34,10 @@ use Database\DataBase;
     <link rel="stylesheet" href="<?= asset('public/app/css/main2.css') ?>">
 </head>
 
-<body style="background-color:#E6E6E6">
+<body style="background-color:#E6E6E6; ">
 
 
-<div style="width: 80%; margin: 0 auto; background-color:  white;">
+<div style="width: 80%; margin: 0 auto; background-color:  white; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);">
     <header>
 
         <style>

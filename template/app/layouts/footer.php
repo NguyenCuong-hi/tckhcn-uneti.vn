@@ -105,7 +105,7 @@ use Database\DataBase;
         </div>
         <div style=" width:30%;margin-left: 4%;">
             <h3>Thông tin liên hệ</h3>
-            <p>Địa chỉ: Phòng 402 - Nhà HA.11, TRường Đại học Kinh tế - Kỹ thuật Công nghiệp, Số 218
+            <p>Địa chỉ: Phòng 402 - Nhà HA.11, Trường Đại học Kinh tế - Kỹ thuật Công nghiệp, Số 218
                 Lĩnh Nam, Hoàng Mai, Hà Nội.
 
             </p>

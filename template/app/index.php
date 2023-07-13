@@ -66,14 +66,11 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                     <h3 style="text-align: center; text-transform: uppercase; color: #3734EA;font-weight: 700; font-size: 30px;">
                         Giới thiệu</h3>
 
-                    <?php foreach ($get_url_image as $image_gioithieu): ?>
                     <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
 
-                        <img style="border-radius: 5px;max-width: 200px;max-height: 121px;" src="<?php echo $image_gioithieu['image']?>"
+                        <img style="border-radius: 5px;max-width: 200px;max-height: 121px;" src="./public/banner-image/gioithieu.png"
                              alt="Giới thiệu">
-
                     </div>
-                    <?php endforeach; ?>
 
                 </div>
                 <!-- Cột thông báo -->
@@ -82,14 +79,14 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                     <h3 style="text-align: center; text-transform: uppercase; color:#3734EA;font-weight: 700; font-size: 30px;">
                         Thông báo</h3>
 
-                    <?php foreach ($get_url_thongbao as $image_thongbao): ?>
+
                         <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
 
-                            <img style="border-radius: 5px;max-width: 200px;max-height: 121px;" src="<?php echo $image_gioithieu['image']?>"
+                            <img style="border-radius: 5px;max-width: 200px;max-height: 121px;" src="./public/banner-image/thong-bao.png"
                                  alt="Giới thiệu">
 
                         </div>
-                    <?php endforeach; ?>
+
 
 
                 </div>
@@ -98,14 +95,13 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
                     <h3 style="text-align: center; text-transform: uppercase; color: #3734EA;font-weight: 700; font-size: 30px; ">
                         Sự kiện</h3>
-                    <?php foreach ($get_url_sukien as $image_sukien): ?>
                         <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
 
-                            <img style="border-radius: 5px;max-width: 200px;max-height: 121px;" src="<?php echo $image_sukien['image']?>"
+                            <img style="border-radius: 5px;max-width: 200px;max-height: 121px;" src="./public/banner-image/sukien.png"
                                  alt="Giới thiệu">
 
                         </div>
-                    <?php endforeach; ?>
+
 
                 </div>
             </div>
@@ -113,14 +109,14 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                 <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">
                     <h3 style="text-align: center; text-transform: uppercase; color: #3734EA;font-weight: 700; font-size: 30px;">
                         Gửi bài</h3>
-                    <?php foreach ($get_url_guibai as $image_guibai): ?>
+
                         <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
 
-                            <img style="border-radius: 5px;max-width: 200px;max-height: 121px;" src="<?php echo $image_guibai['image']?>"
+                            <img style="border-radius: 5px;max-width: 200px;max-height: 121px;" src="./public/banner-image/guibai.png"
                                  alt="Giới thiệu">
 
                         </div>
-                    <?php endforeach; ?>
+
                 </div>
                 <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">
                 </div>
@@ -131,10 +127,10 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
             </div>
         </div>
 
-        <div style="width: 15%;">
-            <?php foreach ($get_image_sidebar as $image): ?>
-                <img style="width: 100%" src="<?php echo $image['image'] ;?>">
-            <?php endforeach; ?>
+        <div class="img_lienket" style="width: 15%; ">
+            <img style="width: 100%" src="./public/banner-image/bo-cong-thuong.png">
+            <img style="width: 100%" src="./public/banner-image/DHKTKTCN.png">
+            <img style="width: 100%" src="./public/banner-image/khcn.png">
 
         </div>
     </div>

@@ -38,11 +38,6 @@ class ScienceTechController
 
         $data = $db->select($query, $params);
 
-        $get_image_sidebar = $db->select('SELECT * FROM banners WHERE id IN (10, 11, 12)');
-
-        $get_icon = $db->select("SELECT image FROM banners WHERE  id  = 18");
-
-
         $result = $db->select('SELECT COUNT(*) AS total_count FROM posts 
                      INNER JOIN author ON posts.author_id = author.id 
                      INNER JOIN categories ON posts.cat_id = categories.id WHERE categories.type = 1;');

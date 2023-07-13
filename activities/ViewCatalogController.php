@@ -10,9 +10,9 @@ class ViewCatalogController
         $query = 'SELECT posts.*, banners.* FROM posts 
                      INNER JOIN banners ON banners.id = posts.banner_id
 					 WHERE posts.id = '. $get_id;
-        $result = $db->select($query)->fetchAll();
+        $result = $db->select($query);
 
-        require_once (BASE_PATH . '/template/app/show-catalog.php ');
+        require_once (BASE_PATH . '/template/app/show-catalog.php');
 
     }
 

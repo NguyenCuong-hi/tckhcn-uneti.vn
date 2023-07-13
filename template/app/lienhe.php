@@ -19,7 +19,6 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
             width: 60%;
             display: flex;
             flex-direction: column;
-            margin: 0 64px;
             padding: 4px;
             box-sizing: border-box
         }
@@ -29,12 +28,6 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
 
         }
-
-        /*.contact-info > h3 {*/
-        /*    color: #00a8ff;*/
-        /*    font-weight: bold;*/
-
-        /*}*/
 
         .contact-details {
             text-align: left;
@@ -53,8 +46,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
     </style>
 
-    <div class="body_data" style="width: 62%; display: flex; flex-direction: column;
-         padding: 4px; box-sizing: border-box">
+    <div class="body_data" style="width: 62%;  padding: 4px; box-sizing: border-box">
         <div class="contact">
             <div class="contact-info">
                 <a style=" font-weight: 600; font-size: 27px; color: #348fde"> THÔNG TIN LIÊN HỆ </a>
@@ -76,9 +68,9 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
 
     <div class="img_lienket" style="width: 15%; ">
-        <img style="width: 100%" src="/OnlineNewsSite/public/banner-image/bo-cong-thuong.png">
-        <img style="width: 100%" src="/OnlineNewsSite/public/banner-image/DHKTKTCN.png">
-        <img style="width: 100%" src="/OnlineNewsSite/public/banner-image/khcn.png">
+        <img style="width: 100%" src="./public/banner-image/bo-cong-thuong.png">
+        <img style="width: 100%" src="./public/banner-image/DHKTKTCN.png">
+        <img style="width: 100%" src="./public/banner-image/khcn.png">
     </div>
 </div>
 
@@ -87,20 +79,3 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 require_once(BASE_PATH . '/template/app/layouts/footer.php');
 ?>
 
-
-<!--hãy css cho đoạn sau-->
-<!--THÔNG TIN LIÊN HỆ-->
-<!--Nội dung chi tiết và thông tin liên hệ xin gửi về:-->
-<!--TÒA SOẠN TẠP CHÍ KHOA HỌC & CÔNG-->
-<!--NGHỆ-->
-<!--Phòng 402 – Nhà HA11, Trường Đại học Kinh tế --->
-<!--Kỹ thuật Công nghiệp, số 218 Lĩnh Nam, Hoàng-->
-<!--Mai, Hà Nội-->
-<!--E-mail: tapchikhcn@uneti.edu.vn;-->
-<!--Website : https://tckhcn-uneti.vn-->
-<!---->
-<!--THÔNG TIN LIÊN HỆ thì ở giữa nội dung
-Nội dung chi tiết và thông tin liên hệ xin gửi về
-css cho nội dung chữ đậm, nét nghiêng
-
--->
