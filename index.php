@@ -15,12 +15,12 @@ define('DB_PASSWORD', '');
 define('DISPLAY_ERROR', true);
 
 //mail config
-define('MAIL_HOST', 'sandbox.smtp.mailtrap.io');
-define('SMTP_AUTH', 'LOGIN');
-define('MAIL_USERNAME', 'yourMailUsername');
-define('MAIL_PASSWORD', 'yourMailPassword');
+define('MAIL_HOST', 'smtp.gmail.com');
+define('SMTP_AUTH', 'true');
+define('MAIL_USERNAME', 'anhdungg.it@gmail.com');
+define('MAIL_PASSWORD', 'ftngkokamqjqceea');
 define('MAIL_PORT', 587);
-define('SENDER_MAIL', 'onlinenewssite@admin.com');
+//define('SENDER_MAIL', 'phamanhdung2k2@gmail.com');
 define('SENDER_NAME', 'admin');
 
 //database
@@ -291,6 +291,7 @@ uri('/thongtintraodoi', 'App\ExchageInfomation', 'index');
 uri('/lienhe', 'App\ContactController', 'index');
 uri('/thongbao', 'App\NoticeController', 'index');
 uri('/guibai', 'App\SendPostToAdmin', 'index');
+uri('/guibai/post', 'App\SendPostToAdmin', 'sendPost', 'POST');
 uri('/thongbao', 'App\NoticeController', 'index');
 
 uri('/khcn/tap-chi/{id}', 'App\ViewCatalogController', 'index');
