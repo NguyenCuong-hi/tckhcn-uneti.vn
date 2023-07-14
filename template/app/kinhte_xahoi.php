@@ -64,10 +64,10 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                         <div class="footer-element" style="text-align: end; margin-bottom: 8px; display: flex;
     justify-content: flex-end;">
                             <div class="icon" style="margin-right: 12px;">
-                                <img style="max-width: 24px; max-height: 19px ;margin: -4px 4px 2px;" src="/OnlineNewsSite/public/banner-image/dowload.png" alt="Download Icon" />
+                                <img style="max-width: 24px; max-height: 19px ;margin: -4px 4px 2px;" src="./public/banner-image/dowload.png" alt="Download Icon" />
                             </div>
                             <div class="icon">
-                                <img style="max-width: 24px; max-height: 19px;" src="/OnlineNewsSite/public/banner-image/eyes.png" alt="Eyes Icon" />
+                                <img style="max-width: 24px; max-height: 12px" src="./public/banner-image/eyes.png" alt="Eyes Icon" />
                             </div>
                         </div>
                     </div>
@@ -78,13 +78,17 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
         </div>
 
         <div class="img_lienket" style="width: 15%; ">
-            <img style="width: 100%" src="./public/banner-image/bo-cong-thuong.png">
-            <img style="width: 100%" src="./public/banner-image/DHKTKTCN.png">
-            <img style="width: 100%" src="./public/banner-image/khcn.png">
+            <H4 style="font-size: 16px; color: #155fa2; font-family: 'Times New Roman', Times, serif; "> LIÊN KẾT WEBSITE</H4>
+            <a href="https://moit.gov.vn/"><img style="width: 100%" src="./public/banner-image/bo-cong-thuong.png"> </a>
+            <a href="https://uneti.edu.vn/"><img style="width: 100%" src="./public/banner-image/DHKTKTCN.png"></a>
+            <a href=""><img style="width: 100%" src="./public/banner-image/khcn.png"></a>
         </div>
 
     </div>
 
+<?php
+require_once(BASE_PATH . '/template/app/layouts/phantrang.php')
+?>
 
 <?php
 require_once(BASE_PATH . '/template/app/layouts/footer.php');

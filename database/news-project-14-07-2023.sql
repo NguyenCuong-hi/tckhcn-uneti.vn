@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 14, 2023 lúc 07:33 AM
+-- Thời gian đã tạo: Th7 14, 2023 lúc 05:55 AM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
--- Phiên bản PHP: 8.0.28
+-- Phiên bản PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Cơ sở dữ liệu: `news-project`
 --
+CREATE DATABASE IF NOT EXISTS `news-project` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE `news-project`;
 
 -- --------------------------------------------------------
 
@@ -27,13 +29,19 @@ SET time_zone = "+00:00";
 -- Cấu trúc bảng cho bảng `author`
 --
 
-CREATE TABLE `author` (
+DROP TABLE IF EXISTS `author`;
+CREATE TABLE IF NOT EXISTS `author` (
   `id` int(11) NOT NULL,
   `fullname` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `url` varchar(300) NOT NULL,
-  `image` varchar(200) NOT NULL
+  `image` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+
+--
+-- RELATIONSHIPS FOR TABLE `author`:
+--
 
 --
 -- Đang đổ dữ liệu cho bảng `author`
@@ -57,15 +65,24 @@ INSERT INTO `author` (`id`, `fullname`, `email`, `url`, `image`) VALUES
 -- Cấu trúc bảng cho bảng `banners`
 --
 
-CREATE TABLE `banners` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `banners`;
+CREATE TABLE IF NOT EXISTS `banners` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `image` varchar(191) NOT NULL,
   `url` varchar(191) NOT NULL,
   `type` int(11) NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime DEFAULT NULL,
-  `id_post` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+  `id_post` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `id_post` (`id_post`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- RELATIONSHIPS FOR TABLE `banners`:
+--   `id_post`
+--       `posts` -> `id`
+--
 
 --
 -- Đang đổ dữ liệu cho bảng `banners`
@@ -81,14 +98,20 @@ INSERT INTO `banners` (`id`, `image`, `url`, `type`, `created_at`, `updated_at`,
 -- Cấu trúc bảng cho bảng `categories`
 --
 
-CREATE TABLE `categories` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `categories`;
+CREATE TABLE IF NOT EXISTS `categories` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(200) NOT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime DEFAULT NULL,
   `code_name` varchar(200) DEFAULT NULL,
-  `type` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+  `type` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+
+--
+-- RELATIONSHIPS FOR TABLE `categories`:
+--
 
 --
 -- Đang đổ dữ liệu cho bảng `categories`
@@ -123,15 +146,27 @@ INSERT INTO `categories` (`id`, `name`, `created_at`, `updated_at`, `code_name`,
 -- Cấu trúc bảng cho bảng `comments`
 --
 
-CREATE TABLE `comments` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `comments`;
+CREATE TABLE IF NOT EXISTS `comments` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `comment` text NOT NULL,
   `post_id` int(11) NOT NULL,
   `status` enum('unseen','seen','approved') NOT NULL DEFAULT 'unseen',
   `created_at` datetime NOT NULL,
-  `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `article_id` (`post_id`),
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+
+--
+-- RELATIONSHIPS FOR TABLE `comments`:
+--   `post_id`
+--       `posts` -> `id`
+--   `user_id`
+--       `users` -> `id`
+--
 
 -- --------------------------------------------------------
 
@@ -139,14 +174,23 @@ CREATE TABLE `comments` (
 -- Cấu trúc bảng cho bảng `menus`
 --
 
-CREATE TABLE `menus` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `menus`;
+CREATE TABLE IF NOT EXISTS `menus` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   `url` varchar(300) NOT NULL,
   `parent_id` int(11) DEFAULT NULL,
   `created_at` datetime NOT NULL,
-  `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `parent_id` (`parent_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+
+--
+-- RELATIONSHIPS FOR TABLE `menus`:
+--   `parent_id`
+--       `menus` -> `id`
+--
 
 --
 -- Đang đổ dữ liệu cho bảng `menus`
@@ -163,8 +207,9 @@ INSERT INTO `menus` (`id`, `name`, `url`, `parent_id`, `created_at`, `updated_at
 -- Cấu trúc bảng cho bảng `posts`
 --
 
-CREATE TABLE `posts` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `posts`;
+CREATE TABLE IF NOT EXISTS `posts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(200) NOT NULL,
   `summary` text NOT NULL,
   `body` text NOT NULL,
@@ -179,8 +224,20 @@ CREATE TABLE `posts` (
   `created_at` datetime NOT NULL,
   `updated_at` datetime DEFAULT NULL,
   `author_id` int(11) NOT NULL,
-  `file` varchar(200) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+  `file` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `cat_id` (`cat_id`),
+  KEY `user_id` (`user_id`),
+  KEY `posts_author` (`author_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=72 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+
+--
+-- RELATIONSHIPS FOR TABLE `posts`:
+--   `cat_id`
+--       `categories` -> `id`
+--   `user_id`
+--       `users` -> `id`
+--
 
 --
 -- Đang đổ dữ liệu cho bảng `posts`
@@ -188,27 +245,7 @@ CREATE TABLE `posts` (
 
 INSERT INTO `posts` (`id`, `title`, `summary`, `body`, `view`, `user_id`, `cat_id`, `image`, `status`, `selected`, `breaking_news`, `published_at`, `created_at`, `updated_at`, `author_id`, `file`) VALUES
 (70, 'Tạp chí NCKH số 30', 'Trong nghiên cứu này, hạt nano tinh thể CsPbBr3 và CsPbBr3 pha tạp Co2+ bằng phương\r\npháp hóa một bước. Các hạt nano tinh thể CsPbX3 (X= Cl, I) cũng được chế tạo bằng\r\nphương pháp trao đổi ion từ CsPbBr3 và CsX. Các mẫu CsPbBr3 và CsPbCl3 thu được có\r\ndạng hình vuông với kích thước hạt trong khoảng 7-14 nm, và dưới 7 nm đối với mẫu\r\nCsPbI3. Chúng phát quang với các bước sóng 450, 516 và 660 nm khi được kích thích bằng\r\nnguồn sáng có bước sóng dưới 400 nm tương ứng với mức năng lượng vùng cấm lần lượt\r\nlà 1,81, 2,4 và 2,71 eV. Bước đầu khi tiến hành pha tạp ion Co2+ vào mạng nền CsPbBr3\r\ncho thấy sự cải thiện về cấu trúc tinh thể và tính chất quang của mẫu CsPb0.95Co0.05Br3 đối\r\nvới mẫu không pha tạp CsPbBr', 'Bột huỳnh quang chấm lượng tử là một trong\r\nnhững vật liệu quan trọng trong lĩnh vực chiếu\r\nsáng rắn - một cấu trúc gồm có LED và vật\r\nliệu huỳnh quang hiệu suất cao có thể hấp thụ\r\nmột phần ánh sáng phát ra từ LED chuyển\r\nthành ánh sáng ở vùng phổ mong muốn, góp\r\nphần làm cho ánh sáng phát ra từ tổ hợp LED\r\n+ bột huỳnh quang có màu sắc mong muốn.\r\nThuật ngữ chấm lượng tử có ý nghĩa cụ thể về\r\ncấu trúc trong đó xảy ra hiệu ứng giam giữ\r\nKHOA HỌC & CÔNG NGHỆ\r\n2 TẠP CHÍ KHOA HỌC & CÔNG NGHỆ . SỐ 30 - 2022\r\nlượng tử các hạt tải điện. Trong thực tế, vì\r\nhiệu ứng giam giữ lượng tử xảy ra khi có ít\r\nnhất là một chiều kích thước của vật liệu nhỏ\r\nso sánh được với bán kính Bohr, mà bán kính\r\nbohr của đa số vật liệu tinh thể bán dẫn nằm\r\ntrong vùng nano mét.\r\nVật liệu perovskite vô cơ dựa trên cấu trúc\r\nCsPbX3 đươc nghiên cứu rộng rãi gần đây do\r\nchúng có tính chất quang điện đặc biệt phù\r\nhợp cho các ứng dụng rộng rãi như pin mặt\r\ntrời, linh kiện chiếu sáng rắn, linh kiện nhạy\r\nquang...[1-3]', 0, 1, 15, 'public/post-image/2023-07-12-19-04-39.jpeg', 'disable', 1, 1, '1970-01-01 01:00:00', '2023-07-13 00:04:39', NULL, 1, NULL),
-(71, 'Tạp chí NCKH số 38', 'NGHIÊN CỨU XÂY DỰNG MÔ HÌNH GIÁM SÁT MÒN ĐÁ\r\nKHI GIA CÔNG HỢP KIM Ti6Al4V TRÊN MÁY MÀI PHẲNG\r\n', 'Quyết định thay dụng cụ phù hợp và đúng lúc là yêu cầu cấp thiết, nhằm tránh hư hỏng chi\r\ntiết hoặc thay dụng cụ không cần thiết. Giám sát trực tuyến tình trạng của dụng cụ là cần\r\nthiết đối với các máy công cụ hiện đại. Mài là quá trình, được đặc trưng bởi sử dụng đá mài\r\ncó nhiều lưỡi cắt, chịu mài mòn không đồng nhất, vì vậy mòn đá mài là phức tạp nhất so với\r\ncác loại dụng cụ cắt khác. Bài báo đề cập sự phát triển hệ thống giám sát mòn đá mài trên\r\ncơ sở ANN. Thiết lập được hệ giám sát trực tuyến mòn đá gồm DAQ và DSS. Xây dựng các\r\nquan hệ cơ bản trong quá trình mài, đặc biệt giữa mòn đá và các thông số đầu ra (lực cắt,\r\nrung động, độ nhám bề mặt…) sử dụng chúng trong giám sát mòn đá.', 0, 1, 19, 'public/post-image/2023-07-12-19-39-01.jpeg', 'disable', 1, 1, '1970-01-01 01:00:00', '2023-07-13 00:39:01', NULL, 2, NULL),
-(72, 'Tạp chí NCKH số 37', 'lokijuyhgtfrdesw', ',kụmnyhtbgvfcdx', 0, 1, 15, 'public/post-image/2023-07-14-07-05-25.jpeg', 'disable', 1, 1, '1970-01-01 01:00:00', '2023-07-14 12:05:25', NULL, 3, NULL),
-(73, 'Tạp chí NCKH số 36', 'zữecrvtgbyhjumki,l', ';plokijuyhgtfrde', 0, 1, 15, 'public/post-image/2023-07-14-07-06-34.jpeg', 'disable', 1, 1, '1970-01-01 01:00:00', '2023-07-14 12:06:34', NULL, 2, NULL),
-(74, 'Tạp chí NCKH số 32', ',mụnyhtbgvrfecdws', 'li,ukmjyhtreds', 0, 1, 15, 'public/post-image/2023-07-14-07-08-13.jpeg', 'disable', 1, 1, '1970-01-01 01:00:00', '2023-07-14 12:08:13', NULL, 5, NULL),
-(75, 'Tạp chí NCKH số 34', 'oiuytrewsa', 'mnbvcxzcv', 0, 1, 23, 'public/post-image/2023-07-14-07-09-18.jpeg', 'disable', 1, 1, '1970-01-01 01:00:00', '2023-07-14 12:09:18', NULL, 1, NULL),
-(76, 'Tạp chí NCKH số 29', 'ynttbrvfcdxsza', 'j6hy5gtsqrtghy', 0, 1, 28, 'public/post-image/2023-07-14-07-14-03.jpeg', 'disable', 1, 1, '1970-01-01 01:00:00', '2023-07-14 12:14:03', NULL, 3, NULL),
-(77, 'Tạp chí NCKH số 28', 'il,ukmyjnhtbrgvfecd', ',umynthbrgvfecdsx', 0, 1, 19, 'public/post-image/2023-07-14-07-14-44.jpeg', 'disable', 1, 1, '1970-01-01 01:00:00', '2023-07-14 12:14:44', NULL, 4, NULL),
-(78, 'Tạp chí NCKH số 27', 'oiuytrewa', 'jhgfdsaf', 0, 1, 25, 'public/post-image/2023-07-14-07-15-31.jpeg', 'disable', 1, 1, '1970-01-01 01:00:00', '2023-07-14 12:15:31', NULL, 2, NULL),
-(79, 'Tạp chí NCKH số 25', ';lkjhgfdsaaaaas', 'kjhgfdswedededede', 0, 1, 25, 'public/post-image/2023-07-14-07-16-35.jpeg', 'disable', 1, 1, '1970-01-01 01:00:00', '2023-07-14 12:16:35', NULL, 1, NULL),
-(80, 'Tạp chí NCKH số 24', '25dxsegfyf', 'ggfttyftyfy', 0, 1, 33, 'public/post-image/2023-07-14-07-18-05.jpeg', 'disable', 1, 1, '1970-01-01 01:00:00', '2023-07-14 12:18:05', NULL, 5, NULL),
-(81, 'Tạp chí NCKH số 23', 'dfghjkl', 'sdfghjkl', 0, 1, 27, 'public/post-image/2023-07-14-07-19-18.jpeg', 'disable', 1, 1, '1970-01-01 01:00:00', '2023-07-14 12:19:18', NULL, 2, NULL),
-(82, 'Tạp chí NCKH số 22', 'ẻtfghjjhyugfy', 'jkdfjdghiijsdhfiwe\r\n', 0, 1, 26, 'public/post-image/2023-07-14-07-20-12.jpeg', 'disable', 1, 1, '1970-01-01 01:00:00', '2023-07-14 12:20:12', NULL, 3, NULL),
-(83, 'Tạp chí NCKH số 20', 'kkjfifirfrfrfrfrggt', 'gtgtgtgtgdfgdfggtgt', 0, 1, 34, 'public/post-image/2023-07-14-07-21-16.jpeg', 'disable', 1, 1, '1970-01-01 01:00:00', '2023-07-14 12:21:16', NULL, 1, NULL),
-(84, 'Tạp chí NCKH số 19', 'ẻtyuioljhufgt', 'gfdrtdrrdr', 0, 1, 25, 'public/post-image/2023-07-14-07-22-03.jpeg', 'disable', 1, 1, '1970-01-01 01:00:00', '2023-07-14 12:22:03', NULL, 5, NULL),
-(85, 'Tạp chí NCKH số 16', 'jhhnhhh', 'jhhnhhhhghhyhyh', 0, 1, 26, 'public/post-image/2023-07-14-07-22-54.jpeg', 'disable', 1, 1, '1970-01-01 01:00:00', '2023-07-14 12:22:54', NULL, 4, NULL),
-(86, 'Tạp chí NCKH số 13', 'tggyhmftukmjutguiu', 'utukmukm uikj uikjjik', 0, 1, 24, 'public/post-image/2023-07-14-07-23-46.jpeg', 'disable', 1, 1, '1970-01-01 01:00:00', '2023-07-14 12:23:46', NULL, 1, NULL),
-(87, 'Tạp chí NCKH số 12', 'bgbhgbhghyhyt', 'rghrrhrthhrthrh', 0, 1, 15, 'public/post-image/2023-07-14-07-26-39.jpeg', 'disable', 1, 1, '1970-01-01 01:00:00', '2023-07-14 12:26:39', NULL, 4, NULL),
-(88, 'Tạp chí NCKH số 11', '2828282', 'dfvgbhnjmkl,', 0, 1, 17, 'public/post-image/2023-07-14-07-28-57.jpeg', 'disable', 1, 1, '1970-01-01 01:00:00', '2023-07-14 12:28:57', NULL, 3, NULL),
-(89, 'Tạp chí NCKH số 10', 'gtgtgtgtgtgtff', 'bfbfbtbtbtbtbtb', 0, 1, 32, 'public/post-image/2023-07-14-07-30-26.jpeg', 'disable', 1, 1, '1970-01-01 01:00:00', '2023-07-14 12:30:26', NULL, 4, NULL),
-(90, 'Tạp chí NCKH số 9', 'ttttgtgtgtgtg', 'tgtgtgtvtvtv', 0, 1, 32, 'public/post-image/2023-07-14-07-31-13.jpeg', 'disable', 1, 1, '1970-01-01 01:00:00', '2023-07-14 12:31:13', NULL, 5, NULL),
-(91, 'Tạp chí NCKH số 8', 'tgtgtgtgtg', 'tgtgtgtgtg', 0, 1, 15, 'public/post-image/2023-07-14-07-31-58.jpeg', 'disable', 1, 1, '1970-01-01 01:00:00', '2023-07-14 12:31:58', NULL, 2, NULL);
+(71, 'Tạp chí NCKH số 38', 'NGHIÊN CỨU XÂY DỰNG MÔ HÌNH GIÁM SÁT MÒN ĐÁ\r\nKHI GIA CÔNG HỢP KIM Ti6Al4V TRÊN MÁY MÀI PHẲNG\r\n', 'Quyết định thay dụng cụ phù hợp và đúng lúc là yêu cầu cấp thiết, nhằm tránh hư hỏng chi\r\ntiết hoặc thay dụng cụ không cần thiết. Giám sát trực tuyến tình trạng của dụng cụ là cần\r\nthiết đối với các máy công cụ hiện đại. Mài là quá trình, được đặc trưng bởi sử dụng đá mài\r\ncó nhiều lưỡi cắt, chịu mài mòn không đồng nhất, vì vậy mòn đá mài là phức tạp nhất so với\r\ncác loại dụng cụ cắt khác. Bài báo đề cập sự phát triển hệ thống giám sát mòn đá mài trên\r\ncơ sở ANN. Thiết lập được hệ giám sát trực tuyến mòn đá gồm DAQ và DSS. Xây dựng các\r\nquan hệ cơ bản trong quá trình mài, đặc biệt giữa mòn đá và các thông số đầu ra (lực cắt,\r\nrung động, độ nhám bề mặt…) sử dụng chúng trong giám sát mòn đá.', 0, 1, 19, 'public/post-image/2023-07-12-19-39-01.jpeg', 'disable', 1, 1, '1970-01-01 01:00:00', '2023-07-13 00:39:01', NULL, 0, NULL);
 
 -- --------------------------------------------------------
 
@@ -216,8 +253,9 @@ INSERT INTO `posts` (`id`, `title`, `summary`, `body`, `view`, `user_id`, `cat_i
 -- Cấu trúc bảng cho bảng `users`
 --
 
-CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `username` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
@@ -227,8 +265,14 @@ CREATE TABLE `users` (
   `forgot_token` varchar(191) DEFAULT NULL,
   `forgot_token_expire` datetime DEFAULT NULL,
   `created_at` datetime NOT NULL,
-  `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+
+--
+-- RELATIONSHIPS FOR TABLE `users`:
+--
 
 --
 -- Đang đổ dữ liệu cho bảng `users`
@@ -246,16 +290,22 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`, `permission`, `verif
 -- Cấu trúc bảng cho bảng `websetting`
 --
 
-CREATE TABLE `websetting` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `websetting`;
+CREATE TABLE IF NOT EXISTS `websetting` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` text DEFAULT NULL,
   `description` text DEFAULT NULL,
   `keywords` text DEFAULT NULL,
   `logo` text DEFAULT NULL,
   `icon` text DEFAULT NULL,
   `created_at` datetime NOT NULL,
-  `updated_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+
+--
+-- RELATIONSHIPS FOR TABLE `websetting`:
+--
 
 --
 -- Đang đổ dữ liệu cho bảng `websetting`
@@ -265,112 +315,6 @@ INSERT INTO `websetting` (`id`, `title`, `description`, `keywords`, `logo`, `ico
 (1, 'online news', 'online news', 'online news', 'public/setting/logo.png', 'public/setting/icon.jpeg', '2019-06-09 19:54:37', '2022-10-24 16:41:31');
 
 --
--- Chỉ mục cho các bảng đã đổ
---
-
---
--- Chỉ mục cho bảng `author`
---
-ALTER TABLE `author`
-  ADD PRIMARY KEY (`id`);
-
---
--- Chỉ mục cho bảng `banners`
---
-ALTER TABLE `banners`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_post` (`id_post`);
-
---
--- Chỉ mục cho bảng `categories`
---
-ALTER TABLE `categories`
-  ADD PRIMARY KEY (`id`);
-
---
--- Chỉ mục cho bảng `comments`
---
-ALTER TABLE `comments`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `article_id` (`post_id`),
-  ADD KEY `user_id` (`user_id`);
-
---
--- Chỉ mục cho bảng `menus`
---
-ALTER TABLE `menus`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `parent_id` (`parent_id`);
-
---
--- Chỉ mục cho bảng `posts`
---
-ALTER TABLE `posts`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `cat_id` (`cat_id`),
-  ADD KEY `user_id` (`user_id`),
-  ADD KEY `posts_author` (`author_id`);
-
---
--- Chỉ mục cho bảng `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email` (`email`);
-
---
--- Chỉ mục cho bảng `websetting`
---
-ALTER TABLE `websetting`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT cho các bảng đã đổ
---
-
---
--- AUTO_INCREMENT cho bảng `banners`
---
-ALTER TABLE `banners`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
-
---
--- AUTO_INCREMENT cho bảng `categories`
---
-ALTER TABLE `categories`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
-
---
--- AUTO_INCREMENT cho bảng `comments`
---
-ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
-
---
--- AUTO_INCREMENT cho bảng `menus`
---
-ALTER TABLE `menus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
---
--- AUTO_INCREMENT cho bảng `posts`
---
-ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=92;
-
---
--- AUTO_INCREMENT cho bảng `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
-
---
--- AUTO_INCREMENT cho bảng `websetting`
---
-ALTER TABLE `websetting`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- Các ràng buộc cho các bảng đã đổ
 --
 
@@ -378,7 +322,7 @@ ALTER TABLE `websetting`
 -- Các ràng buộc cho bảng `banners`
 --
 ALTER TABLE `banners`
-  ADD CONSTRAINT `banners_ibfk_1` FOREIGN KEY (`id_post`) REFERENCES `posts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_banner_post` FOREIGN KEY (`id_post`) REFERENCES `posts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Các ràng buộc cho bảng `comments`
@@ -399,6 +343,48 @@ ALTER TABLE `menus`
 ALTER TABLE `posts`
   ADD CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`cat_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `posts_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+
+--
+-- Siêu dữ liệu
+--
+USE `phpmyadmin`;
+
+--
+-- Siêu dữ liệu cho bảng author
+--
+
+--
+-- Siêu dữ liệu cho bảng banners
+--
+
+--
+-- Siêu dữ liệu cho bảng categories
+--
+
+--
+-- Siêu dữ liệu cho bảng comments
+--
+
+--
+-- Siêu dữ liệu cho bảng menus
+--
+
+--
+-- Siêu dữ liệu cho bảng posts
+--
+
+--
+-- Siêu dữ liệu cho bảng users
+--
+
+--
+-- Siêu dữ liệu cho bảng websetting
+--
+
+--
+-- Siêu dữ liệu cho cơ sở dữ liệu news-project
+--
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

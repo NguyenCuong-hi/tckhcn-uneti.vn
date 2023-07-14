@@ -68,9 +68,10 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
 
     <div class="img_lienket" style="width: 15%; ">
-        <img style="width: 100%" src="./public/banner-image/bo-cong-thuong.png">
-        <img style="width: 100%" src="./public/banner-image/DHKTKTCN.png">
-        <img style="width: 100%" src="./public/banner-image/khcn.png">
+        <H4 style="font-size: 16px; color: #155fa2; font-family: 'Times New Roman', Times, serif; "> LIÊN KẾT WEBSITE</H4>
+        <a href="https://moit.gov.vn/"><img style="width: 100%" src="./public/banner-image/bo-cong-thuong.png"> </a>
+        <a href="https://uneti.edu.vn/"><img style="width: 100%" src="./public/banner-image/DHKTKTCN.png"></a>
+        <a href=""><img style="width: 100%" src="./public/banner-image/khcn.png"></a>
     </div>
 </div>
 
