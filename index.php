@@ -291,9 +291,7 @@ uri('/thongtintraodoi', 'App\ExchageInfomation', 'index');
 uri('/lienhe', 'App\ContactController', 'index');
 uri('/thongbao', 'App\NoticeController', 'index');
 uri('/guibai', 'App\SendPostToAdmin', 'index');
-uri('/guibai/post', 'App\SendPostToAdmin', 'sendPost', 'POST');
-uri('/thongbao', 'App\NoticeController', 'index');
-
+//uri('/thongbao', 'App\NoticeController', 'index');
 uri('/khcn/tap-chi/{id}', 'App\ViewCatalogController', 'index');
 
 echo '404 - not found';

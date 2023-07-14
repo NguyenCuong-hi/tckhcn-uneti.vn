@@ -9,7 +9,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 <div class="body_getdata" style="display: flex;  margin-top: 30px; margin-right: 32px">
     <?php require_once(BASE_PATH . '/template/app/layouts/menuleft.php') ?>
 
-    <div class="body_data" style="width: 62%; display: flex; border-left: 1px solid #ddd; flex-direction: column; margin: 0 64px;
+    <div class="body_data" style="width: 62%; display: flex;  flex-direction: column; margin: 0 64px;
          padding: 4px; box-sizing: border-box">
 
         <?php foreach ($data as $datas): ?>
@@ -26,20 +26,20 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                 <div style="padding-left: 20px">
                     <div style="font-size: 16px; font-weight: 500">
                     <span>
-                        <a style=" font-weight: 600; font-size: 18px" href="#"> <?php echo $datas['title']; ?>
+                        <a style=" font-weight: 600; font-size: 20px" href="#"> <?php echo $datas['title']; ?>
                             </a>
                     </span>
 
-                        <div style="display: flex">
+                        <div style="display: flex; font-weight: 300">
                             <div>
                                 <?php echo date("d/m/Y", strtotime($datas['created_at'])); ?> |
                             </div>
                             <div>
-                                <a href="">Thông báo</a>
+                                <a href="" style="font-weight: 500">Thông báo</a>
                             </div>
                         </div>
 
-                        <div style=" margin-bottom: 8px; font-size: 14px">
+                        <div style=" margin:7px 0 ; font-size: 14px">
                             <div>
                                 <?php echo $datas['summary'] ?>
                             </div>
@@ -59,11 +59,11 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
     </div>
 
-    <div class="img_lienket" style="width: 20%; padding-left: 32px">
-        <?php foreach ($get_image_sidebar as $image): ?>
-            <img style="width: 100%" src="<?php echo $image['image']; ?>">
-        <?php endforeach; ?>
-    </div>
+<!--    <div class="img_lienket" style="width: 20%; padding-left: 32px">-->
+<!--        --><?php //foreach ($get_image_sidebar as $image): ?>
+<!--            <img style="width: 100%" src="--><?php //echo $image['image']; ?><!--">-->
+<!--        --><?php //endforeach; ?>
+<!--    </div>-->
 
 </div>
 

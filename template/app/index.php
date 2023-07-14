@@ -78,17 +78,13 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
             <!-- Cột thông báo -->
             <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%; flex-grow: 1;">
 
-                <a style="text-decoration: none" href="#">
+                <a style="text-decoration: none" href="<?= url("thongbao") ?>">
                     <h3 style="text-align: center; text-transform: uppercase; color:#3734EA;font-weight: 700; font-size: 30px;">
                         Thông báo</h3>
-
-
                     <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
-
                         <img style="border-radius: 5px;max-width: 200px;max-height: 121px;"
                              src="./public/banner-image/thong-bao.png"
                              alt="Giới thiệu">
-
                     </div>
                 </a>
 
