@@ -9,7 +9,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 class Auth
 {
 
-    protected function redirect($url)
+    public function redirect($url)
     {
         header('Location: ' . trim(CURRENT_DOMAIN, '/ ') . '/' . trim($url, '/ '));
         exit;
@@ -43,7 +43,7 @@ class Auth
         return $message;
     }
 
-    public function sendMail($emailAddress, $subject, $body)
+    public function sendMail($emailAddress,$mail_recipient, $subject, $body,$target_file)
     {
         //Create an instance; passing `true` enables exceptions
         $mail = new PHPMailer(true);
@@ -52,21 +52,28 @@ class Auth
             //Server settings
             $mail->CharSet = "UTF-8";
             $mail->isSMTP(); //Send using SMTP
-            $mail->Host = MAIL_HOST; //Set the SMTP server to send through
             $mail->SMTPAuth = SMTP_AUTH; //Enable SMTP authentication
+
+            $mail->Host = MAIL_HOST; //Set the SMTP server to send through
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+
+            $mail->Port = MAIL_PORT; //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
             $mail->Username = MAIL_USERNAME; //SMTP username
             $mail->Password = MAIL_PASSWORD; //SMTP password
             $mail->SMTPSecure = 'tls';
-            $mail->Port = MAIL_PORT; //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
-            $mail->setFrom(SENDER_MAIL, SENDER_NAME);
+            $mail->setFrom($mail_recipient);
+//            $mail->setFrom($mail_recipient, SENDER_NAME);
             $mail->addAddress($emailAddress); //Add a recipient
 
             //Content
             $mail->isHTML(true); //Set email format to HTML
             $mail->Subject = $subject;
             $mail->Body = $body;
+
+            $mail->addAttachment($target_file);
 
             $mail->send();
             echo 'Message has been sent';
