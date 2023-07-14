@@ -27,6 +27,8 @@ require_once(BASE_PATH . '/template/admin/layouts/head-tag.php')
                     <option value="3">Diễn đàn khoa học</option>
                     <option value= "4" >Thông báo</option>
                     <option value= "5" >Sự kiện</option>
+                    <option value= "6" >Giới thiệu</option>
+
             </select>
             </div>
             <button type="submit" class="btn btn-primary btn-sm">Lưu</button>
