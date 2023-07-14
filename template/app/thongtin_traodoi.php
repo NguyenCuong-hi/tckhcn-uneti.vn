@@ -181,7 +181,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                 Mai, Hà Nội
             </p>
             <p>
-                E-mail: <a style="text-decoration: ;" href="tapchikhcn@uneti.edu.vn"><u>tapchikhcn@uneti.edu.vn</u></a>
+                E-mail: <a style="text-decoration: none ;" href="tapchikhcn@uneti.edu.vn"><u>tapchikhcn@uneti.edu.vn</u></a>
             </p>
             <p>
                 Website : <a href=" https://tckhcn-uneti.vn"><u> https://tckhcn-uneti.vn</u></a>

@@ -62,7 +62,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
             <!-- Cột giới thiệu -->
             <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%; flex-grow: 1;">
 
-                <a style="text-decoration: none" href="#">
+                <a style="text-decoration: none" href="<?=url('gioithieu') ?>">
                     <h3 style="text-align: center; text-transform: uppercase; color: #3734EA;font-weight: 700; font-size: 30px;">
                         Giới thiệu</h3>
 
