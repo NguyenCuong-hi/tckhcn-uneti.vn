@@ -6,34 +6,37 @@ require_once(BASE_PATH . '/template/admin/layouts/head-tag.php')
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
     <h1 class="h5"><i class="fas fa-newspaper"></i> Articles</h1>
+
+
+    <form method="GET" action="<?= url('admin/post/search') ?>" style="display: flex; margin-right: 8px ; width: 100%;">
+        <div style="display: flex; align-items: center; width: 80%;">
+            <div style="font-size: 16px; margin-right: 8px; display: flex;
+                    flex-direction: column ; width: 100%">
+                <input type="text" name="keyword" style="padding-left: 8px ; width: 100%; margin: 1px 3px;" />
+                <button type="submit" style=" margin-left: 3px; background-color: #ddd; border: none;
+                            height: 30px;  border-radius: 4px; font-size: 16px; width: 92px;">
+                    Tìm kiếm
+                </button>
+            </div>
+        </div>
+
+        <!-- <div style="display: flex; width: 50%">
+            <label style="margin-right: 8px; width: 50%">
+                <input type="radio" name="title"> Tiêu đề
+            </label>
+            <label style="width: 50%">
+                <input type="radio" name="author"> Tác giả
+            </label>
+        </div> -->
+
+    </form>
+
     <div class="btn-toolbar mb-2 mb-md-0">
         <a role="button" href="<?= url('admin/post/create') ?>" class="btn btn-sm btn-success">create</a>
     </div>
+
 </div>
 <div class="table-responsive">
-    <!-- Test -->
-    <div style="display: flex; align-items: center; width: 80%;">
-        <div style="font-size: 16px; margin-right: 8px; display: flex;
-                    flex-direction: column ; width: 100%">
-            <input type="text" name="keyword" style="padding-left: 8px ; width: 30%; margin: 1px 3px;" />
-
-           
-
-        </div>
-    </div>
-
-    <div style="display: flex; width: 50%">
-
-
-    </div>
-    <button type="submit" onclick="myFunction()" style=" margin-left: 3px; background-color: #ddd; border: none;
-                            height: 30px;  border-radius: 4px; font-size: 16px; width: 92px;">
-        Tìm kiếm
-    </button>
-
-    <!-- Test -->
-
-
     <table class="table table-striped table-sm">
         <caption>List of posts</caption>
         <thead>

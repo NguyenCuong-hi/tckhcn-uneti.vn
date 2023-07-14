@@ -14,6 +14,21 @@ class Post extends Admin
         require_once BASE_PATH . '/template/admin/post/index.php';
     }
 
+    public function search()
+    {
+        $db = new DataBase();
+        $sql = 'SELECT * FROM posts WHERE ';
+        // $keywords = null;
+        if(isset($_GET['keyword'])){
+            $sql .= ' posts.title LIKE ?';
+            $params[] = '%' . $_GET['keyword'] . '%';
+        }
+        
+        $posts = $db->select($sql, $params);
+        require_once (BASE_PATH . '/template/admin/post/index.php');
+      
+    }
+
     public function create()
     {
         $db = new DataBase();
