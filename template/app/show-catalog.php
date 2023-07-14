@@ -1,49 +1,27 @@
-<html>
 
-</html>
 <?php
 require_once(BASE_PATH . '/template/app/layouts/header.php');
 ?>
-
 
 <div class="body_getdata" style="display: flex; margin-top: 30px; margin-right: 32px">
 
     <?php require_once(BASE_PATH . '/template/app/layouts/menuleft.php') ?>
 
-    <div class="the-content clearfix">
+    <div class="the-content">
 
-        <p><img class="size-medium wp-image-29451 aligncenter lazy loaded"
-                src="https://uneti.edu.vn/wp-content/uploads/2023/06/Bia-2-so-38_page-0001.jpg"
-                data-src="https://uneti.edu.vn/wp-content/uploads/2023/06/Bia-2-so-38_page-0001.jpg" alt=""
-                width="1241" height="1754"
-                data-srcset="https://uneti.edu.vn/wp-content/uploads/2023/06/Bia-2-so-38_page-0001.jpg 1241w, https://uneti.edu.vn/wp-content/uploads/2023/06/Bia-2-so-38_page-0001-768x1085.jpg 768w, https://uneti.edu.vn/wp-content/uploads/2023/06/Bia-2-so-38_page-0001-1087x1536.jpg 1087w"
-                data-sizes="(max-width: 1241px) 100vw, 1241px" sizes="(max-width: 1241px) 100vw, 1241px"
-                srcset="https://uneti.edu.vn/wp-content/uploads/2023/06/Bia-2-so-38_page-0001.jpg 1241w, https://uneti.edu.vn/wp-content/uploads/2023/06/Bia-2-so-38_page-0001-768x1085.jpg 768w, https://uneti.edu.vn/wp-content/uploads/2023/06/Bia-2-so-38_page-0001-1087x1536.jpg 1087w"
-                data-was-processed="true"></p>
-        <p><img class="size-medium wp-image-29452 aligncenter lazy loaded"
-                src="https://uneti.edu.vn/wp-content/uploads/2023/06/Bia-3-The-le-dang-Tap-chi-KHCN-2023_page-0001.jpg"
-                data-src="https://uneti.edu.vn/wp-content/uploads/2023/06/Bia-3-The-le-dang-Tap-chi-KHCN-2023_page-0001.jpg"
-                alt="" width="1240" height="1753"
-                data-srcset="https://uneti.edu.vn/wp-content/uploads/2023/06/Bia-3-The-le-dang-Tap-chi-KHCN-2023_page-0001.jpg 1240w, https://uneti.edu.vn/wp-content/uploads/2023/06/Bia-3-The-le-dang-Tap-chi-KHCN-2023_page-0001-768x1086.jpg 768w, https://uneti.edu.vn/wp-content/uploads/2023/06/Bia-3-The-le-dang-Tap-chi-KHCN-2023_page-0001-1087x1536.jpg 1087w"
-                data-sizes="(max-width: 1240px) 100vw, 1240px" sizes="(max-width: 1240px) 100vw, 1240px"
-                srcset="https://uneti.edu.vn/wp-content/uploads/2023/06/Bia-3-The-le-dang-Tap-chi-KHCN-2023_page-0001.jpg 1240w, https://uneti.edu.vn/wp-content/uploads/2023/06/Bia-3-The-le-dang-Tap-chi-KHCN-2023_page-0001-768x1086.jpg 768w, https://uneti.edu.vn/wp-content/uploads/2023/06/Bia-3-The-le-dang-Tap-chi-KHCN-2023_page-0001-1087x1536.jpg 1087w"
-                data-was-processed="true"></p>
-        <p><img class="size-medium wp-image-29453 aligncenter lazy loaded"
-                src="https://uneti.edu.vn/wp-content/uploads/2023/06/Bia-4-so-38_page-0001.jpg"
-                data-src="https://uneti.edu.vn/wp-content/uploads/2023/06/Bia-4-so-38_page-0001.jpg" alt=""
-                width="1241" height="1754"
-                data-srcset="https://uneti.edu.vn/wp-content/uploads/2023/06/Bia-4-so-38_page-0001.jpg 1241w, https://uneti.edu.vn/wp-content/uploads/2023/06/Bia-4-so-38_page-0001-768x1085.jpg 768w, https://uneti.edu.vn/wp-content/uploads/2023/06/Bia-4-so-38_page-0001-1087x1536.jpg 1087w"
-                data-sizes="(max-width: 1241px) 100vw, 1241px" sizes="(max-width: 1241px) 100vw, 1241px"
-                srcset="https://uneti.edu.vn/wp-content/uploads/2023/06/Bia-4-so-38_page-0001.jpg 1241w, https://uneti.edu.vn/wp-content/uploads/2023/06/Bia-4-so-38_page-0001-768x1085.jpg 768w, https://uneti.edu.vn/wp-content/uploads/2023/06/Bia-4-so-38_page-0001-1087x1536.jpg 1087w"
-                data-was-processed="true"></p>
-        <p><img class="size-full wp-image-29454 aligncenter lazy loaded"
-                src="https://uneti.edu.vn/wp-content/uploads/2023/06/Muc-luc-so-38-ver1_page-0001.jpg"
-                data-src="https://uneti.edu.vn/wp-content/uploads/2023/06/Muc-luc-so-38-ver1_page-0001.jpg" alt=""
-                width="1241" height="1754"
-                data-srcset="https://uneti.edu.vn/wp-content/uploads/2023/06/Muc-luc-so-38-ver1_page-0001.jpg 1241w, https://uneti.edu.vn/wp-content/uploads/2023/06/Muc-luc-so-38-ver1_page-0001-768x1085.jpg 768w, https://uneti.edu.vn/wp-content/uploads/2023/06/Muc-luc-so-38-ver1_page-0001-1087x1536.jpg 1087w"
-                data-sizes="(max-width: 1241px) 100vw, 1241px" sizes="(max-width: 1241px) 100vw, 1241px"
-                srcset="https://uneti.edu.vn/wp-content/uploads/2023/06/Muc-luc-so-38-ver1_page-0001.jpg 1241w, https://uneti.edu.vn/wp-content/uploads/2023/06/Muc-luc-so-38-ver1_page-0001-768x1085.jpg 768w, https://uneti.edu.vn/wp-content/uploads/2023/06/Muc-luc-so-38-ver1_page-0001-1087x1536.jpg 1087w"
-                data-was-processed="true"></p>
+        <div class="content-image">
+
+            <?php
+            foreach ($result_image as $item):
+            ?>
+            <img src="<?php  $item['image'] ;?> ">
+
+            <?php echo $item['image']?>
+            <?php endforeach; ?>
+            
+        </div>
+
+
 
         <div class="ead-preview">
             <div class="ead-document" style="position: relative;padding-top: 90%;">
@@ -97,10 +75,9 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
     </div>
 
     <div class="img_lienket" style="width: 15%; ">
-        <img style="width: 100%" src="./public/banner-image/bo-cong-thuong.png">
-        <img style="width: 100%" src="./public/banner-image/DHKTKTCN.png">
-        <img style="width: 100%" src="./public/banner-image/khcn.png">
-
+        <img style="width: 100%" src="/OnlineNewsSite/public/banner-image/bo-cong-thuong.png">
+        <img style="width: 100%" src="/OnlineNewsSite/public/banner-image/DHKTKTCN.png">
+        <img style="width: 100%" src="/OnlineNewsSite/public/banner-image/khcn.png">
     </div>
 
 </div>

@@ -9,34 +9,37 @@ class ScienceTechController
 
     public function index()
     {
+
+        // Category type = 1
         $db = new DataBase();
         $setting = $db->select('SELECT * FROM websetting')->fetch();
 
-        $query = 'SELECT posts.*, author.fullname AS author_name, 
-                         categories.name as cat_name, 
-                         categories.code_name as code_name FROM posts 
+        $item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 4;
+        $current_page =!empty($_GET['page']) ? $_GET['page'] : 1;
+        $off_set = ( $current_page -1)* $item_per_page;
+
+        $query = 'SELECT posts.*, author.fullname AS author_name , categories.name as cat_name, categories.code_name as code_name
+                     FROM posts 
                      INNER JOIN author ON posts.author_id = author.id
-					 INNER JOIN categories ON posts.cat_id = categories.id 
-					 WHERE categories.type = 1 ORDER BY posts.created_at DESC ';
-
+                     INNER JOIN categories ON posts.cat_id = categories.id 
+                     WHERE categories.type = 1 ';
         $params = [];
-
         $keywords = null;
         if(isset($_GET['keyword'])){
             $keywords = $_GET['keyword'];
         }
-
         if (isset($_GET['title'])) {
             $query .= ' AND posts.title LIKE ?';
             $params[] = '%' . $_GET['keyword'] . '%';
         }
-
         if (isset($_GET['author'])) {
-            $query .= ' AND author.fullname = ?';
-            $params[] = $_GET['keyword'];
+            $query .= ' AND author.fullname LIKE ?';
+            $params[] = '%' . $_GET['keyword'] . '%';
         }
 
+        $query .= ' ORDER BY posts.created_at DESC LIMIT '. $item_per_page. ' OFFSET ' .$off_set. ' ';
         $data = $db->select($query, $params);
+
 
         $result = $db->select('SELECT COUNT(*) AS total_count FROM posts 
                      INNER JOIN author ON posts.author_id = author.id 
