@@ -228,6 +228,7 @@ uri('admin/post/update/{id}', 'Admin\Post', 'update', "POST");
 uri('admin/post/delete/{id}', 'Admin\Post', 'delete');
 uri('admin/post/breaking-news/{id}', 'Admin\Post', 'breakingNews');
 uri('admin/post/selected/{id}', 'Admin\Post', 'selected');
+uri('admin/post/search', 'Admin\Post', 'search');
 
 // banners
 
