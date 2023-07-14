@@ -19,7 +19,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                     <div style="font-size: 16px; margin-right: 8px; display: flex;
                     flex-direction: column ; width: 100%">
                         <input type="text" name="keyword"
-                               style="padding-left: 8px ; width: 100%; margin: 1px 3px;"/>
+                                 style="padding-left: 8px ; width: 100%; margin: 1px 3px;"/>
                         <button type="submit"
                                 style=" margin-left: 3px; background-color: #ddd; border: none;
                             height: 30px;  border-radius: 4px; font-size: 16px; width: 92px;">

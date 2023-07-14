@@ -11,19 +11,38 @@ class ScienceForumController
 
         // Xu ly logic o day
         // Category type = 3
-        $get_image_sidebar = $db->select('SELECT * FROM banners WHERE id IN (10, 11, 12)');
 
         $item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 4;
         $current_page =!empty($_GET['page']) ? $_GET['page'] : 1;
         $off_set = ( $current_page -1)* $item_per_page;
 
-        $data = $db->select('SELECT posts.*, author.fullname AS author_name, 
+
+        $sql = 'SELECT posts.*, author.fullname AS author_name, 
                                    categories.name as cat_name, 
                                    categories.code_name as code_name FROM posts 
                      INNER JOIN author ON posts.author_id = author.id
-					 INNER JOIN categories ON posts.cat_id = categories.id WHERE categories.type = 3 ORDER BY posts.created_at DESC 
+					 INNER JOIN categories ON posts.cat_id = categories.id WHERE categories.type = 3 ';
+
+
+        $params = [];
+        $keywords = null;
+        if(isset($_GET['keyword'])){
+            $keywords = $_GET['keyword'];
+        }
+        if (isset($_GET['title'])) {
+            $sql .= ' AND posts.title LIKE ?';
+            $params[] = '%' . $_GET['keyword'] . '%';
+        }
+        if (isset($_GET['author'])) {
+            $sql .= ' AND author.fullname LIKE ?';
+            $params[] = '%' . $_GET['keyword'] . '%';
+        }
+
+
+        $sql.= 'ORDER BY posts.created_at DESC 
 					 LIMIT '.$item_per_page.' OFFSET '.$off_set.'
-					 ');
+					 ';
+        $data = $db->select($sql, $params);
 
         $result = $db->select('SELECT COUNT(*) AS total_count FROM posts 
                      INNER JOIN author ON posts.author_id = author.id 

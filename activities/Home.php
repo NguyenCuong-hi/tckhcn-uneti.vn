@@ -32,12 +32,10 @@ class Home{
 
                 $get_image_sidebar = $db->select('SELECT * FROM banners WHERE id IN (10, 11, 12)');
 
-
                 $get_url_image = $db->select('SELECT * FROM banners WHERE id IN (15, 16)')->fetchAll();
                 $get_url_thongbao = $db->select('SELECT * FROM banners WHERE id IN (15, 16)')->fetchAll();
                 $get_url_sukien = $db->select('SELECT * FROM banners WHERE id IN (15, 16)')->fetchAll();
                 $get_url_guibai = $db->select('SELECT * FROM banners WHERE id IN (17)')->fetchAll();
-
 
                 require_once (BASE_PATH . '/template/app/index.php');
         }
@@ -70,7 +68,6 @@ class Home{
                 require_once (BASE_PATH . '/template/app/show-post.php');
 
         }
-
 
         public function commentStore($request){
                
