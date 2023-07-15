@@ -9,7 +9,7 @@ class ViewCatalogController
 
 
         $db = new DataBase();
-        $result_image = $db->select('SELECT  banners.* FROM banners WHERE id_post ='.$id.'');
+        $result_image = $db->select('SELECT  banners.* FROM banners WHERE id_post ='.$id.' ' );
 //        if ($result_image) {
 //            $fetch_image = $result_image->fetch();
 //        } else {

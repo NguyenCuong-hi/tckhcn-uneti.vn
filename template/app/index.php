@@ -62,7 +62,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
             <!-- Cột giới thiệu -->
             <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%; flex-grow: 1;">
 
-                <a style="text-decoration: none" href="<?=url('gioithieu') ?>">
+                <a style="text-decoration: none" href="<?= url('gioithieu') ?>">
                     <h3 style="text-align: center; text-transform: uppercase; color: #3734EA;font-weight: 700; font-size: 30px;">
                         Giới thiệu</h3>
 
@@ -78,7 +78,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
             <!-- Cột thông báo -->
             <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%; flex-grow: 1;">
 
-                <a style="text-decoration: none" href="<?=url('thongbao') ?>">
+                <a style="text-decoration: none" href="<?= url('thongbao') ?>">
                     <h3 style="text-align: center; text-transform: uppercase; color:#3734EA;font-weight: 700; font-size: 30px;">
                         Thông báo</h3>
 
@@ -164,9 +164,14 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
     margin-bottom: 50px;">
 
             <div class="image-container">
+
                 <?php foreach ($posts as $datas): ?>
                     <div class="image-item">
-                        <img class="image" src="<?php echo $datas['image'] ?>" alt="Nhà xuất bản 1">
+                        <?php $id = $datas['id'] ?>
+                        <a href="<?= url('khcn/tap-chi/id=' . $id) ?>">
+                            <img class="image" src="<?php echo $datas['image'] ?>" alt="Nhà xuất bản 1">
+                        </a>
+
                     </div>
                 <?php endforeach; ?>
             </div>
