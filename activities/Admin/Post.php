@@ -40,16 +40,55 @@ class Post extends Admin
     {
         $realTimestamp = substr($request['published_at'], 0, 10);
         $request['published_at'] = date("Y-m-d H:i:s", (int) $realTimestamp);
+        $imagePath = "post-image";
         $db = new DataBase();
         if ($request['cat_id'] != null) {
-            $request['image'] = $this->saveImage($request['image'], 'post-image');
-            if ($request['image']) {
-                $request = array_merge($request, ['user_id' => 1]);
-               $posts = $db->insert('posts', array_keys($request), $request);
-                $this->redirect('admin/post');
-            } else {
-                $this->redirect('admin/post');
+            if(isset($_FILES['image_upload'])){
+                $files = $_FILES['image_upload'];
+                $names      = $files['name'];
+                $types      = $files['type'];
+                $tmp_names  = $files['tmp_name'];
+                $errors     = $files['error'];
+                $sizes      = $files['size'];
+
+
+                $numitems = count($names);
+                $numfiles = 0;
+                $file_arr = array();
+                for ($i = 0; $i < $numitems; $i ++) {
+                    if ($errors[$i] == 0) {
+                        $numfiles++;
+                        $path_img = "";
+
+                        $extension = explode('/', $types[$i])[1];
+                        $imageName = date("Y-m-d-H-i-s"). '.' . $extension;
+
+                        $imageTemp = $tmp_names[$i];
+                        $imagePath = '/public/' . $imagePath . '/';
+
+                        if(is_uploaded_file($imageTemp))
+                        {
+                            if(move_uploaded_file($imageTemp, $imagePath . $imageName))
+                            {
+                                $path_img =  $imagePath . $imageName;
+                                $file_arr[] = $path_img;
+                            }
+                            else{
+                                return false;
+                            }
+                        }
+                    }
+                }
+                if ($files) {
+                    $request = array_merge($request, ['user_id' => 1]);
+                    $posts = $db->insert('posts',$request, $request);
+                    $banner = $db->insert('banner', $request, $request);
+                    $this->redirect('admin/post');
+                } else {
+                    $this->redirect('admin/post');
+                }
             }
+
         } else {
             $this->redirect('admin/post');
         }

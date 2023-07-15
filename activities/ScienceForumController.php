@@ -17,10 +17,7 @@ class ScienceForumController
         $off_set = ( $current_page -1)* $item_per_page;
 
 
-        $sql = 'SELECT posts.*, author.fullname AS author_name, 
-                                   categories.name as cat_name, 
-                                   categories.code_name as code_name FROM posts 
-                     INNER JOIN author ON posts.author_id = author.id
+        $sql = 'SELECT posts.*,categories.name as cat_name, categories.code_name as code_name FROM posts 
 					 INNER JOIN categories ON posts.cat_id = categories.id WHERE categories.type = 3 ';
 
 
@@ -34,7 +31,7 @@ class ScienceForumController
             $params[] = '%' . $_GET['keyword'] . '%';
         }
         if (isset($_GET['author'])) {
-            $sql .= ' AND author.fullname LIKE ?';
+            $sql .= ' AND posts.author_name LIKE ?';
             $params[] = '%' . $_GET['keyword'] . '%';
         }
 
@@ -45,7 +42,6 @@ class ScienceForumController
         $data = $db->select($sql, $params);
 
         $result = $db->select('SELECT COUNT(*) AS total_count FROM posts 
-                     INNER JOIN author ON posts.author_id = author.id 
                      INNER JOIN categories ON posts.cat_id = categories.id WHERE categories.type = 3;');
 
         $row = $result->fetch();

@@ -18,9 +18,8 @@ class ScienceTechController
         $current_page =!empty($_GET['page']) ? $_GET['page'] : 1;
         $off_set = ( $current_page -1)* $item_per_page;
 
-        $query = 'SELECT posts.*, author.fullname AS author_name , categories.name as cat_name, categories.code_name as code_name
+        $query = 'SELECT posts.* , categories.name as cat_name, categories.code_name as code_name
                      FROM posts 
-                     INNER JOIN author ON posts.author_id = author.id
                      INNER JOIN categories ON posts.cat_id = categories.id 
                      WHERE categories.type = 1 ';
         $params = [];
@@ -33,7 +32,7 @@ class ScienceTechController
             $params[] = '%' . $_GET['keyword'] . '%';
         }
         if (isset($_GET['author'])) {
-            $query .= ' AND author.fullname LIKE ?';
+            $query .= ' AND posts.author_name LIKE ?';
             $params[] = '%' . $_GET['keyword'] . '%';
         }
 
@@ -42,7 +41,6 @@ class ScienceTechController
 
 
         $result = $db->select('SELECT COUNT(*) AS total_count FROM posts 
-                     INNER JOIN author ON posts.author_id = author.id 
                      INNER JOIN categories ON posts.cat_id = categories.id WHERE categories.type = 1;');
 
 //        Todo Xu ly phan trang
