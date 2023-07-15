@@ -58,6 +58,8 @@ require_once 'activities/ViewCatalogController.php';
 require_once 'activities/ViewSocioEconomicController.php';
 
 
+require_once "activities/ViewEventController.php";
+
 //helpers
 
 spl_autoload_register(function ($className) {
@@ -298,11 +300,11 @@ uri('/guibai/post', 'App\SendPostToAdmin', 'sendPost', 'POST');
 uri('/thongbao', 'App\NoticeController', 'index');
 uri('/gioithieu', 'App\IntroduceController', 'index');
 
-
-
 uri('/khcn/tap-chi/{id}', 'App\ViewCatalogController', 'index');
 uri('/ktxh/chi-tiet/{id}', 'App\ViewSocioEconomicController', 'index');
 
+
+uri('/sukien/chi-tiet/{id}', 'App\ViewEventController', 'index');
 
 echo '404 - not found';
 exit;

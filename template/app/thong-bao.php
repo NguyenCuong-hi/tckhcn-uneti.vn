@@ -29,7 +29,9 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                 <div style="padding-left: 20px">
                     <div style="font-size: 16px; font-weight: 500">
                     <span>
-                        <a style=" font-weight: 600; font-size: 20px" href="#"> <?php echo $datas['title']; ?>
+                        <?php $id = $datas['id']?>
+                        <a style=" font-weight: 600; font-size: 20px" href="<?= url('sukien/chi-tiet/id='.$id) ?>">
+                            <?php echo $datas['title']; ?>
                             </a>
                     </span>
 
