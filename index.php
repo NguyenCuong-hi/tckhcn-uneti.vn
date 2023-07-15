@@ -54,6 +54,7 @@ require_once "activities/IntroduceController.php";
 require_once "activities/NoticeController.php";
 require_once "activities/SendPostToAdmin.php";
 require_once "activities/EventController.php";
+require_once "activities/ViewNoticeController.php";
 require_once 'activities/ViewCatalogController.php';
 require_once 'activities/ViewSocioEconomicController.php';
 
@@ -305,6 +306,9 @@ uri('/ktxh/chi-tiet/{id}', 'App\ViewSocioEconomicController', 'index');
 
 
 uri('/sukien/chi-tiet/{id}', 'App\ViewEventController', 'index');
+
+
+uri('/thongbao/chi-tiet/{id}', 'App\ViewNoticeController', 'index');
 
 echo '404 - not found';
 exit;

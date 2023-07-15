@@ -15,8 +15,8 @@ class ScienceTechController
         $setting = $db->select('SELECT * FROM websetting')->fetch();
 
         $item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 4;
-        $current_page =!empty($_GET['page']) ? $_GET['page'] : 1;
-        $off_set = ( $current_page -1)* $item_per_page;
+        $current_page = !empty($_GET['page']) ? $_GET['page'] : 1;
+        $off_set = ($current_page - 1) * $item_per_page;
 
         $query = 'SELECT posts.* , categories.name as cat_name, categories.code_name as code_name
                      FROM posts 
@@ -24,7 +24,7 @@ class ScienceTechController
                      WHERE categories.type = 1 ';
         $params = [];
         $keywords = null;
-        if(isset($_GET['keyword'])){
+        if (isset($_GET['keyword'])) {
             $keywords = $_GET['keyword'];
         }
         if (isset($_GET['title'])) {
@@ -36,7 +36,7 @@ class ScienceTechController
             $params[] = '%' . $_GET['keyword'] . '%';
         }
 
-        $query .= ' ORDER BY posts.created_at DESC LIMIT '. $item_per_page. ' OFFSET ' .$off_set. ' ';
+        $query .= ' ORDER BY posts.created_at DESC LIMIT ' . $item_per_page . ' OFFSET ' . $off_set . ' ';
         $data = $db->select($query, $params);
 
 
@@ -48,12 +48,14 @@ class ScienceTechController
         $total_count = $row['total_count'];
 
         $item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 4;
-        $current_page =!empty($_GET['page']) ? $_GET['page'] : 1;
-        $off_set = ( $current_page -1)* $item_per_page;
+        $current_page = !empty($_GET['page']) ? $_GET['page'] : 1;
+        $off_set = ($current_page - 1) * $item_per_page;
 
         $totalRecords = $row['total_count'];
         $totalPages = ceil($totalRecords / $item_per_page);
 
-        require_once (BASE_PATH . '/template/app/khoahoc_congnghe.php');
+        require_once(BASE_PATH . '/template/app/khoahoc_congnghe.php');
     }
+
+
 }
