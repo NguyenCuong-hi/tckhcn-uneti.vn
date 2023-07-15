@@ -69,8 +69,8 @@
             <textarea class="form-control" id="body" name="body" placeholder="Bài viết ..." rows="5" required autofocus></textarea>
         </div>
             <div class="form-group">
-                <label for="summary">Tác giả</label>
-                <textarea class="form-control" id="author" name="summary" placeholder="Tác giả ..." rows="3" required autofocus></textarea>
+                <label for="author">Tác giả</label>
+                <textarea class="form-control" id="author" name="author" placeholder="Tác giả ..." rows="3" required autofocus></textarea>
             </div>
 
         <button type="submit" class="btn btn-primary btn-sm">Lưu</button>

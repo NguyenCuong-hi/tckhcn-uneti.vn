@@ -3,6 +3,7 @@
 namespace Admin;
 
 use Database\DataBase;
+use Admin\Banner;
 
 class Post extends Admin
 {
@@ -40,8 +41,39 @@ class Post extends Admin
     {
         $realTimestamp = substr($request['published_at'], 0, 10);
         $request['published_at'] = date("Y-m-d H:i:s", (int) $realTimestamp);
-        $imagePath = "post-image";
+
+        $imagePath = './public/' . 'post-image' . '/';
+        $filePath =  './public/upload'. '/';
+        $file_path_db = '';
         $db = new DataBase();
+
+        if(isset($_FILES['file-upload'])){
+            $up_file = $_FILES['file-upload'];
+            $namefile      = $up_file['name'];
+            $typefile      = $up_file['type'];
+            $tmp_names  = $up_file['tmp_name'];
+            $errors     = $up_file['error'];
+            $sizes      = $up_file['size'];
+
+            $name_file = date("Y-m-d-H-i-s-")  . '.' . explode('/', $typefile)[1];
+
+            $temp_file = $tmp_names;
+            $file_full_path = $filePath . $name_file;
+            if(is_uploaded_file($temp_file))
+            {
+                if(move_uploaded_file($temp_file, $file_full_path))
+                {
+                    $file_path_db = $file_full_path;
+                }
+            }
+
+        }
+
+        $fields = ['title', 'summary', 'body', 'user_id', 'cat_id', 'published_at', 'author_name', 'file'];
+        $values = [$_POST['title'], $_POST['summary'], $_POST['body'], 1 , $_POST['cat_id'], $_POST['published_at'], $_POST['author'], $file_path_db];
+        $id_posts = $db->insert_post('posts',$fields, $values);
+
+
         if ($request['cat_id'] != null) {
             if(isset($_FILES['image_upload'])){
                 $files = $_FILES['image_upload'];
@@ -51,44 +83,33 @@ class Post extends Admin
                 $errors     = $files['error'];
                 $sizes      = $files['size'];
 
-
                 $numitems = count($names);
                 $numfiles = 0;
-                $file_arr = array();
-                for ($i = 0; $i < $numitems; $i ++) {
+
+                for ($i = 0; $i < $numitems; $i++) {
                     if ($errors[$i] == 0) {
                         $numfiles++;
-                        $path_img = "";
 
+                        $micro_timestamp = microtime(true);
+                        $micro_timestamp = str_replace('.', '', $micro_timestamp);
                         $extension = explode('/', $types[$i])[1];
-                        $imageName = date("Y-m-d-H-i-s"). '.' . $extension;
+                        $imageName = date("Y-m-d-H-i-s-", time()) . $micro_timestamp . '.' . $extension;
 
                         $imageTemp = $tmp_names[$i];
-                        $imagePath = '/public/' . $imagePath . '/';
-
+                        $image_full_path = $imagePath . $imageName;
                         if(is_uploaded_file($imageTemp))
                         {
-                            if(move_uploaded_file($imageTemp, $imagePath . $imageName))
+                            if(move_uploaded_file($imageTemp, $image_full_path))
                             {
-                                $path_img =  $imagePath . $imageName;
-                                $file_arr[] = $path_img;
-                            }
-                            else{
-                                return false;
+                                $fields_img = ['image', 'id_post'];
+                                $value_img = [$image_full_path, $id_posts];
+                                $banner = $db->insert('banners',$fields_img,$value_img);
                             }
                         }
                     }
                 }
-                if ($files) {
-                    $request = array_merge($request, ['user_id' => 1]);
-                    $posts = $db->insert('posts',$request, $request);
-                    $banner = $db->insert('banner', $request, $request);
-                    $this->redirect('admin/post');
-                } else {
-                    $this->redirect('admin/post');
-                }
+                $this->redirect('admin/post');
             }
-
         } else {
             $this->redirect('admin/post');
         }
