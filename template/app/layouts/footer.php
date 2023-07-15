@@ -78,7 +78,7 @@ use Database\DataBase;
         margin-bottom: 0;
     }
 </style>
-<footer class="footer-area section-gap" style="background-image: url('public/banner-image/banner_khcn_footer_.jpg'); background-size: cover; background-repeat: no-repeat">
+<footer class="footer-area section-gap" style="background-image: url('https://png.pngtree.com/background/20210710/original/pngtree-blue-technology-web-banner-picture-image_1038231.jpg'); background-size: cover; background-repeat: no-repeat">
     <div style="width: 100%; display: flex; ">
 
         <div style="width:70%; margin-left: 5%; ">

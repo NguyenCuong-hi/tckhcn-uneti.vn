@@ -38,18 +38,18 @@ require_once(BASE_PATH . '/template/admin/layouts/head-tag.php')
 </div>
 <div class="table-responsive">
     <table class="table table-striped table-sm">
-        <caption>List of posts</caption>
+        <caption>Danh sách bài đăng</caption>
         <thead>
             <tr>
                 <th>#</th>
-                <th>title</th>
-                <th>summary</th>
+                <th>Tiêu đề</th>
+                <th>Tóm tắt</th>
                 <th>view</th>
-                <th>status</th>
-                <th>user ID</th>
-                <th>cat ID</th>
-                <th>image</th>
-                <th>setting</th>
+                <th>Trạng thái</th>
+                <th>Người đăng</th>
+                <th>Mã danh mục</th>
+                <th>Ảnh</th>
+                <th>Setting</th>
             </tr>
         </thead>
         <tbody>
@@ -101,8 +101,8 @@ require_once(BASE_PATH . '/template/admin/layouts/head-tag.php')
                             <?php } ?>
                         </a>
                         <hr class="my-1" />
-                        <a role="button" class="btn btn-sm btn-primary text-white" href="<?= url('admin/post/edit/' . $post['id']) ?>">edit</a>
-                        <a role="button" class="btn btn-sm btn-danger text-white" href="<?= url('admin/post/delete/' . $post['id']) ?>">delete</a>
+                        <a role="button" class="btn btn-sm btn-primary text-white" href="<?= url('admin/post/edit/' . $post['id']) ?>">Sửa</a>
+                        <a role="button" class="btn btn-sm btn-danger text-white" href="<?= url('admin/post/delete/' . $post['id']) ?>">Xóa</a>
                     </td>
                 </tr>
 
