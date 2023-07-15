@@ -52,6 +52,7 @@ require_once "activities/SocioEconomicController.php";
 require_once "activities/NoticeController.php";
 require_once "activities/NoticeController.php";
 require_once "activities/SendPostToAdmin.php";
+require_once "activities/EventController.php";
 
 //helpers
 
@@ -290,8 +291,10 @@ uri('/diendankhoahoc', 'App\ScienceForumController', 'index');
 uri('/thongtintraodoi', 'App\ExchageInfomation', 'index');
 uri('/lienhe', 'App\ContactController', 'index');
 uri('/thongbao', 'App\NoticeController', 'index');
+uri('/sukien', 'App\EventController', 'index');
 uri('/guibai', 'App\SendPostToAdmin', 'index');
 uri('/guibai/post', 'App\SendPostToAdmin', 'sendPost', 'POST');
+
 //uri('/thongbao', 'App\NoticeController', 'index');
 //uri('/thongbao', 'App\NoticeController', 'index');
 
