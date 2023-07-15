@@ -296,9 +296,9 @@ uri('/thongbao', 'App\NoticeController', 'index');
 uri('/sukien', 'App\EventController', 'index');
 uri('/guibai', 'App\SendPostToAdmin', 'index');
 uri('/guibai/post', 'App\SendPostToAdmin', 'sendPost', 'POST');
-
-
 uri('/thongbao', 'App\NoticeController', 'index');
+uri('/gioithieu', 'App\IntroduceController', 'index');
+
 
 uri('/khcn/tap-chi/{id}', 'App\ViewCatalogController', 'index');
 
