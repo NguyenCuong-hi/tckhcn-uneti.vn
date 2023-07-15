@@ -22,7 +22,7 @@ class ViewCatalogController
         require_once (BASE_PATH . '/template/app/show-catalog.php');
     }
 
-    public function get_catalog($get_id){
+    public function get_catalog($get_id){ 
         $db = new DataBase();
         $result_image = $db->select(' SELECT  banners.* FROM banners WHERE id_post = ' . $get_id . ' ' );
         if ($result_image) {
