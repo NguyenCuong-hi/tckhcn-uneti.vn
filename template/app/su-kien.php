@@ -1,9 +1,10 @@
 <html>
 
 </html>
+
 <?php
 
-//use App\NoticeController;
+use App\EventController;
 
 require_once(BASE_PATH . '/template/app/layouts/header.php');
 
@@ -18,10 +19,6 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
         <?php foreach ($data as $datas): ?>
 
             <div style="display: flex; font-weight: 500; height: 200px; padding-bottom: 0.800px; margin-bottom: 18px;border-bottom: 2px dotted red">
-                <!--            <div style="display: flex; width: 819px; height: 187.775px; padding-bottom: 0.800px; margin-bottom: 18px;border-bottom: 2px dotted red">-->
-
-                <!--                <div style="font-size: 16px; font-weight: 500; border-bottom: 2px dotted red;
-                                border-left: 2px solid rgb(241,243,244); padding-left: 30px;">-->
                 <div>
                     <img style="width: 286px; height: 190px" src="<?php echo $datas['image'] ?>">
                 </div>
@@ -38,7 +35,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                                 <?php echo date("d/m/Y", strtotime($datas['created_at'])); ?> |
                             </div>
                             <div>
-                                <a href="" style="font-weight: 500">Thông báo</a>
+                                <a href="" style="font-weight: 500">Chi tiết</a>
                             </div>
                         </div>
 
@@ -61,7 +58,6 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
         <img style="width: 100%" src="./public/banner-image/khcn.png">
 
     </div>
-
 
 </div>
 

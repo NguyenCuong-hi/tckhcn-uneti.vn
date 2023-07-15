@@ -43,7 +43,7 @@ class Auth
         return $message;
     }
 
-    public function sendMail($emailAddress,$mail_recipient, $subject, $body,$target_file)
+    public function sendMail($emailAddress, $mail_recipient, $subject, $body, $target_file)
     {
         //Create an instance; passing `true` enables exceptions
         $mail = new PHPMailer(true);
@@ -65,7 +65,7 @@ class Auth
 
             //Recipients
             $mail->setFrom($mail_recipient);
-//            $mail->setFrom($mail_recipient, SENDER_NAME);
+//          $mail->setFrom($mail_recipient, SENDER_NAME);
             $mail->addAddress($emailAddress); //Add a recipient
 
             //Content
@@ -75,9 +75,11 @@ class Auth
 
             $mail->addAttachment($target_file);
 
-            $mail->send();
-            echo 'Message has been sent';
-            return true;
+            if ($mail->send()) {
+                return true;
+            }
+            return false;
+
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             return false;
