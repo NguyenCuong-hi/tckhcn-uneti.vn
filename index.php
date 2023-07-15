@@ -53,6 +53,7 @@ require_once "activities/NoticeController.php";
 require_once "activities/IntroduceController.php";
 require_once "activities/NoticeController.php";
 require_once "activities/SendPostToAdmin.php";
+require_once "activities/EventController.php";
 
 //helpers
 
@@ -292,11 +293,18 @@ uri('/diendankhoahoc', 'App\ScienceForumController', 'index');
 uri('/thongtintraodoi', 'App\ExchageInfomation', 'index');
 uri('/lienhe', 'App\ContactController', 'index');
 uri('/thongbao', 'App\NoticeController', 'index');
+uri('/sukien', 'App\EventController', 'index');
 uri('/guibai', 'App\SendPostToAdmin', 'index');
 uri('/guibai/post', 'App\SendPostToAdmin', 'sendPost', 'POST');
+<<<<<<< HEAD
 uri('/thongbao', 'App\NoticeController', 'index');
 uri('/gioithieu', 'App\IntroduceController', 'index');
 
+=======
+
+//uri('/thongbao', 'App\NoticeController', 'index');
+//uri('/thongbao', 'App\NoticeController', 'index');
+>>>>>>> 9ce336c (featrue/UN-13-su-kien: phan trang su-kien,thong-bao; cau hinh Auth,gui-bai)
 
 uri('/khcn/tap-chi/{id}', 'App\ViewCatalogController', 'index');
 

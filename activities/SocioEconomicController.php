@@ -16,8 +16,8 @@ class SocioEconomicController
 
 //        Todo phan trang
         $item_per_page = !empty($_GET['per_page']) ? $_GET['per_page'] : 4;
-        $current_page =!empty($_GET['page']) ? $_GET['page'] : 1;
-        $off_set = ( $current_page -1)* $item_per_page;
+        $current_page = !empty($_GET['page']) ? $_GET['page'] : 1;
+        $off_set = ($current_page - 1) * $item_per_page;
 
 
         $query = 'SELECT posts.*, author.fullname AS author_name , categories.name as cat_name, categories.code_name as code_name
@@ -29,7 +29,7 @@ class SocioEconomicController
 //        Todo Tim kiem
         $params = [];
         $keywords = null;
-        if(isset($_GET['keyword'])){
+        if (isset($_GET['keyword'])) {
             $keywords = $_GET['keyword'];
         }
         if (isset($_GET['title'])) {
@@ -42,7 +42,7 @@ class SocioEconomicController
         }
 
         $query .= 'ORDER BY posts.created_at DESC 
-					 LIMIT '.$item_per_page.' OFFSET '.$off_set.'
+					 LIMIT ' . $item_per_page . ' OFFSET ' . $off_set . '
 					 ';
         $data = $db->select($query, $params);
 

@@ -83,16 +83,16 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                         Thông báo</h3>
 
 
-                        <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
-                            <a href="<?= url("thongbao") ?>">
-                                <img style="border-radius: 5px;max-width: 200px;max-height: 121px;" src="./public/banner-image/thong-bao.png"
-                                     alt="Giới thiệu">
-                            </a>
+                    <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
+                        <a href="<?= url("thongbao") ?>">
+                            <img style="border-radius: 5px;max-width: 200px;max-height: 121px;"
+                                 src="./public/banner-image/thong-bao.png"
+                                 alt="Giới thiệu">
+                        </a>
 
 
                     </div>
                 </a>
-
 
 
             </div>
@@ -103,9 +103,10 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                         Sự kiện</h3>
                     <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
 
-                        <img style="border-radius: 5px;max-width: 200px;max-height: 121px;"
-                             src="./public/banner-image/sukien.png"
-                             alt="Giới thiệu">
+                        <a href="<?= url('sukien') ?>">
+                            <img style="border-radius: 5px;max-width: 200px;max-height: 121px;"
+                                 src="./public/banner-image/sukien.png" alt="Giới thiệu">
+                        </a>
 
                     </div>
                 </a>
