@@ -83,11 +83,12 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                         Thông báo</h3>
 
 
-                        <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
-                            <a href="<?= url("thongbao") ?>">
-                                <img style="border-radius: 5px;max-width: 200px;max-height: 121px;" src="./public/banner-image/thong-bao.png"
-                                     alt="Giới thiệu">
-                            </a>
+                    <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
+                        <a href="<?= url("thongbao") ?>">
+                            <img style="border-radius: 5px;max-width: 200px;max-height: 121px;"
+                                 src="./public/banner-image/thong-bao.png"
+                                 alt="Giới thiệu">
+                        </a>
 
                     </div>
                 </a>
