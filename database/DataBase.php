@@ -5,8 +5,12 @@ namespace Database;
 use Exception;
 use PDO;
 
-class DataBase
+/**
+ * @property $pdo
+ */
+class DataBase extends PDO
 {
+    private PDO $pdo;
 
     private $connection;
     private $options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC, PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"];
@@ -21,7 +25,7 @@ class DataBase
 
         try {
             $this->connection = new PDO('mysql:host=' . $this->dbHost . ";dbname=" . $this->dbName, $this->dbUsername, $this->dbPassword, $this->options);
-
+            $this->pdo = $this->connection;
         } catch (Exception $e) {
             echo 'error ' . $e->getMessage();
             return false;
@@ -58,6 +62,19 @@ class DataBase
             $statement = $this->connection->prepare("INSERT INTO " . $tableName . "(" . implode(', ', $fields) . ", created_at) VALUES ( :" . implode(', :', $fields) . ", now() );");
             $statement->execute(array_combine($fields, $values));
             return true;
+        } catch (Exception $e) {
+            echo 'error ' . $e->getMessage();
+            return false;
+        }
+
+    }
+
+    public function insert_post($tableName, $fields, $values)
+    {
+        try {
+            $statement = $this->connection->prepare("INSERT INTO " . $tableName . "(" . implode(', ', $fields) . ", created_at) VALUES ( :" . implode(', :', $fields) . ", now() );");
+            $statement->execute(array_combine($fields, $values));
+            return $this->pdo->lastInsertId();
         } catch (Exception $e) {
             echo 'error ' . $e->getMessage();
             return false;
