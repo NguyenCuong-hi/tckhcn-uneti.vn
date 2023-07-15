@@ -42,6 +42,10 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
         .contact {
             font-size: 16px;
         }
+        .contact-item p{
+            font-family: "Times New Roman";
+            font-weight: 530;
+        }
 
 
     </style>
@@ -49,13 +53,13 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
     <div class="body_data" style="width: 62%;  padding: 4px; box-sizing: border-box">
         <div class="contact">
             <div class="contact-info">
-                <a style=" font-weight: 600; font-size: 27px; color: #348fde"> THÔNG TIN LIÊN HỆ </a>
+                <a style=" font-weight: 600; font-size: 27px; color: #2b2bff"> THÔNG TIN LIÊN HỆ </a>
             </div>
             <div class="contact-details">
                 <div class="contact-item">
-                    <p style="font-style: italic; font-size: 20px">Nội dung chi tiết và thông tin liên hệ xin gửi
+                    <p style="font-style: italic; font-size: 20px; font-weight: bold">Nội dung chi tiết và thông tin liên hệ xin gửi
                         về:</p>
-                    <p style="font-weight: bold; font-style: normal; font-size:26px;color: #348fde">TÒA SOẠN TẠP CHÍ KHOA HỌC &amp; CÔNG NGHỆ</p>
+                    <p style="font-weight: bold; font-style: normal; font-size:26px;color: #2b2bff">TÒA SOẠN TẠP CHÍ KHOA HỌC &amp; CÔNG NGHỆ</p>
                     <p style="font-size:18px" >Phòng 402 – Nhà HA11, Trường Đại học Kinh tế - Kỹ thuật Công nghiệp, số 218 Lĩnh Nam, Hoàng
                         Mai, Hà Nội</p>
                     <p style="font-size:18px">E-mail: <a href="tapchikhcn@uneti.edu.vn"><span style="text-decoration: underline;">tapchikhcn@uneti.edu.vn</span></a>;</p>

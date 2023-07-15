@@ -49,10 +49,6 @@ use Database\DataBase;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             }
 
-            body {
-                background-color: ;
-            }
-
             .banner img {
                 width: 100%;
                 height: 350px;
@@ -134,11 +130,11 @@ use Database\DataBase;
                 box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
                 width: 100%;
                 display: flex;
-                justify-content: space-around;
+              justify-content: space-around;
                 box-sizing: border-box;
                 padding: 8px;
                 border-top: 2px #9b3333 solid;
-
+                white-space: nowrap;
             }
 
 
@@ -146,6 +142,7 @@ use Database\DataBase;
                 color: black;
                 font-size: 14px;
                 width: 15%;
+
                 font-family: Arial, Helvetica, sans-serif;
                 font-weight: 400;
                 text-align: left;
@@ -158,12 +155,15 @@ use Database\DataBase;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 font-weight: 700;
                 text-align: center;
+                height: 100%;
                 width: 70%;
+
             }
 
             .search-input {
 
                 text-align: right;
+                height: 100%;
             }
 
             .search-input input {
@@ -217,7 +217,8 @@ use Database\DataBase;
                     document.getElementById('date').innerHTML = formattedDate;
                 </script>
             </div>
-            <div class="title-head">Giáo dục và đào tạo cùng với khoa học và công nghệ là quốc sách hàng đầu</div>
+
+            <div class="title-head">  <p> Giáo dục và đào tạo cùng với khoa học và công nghệ là quốc sách hàng đầu</p></div>
             <div class="search-input">
                 <input type="text" placeholder="Tìm kiếm...">
             </div>
