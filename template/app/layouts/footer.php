@@ -9,6 +9,7 @@ use Database\DataBase;
         /*background-image: url("public/banner-image/banner_khcn_footer_.jpg");*/
         padding: 25px 0;
         color: aliceblue;
+        letter-spacing: 3.5px;
         /* position: fixed;
         z-index:9999; */
     }
@@ -20,9 +21,9 @@ use Database\DataBase;
     }
 
     .footer-area img {
-        width: 55px;
-        height: 55px;
-        margin-right: 20px;
+        width: 67px;
+    height: 66px;
+    margin-right: 20px;
     }
 
     .footer-area u {
@@ -40,17 +41,17 @@ use Database\DataBase;
     }
 
     .footer-area p {
-        font-size: 14px;
+        font-size: 19px;
         margin-bottom: 10px;
         font-weight: 500;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     .footer-area h3 {
-        font-size: 20px;
+        font-size: 25px;
         font-weight: bold;
         margin-bottom: 10px;
-        text-transform: uppercase;
+
 
     }
 
@@ -78,40 +79,41 @@ use Database\DataBase;
         margin-bottom: 0;
     }
 </style>
-<footer class="footer-area section-gap" style="background-image: url('https://png.pngtree.com/background/20210710/original/pngtree-blue-technology-web-banner-picture-image_1038231.jpg'); background-size: cover; background-repeat: no-repeat">
-    <div style="width: 100%; display: flex; ">
+<footer class="footer-area section-gap" style="background-image: url('https://png.pngtree.com/background/20210710/original/pngtree-blue-technology-web-banner-picture-image_1038231.jpg');background-size: cover; background-repeat: no-repeat">
+ <!-- <footer class="footer-area section-gap" style="background-image: url('https://png.pngtree.com/background/20210710/original/pngtree-blue-technology-web-banner-picture-image_1038231.jpeg');background-size: cover; background-repeat: no-repeat">  -->
+<!-- <footer class="footer-area section-gap" style="background-color: #2695ED;background-size: cover; background-repeat: no-repeat">    -->
+<div style="width: 100%; display: flex; ">
 
-        <div style="width:70%; margin-left: 5%; ">
+        <div style="width:50%; margin-left: 5%; ">
             <div style=" display: flex;">
                 <div>
                     <img src="/OnlineNewsSite/public/banner-image/logo.png" alt="">
                 </div>
                 <div>
-                    <p style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                        <span style="text-transform: uppercase; font-weight: 700; margin-right: 10px;">Tạp chí khóa học & công nghệ trường Đại học Kinh tế - Kỹ thuật Công nghiệp</span>
-                    <hr style="margin: 0 0px;">
-                    <i style="margin-right: 10px;">University of Economics - Technology for Industries</i>
-                    </p>
+                        <h3 style=" font-weight: 700; margin-right: 10px;">Bản đồ chỉ dẫn</h3>
+                    <p >
+                    Tạp chí Khoa học & Công nghệ</p>
+
                 </div>
             </div>
             <div>
-                <br>
 
-                <p>Cơ quan chủ quản: Trường Đại học Kinh tế - Kỹ thuật Công nghiệp</p>
-                <p>Giấy phép hoạt động số: xxx/GP-BTTTT ngày dd-mm-2022</p>
-                <p>Cơ quan cấp phép: Bộ Thông tin và Truyền thông</p>
-                <p>Copyright © 2022 Trường Đại học Kinh tế - Kỹ thuật Công nghiệp</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.3077152215537!2d105.8736443747645!3d20.980298780656934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135afd765487289%3A0x21bd5839ba683d5f!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBLaW5oIFThur8gLSBL4bu5IFRodeG6rXQgQ8O0bmcgTmdoaeG7h3A!5e0!3m2!1svi!2s!4v1689386949867!5m2!1svi!2s"
+                   style="margin: 0 0 5px 90px" width="65%" height="200px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
             </div>
         </div>
-        <div style=" width:30%;margin-left: 4%;">
-            <h3>Thông tin liên hệ</h3>
-            <p>Địa chỉ: Phòng 402 - Nhà HA.11, Trường Đại học Kinh tế - Kỹ thuật Công nghiệp, Số 218
+        <div style=" width:50%;margin-left: 4%;">
+            <h3 style="font-weight: 700;">Trụ sở chính</h3>
+            <br>
+            <h4 style= "font-size: 25px; text-transform: uppercase; font-weight: 700; "> Tạp chí khoa học & công nghệ</h4>
+            <p>Địa chỉ: Phòng 402 - Nhà HA.11, Số 218
                 Lĩnh Nam, Hoàng Mai, Hà Nội.
 
             </p>
             <p>Số diện thoại: 086.6472407</p>
             <p>Email: tapchikhcn@uneti.edu.vn</p>
-            <h4>Bản đồ chỉ dẫn</h4>
+
         </div>
     </div>
 
