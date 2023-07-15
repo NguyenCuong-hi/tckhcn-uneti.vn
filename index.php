@@ -7,7 +7,7 @@ session_start();
 
 //configuration
 define('BASE_PATH', __DIR__);
-define('CURRENT_DOMAIN', current_domain(). '/OnlineNewsSite/');
+define('CURRENT_DOMAIN', current_domain() . '/OnlineNewsSite/');
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'news-project');
 define('DB_USERNAME', 'root');
@@ -37,7 +37,7 @@ require_once 'activities/Admin/User.php';
 require_once 'activities/Admin/Comment.php';
 require_once 'activities/Admin/Menu.php';
 require_once 'activities/Admin/WebSetting.php';
-require_once 'activities/ViewCatalogController.php';
+
 
 //auth
 require_once 'activities/Auth/Auth.php';
@@ -54,6 +54,9 @@ require_once "activities/IntroduceController.php";
 require_once "activities/NoticeController.php";
 require_once "activities/SendPostToAdmin.php";
 require_once "activities/EventController.php";
+require_once 'activities/ViewCatalogController.php';
+require_once 'activities/ViewSocioEconomicController.php';
+
 
 //helpers
 
@@ -85,33 +88,29 @@ function uri($reservedUrl, $class, $method, $requestMethod = "GET")
     // admin/category/create
     // admin/category/create
 
-    if(sizeof($currentUrlArray) != sizeof($reservedUrlArray) || methodField() != $requestMethod){
-            return false;
+    if (sizeof($currentUrlArray) != sizeof($reservedUrlArray) || methodField() != $requestMethod) {
+        return false;
     }
 
     // admin/category/edit/2
     // admin/category/edit/{id}
-    
- 
+
+
     $parameters = [];
-    for($key = 0; $key < sizeof($currentUrlArray); $key++)
-    {
-            if($reservedUrlArray[$key][0] == '{' && $reservedUrlArray[$key][strlen($reservedUrlArray[$key]) - 1] == "}")
-             {
-                    array_push($parameters, $currentUrlArray[$key]);
-            }
-            elseif($currentUrlArray[$key] !== $reservedUrlArray[$key]){
-                       // admin/category/delete/2
-                    // admin/category/edit/{id}
-    
-                    return false;
-            }
+    for ($key = 0; $key < sizeof($currentUrlArray); $key++) {
+        if ($reservedUrlArray[$key][0] == '{' && $reservedUrlArray[$key][strlen($reservedUrlArray[$key]) - 1] == "}") {
+            array_push($parameters, $currentUrlArray[$key]);
+        } elseif ($currentUrlArray[$key] !== $reservedUrlArray[$key]) {
+            // admin/category/delete/2
+            // admin/category/edit/{id}
+
+            return false;
+        }
     }
 
-    if(methodField() == 'POST')
-    {
-            $request = isset($_FILES) ? array_merge($_POST, $_FILES) : $_POST;
-            $parameters = array_merge([$request], $parameters);
+    if (methodField() == 'POST') {
+        $request = isset($_FILES) ? array_merge($_POST, $_FILES) : $_POST;
+        $parameters = array_merge([$request], $parameters);
     }
 
 
@@ -300,7 +299,10 @@ uri('/thongbao', 'App\NoticeController', 'index');
 uri('/gioithieu', 'App\IntroduceController', 'index');
 
 
+
 uri('/khcn/tap-chi/{id}', 'App\ViewCatalogController', 'index');
+uri('/ktxh/chi-tiet/{id}', 'App\ViewSocioEconomicController', 'index');
+
 
 echo '404 - not found';
 exit;

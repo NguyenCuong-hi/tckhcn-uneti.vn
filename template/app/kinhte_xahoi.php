@@ -50,7 +50,9 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                 <div style="font-size: 16px; font-weight: 500; border-bottom: 2px dotted red;
                 border-left: 2px solid rgb(241,243,244); padding-left: 30px;">
                     <span>
-                        <a style=" font-weight: 600; font-size: 18px" href="#"> <?php echo $datas['title']; ?>
+                        <?php $id = $datas['id'] ?>
+                        <a style=" font-weight: 600; font-size: 18px" href="<?= url('ktxh/chi-tiet/id=' . $id) ?>">
+                            <?php echo $datas['title']; ?>
                             </a>
                     </span>
                     <div style=" margin-bottom: 8px">
