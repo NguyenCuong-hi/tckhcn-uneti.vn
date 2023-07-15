@@ -3,7 +3,7 @@
 </html>
 <?php
 
-//use App\NoticeController;
+use App\NoticeController;
 
 require_once(BASE_PATH . '/template/app/layouts/header.php');
 
