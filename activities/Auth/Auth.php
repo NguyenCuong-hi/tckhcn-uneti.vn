@@ -76,11 +76,8 @@ class Auth
             $mail->addAttachment($target_file);
 
             if ($mail->send()) {
-//                echo "<script>window.location.href = '" . url("guibai") . "'; alert('Đã gửi bài thành công!');</script>";
                 return true;
             }
-
-//            echo "<script>window.location.href = '" . url("guibai") . "'; alert('Gửi thất bại'.$mail->ErrorInfo);</script>";
             return false;
 
         } catch (Exception $e) {
