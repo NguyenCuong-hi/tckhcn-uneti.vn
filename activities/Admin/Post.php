@@ -101,8 +101,14 @@ class Post extends Admin
                         {
                             if(move_uploaded_file($imageTemp, $image_full_path))
                             {
-                                $fields_img = ['image', 'id_post'];
-                                $value_img = [$image_full_path, $id_posts];
+                                if($numfiles <= 1){
+                                    $fields_img = ['image', 'type' , 'id_post'];
+                                    $value_img = [$image_full_path, 1 ,$id_posts];
+                                }
+                                else{
+                                    $fields_img = ['image', 'id_post'];
+                                    $value_img = [$image_full_path, $id_posts];
+                                }
                                 $banner = $db->insert('banners',$fields_img,$value_img);
                             }
                         }
@@ -181,6 +187,11 @@ class Post extends Admin
             $db->update('posts', $id, ['selected'], [1]);
         }
         $this->redirectBack();
+    }
+
+
+    public function PostFileWord(){
+
     }
 
 }

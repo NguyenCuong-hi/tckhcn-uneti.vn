@@ -54,12 +54,7 @@ require_once "activities/IntroduceController.php";
 require_once "activities/NoticeController.php";
 require_once "activities/SendPostToAdmin.php";
 require_once "activities/EventController.php";
-require_once "activities/ViewNoticeController.php";
-require_once 'activities/ViewCatalogController.php';
-require_once 'activities/ViewSocioEconomicController.php';
-
-
-require_once "activities/ViewEventController.php";
+require_once "activities/ViewDetailPostController.php";
 
 //helpers
 
@@ -301,14 +296,14 @@ uri('/guibai/post', 'App\SendPostToAdmin', 'sendPost', 'POST');
 uri('/thongbao', 'App\NoticeController', 'index');
 uri('/gioithieu', 'App\IntroduceController', 'index');
 
-uri('/khcn/tap-chi/{id}', 'App\ViewCatalogController', 'index');
-uri('/ktxh/chi-tiet/{id}', 'App\ViewSocioEconomicController', 'index');
+uri('/khcn/chi-tiet/{id}', 'App\ViewDetailPostController', 'index');
+uri('/ktxh/chi-tiet/{id}', 'App\ViewDetailPostController', 'index');
+uri('/ddkh/chi-tiet/{id}', 'App\ViewDetailPostController', 'index');
 
+uri('/sukien/chi-tiet/{id}', 'App\ViewDetailPostController', 'index');
+uri('/thongbao/chi-tiet/{id}', 'App\ViewDetailPostController', 'index');
+uri('/gioithieu/chi-tiet/{id}', 'App\ViewDetailPostController', 'index');
 
-uri('/sukien/chi-tiet/{id}', 'App\ViewEventController', 'index');
-
-
-uri('/thongbao/chi-tiet/{id}', 'App\ViewNoticeController', 'index');
 
 echo '404 - not found';
 exit;

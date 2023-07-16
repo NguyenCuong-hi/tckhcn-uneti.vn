@@ -189,13 +189,6 @@ use Database\DataBase;
 
         </div>
 
-        <!--        <div class="header-top-right">-->
-        <!--            <ul class="login-register">-->
-        <!--                <li><a href="--><?php //= url('login') ?><!--"><span class="lnr">Login</span></a></li>-->
-        <!--                <li><a href="-->
-        <?php //= url('register') ?><!--"><span class="lnr">Register</span></a></li>-->
-        <!--            </ul>-->
-        <!--        </div>-->
 
         <div class="menu">
             <a style=" margin: 0 2px 0 0px;" href="<?= url('/') ?>">Trang chủ</a>

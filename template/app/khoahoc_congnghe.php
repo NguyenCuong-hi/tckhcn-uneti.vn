@@ -46,7 +46,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                 border-left: 2px solid rgb(241,243,244); padding-left: 30px;">
                     <span>
                         <?php $id = $datas['id'] ?>
-                        <a style=" font-weight: 600; font-size: 18px" href="<?= url('khcn/tap-chi/id=' . $id) ?>">
+                        <a style=" font-weight: 600; font-size: 18px" href="<?= url('khcn/chi-tiet/' . $id) ?>">
                             <?php echo $datas['title']; ?>
                             </a>
                     </span>
