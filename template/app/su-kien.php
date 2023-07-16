@@ -20,7 +20,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
             <div style="display: flex; font-weight: 500; height: 200px; padding-bottom: 0.800px; margin-bottom: 18px;border-bottom: 2px dotted red">
                 <div>
-                    <img style="width: 286px; height: 190px" src="<?php echo $datas['image'] ?>">
+                    <img style="width: 286px; height: 190px" src="<?php echo $datas['banner_img'] ?>">
                 </div>
 
                 <div style="padding-left: 20px">

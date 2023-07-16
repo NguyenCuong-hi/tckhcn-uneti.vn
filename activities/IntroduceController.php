@@ -9,7 +9,7 @@ class IntroduceController
 
     public function index()
     {
-        // Category type = 6
+        // Category type = 6: Gioi thieu
 
         $db = new DataBase();
         $setting = $db->select('SELECT * FROM websetting')->fetch();
@@ -40,7 +40,7 @@ class IntroduceController
         $totalPages = ceil($totalRecords / $item_per_page);
 
 
-        require_once(BASE_PATH . '/template/app/thong-bao.php');
+        require_once(BASE_PATH . '/template/app/gioi-thieu.php');
     }
 
 }
