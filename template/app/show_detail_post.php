@@ -1,3 +1,6 @@
+<html>
+
+</html>
 <?php
 require_once(BASE_PATH . '/template/app/layouts/header.php');
 ?>
@@ -36,10 +39,11 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
             <div style="position: relative; width: 80%; height: 650px; background-color: #D1D1D1;">
                 <div class="phongto" style="position: absolute; top: 0; right: 0;">
-                    <span class="icon-phongto"></span>
                 </div>
+                <iframe src="<?=url($result_file['file']) ?>" style="width: 100%; height: 100%; border: none;"></iframe>
+
             </div>
-            <p class="embed_download"><a href="https://uneti.edu.vn/wp-content/uploads/2022/09/pdf24_merged.pdf"
+            <p style="font-size: 15px;" class="embed_download"><a href="<?=url($result_file['file']) ?>"
                     download="">Download File </a>
             </p>
         </div>
@@ -52,9 +56,9 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
 
     <div class="img_lienket" style="width: 15%; ">
-        <img style="width: 100%" src="/OnlineNewsSite/public/banner-image/bo-cong-thuong.png">
-        <img style="width: 100%" src="/OnlineNewsSite/public/banner-image/DHKTKTCN.png">
-        <img style="width: 100%" src="/OnlineNewsSite/public/banner-image/khcn.png">
+        <img style="width: 100%" src="<?=url('./public/banner-image/bo-cong-thuong.png')?>">
+        <img style="width: 100%" src="<?=url('./public/banner-image/DHKTKTCN.png')?>">
+        <img style="width: 100%" src="<?=url('./public/banner-image/khcn.png')?>">
     </div>
 
 </div>

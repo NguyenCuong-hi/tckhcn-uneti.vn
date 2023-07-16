@@ -185,7 +185,7 @@ use Database\DataBase;
 
         <div class="banner">
 
-            <img src="/OnlineNewsSite/public/banner-image/banner_header.jpg" alt="Banner"/>
+            <img src="<?=url('./public/banner-image/banner_header.jpg')?>" alt="Banner"/>
 
         </div>
 
@@ -196,7 +196,7 @@ use Database\DataBase;
             <a href="<?= url('kinhtexahoi') ?>">Kinh tế - xã hội</a>
             <a href="<?= url('diendankhoahoc') ?>">Diễn đàn khoa học</a>
             <a href="<?= url('thongtintraodoi') ?>">Thông tin trao đổi</a>
-            <a style=" margin: 0 0px 0 2px;" href="<?= url('lienhe') ?>">Liên hệ</a>
+            <a style=" margin: 0 0px 0 2px;" href="<?=url('lienhe') ?>">Liên hệ</a>
         </div>
 
         <div class="footer">

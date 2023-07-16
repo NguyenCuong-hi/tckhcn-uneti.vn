@@ -63,7 +63,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                 hồi lại tác giả qua thư điện tử.
                 Tòa soạn không gửi lại bài nếu không được
                 đăng
-            </p  style="font-weight: 700; color: #3734ea">I. Qui định khuôn khổ bài báo:
+            </p  style="font-weight: 700; color: #3734ea; font-family: 'Times New Roman'">I. Qui định khuôn khổ bài báo:
 
             </p>
             <p>

@@ -16,8 +16,18 @@ class ViewDetailPostController
         $qSql_getFile = 'SELECT posts.file FROM posts WHERE posts.id = ? ';
         $result_file = $db->select($qSql_getFile, [$id])->fetch();
 
+
+
         require_once(BASE_PATH . '/template/app/show_detail_post.php');
 
+    }
+
+    public function read_file($id){
+        $db = new DataBase();
+
+
+
+        require_once(BASE_PATH . '/template/app/show_detail_post.php');
     }
 
 }
