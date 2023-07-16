@@ -49,7 +49,9 @@ class SendPostToAdmin
                 // Di chuyển file vào thư mục lưu trữ
                 move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
 
-                $mail_ = $mail->sendMail($mail_recipient, $email, $subject, $message, $target_file);
+                $message_ = "Email người gửi: ".$email ."<br>"."Tên tác giả: ".$message;
+
+                $mail_ = $mail->sendMail($mail_recipient, $email, $subject, $message_, $target_file);
                 if ($mail_) {
                     echo "<script>window.location.href = '" . url("guibai") . "'; alert('Đã gửi bài thành công!');</script>";
                 } else {
