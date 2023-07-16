@@ -55,7 +55,14 @@ class Post extends Admin
             $errors     = $up_file['error'];
             $sizes      = $up_file['size'];
 
-            $name_file = date("Y-m-d-H-i-s-")  . '.' . explode('/', $typefile)[1];
+            if ($typefile !== 'pdf') {
+                $validFileName = str_replace('.vnd.openxmlformats-officedocument.wordprocessingml.document', '.docx', $namefile);
+                $name_file = date("Y-m-d-H-i-s") . $validFileName;
+
+            }
+            else{
+                $name_file = date("Y-m-d-H-i-s-")  . '.' . explode('/', $typefile)[1];
+            }
 
             $temp_file = $tmp_names;
             $file_full_path = $filePath . $name_file;
