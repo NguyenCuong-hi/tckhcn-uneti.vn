@@ -27,15 +27,13 @@ class Home{
 
                 $mostCommentsPosts =$db->select('SELECT posts.*, (SELECT COUNT(*) FROM comments WHERE comments.post_id = posts.id) AS comments_count, (SELECT username FROM users WHERE users.id = posts.user_id) AS username, (SELECT name FROM categories WHERE categories.id = posts.cat_id) AS category FROM posts  ORDER BY comments_count DESC LIMIT 0, 4')->fetchAll();
 
-                $posts = $db->select('SELECT * FROM posts')->fetchAll();
-                $get_image = $db->select('SELECT * FROM banners WHERE id IN (10, 11, 12)');
+                $posts = $db->select('SELECT posts.id, posts.cat_id , banners.image FROM posts  
+                                          INNER JOIN categories ON posts.cat_id = categories.id 
+                                          INNER JOIN banners ON posts.id = banners.id_post 
+                                          WHERE (1=1) AND categories.type IN (1,2,3)
+                                          AND banners.type = 1
+                                          ORDER BY posts.created_at DESC ')->fetchAll();
 
-                $get_image_sidebar = $db->select('SELECT * FROM banners WHERE id IN (10, 11, 12)');
-
-                $get_url_image = $db->select('SELECT * FROM banners WHERE id IN (15, 16)')->fetchAll();
-                $get_url_thongbao = $db->select('SELECT * FROM banners WHERE id IN (15, 16)')->fetchAll();
-                $get_url_sukien = $db->select('SELECT * FROM banners WHERE id IN (15, 16)')->fetchAll();
-                $get_url_guibai = $db->select('SELECT * FROM banners WHERE id IN (17)')->fetchAll();
 
                 require_once (BASE_PATH . '/template/app/index.php');
         }

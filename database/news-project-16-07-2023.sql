@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 14, 2023 lúc 05:55 AM
+-- Thời gian đã tạo: Th7 16, 2023 lúc 09:54 AM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.2.4
 
@@ -40,10 +40,6 @@ CREATE TABLE IF NOT EXISTS `author` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
--- RELATIONSHIPS FOR TABLE `author`:
---
-
---
 -- Đang đổ dữ liệu cho bảng `author`
 --
 
@@ -76,21 +72,21 @@ CREATE TABLE IF NOT EXISTS `banners` (
   `id_post` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `id_post` (`id_post`)
-) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- RELATIONSHIPS FOR TABLE `banners`:
---   `id_post`
---       `posts` -> `id`
---
+) ENGINE=InnoDB AUTO_INCREMENT=62 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `banners`
 --
 
 INSERT INTO `banners` (`id`, `image`, `url`, `type`, `created_at`, `updated_at`, `id_post`) VALUES
-(1, 'public/banner-image/Bìa-1-số-30-1448x2048.jpg', '', 0, '0000-00-00 00:00:00', NULL, 70),
-(25, '', '', 0, '0000-00-00 00:00:00', NULL, NULL);
+(54, '\r\n./public/post-image/2023-07-15-21-11-23-16894482831516.jpeg', '', 1, '2023-07-16 02:11:23', NULL, 122),
+(55, './public/post-image/2023-07-16-08-10-55-16894878559757.png', '', 1, '2023-07-16 13:10:55', NULL, 123),
+(56, './public/post-image/2023-07-16-08-12-42-16894879624551.png', '', 1, '2023-07-16 13:12:42', NULL, 124),
+(57, './public/post-image/2023-07-16-08-12-42-16894879624681.png', '', 0, '2023-07-16 13:12:42', NULL, 124),
+(58, './public/post-image/2023-07-16-08-25-49-16894887495829.png', '', 1, '2023-07-16 13:25:49', NULL, 125),
+(59, './public/post-image/2023-07-16-08-49-58-16894901989717.jpeg', '', 1, '2023-07-16 13:49:58', NULL, 126),
+(60, './public/post-image/2023-07-16-08-49-58-16894901989861.png', '', 0, '2023-07-16 13:49:58', NULL, 126),
+(61, './public/post-image/2023-07-16-08-49-58-16894901989916.png', '', 0, '2023-07-16 13:49:58', NULL, 126);
 
 -- --------------------------------------------------------
 
@@ -107,11 +103,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
   `code_name` varchar(200) DEFAULT NULL,
   `type` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=79 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
-
---
--- RELATIONSHIPS FOR TABLE `categories`:
---
+) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `categories`
@@ -138,7 +130,10 @@ INSERT INTO `categories` (`id`, `name`, `created_at`, `updated_at`, `code_name`,
 (32, 'Tạp chí Diễn đàn khoa học Bộ công thương', '2023-07-11 15:44:01', '2023-07-11 15:44:48', 'Số 45 (2023)', 3),
 (33, 'Tạp chí Diễn đàn khoa học Bộ Công nghệ thông tin', '2023-07-11 15:44:03', '2023-07-11 15:44:50', 'Số 39 (2023)', 3),
 (34, 'Tạp chí Diễn đàn khoa học và hội nhập kinh tế', '2023-07-11 15:44:05', '2023-07-11 15:44:52', 'Số 77 (2023)', 3),
-(77, 'Tạp chí kinh tế - xã hội Bộ Văn Hóa Thể thao và Du lịch', '2023-07-11 15:44:09', '2023-07-11 15:44:54', 'Số 32 (2023)', 2);
+(77, 'Tạp chí kinh tế - xã hội Bộ Văn Hóa Thể thao và Du lịch', '2023-07-11 15:44:09', '2023-07-11 15:44:54', 'Số 32 (2023)', 2),
+(79, 'Thông báo', '2023-07-16 01:53:58', NULL, NULL, 4),
+(80, 'Sự kiện', '2023-07-16 01:54:23', NULL, NULL, 5),
+(81, 'Giới thiệu', '2023-07-16 01:54:40', NULL, NULL, 6);
 
 -- --------------------------------------------------------
 
@@ -160,14 +155,6 @@ CREATE TABLE IF NOT EXISTS `comments` (
   KEY `user_id` (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
---
--- RELATIONSHIPS FOR TABLE `comments`:
---   `post_id`
---       `posts` -> `id`
---   `user_id`
---       `users` -> `id`
---
-
 -- --------------------------------------------------------
 
 --
@@ -185,12 +172,6 @@ CREATE TABLE IF NOT EXISTS `menus` (
   PRIMARY KEY (`id`),
   KEY `parent_id` (`parent_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
-
---
--- RELATIONSHIPS FOR TABLE `menus`:
---   `parent_id`
---       `menus` -> `id`
---
 
 --
 -- Đang đổ dữ liệu cho bảng `menus`
@@ -223,29 +204,24 @@ CREATE TABLE IF NOT EXISTS `posts` (
   `published_at` datetime DEFAULT NULL,
   `created_at` datetime NOT NULL,
   `updated_at` datetime DEFAULT NULL,
-  `author_id` int(11) NOT NULL,
+  `author_name` varchar(200) NOT NULL DEFAULT '',
   `file` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `cat_id` (`cat_id`),
   KEY `user_id` (`user_id`),
-  KEY `posts_author` (`author_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=72 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
-
---
--- RELATIONSHIPS FOR TABLE `posts`:
---   `cat_id`
---       `categories` -> `id`
---   `user_id`
---       `users` -> `id`
---
+  KEY `posts_author` (`author_name`)
+) ENGINE=InnoDB AUTO_INCREMENT=127 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `posts`
 --
 
-INSERT INTO `posts` (`id`, `title`, `summary`, `body`, `view`, `user_id`, `cat_id`, `image`, `status`, `selected`, `breaking_news`, `published_at`, `created_at`, `updated_at`, `author_id`, `file`) VALUES
-(70, 'Tạp chí NCKH số 30', 'Trong nghiên cứu này, hạt nano tinh thể CsPbBr3 và CsPbBr3 pha tạp Co2+ bằng phương\r\npháp hóa một bước. Các hạt nano tinh thể CsPbX3 (X= Cl, I) cũng được chế tạo bằng\r\nphương pháp trao đổi ion từ CsPbBr3 và CsX. Các mẫu CsPbBr3 và CsPbCl3 thu được có\r\ndạng hình vuông với kích thước hạt trong khoảng 7-14 nm, và dưới 7 nm đối với mẫu\r\nCsPbI3. Chúng phát quang với các bước sóng 450, 516 và 660 nm khi được kích thích bằng\r\nnguồn sáng có bước sóng dưới 400 nm tương ứng với mức năng lượng vùng cấm lần lượt\r\nlà 1,81, 2,4 và 2,71 eV. Bước đầu khi tiến hành pha tạp ion Co2+ vào mạng nền CsPbBr3\r\ncho thấy sự cải thiện về cấu trúc tinh thể và tính chất quang của mẫu CsPb0.95Co0.05Br3 đối\r\nvới mẫu không pha tạp CsPbBr', 'Bột huỳnh quang chấm lượng tử là một trong\r\nnhững vật liệu quan trọng trong lĩnh vực chiếu\r\nsáng rắn - một cấu trúc gồm có LED và vật\r\nliệu huỳnh quang hiệu suất cao có thể hấp thụ\r\nmột phần ánh sáng phát ra từ LED chuyển\r\nthành ánh sáng ở vùng phổ mong muốn, góp\r\nphần làm cho ánh sáng phát ra từ tổ hợp LED\r\n+ bột huỳnh quang có màu sắc mong muốn.\r\nThuật ngữ chấm lượng tử có ý nghĩa cụ thể về\r\ncấu trúc trong đó xảy ra hiệu ứng giam giữ\r\nKHOA HỌC & CÔNG NGHỆ\r\n2 TẠP CHÍ KHOA HỌC & CÔNG NGHỆ . SỐ 30 - 2022\r\nlượng tử các hạt tải điện. Trong thực tế, vì\r\nhiệu ứng giam giữ lượng tử xảy ra khi có ít\r\nnhất là một chiều kích thước của vật liệu nhỏ\r\nso sánh được với bán kính Bohr, mà bán kính\r\nbohr của đa số vật liệu tinh thể bán dẫn nằm\r\ntrong vùng nano mét.\r\nVật liệu perovskite vô cơ dựa trên cấu trúc\r\nCsPbX3 đươc nghiên cứu rộng rãi gần đây do\r\nchúng có tính chất quang điện đặc biệt phù\r\nhợp cho các ứng dụng rộng rãi như pin mặt\r\ntrời, linh kiện chiếu sáng rắn, linh kiện nhạy\r\nquang...[1-3]', 0, 1, 15, 'public/post-image/2023-07-12-19-04-39.jpeg', 'disable', 1, 1, '1970-01-01 01:00:00', '2023-07-13 00:04:39', NULL, 1, NULL),
-(71, 'Tạp chí NCKH số 38', 'NGHIÊN CỨU XÂY DỰNG MÔ HÌNH GIÁM SÁT MÒN ĐÁ\r\nKHI GIA CÔNG HỢP KIM Ti6Al4V TRÊN MÁY MÀI PHẲNG\r\n', 'Quyết định thay dụng cụ phù hợp và đúng lúc là yêu cầu cấp thiết, nhằm tránh hư hỏng chi\r\ntiết hoặc thay dụng cụ không cần thiết. Giám sát trực tuyến tình trạng của dụng cụ là cần\r\nthiết đối với các máy công cụ hiện đại. Mài là quá trình, được đặc trưng bởi sử dụng đá mài\r\ncó nhiều lưỡi cắt, chịu mài mòn không đồng nhất, vì vậy mòn đá mài là phức tạp nhất so với\r\ncác loại dụng cụ cắt khác. Bài báo đề cập sự phát triển hệ thống giám sát mòn đá mài trên\r\ncơ sở ANN. Thiết lập được hệ giám sát trực tuyến mòn đá gồm DAQ và DSS. Xây dựng các\r\nquan hệ cơ bản trong quá trình mài, đặc biệt giữa mòn đá và các thông số đầu ra (lực cắt,\r\nrung động, độ nhám bề mặt…) sử dụng chúng trong giám sát mòn đá.', 0, 1, 19, 'public/post-image/2023-07-12-19-39-01.jpeg', 'disable', 1, 1, '1970-01-01 01:00:00', '2023-07-13 00:39:01', NULL, 0, NULL);
+INSERT INTO `posts` (`id`, `title`, `summary`, `body`, `view`, `user_id`, `cat_id`, `image`, `status`, `selected`, `breaking_news`, `published_at`, `created_at`, `updated_at`, `author_name`, `file`) VALUES
+(122, 'Lịch sử hình thành', 'Thông tin chi tiết lịch sử hình thành Trường Đại học Kinh tế – Kỹ thuật Công nghiệp xem tại đây', 'Trường Đại học Kinh tế – Kỹ thuật Công nghiệp được thành lập theo Quyết định số 1206/QĐ-TTg ngày 11 tháng 9 năm 2007 của Thủ tướng Chính phủ, trên cơ sở nâng cấp Trường Cao đẳng Kinh tế Kỹ thuật Công nghiệp I, tiền thân là Trường Trung cấp Kỹ thuật III, được thành lập năm 1956. Trải qua hơn nửa thế kỷ, tập thể lãnh đạo, cán bộ, giáo viên, công nhân, viên chức và học sinh sinh viên của Nhà trường đã bền bỉ phấn đấu, tập trung trí tuệ và sáng tạo, vượt qua mọi khó khăn thử thách để đưa Nhà trường liên tục phát triển bền vững với những thành tích vẻ vang trong sự nghiệp đào tạo, phát triển nguồn nhân lực cho đất nước.', 0, 1, 81, '', 'disable', 1, 1, '2023-07-15 00:00:00', '2023-07-16 02:11:23', NULL, 'Trường Đại Học Kinh Tế Kỹ Thuật Công Nghiệp', ''),
+(123, 'Thông báo mới', 'Thông báo mới', 'Thông báo mới', 0, 1, 79, '', 'disable', 1, 1, '2023-07-16 00:00:00', '2023-07-16 13:10:55', NULL, 'Trường Đại Học Kinh tế kỹ thuật công nghiệp', ''),
+(124, 'Sự kiện mới', 'Sự kiên mới', 'Sự kiên mới', 0, 1, 80, '', 'disable', 1, 1, '2023-07-16 00:00:00', '2023-07-16 13:12:42', NULL, 'Trường Đại Học Kinh Tế kỹ thuật công nghiệp', ''),
+(125, 'Bài viết khoa học công nghê', 'Bài viết khoa học công nghệ', 'Bài viết khoa học công nghệ', 0, 1, 15, '', 'disable', 1, 1, '2023-07-16 00:00:00', '2023-07-16 13:25:49', NULL, 'Trường Đại học kinh tế kỹ thuật công nghiệp', ''),
+(126, 'Bài viết khoa học công nghệ', 'Tóm tắt', 'Tóm tắt', 0, 1, 15, '', 'disable', 1, 1, '2023-07-16 00:00:00', '2023-07-16 13:49:58', NULL, 'Trường đại học kinh tế kỹ thuật công nghiệp', '');
 
 -- --------------------------------------------------------
 
@@ -269,10 +245,6 @@ CREATE TABLE IF NOT EXISTS `users` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
-
---
--- RELATIONSHIPS FOR TABLE `users`:
---
 
 --
 -- Đang đổ dữ liệu cho bảng `users`
@@ -304,10 +276,6 @@ CREATE TABLE IF NOT EXISTS `websetting` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
--- RELATIONSHIPS FOR TABLE `websetting`:
---
-
---
 -- Đang đổ dữ liệu cho bảng `websetting`
 --
 
@@ -322,7 +290,7 @@ INSERT INTO `websetting` (`id`, `title`, `description`, `keywords`, `logo`, `ico
 -- Các ràng buộc cho bảng `banners`
 --
 ALTER TABLE `banners`
-  ADD CONSTRAINT `fk_banner_post` FOREIGN KEY (`id_post`) REFERENCES `posts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `banners_ibfk_1` FOREIGN KEY (`id_post`) REFERENCES `posts` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Các ràng buộc cho bảng `comments`
