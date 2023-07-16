@@ -168,7 +168,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                 <?php foreach ($posts as $datas): ?>
                     <div class="image-item">
                         <?php $id = $datas['id'] ?>
-                        <a href="<?= url('khcn/tap-chi/id=' . $id) ?>">
+                        <a href="<?= url('khcn/chi-tiet/' . $id) ?>">
                             <img class="image" src="<?php echo $datas['image'] ?>" alt="Nhà xuất bản 1">
                         </a>
 

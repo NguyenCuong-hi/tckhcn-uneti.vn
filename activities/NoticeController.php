@@ -9,7 +9,7 @@ class NoticeController
 
     public function index()
     {
-        // Category type = 4
+        // Category type = 4 : Thong bao
 
         $db = new DataBase();
         $setting = $db->select('SELECT * FROM websetting')->fetch();
@@ -19,10 +19,10 @@ class NoticeController
         $current_page = !empty($_GET['page']) ? $_GET['page'] : 1;
         $off_set = ($current_page - 1) * $item_per_page;
 
-        $query = 'SELECT posts.*
-                     FROM posts
+        $query = 'SELECT posts.*, banners.image as banner_img FROM posts
 					 INNER JOIN categories ON posts.cat_id = categories.id
-					 WHERE categories.type = 4 ';
+                     INNER JOIN banners ON posts.id = banners.id_post 
+					 WHERE (1=1) AND categories.type = 4 AND banners.type = 1 ';
 
         $query .= 'ORDER BY posts.created_at DESC 
 					 LIMIT ' . $item_per_page . ' OFFSET ' . $off_set . '
