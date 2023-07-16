@@ -41,9 +41,17 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                         </div>
 
                         <div style=" margin:7px 0 ; font-size: 14px">
-                            <div>
+                            <div id="summary">
                                 <?php echo $datas['summary'] ?>
                             </div>
+                            <script>
+                                var contentElement = document.getElementById('summary');
+                                var maxCharacters = 100; // Giới hạn kí tự
+
+                                if (contentElement.textContent.length > maxCharacters) {
+                                    contentElement.textContent = contentElement.textContent.substr(0, maxCharacters) + '...';
+                                }
+                            </script>
                         </div>
                     </div>
 

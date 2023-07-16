@@ -60,7 +60,29 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                             <li>Số tạp chí: <?php echo $datas['code_name'] ?></li>
                             <li>Tác giả: <?php echo $datas['author_name'] ?></li>
                             <li>Tạp chí xuất bản: <?php echo $datas['cat_name'] ?></li>
-                            <li><a href="#">Tóm tắt</a></li>
+                            <li>
+                                <a href="#" onclick="toggleSummary(event)">Tóm tắt</a>
+                                <span class="summary" style="display: none;"><?php echo $datas['summary']?></span>
+                            </li>
+                            <script>
+                                function toggleSummary(event) {
+                                    event.preventDefault();
+
+                                    var summaryElement = event.target.nextElementSibling;
+                                    summaryElement.classList.toggle('show');
+
+                                    if (summaryElement.classList.contains('show')) {
+                                        event.target.innerText = 'Ẩn tóm tắt';
+                                    } else {
+                                        event.target.innerText = 'Tóm tắt';
+                                    }
+                                }
+                            </script>
+                            <style>
+                                .show {
+                                    display: block !important;
+                                }
+                            </style>
                         </ul>
                     </div>
                     <div class="footer-element" style="text-align: end; margin-bottom: 8px; display: flex;
