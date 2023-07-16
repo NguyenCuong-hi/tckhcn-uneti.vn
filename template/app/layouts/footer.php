@@ -115,7 +115,7 @@ use Database\DataBase;
             <div>
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.3077152215537!2d105.8736443747645!3d20.980298780656934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135afd765487289%3A0x21bd5839ba683d5f!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBLaW5oIFThur8gLSBL4bu5IFRodeG6rXQgQ8O0bmcgTmdoaeG7h3A!5e0!3m2!1svi!2s!4v1689386949867!5m2!1svi!2s"
-  width="260px" height="132px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  width="70%" height="132px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 </div>
         </div>

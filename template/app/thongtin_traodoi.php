@@ -2,20 +2,30 @@
 
 </html>
 <?php
+
 require_once(BASE_PATH . '/template/app/layouts/header.php');
 
 ?>
 <!--Xủ lý hiển thị ở đây-->
-
+<style>
+    p{
+        font-family: 'Times New Roman';
+        font-size: 18px;
+    }
+    span{
+        font-family: 'Times New Roman';
+        font-size: 18px;
+    }
+</style>
 <div style="display: flex;  margin-top: 30px; margin-right: 32px">
 
     <?php require_once (BASE_PATH . '/template/app/layouts/menuleft.php')?>
 
 <!-- _________________________________________________________________________________ -->
-    <div style="width: 62%;  padding: 4px; box-sizing: border-box">
+    <div style="width: 62%;  padding: 4px; box-sizing: border-box; font-family:'Times New Roman';">
         <h3 style="text-transform: uppercase; color: #3734ea">Thể lệ bài gửi</h3>
         <div style="padding-left: 20px;">
-            <p><span style="font-weight: 700;">
+            <p ><span style="font-weight: 700;">
         Tạp chí Khoa học & Công nghệ
     </span>
                 Trường Đại học
@@ -79,7 +89,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                 II. Bố cục và hình thức trình bày bài báo:
             </p>
             <p>
-                1. <span style="font-weight: 700;">Tên bài báo:</span> Tên bài báo cần ngắn gọn nhưng
+                 <span style="font-weight: 700;">1. Tên bài báo:</span> Tên bài báo cần ngắn gọn nhưng
                 thể hiện nội dung chính của bài báo, đề cập thẳng
                 đến vấn đề bài báo muốn giải quyết; được viết
                 bằng Tiếng Việt và Tiếng Anh (font chữ Times
@@ -87,13 +97,13 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                 giữa, không chia cột).
             </p>
             <p>
-                2. <span style="font-weight: 700;">Tên tác giả</span> (viết bằng chữ in đậm) và địa chỉ của
+                <span style="font-weight: 700;"> 2. Tên tác giả</span> (viết bằng chữ in đậm) và địa chỉ của
                 tác giả (viết bằng chữ in thường) đặt ngay sau tên
                 tác giả, font Times New Roman, cỡ chữ 12, cân
                 giữa;
             </p>
             <p>
-                3. <span style="font-weight: 700;">Tóm tắt (Abstract): </span> được trình bày dưới dạng
+                <span style="font-weight: 700;"> 3. Tóm tắt (Abstract): </span> được trình bày dưới dạng
                 một đoạn văn ngắn gọn (không quá 200 từ), thể
                 hiện tầm quan trọng, mục đích nghiên cứu,
                 phương pháp nghiên cứu, những kết quả và kết
@@ -102,12 +112,12 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                 chữ thường, cỡ chữ 10, không chia cột);
             </p>
             <p>
-                4. <span style="font-weight: 700;">Từ khóa (Keywords): </span>bằng Tiếng Việt và Tiếng
+                <span style="font-weight: 700;"> 4. Từ khóa (Keywords): </span>bằng Tiếng Việt và Tiếng
                 Anh, không quá 5 từ, font Times New Roman,
                 kiểu chữ thường cỡ chữ 10;
             </p>
             <p>
-                5. <span style="font-weight: 700;">Nội dung: </span> Bài báo viết bằng tiếng Việt hoặc bằng
+                <span style="font-weight: 700;"> 5. Nội dung: </span> Bài báo viết bằng tiếng Việt hoặc bằng
                 tiếng Anh và cần có kết quả mới (về lý thuyết,
                 phương pháp, phương tiện, mô hình, công cụ…),
                 có giá trị khoa học và thực tiễn, (font Times New
@@ -141,7 +151,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                 cứu rút ra từ công trình này và nêu các đề xuất
             </p>
             <p>
-                6. <span style="font-weight: 700;">Tài liệu tham khảo: </span> Tài liệu tiếng Việt ghi trước,
+                <span style="font-weight: 700;">6. Tài liệu tham khảo: </span> Tài liệu tiếng Việt ghi trước,
                 sau đó là tài liệu bằng tiếng nước khác. Khi trích
                 dẫn cần đầy đủ các thông tin sau:
             </p>
@@ -165,7 +175,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                 các câu viết trong bài.
             </p>
             <p>
-                7. <span style="font-weight: 700;">Các thông tin liên quan đến tác giả: </span>học
+                <span style="font-weight: 700;">7. Các thông tin liên quan đến tác giả: </span>học
                 hàm, học vị, cơ quan công tác, điện thoại, email
                 của tác giả phải ghi rõ ràng ở cuối bài.
             </p>
