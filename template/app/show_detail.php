@@ -29,6 +29,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
 
             <?php
+
             foreach ($result_image as $item):
                 ?>
                 <div style="width: 80%;border: 1px solid #D1D1D1; justify-content: center; margin-bottom: 70px;">
@@ -37,28 +38,20 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
             <?php endforeach; ?>
 
 
-            <div style="position: relative; width: 80%; height: 650px; background-color: #D1D1D1;">
-                <div class="phongto" style="position: absolute; top: 0; right: 0;">
-                </div>
-                <?php if (empty($result_file) || !file_exists($result_file['file'])): ?>
-                    <p style="text-align: center; justify-content: center">Không có bài viết để hiển thị</p>
-                <?php else : ?>
-                    <iframe loading="lazy" src="<?= url($result_file['file']) ?>"
-                            style="width: 100%; height: 100%; border: none;">
-                    </iframe>
-
-                <?php endif; ?>
-
-            </div>
-            <p style="font-size: 15px;" class="embed_download"><a href="<?=url($result_file['file']) ?>"
-                    download="">Download File </a>
-            </p>
+<!--            <div style="position: relative; width: 80%; height: 650px; background-color: #D1D1D1;">-->
+<!--                <div class="phongto" style="position: absolute; top: 0; right: 0;">-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            <p style="font-size: 15px;" class="embed_download"><a href="--><?php //=url($result_file['file']) ?><!--"-->
+<!--                                                                  download="">Download File </a>-->
+<!--            </p>-->
         </div>
 
         <div>
 
         </div>
     </div>
+
 
 
 

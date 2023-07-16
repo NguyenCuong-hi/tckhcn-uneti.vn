@@ -8,26 +8,44 @@ use Database\DataBase;
 class ViewDetailPostController
 {
 
-    public function index($id){
+    public function index($id)
+    {
 
         $db = new DataBase();
         $result_image = $db->select('SELECT  banners.* FROM banners WHERE id_post = ? ', [$id])->fetchAll();
 
-        $qSql_getFile = 'SELECT posts.file FROM posts WHERE posts.id = ? ';
+        $qSql_getFile = 'SELECT posts.file, categories.type
+                        FROM posts
+                        INNER JOIN categories ON categories.id = posts.cat_id
+                        WHERE posts.id = ? ';
         $result_file = $db->select($qSql_getFile, [$id])->fetch();
 
 
 
-        require_once(BASE_PATH . '/template/app/show_detail_post.php');
+
+        if ($result_file['type'] == 1 || $result_file['type'] == 2 || $result_file['type'] == 3) {
+            require_once(BASE_PATH . '/template/app/show_detail_post.php');
+        } else {
+            require_once(BASE_PATH . '/template/app/show_detail.php');
+        }
+
+//        $db = new DataBase();
+//        $result_image = $db->select('SELECT  banners.* FROM banners WHERE id_post = ? ', [$id])->fetchAll();
+//
+//        $qSql_getFile = 'SELECT posts.file, categories.type
+//                FROM posts
+//                INNER JOIN categories ON categories.id = posts.cat_id
+//                WHERE posts.id = ? ';
+//        $result_file = $db->select($qSql_getFile, [$id])->fetch();
+//
+//        if ($result_file['type'] == 1 || $result_file['type'] == 2 || $result_file['type'] == 3) {
+//            require_once(BASE_PATH . '/template/app/show_detail_post.php');
+//        } else {
+//            require_once(BASE_PATH . '/template/app/show_detail.php');
+//        }
+
 
     }
 
-    public function read_file($id){
-        $db = new DataBase();
-
-
-
-        require_once(BASE_PATH . '/template/app/show_detail_post.php');
-    }
 
 }
