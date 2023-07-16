@@ -43,7 +43,19 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                 <?php if (empty($result_file) || !file_exists($result_file['file'])): ?>
                     <p style="text-align: center; justify-content: center">Không có bài viết để hiển thị</p>
                 <?php else : ?>
-                    <iframe loading="lazy" src="<?= url($result_file['file']) ?>"
+
+                <?php $extension = pathinfo($result_file['file'], PATHINFO_EXTENSION);
+                $src = '';
+                    if($extension === 'docx'){
+
+                        $src = 'https://docs.google.com/viewer?embedded=true&url='. url($result_file['file']);
+                    }
+                    if($extension === 'pdf'){
+
+                        $src = url($result_file['file']);
+                    }
+                ?>
+                    <iframe loading="lazy" src="<?=$src?>"
                             style="width: 100%; height: 100%; border: none;">
                     </iframe>
 
