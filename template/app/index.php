@@ -60,7 +60,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
     <div style="width: 62%; margin: 0; padding: 4px; box-sizing: border-box">
         <div style="display: flex; flex: 1; justify-content: space-between">
             <!-- Cột giới thiệu -->
-            <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%; flex-grow: 1;">
+            <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 33%; flex-grow: 1;">
 
                 <a style="text-decoration: none" href="<?=url('gioithieu') ?>">
                     <h3 style="text-align: center; text-transform: uppercase; color: #3734EA;font-weight: 700; font-size: 30px;">
@@ -68,7 +68,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
                     <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
 
-                        <img style="border-radius: 5px;max-width: 200px;max-height: 121px;"
+                        <img style="border-radius: 5px; width:100%;max-width: 200px;max-height: 121px;"
                              src="./public/banner-image/gioithieu.png"
                              alt="Giới thiệu">
                     </div>
@@ -76,7 +76,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
             </div>
             <!-- Cột thông báo -->
-            <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%; flex-grow: 1;">
+            <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 33%; flex-grow: 1;">
 
                 <a style="text-decoration: none" href="<?=url('thongbao') ?>">
                     <h3 style="text-align: center; text-transform: uppercase; color:#3734EA;font-weight: 700; font-size: 30px;">
@@ -85,7 +85,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
                     <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
                         <a href="<?= url("thongbao") ?>">
-                            <img style="border-radius: 5px;max-width: 200px;max-height: 121px;"
+                            <img style="border-radius: 5px;width:100%; max-width: 200px;max-height: 121px;"
                                  src="./public/banner-image/thong-bao.png"
                                  alt="Giới thiệu">
                         </a>
@@ -96,14 +96,14 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
             </div>
             <!-- Cột sự kiện -->
-            <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%; flex-grow: 1;">
+            <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 33%; flex-grow: 1;">
                 <a style="text-decoration: none" href="#">
                     <h3 style="text-align: center; text-transform: uppercase; color: #3734EA;font-weight: 700; font-size: 30px; ">
                         Sự kiện</h3>
                     <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
 
                         <a href="<?= url('sukien') ?>">
-                            <img style="border-radius: 5px;max-width: 200px;max-height: 121px;"
+                            <img style="border-radius: 5px;width:100%;max-width: 200px;max-height: 121px;"
                                  src="./public/banner-image/sukien.png" alt="Giới thiệu">
                         </a>
 

@@ -130,38 +130,43 @@ use Database\DataBase;
                 box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
                 width: 100%;
                 display: flex;
-              justify-content: space-around;
-                box-sizing: border-box;
-                padding: 8px;
+                
+                 align-items: center;
+                 height: 10%;
+              /* justify-content: space-around; */
+                /* box-sizing: border-box; */
+                justify-content: center;
                 border-top: 2px #9b3333 solid;
-                white-space: nowrap;
+                 height: max-content;
+                /* white-space: nowrap; */
             }
-
-
+    
             .current-date {
                 color: black;
-                font-size: 14px;
+                font-size: 12px;
                 width: 15%;
-
+                line-height: 37px;
                 font-family: Arial, Helvetica, sans-serif;
                 font-weight: 400;
                 text-align: left;
+                height: max-content;
             }
-
+         
 
             .title-head {
                 color: #9C1A1A;
+                line-height: 37px;
                 font-size: 14px;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 font-weight: 700;
                 text-align: center;
                 height: 100%;
                 width: 70%;
+                height: max-content;
 
             }
-
             .search-input {
-
+                
                 text-align: right;
                 height: 100%;
             }
@@ -202,7 +207,10 @@ use Database\DataBase;
         </div>
 
         <div class="footer">
+           
+
             <div class="current-date" id="date">
+                <p>
                 <script>
                     var daysOfWeek = ['Chủ Nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'];
                     var monthsOfYear = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
@@ -216,9 +224,10 @@ use Database\DataBase;
                     var formattedDate = dayOfWeek + ',' + day + '/' + month + '/' + year;
                     document.getElementById('date').innerHTML = formattedDate;
                 </script>
+                </p>
             </div>
 
-            <div class="title-head">  <p> Giáo dục và đào tạo cùng với khoa học và công nghệ là quốc sách hàng đầu</p></div>
+            <div class="title-head">  Giáo dục và đào tạo cùng với khoa học và công nghệ là quốc sách hàng đầu</div>
             <div class="search-input">
                 <input type="text" placeholder="Tìm kiếm...">
             </div>
