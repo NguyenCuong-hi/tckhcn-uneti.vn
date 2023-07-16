@@ -84,7 +84,7 @@ use Database\DataBase;
         <div style="width:65%; margin-left: 5%; ">
             <div style=" display: flex;">
                 <div>
-                    <img src="/OnlineNewsSite/public/banner-image/logo.png" alt="">
+                    <img src="<?=url('./public/banner-image/logo.png')?>" alt="">
                 </div>
                 <div>
                     <p style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
