@@ -39,8 +39,7 @@ class IntroduceController
         $totalRecords = $row['total_count'];
         $totalPages = ceil($totalRecords / $item_per_page);
 
-
         require_once(BASE_PATH . '/template/app/thong-bao.php');
     }
-
+    
 }
