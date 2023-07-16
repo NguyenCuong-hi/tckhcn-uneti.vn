@@ -100,7 +100,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                     <span>
                         <?php $id = $datas['id'] ?>
                         <a style=" font-weight: 600; font-size: 18px"
-                             href="<?= url('ddkh/tap-chi/' . $id) ?>"><?php echo $datas['title'] ?></a></span>
+                             href="<?=url('ddkh/chi-tiet/' . $id) ?>"><?php echo $datas['title'] ?></a></span>
                     <div style=" margin-bottom: 8px; ">
                         <ul style="list-style-type: circle; margin-bottom: 8px">
                             <li>Tác giả: <?php echo $datas['author_name'] ?></li>
