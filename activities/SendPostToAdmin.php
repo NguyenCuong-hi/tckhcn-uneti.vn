@@ -40,14 +40,14 @@ class SendPostToAdmin
             $target_dir = "uploads/file_uploads/";
 
             // Tạo tên file mới dựa trên thời gian để tránh trùng lặp
-            $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+            $target_file =  basename($_FILES["fileToUpload"]["name"]);
 
             // Kiểm tra kiểu file (ở đây, chỉ cho phép tải lên file PDF và DOC)
             $fileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
             if ($fileType === "pdf" || $fileType === "doc" || $fileType === "docx") {
                 // Di chuyển file vào thư mục lưu trữ
-                move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
+//                move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file);
 
                 $message_ = "Email người gửi: ".$email ."<br>"."Tên tác giả: ".$message;
 

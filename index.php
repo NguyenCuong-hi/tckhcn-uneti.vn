@@ -7,7 +7,7 @@ session_start();
 
 //configuration
 define('BASE_PATH', __DIR__);
-define('CURRENT_DOMAIN', current_domain() . '/OnlineNewsSite/');
+define('CURRENT_DOMAIN', current_domain() . '/tckhcn.uneti.vn/');
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'news-project');
 define('DB_USERNAME', 'root');
