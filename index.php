@@ -9,7 +9,7 @@ session_start();
 define('BASE_PATH', __DIR__);
 define('CURRENT_DOMAIN', current_domain() . '/tckhcn.uneti.vn/');
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'news-project');
+define('DB_NAME', 'khcn-uneti');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');
 define('DISPLAY_ERROR', true);
