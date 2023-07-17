@@ -185,7 +185,7 @@ use Database\DataBase;
 
         <div class="banner">
 
-            <img src="<?=url('./public/banner-image/banner_new.jpg')?>" alt="Banner"/>
+            <img src="<?=url('./public/banner-image/banner_header.jpg')?>" alt="Banner"/>
 
         </div>
 
