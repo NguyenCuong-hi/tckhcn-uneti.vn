@@ -16,14 +16,19 @@
     }
 
     .image {
-        margin-top: 20px;
-        width: 160px;
-        height: 241px;
+        margin:  3vh 0;
+        width: 10vw;
+        height: 13vh;
         cursor: pointer;
         transition: transform .2s ease-out;
-        border-radius: 25px;
+        border-radius: 2.5%;
     }
+@media screen and (min-width: 768px) {
+        .image {
+            height: 28vh;
+  }
 
+}
     .image:hover {
         transform: scale(1.1);
     }
@@ -53,7 +58,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 ?>
 
 
-<div class="body_getdata" style="display: flex;  margin-top: 30px; margin-right: 32px">
+<div class="body_getdata" style="display: flex;  margin-top: 3vh; margin-right: 3.2vh">
     <?php require_once(BASE_PATH . '/template/app/layouts/menuleft.php') ?>
 
     <!-- _________________________________________________________________________________ -->
@@ -63,10 +68,10 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
             <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 33%; flex-grow: 1;">
 
                 <a style="text-decoration: none" href="<?= url('gioithieu') ?>">
-                    <h3 style="text-align: center; text-transform: uppercase; color: #3734EA;font-weight: 700; font-size: 30px;">
+                    <h3 style="text-align: center; text-transform: uppercase; color: #3734EA;font-weight: 700; font-size: 1.8vw;">
                         Giới thiệu</h3>
 
-                    <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
+                    <div style=" margin-bottom: 7vh; display: flex; justify-content: center; align-items: center;">
 
                         <img style="border-radius: 5px; width:100%;max-width: 200px;max-height: 121px;"
                              src="./public/banner-image/gioithieu.png"
@@ -79,11 +84,11 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
             <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 33%; flex-grow: 1;">
 
                 <a style="text-decoration: none" href="<?= url('thongbao') ?>">
-                    <h3 style="text-align: center; text-transform: uppercase; color:#3734EA;font-weight: 700; font-size: 30px;">
+                    <h3 style="text-align: center; text-transform: uppercase; color:#3734EA;font-weight: 700; font-size: 1.8vw;">
                         Thông báo</h3>
 
 
-                    <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
+                    <div style=" margin-bottom: 7vh; display: flex; justify-content: center; align-items: center;">
                         <a href="<?= url("thongbao") ?>">
                             <img style="border-radius: 5px;width:100%; max-width: 200px;max-height: 121px;"
                                  src="./public/banner-image/thong-bao.png"
@@ -98,9 +103,9 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
             <!-- Cột sự kiện -->
             <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 33%; flex-grow: 1;">
                 <a style="text-decoration: none" href="#">
-                    <h3 style="text-align: center; text-transform: uppercase; color: #3734EA;font-weight: 700; font-size: 30px; ">
+                    <h3 style="text-align: center; text-transform: uppercase; color: #3734EA;font-weight: 700; font-size: 1.8vw; ">
                         Sự kiện</h3>
-                    <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
+                    <div style=" margin-bottom: 7vh; display: flex; justify-content: center; align-items: center;">
 
                         <a href="<?= url('sukien') ?>">
                             <img style="border-radius: 5px;width:100%;max-width: 200px;max-height: 121px;"
@@ -114,12 +119,12 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
         </div>
         <div style="display: flex; flex: 1; justify-content: space-between">
             <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">
-                <h3 style="text-align: center; text-transform: uppercase; color: #3734EA;font-weight: 700; font-size: 30px;">
+                <h3 style="text-align: center; text-transform: uppercase; color: #0C548A;font-weight: 700; font-size: 1.8vw;">
                     Gửi bài</h3>
 
-                <div style=" margin-bottom: 70px; display: flex; justify-content: center; align-items: center;">
+                <div style=" margin-bottom: 7vh; display: flex; justify-content: center; align-items: center;">
                     <a href="<?= url("guibai") ?>">
-                        <img style="border-radius: 5px;max-width: 200px;max-height: 121px;"
+                        <img style="border-radius: 5px;width:100%;max-width: 200p;max-height:  121px;"
                              src="./public/banner-image/guibai.png"
                              alt="Giới thiệu">
                     </a>
@@ -137,8 +142,8 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
         </div>
     </div>
 
-    <div class="img_lienket" style="width: 15%; ">
-        <H4 style="font-size: 16px; color: #155fa2; font-family: 'Times New Roman', Times, serif; "> LIÊN KẾT
+    <div class="img_lienket" style="width: 15%; text-align: center; margin-top: 2vh;" >
+        <H4 style="font-size: 1.1vw; color: #155fa2; font-family: 'Times New Roman', Times, serif; "> LIÊN KẾT
             WEBSITE</H4>
         <a href="https://moit.gov.vn/"><img style="width: 100%" src="./public/banner-image/bo-cong-thuong.png"> </a>
         <a href="https://uneti.edu.vn/"><img style="width: 100%" src="./public/banner-image/DHKTKTCN.png"></a>
@@ -149,8 +154,8 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 </div>
 <!-- _________________________________________________________________________________ -->
 <div>
-    <div style="margin-left: 60px; margin-top: 30px;">
-        <h3 style="text-align: left;  color: #3734ea;font-weight: 700; font-size: 30px;">Các số đã xuất bản</h3>
+    <div style="margin-left: 3%; margin-top: 2vh;">
+        <h3 style="text-align: left;  color: #0C548A;font-weight: 700; font-size: 1.7vw;">Các số đã xuất bản</h3>
     </div>
     <div style="margin-left: 8%; margin-right:6%">
 
@@ -160,7 +165,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
     /*justify-content: center;*/ /* căn giữa các sản phẩm */
     margin-left: -20px;
     margin-right: -20px;
-    margin-top: 50px;
+   
     margin-bottom: 50px;">
 
             <div class="image-container">

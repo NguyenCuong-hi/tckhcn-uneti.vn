@@ -17,6 +17,15 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
         background-image: url(//ssl.gstatic.com/docs/common/viewer/v3/v-sprite50.svg) !important;
         background-size: cover;
     }
+    .ctgt{
+        width: 100%; height: 35vh;
+    }
+    @media screen and (min-width: 768px) {
+        .ctgt{
+        width: 100%; height: 650px;
+    }
+
+}
 </style>
 <div class="body_getdata" style="display: flex; margin-top: 30px; margin-right: 32px">
 
@@ -33,7 +42,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
             foreach ($result_image as $item):
                 ?>
                 <div style="width: 80%;border: 1px solid #D1D1D1; justify-content: center; margin-bottom: 70px;">
-                    <img style="width: 100%; height: 650px;  " src="<?= url($item['image']) ?> " alt="">
+                    <img class="ctgt"  src="<?= url($item['image']) ?> " alt="">
                 </div>
             <?php endforeach; ?>
 
@@ -55,10 +64,14 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
 
 
-    <div class="img_lienket" style="width: 15%; ">
-        <img style="width: 100%" src="<?=url('./public/banner-image/bo-cong-thuong.png')?>">
+    <div class="img_lienket" style="width: 15%; text-align: center; margin-top: 2vh;" >
+        <H4 style="font-size: 1.1vw; color: #155fa2; font-family: 'Times New Roman', Times, serif; "> LIÊN KẾT
+            WEBSITE</H4>
+            <img style="width: 100%" src="<?=url('./public/banner-image/bo-cong-thuong.png')?>">
         <img style="width: 100%" src="<?=url('./public/banner-image/DHKTKTCN.png')?>">
         <img style="width: 100%" src="<?=url('./public/banner-image/khcn.png')?>">
+
+
     </div>
 
 </div>

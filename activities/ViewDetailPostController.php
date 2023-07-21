@@ -18,7 +18,10 @@ class ViewDetailPostController
                         FROM posts
                         INNER JOIN categories ON categories.id = posts.cat_id
                         WHERE posts.id = ? ';
+
+        $qFile = 'SELECT * FROM file WHERE file.id_post = ?';
         $result_file = $db->select($qSql_getFile, [$id])->fetch();
+        $getFileExcute = $db ->select($qFile, [$id])->fetchAll();
 
 
 

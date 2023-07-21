@@ -26,7 +26,7 @@
         -webkit-border-radius: 100%;
         border-radius: 100%;
         background-color: #3498DB;
-        font-size: 18px;
+        font-size: 1vw;
         color: #ffffff;
     }
 
@@ -35,7 +35,7 @@
         -moz-border-radius: 50px 0 0 50px;
         -webkit-border-radius: 50px;
         border-radius: 50px 0 0 50px;
-        width: 100px;
+        width: 5vw;
     }
 
     .modal-4 div.next {
@@ -43,7 +43,7 @@
         -moz-border-radius: 0 50px 50px 0;
         -webkit-border-radius: 0;
         border-radius: 0 50px 50px 0;
-        width: 100px;
+        width: 5vw;
     }
 
     .modal-4 div:hover {
@@ -78,7 +78,7 @@
             ?>
             <li>
                 <a href="?per_page=<?= $item_per_page ?> &page=<?= $prev_page ?>">
-                    <div class="next">
+                    <div class="prev">
                         <i class="fa fa-chevron-left"></i>
                         Trước
 

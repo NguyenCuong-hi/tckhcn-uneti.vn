@@ -47,39 +47,63 @@ class Post extends Admin
         $file_path_db = '';
         $db = new DataBase();
 
-        if(isset($_FILES['file-upload'])){
-            $up_file = $_FILES['file-upload'];
-            $namefile      = $up_file['name'];
-            $typefile      = $up_file['type'];
-            $tmp_names  = $up_file['tmp_name'];
-            $errors     = $up_file['error'];
-            $sizes      = $up_file['size'];
-
-            if ($typefile !== 'pdf') {
-                $validFileName = str_replace('.vnd.openxmlformats-officedocument.wordprocessingml.document', '.docx', $namefile);
-                $name_file = date("Y-m-d-H-i-s") . $validFileName;
-
-            }
-            else{
-                $name_file = date("Y-m-d-H-i-s-")  . '.' . explode('/', $typefile)[1];
-            }
-
-            $temp_file = $tmp_names;
-            $file_full_path = $filePath . $name_file;
-            if(is_uploaded_file($temp_file))
-            {
-                if(move_uploaded_file($temp_file, $file_full_path))
-                {
-                    $file_path_db = $file_full_path;
-                }
-            }
-
-        }
 
         $fields = ['title', 'summary', 'body', 'user_id', 'cat_id', 'published_at', 'author_name', 'file'];
         $values = [$_POST['title'], $_POST['summary'], $_POST['body'], 1 , $_POST['cat_id'], $_POST['published_at'], $_POST['author'], $file_path_db];
         $id_posts = $db->insert_post('posts',$fields, $values);
 
+
+        $fields_file=[];
+        $value_file = [];
+
+
+        if(isset($_FILES['file_upload'])){
+            $up_file_ = $_FILES['file_upload'];
+            $name_file_item      = $up_file_['name'];
+            $type_file_item      = $up_file_['type'];
+            $tmp_names_file  = $up_file_['tmp_name'];
+            $errors     = $up_file_['error'];
+            $sizes      = $up_file_['size'];
+
+            $numberItems = count($name_file_item);
+            $numItem = 0;
+
+            for ($i = 0; $i < $numberItems; $i++) {
+                if ($errors[$i] == 0) {
+                    $numItem++;
+
+                    $timestamp_micro = microtime(true);
+                    $timestamp_micro = str_replace('.', '', $timestamp_micro);
+                    $extension = explode('/', $type_file_item[$i])[1];
+                    $file_upload_name = date("Y-m-d-H-i-s-", time()) . $timestamp_micro . '.' . $extension;
+
+                    if ($extension !== 'pdf') {
+                        $validFileName = str_replace('.vnd.openxmlformats-officedocument.wordprocessingml.document', '.docx', $file_upload_name);
+                        $name_file = date("Y-m-d-H-i-s-", time()) . $timestamp_micro . $validFileName;
+
+                    }
+                    else{
+                        $name_file = date("Y-m-d-H-i-s-")  . $timestamp_micro .'.' . explode('/', $type_file_item[$i])[1];
+                    }
+
+                    $temp_file = $tmp_names_file[$i];
+                    $file_full_path = $filePath . $name_file;
+                    if(is_uploaded_file($temp_file))
+                    {
+                        if(move_uploaded_file($temp_file, $file_full_path))
+                        {
+                            $file_path_db = $file_full_path;
+                            $fields_file = ['name','path', 'id_post'];
+                            $value_file = [$numItem, $file_path_db, $id_posts];
+
+                        }
+                    }
+
+
+                }
+            }
+        }
+        $ufile = $db->insert('file',$fields_file,$value_file);
 
         if ($request['cat_id'] != null) {
             if(isset($_FILES['image_upload'])){
