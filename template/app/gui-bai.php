@@ -20,7 +20,8 @@
         padding: 20px;
         background-color: #f0f0f0;
         border-radius: 5px;
-        margin-left: 30px;
+        /* margin-left: 30px; */
+        font-size: 1vw;
 
     }
 
@@ -55,7 +56,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
     <?php require_once(BASE_PATH . '/template/app/layouts/menuleft.php') ?>
 
     <div class="body_data" style="width: 62%; display: flex;  flex-direction: column;
-         padding: 10px 50px; box-sizing: border-box">
+         padding: 10px 3vw; box-sizing: border-box">
         <div style="width: 100%; display: flex; justify-content: center">
 
 
@@ -76,10 +77,14 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
     </div>
 
-    <div class="img_lienket" style="width: 15%; ">
-        <img style="width: 100%" src="./public/banner-image/bo-cong-thuong.png">
-        <img style="width: 100%" src="./public/banner-image/DHKTKTCN.png">
-        <img style="width: 100%" src="./public/banner-image/khcn.png">
+    <div class="img_lienket" style="width: 15%; text-align: center; margin-top: 2vh;" >
+        <H4 style="font-size: 1.1vw; color: #155fa2; font-family: 'Times New Roman', Times, serif; "> LIÊN KẾT
+            WEBSITE</H4>
+        <a href="https://moit.gov.vn/"><img style="width: 100%" src="./public/banner-image/bo-cong-thuong.png"> </a>
+        <a href="https://uneti.edu.vn/"><img style="width: 100%" src="./public/banner-image/DHKTKTCN.png"></a>
+        <a href=""><img style="width: 100%" src="./public/banner-image/khcn.png"></a>
+
+
     </div>
 
 </div>

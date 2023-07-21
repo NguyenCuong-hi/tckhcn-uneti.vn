@@ -7,6 +7,7 @@ use Database\DataBase;
 <html lang="zxx" class="no-js">
 
 <head>
+    
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon-->
@@ -42,6 +43,8 @@ use Database\DataBase;
 
         <style>
 
+
+
             * {
                 box-sizing: border-box;
                 padding: 0;
@@ -49,10 +52,6 @@ use Database\DataBase;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             }
 
-            .banner img {
-                width: 100%;
-                height: 350px;
-            }
 
 
             .header-top-right {
@@ -72,28 +71,46 @@ use Database\DataBase;
             }
 
 
+
+
+.banner img {
+  width: 100%;
+  height: 27vh; 
+}
+
+
+@media screen and (min-width: 768px) {
+  .banner img {
+    height: 50vh; 
+  }
+
+}
             .menu {
+                flex-direction: row; 
+                 justify-content: center; 
                 display: flex;
                 justify-content: space-between;
                 box-sizing: border-box;
                 padding: 1px;
                 color: white;
-                font-size: 12px;
-                margin-bottom: 20px;
+                /* font-size: 12px; */
+                margin-bottom: 3vh;
                 font-weight: 700;
             }
 
             .menu a {
+                margin: 0 10px; 
+             font-size: 1vw; 
                 color: white;
                 font-weight: 700;
                 border-radius: 8px;
                 background-color: #5B9BD5;
                 width: 100%;
                 border: none;
-                margin: 0 2px 0 2px;
-                padding: 15px 0px;
+                margin: 0 0.1vw 0 0.1vw;
+                padding: 2.5vh 0px;
                 text-align: center;
-                font-size: 12.5px;
+                /* font-size: 12.5px; */
                 box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
                 transition: transform 0.3s ease;
                 text-transform: uppercase;
@@ -126,26 +143,26 @@ use Database\DataBase;
 
             .footer {
                 background-color: #F7F7F7;
-                height: 40px;
+                height: 1vh;
                 box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
                 width: 100%;
                 display: flex;
                 
                  align-items: center;
-                 height: 10%;
+                 
               /* justify-content: space-around; */
                 /* box-sizing: border-box; */
                 justify-content: center;
                 border-top: 2px #9b3333 solid;
-                 height: max-content;
+                height: 5vh;
                 /* white-space: nowrap; */
             }
-    
+
             .current-date {
                 color: black;
-                font-size: 12px;
+                font-size: 0.8vw;
                 width: 15%;
-                line-height: 37px;
+               
                 font-family: Arial, Helvetica, sans-serif;
                 font-weight: 400;
                 text-align: left;
@@ -156,11 +173,11 @@ use Database\DataBase;
             .title-head {
                 color: #9C1A1A;
                 line-height: 37px;
-                font-size: 14px;
+                font-size: 0.9vw;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 font-weight: 700;
                 text-align: center;
-                height: 100%;
+                /* height: 100%; */
                 width: 70%;
                 height: max-content;
 
@@ -168,16 +185,18 @@ use Database\DataBase;
             .search-input {
                 
                 text-align: right;
-                height: 100%;
+                /* height: 100%; */
+                height: max-content;
             }
 
             .search-input input {
                 color: black;
-                font-size: 14px;
+                font-size: 1vw;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 font-weight: bold;
                 border-radius: 5px;
                 border: 1px solid #E2E6EB;
+                
 
             }
 

@@ -64,15 +64,12 @@ use Database\DataBase;
         }
 
         /* Responsive */
-        @media screen and (max-width: 768px) {
+        /* @media screen and (max-width: 768px) {
             .menu_left {
                 width: 100%;
                 padding-right: 0;
             }
-        }
-    </style>
-
-    <style>
+        } */
         .menu_left{
             list-style: none;
             padding: 10px;
@@ -81,14 +78,14 @@ use Database\DataBase;
             text-decoration: none;
             color: #fff;
             background-color: #5B9BD5;
-            padding: 25px 10px;
+            padding: 3.5vh 1vw;
             border-radius: 5px;
             margin-bottom: 2%;
             text-align: left;
             font-size: medium;
             text-transform: uppercase;
-            font-size: 14px;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+            font-size: 1vw;
+                        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         }
         .menu_left a:hover {
     transform: translateY(-2px) rotateX(8deg) rotateY(3deg);

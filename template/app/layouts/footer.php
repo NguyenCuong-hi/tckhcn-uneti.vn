@@ -9,6 +9,7 @@ use Database\DataBase;
         /*background-image: url("public/banner-image/banner_khcn_footer_.jpg");*/
         padding: 25px 0;
         color: aliceblue;
+        margin-top: 1vh;
         /* position: fixed;
         z-index:9999; */
     }
@@ -20,9 +21,9 @@ use Database\DataBase;
     }
 
     .footer-area img {
-        width: 55px;
-        height: 55px;
-        margin-right: 20px;
+        width: 4vw;
+        height: 100%;
+        margin-right: 1vw;
     }
 
     .footer-area u {
@@ -30,24 +31,28 @@ use Database\DataBase;
         font-weight: bold;
         text-decoration: underline;
     }
-
+    .footer-area i {
+        font-size: 0.8vw;
+        font-weight: bold;
+       
+    }
     .footer-area hr {
         border: none;
-        height: 1px;
+        height: 0.1vw;
         background-color: #ccc;
-        margin-top: 10px;
+        margin-top: 1vh;
         margin-bottom: 10px;
     }
 
     .footer-area p {
-        font-size: 14px;
+        font-size: 0.8vw;
         margin-bottom: 10px;
         font-weight: 500;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     .footer-area h3 {
-        font-size: 20px;
+        font-size: 1.3vw;
         font-weight: bold;
         margin-bottom: 10px;
         text-transform: uppercase;
@@ -55,7 +60,7 @@ use Database\DataBase;
     }
 
     .footer-area h4 {
-        font-size: 20px;
+        font-size: 1.3vw;
         font-weight: bold;
         margin-bottom: 10px;
     }
@@ -89,7 +94,7 @@ use Database\DataBase;
                 <div>
                     <p style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
                         <span style="text-transform: uppercase; font-weight: 700; margin-right: 10px;">Tạp chí khóa học & công nghệ trường Đại học Kinh tế - Kỹ thuật Công nghiệp</span>
-                    <hr style="margin: 0 0px;">
+                    <hr style="margin: 0;">
                     <i style="margin-right: 10px;">University of Economics - Technology for Industries</i>
                     </p>
                 </div>
@@ -115,7 +120,7 @@ use Database\DataBase;
             <div>
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.3077152215537!2d105.8736443747645!3d20.980298780656934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135afd765487289%3A0x21bd5839ba683d5f!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBLaW5oIFThur8gLSBL4bu5IFRodeG6rXQgQ8O0bmcgTmdoaeG7h3A!5e0!3m2!1svi!2s!4v1689386949867!5m2!1svi!2s"
-  width="70%" height="132px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  width="70%" height="50%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 </div>
         </div>

@@ -8,13 +8,13 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 ?>
 <!--Xủ lý hiển thị ở đây-->
 <style>
-    p{
+   .contenttapchi p{
         font-family: 'Times New Roman';
-        font-size: 18px;
+        font-size: 1.3vw;
     }
-    span{
+   . span{
         font-family: 'Times New Roman';
-        font-size: 18px;
+        font-size:1.3vw;
     }
 </style>
 <div style="display: flex;  margin-top: 30px; margin-right: 32px">
@@ -23,8 +23,8 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
 <!-- _________________________________________________________________________________ -->
     <div style="width: 62%;  padding: 4px; box-sizing: border-box; font-family:'Times New Roman';">
-        <h3 style="text-transform: uppercase; color: #3734ea">Thể lệ bài gửi</h3>
-        <div style="padding-left: 20px;">
+        <h3 style=" font-size: 2vw; font-weight:700;text-transform: uppercase; color: #3734ea">Thể lệ gửi bài</h3>
+        <div class= "contenttapchi"style="padding-left: 20px;">
             <p ><span style="font-weight: 700;">
         Tạp chí Khoa học & Công nghệ
     </span>
@@ -63,7 +63,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                 hồi lại tác giả qua thư điện tử.
                 Tòa soạn không gửi lại bài nếu không được
                 đăng
-            </p  style="font-weight: 700; color: #3734ea; font-family: 'Times New Roman'">I. Qui định khuôn khổ bài báo:
+                <p style="font-weight: 700; color: #3734ea">I. Qui định khuôn khổ bài báo:
 
             </p>
             <p>
@@ -179,7 +179,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                 hàm, học vị, cơ quan công tác, điện thoại, email
                 của tác giả phải ghi rõ ràng ở cuối bài.
             </p>
-            <i style="font-weight: 700; ">Nội dung chi tiết và thông tin liên hệ xin gửi về:
+            <i style="font-weight: 700; font-size:1.3vw;">Nội dung chi tiết và thông tin liên hệ xin gửi về:
             </i>
             <p style="font-weight: 700; color: #3734ea; text-transform: uppercase;">
                 TÒA SOẠN TẠP CHÍ KHOA HỌC & CÔNG
@@ -199,11 +199,14 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
         </div>
     </div>
 
-    <div class="img_lienket" style="width: 15%; ">
-        <H4 style="font-size: 16px; color: #155fa2; font-family: 'Times New Roman', Times, serif; "> LIÊN KẾT WEBSITE</H4>
+    <div class="img_lienket" style="width: 15%; text-align: center; margin-top: 2vh;" >
+        <H4 style="font-size: 1.1vw; color: #155fa2; font-family: 'Times New Roman', Times, serif; "> LIÊN KẾT
+            WEBSITE</H4>
         <a href="https://moit.gov.vn/"><img style="width: 100%" src="./public/banner-image/bo-cong-thuong.png"> </a>
         <a href="https://uneti.edu.vn/"><img style="width: 100%" src="./public/banner-image/DHKTKTCN.png"></a>
         <a href=""><img style="width: 100%" src="./public/banner-image/khcn.png"></a>
+
+
     </div>
 </div>
 

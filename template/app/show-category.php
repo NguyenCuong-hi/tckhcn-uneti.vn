@@ -135,7 +135,7 @@
                                             <li><a href="<?= url('show-category/' . $popularPosts[2]['cat_id']) ?>"><?= $popularPosts[2]['category'] ?></a></li>
                                         </ul>
                                     </div>
-                                    <div class="details post-left text-left"">
+                                    <div class="details post-left text-left">
                                         <a href="<?= url('show-post/' . $popularPosts[2]['id']) ?>">
                                             <h4><?= $popularPosts[2]['title'] ?></h4>
                                         </a>
