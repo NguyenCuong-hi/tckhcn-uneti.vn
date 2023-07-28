@@ -39,9 +39,9 @@
         </div>
 
             <div class="form-group">
-                <label for="file-upload">Tải lên tệp tin</label>
-                <div class="file-upload">
-                    <input type="file" id="file-upload" name="file-upload" class="file-input" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg" >
+                <label for="file_upload">Tải lên tệp tin</label>
+                <div class="file_upload">
+                    <input type="file" id="file-upload" name="file_upload[]" multiple = "multiple" class="file-input" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg" >
                     <span class="file-name">Chọn tệp tin</span>
                     <span class="file-btn">Duyệt</span>
                 </div>
