@@ -78,7 +78,7 @@ use Database\DataBase;
             text-decoration: none;
             color: #fff;
             background-color: #5B9BD5;
-            padding: 3.5vh 1vw;
+            padding: 2vh 1vw;
             border-radius: 5px;
             margin-bottom: 2%;
             text-align: left;
@@ -87,6 +87,22 @@ use Database\DataBase;
             font-size: 1vw;
                         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         }
+        @media screen and (min-width: 768px) {
+            .menu_left a{
+            text-decoration: none;
+            color: #fff;
+            background-color: #5B9BD5;
+            padding:  3.5vh 1vw;
+            border-radius: 5px;
+            margin-bottom: 2%;
+            text-align: left;
+            font-size: medium;
+            text-transform: uppercase;
+            font-size: 1vw;
+                        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+}
         .menu_left a:hover {
     transform: translateY(-2px) rotateX(8deg) rotateY(3deg);
 }

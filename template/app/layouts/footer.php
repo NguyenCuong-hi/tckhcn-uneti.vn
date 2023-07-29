@@ -22,7 +22,7 @@ use Database\DataBase;
 
     .footer-area img {
         width: 4vw;
-        height: 100%;
+        height:4vh;
         margin-right: 1vw;
     }
 
@@ -45,7 +45,7 @@ use Database\DataBase;
     }
 
     .footer-area p {
-        font-size: 0.8vw;
+        font-size: 0.9vw;
         margin-bottom: 10px;
         font-weight: 500;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -82,6 +82,21 @@ use Database\DataBase;
     .footer-area .container > div:last-child p:last-child {
         margin-bottom: 0;
     }
+    .imgfooter{
+        width:70%; 
+        height:10vh;
+    }
+    @media screen and (min-width: 768px) {
+        .imgfooter{
+            width:70%; 
+        height:30vh;
+    }
+    .footer-area img {
+        width: 4vw;
+        height: 100%;
+        margin-right: 1vw;
+    }
+}
 </style>
 <footer class="footer-area section-gap" style="background-image: url('https://png.pngtree.com/background/20210710/original/pngtree-blue-technology-web-banner-picture-image_1038231.jpg'); background-size: cover; background-repeat: no-repeat">
     <div style="width: 100%; display: flex; ">
@@ -99,8 +114,7 @@ use Database\DataBase;
                     </p>
                 </div>
             </div>
-            <div>
-                <br>
+            <div style="margin-top: 2vh;" >
 
                 <p>Cơ quan chủ quản: Trường Đại học Kinh tế - Kỹ thuật Công nghiệp</p>
                 <p>Giấy phép hoạt động số: xxx/GP-BTTTT ngày dd-mm-2022</p>
@@ -119,8 +133,8 @@ use Database\DataBase;
             <h4>Bản đồ chỉ dẫn</h4>
             <div>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.3077152215537!2d105.8736443747645!3d20.980298780656934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135afd765487289%3A0x21bd5839ba683d5f!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBLaW5oIFThur8gLSBL4bu5IFRodeG6rXQgQ8O0bmcgTmdoaeG7h3A!5e0!3m2!1svi!2s!4v1689386949867!5m2!1svi!2s"
-  width="70%" height="50%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe class = "imgfooter" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.3077152215537!2d105.8736443747645!3d20.980298780656934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135afd765487289%3A0x21bd5839ba683d5f!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBLaW5oIFThur8gLSBL4bu5IFRodeG6rXQgQ8O0bmcgTmdoaeG7h3A!5e0!3m2!1svi!2s!4v1689386949867!5m2!1svi!2s"
+  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 </div>
         </div>
