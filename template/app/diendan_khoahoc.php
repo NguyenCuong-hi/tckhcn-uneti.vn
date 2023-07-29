@@ -59,6 +59,48 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
     .modal-4 div.active, .modal-4 div:active {
         background-color: #003333;
     }
+    .btntimkiem{
+        margin-left: 3px;
+         background-color: #ddd; 
+         border: none;
+                            
+         height: 3vh;  
+         border-radius: 4px; 
+         font-size: 1.1vw;
+         width: 9.2vw;
+
+    }
+    @media screen and (min-width: 768px) {
+        .btntimkiem{
+        margin-left: 3px;
+         background-color: #ddd; 
+         border: none;
+                            
+         height: 5vh;  
+         border-radius: 4px; 
+         font-size: 1.1vw;
+         width: 9.2vw;
+
+    }
+
+}
+    /* Kiểu mặc định của thanh tìm kiếm */
+    .search-bar {
+      width: 100%;
+      height: 30px;
+  
+   
+    }
+
+    /* Kiểu khi màn hình có chiều rộng nhỏ hơn 600px */
+    @media (max-width: 600px) {
+      .search-bar {
+        height: 15px;
+   
+        
+      }
+    }
+
 </style>
 <div style="display: flex;  margin-top: 30px; margin-right: 32px">
 
@@ -68,14 +110,13 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
         <div style="width: 100%; display: flex; justify-content: center">
             <form method="GET" action="<?= url('diendankhoahoc') ?>"
                   style="display: flex; margin-right: 8px ; width: 100%;">
-                <div style="display: flex; align-items: center; width: 80%;">
-                    <div style="font-size: 16px; margin-right: 8px; display: flex;
+                <div  style="display: flex; align-items: center; width: 50%;">
+                    <div style="font-size: 16px; margin-right: 0.3vh; display: flex;
                     flex-direction: column ; width: 100%">
-                        <input type="text" name="keyword"
-                               style="padding-left: 8px ; width: 100%; margin: 1px 3px;"/>
-                        <button type="submit"
-                                style=" margin-left: 3px; background-color: #ddd; border: none;
-                             height: 5vh;  border-radius: 4px; font-size: 1.1vw; width: 9.2vw;">
+                        <input class="search-bar"  type="text" name="keyword"
+                             />
+                        <button class = "btntimkiem" type="submit"
+                                >
                             Tìm kiếm
                         </button>
                     </div>
@@ -83,10 +124,10 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
                 <div style="font-size: 1.1vw;display: flex; width: 50%">
                     <label style="width: 100%">
-                        <input type="radio" name="title"> Tiêu đề
+                        <input  type="radio" name="title"> Tiêu đề
                     </label>
                     <label style="width: 100%">
-                        <input type="radio" name="author"> Tác giả
+                        <input  type="radio" name="author"> Tác giả
                     </label>
                 </div>
 
@@ -96,7 +137,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
         <div>
             <?php foreach ($data as $datas): ?>
                 <div style="font-size: 1.1vw; font-weight: 500; border-bottom: 2px dotted red;
-                border-left: 2px solid rgb(241,243,244); padding-left: 30px;">
+                border-left: 2px solid rgb(241,243,244); padding-left: 3vw; padding-top: 1vw;">
                     <span>
                         <?php $id = $datas['id'] ?>
                         <a style=" font-weight: 600; font-size: 1.3vw"
