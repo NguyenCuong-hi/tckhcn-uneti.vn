@@ -43,4 +43,6 @@ class NoticeController
         require_once(BASE_PATH . '/template/app/thong-bao.php');
     }
 
+
+
 }
