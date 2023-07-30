@@ -51,6 +51,81 @@
     .image-container::-webkit-scrollbar-thumb:hover {
         background-color: #cccccc99;
     }
+ 
+/* CSS for scrollLeftBtn and scrollRightBtn */
+#scrollLeftBtn,
+#scrollRightBtn {
+    background-color:#c0c0c000;
+    color: #DDDDDD;
+    font-size: 24px;
+    border: none;
+    padding: 0.8vh 0.5vw;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+   
+}
+
+#scrollRightBtn:hover{
+    background-color: #C0C0C0;
+    color: white;
+    font-size: 24px;
+    border: none;
+    padding: 0.8vh 0.5vw;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+   
+}
+#scrollLeftBtn:hover{
+    background-color: #C0C0C0;
+    color: white;
+    font-size: 24px;
+    border: none;
+    padding: 0.8vh 0.8vw;
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+#scrollLeftBtn {
+    left: 0;
+    border-radius:  100% 100% 100% 100% ;
+}
+
+#scrollRightBtn {
+    right: 0;
+    border-radius:100% 100% 100% 100%;
+}
+
+/* CSS for the parent div wrapping the .image-container and buttons */
+.image-container-parent {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 8%; /* Adjust the margin as needed */
+    margin-right: 6%; /* Adjust the margin as needed */
+    overflow: hidden; /* Hide the scroll buttons if not needed */
+}
+
+.image-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.image-item {
+    /* ... Your previous styles ... */
+}
+
 </style>
 
 <?php
@@ -168,7 +243,9 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
    
     margin-bottom: 50px;">
 
-            <div class="image-container">
+<div class="image-container-parent">
+    <button id="scrollLeftBtn">&#10094;</button>
+    <div class="image-container">
 
                 <?php foreach ($posts as $datas): ?>
                     <div class="image-item">
@@ -179,10 +256,17 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
                     </div>
                 <?php endforeach; ?>
-            </div>
+              
+                </div>
+    <button id="scrollRightBtn">&#10095;</button>
+</div>
 
         </div>
     </div>
+    <!-- <button id="scrollLeftBtn">&#10094;</button>
+        <button id="scrollRightBtn">&#10095;</button> -->
+       
+   
 </div>
 <script>
     const imageContainer = document.querySelector('.image-container');
@@ -199,7 +283,8 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
         }
     }
 
-    setInterval(autoScroll, 3000); // scroll every 3 seconds
+
+    setInterval(autoScroll, 3000); 
 
     imageContainer.addEventListener('mousedown', (e) => {
         isMouseDown = true;
@@ -223,6 +308,40 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
         imageContainer.scrollLeft = scrollLeft - walk;
     });
 
+
+document.getElementById('scrollLeftBtn').addEventListener('click', () => {
+    const scrollAmount = imageContainer.clientWidth * 1; 
+    imageContainer.scrollLeft -= scrollAmount;
+
+
+    if (imageContainer.scrollLeft <= 0) {
+        const maxScrollLeft = imageContainer.scrollWidth - imageContainer.clientWidth;
+        imageContainer.scrollLeft = maxScrollLeft;
+    }
+});
+
+
+const imageItems = document.querySelectorAll('.image-item');
+let totalImageWidth = 0;
+imageItems.forEach((item) => {
+    totalImageWidth += item.offsetWidth;
+});
+
+const containerWidth = imageContainer.offsetWidth;
+const maxScrollLeft = totalImageWidth - containerWidth;
+
+
+document.getElementById('scrollRightBtn').addEventListener('click', () => {
+    const scrollAmount = imageContainer.clientWidth * 1; 
+    imageContainer.scrollLeft += scrollAmount;
+
+  
+    if (imageContainer.scrollLeft >= maxScrollLeft) {
+    
+        imageContainer.scrollLeft = 0;
+    }
+});
+ 
 </script>
 
 <!-- start footer Area -->

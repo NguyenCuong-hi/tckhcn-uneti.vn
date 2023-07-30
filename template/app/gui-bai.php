@@ -62,10 +62,11 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
             <form action="<?= url("guibai/post") ?>" method="post" enctype="multipart/form-data">
                 <label for="email">Email của bạn</label>
-                <input class="input_" type="email" id="email" name="email" required>
+                <input class="input_" type="email" id="email" name="email"  required>
+                
 
-                <label for="file">Chọn file:</label>
-                <input class="input_" type="file" id="file" name="fileToUpload" required>
+                <label for="file" >Chọn file:</label>
+                <input class="input_"  multiple="multiple" type="file" id="file" name="fileToUpload" required>
 
                 <label for="content">Nội dung:</label>
                 <textarea id="content" name="message" rows="4" cols="50" placeholder="Nhập tên tác giả" required></textarea>

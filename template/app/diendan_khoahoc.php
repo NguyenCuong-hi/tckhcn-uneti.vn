@@ -70,16 +70,20 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
          width: 9.2vw;
 
     }
+    .btntimkiem:hover{
+        background-color: #ccc; 
+        cursor: pointer;
+    }
     @media screen and (min-width: 768px) {
         .btntimkiem{
-        margin-left: 3px;
+            margin-left: 3px;
          background-color: #ddd; 
          border: none;
-                            
-         height: 5vh;  
+                        
+         height: 4vh;  
          border-radius: 4px; 
          font-size: 1.1vw;
-         width: 9.2vw;
+         width: 6vw;
 
     }
 
