@@ -33,11 +33,19 @@
                     </select>
         </div>
 
-        <div class="form-group">
-            <label for="image">Image</label>
-            <input type="file" id="image" name="image" class="form-control-file"  autofocus>
-        </div>
-        <img src="<?= asset($post['image']) ?>" alt="">
+            <div class="form-group">
+                <label for="images">Ảnh</label>
+                <input type="file" id="images" name="image_upload[]" multiple="multiple" class="form-control-file" >
+            </div>
+
+            <div class="form-group">
+                <label for="file_upload">Tải lên tệp tin</label>
+                <div class="file_upload">
+                    <input type="file" id="file-upload" name="file_upload[]" multiple = "multiple" class="file-input" accept=".pdf,.doc,.docx,.png,.jpg,.jpeg" >
+                    <span class="file-name">Chọn tệp tin</span>
+                    <span class="file-btn">Duyệt</span>
+                </div>
+            </div>
 
         <div class="form-group">
             <label for="published_at">published at</label>

@@ -3,6 +3,7 @@
 </html>
 <?php
 require_once(BASE_PATH . '/template/app/layouts/header.php');
+require_once "vendor/autoload.php";
 
 use PhpOffice\PhpWord\IOFactory;
 use PhpOffice\PhpWord\Writer\HTML;
@@ -47,16 +48,16 @@ use PhpOffice\PhpWord\Writer\HTML;
             <div class="suanh2" style="position: relative;  background-color: #D1D1D1;">
                 <div class="phongto" style="position: absolute; top: 0; right: 0;">
                 </div>
-                <?php if (empty($result_file) || !file_exists($result_file['file'])): ?>
+                <?php if (empty($file) || !file_exists($file['file'])): ?>
                     <p style="text-align: center; justify-content: center">Không có bài viết để hiển thị</p>
                 <?php else : ?>
 
                     <?php
 
-                    $extension = pathinfo($result_file['path'], PATHINFO_EXTENSION);
+                    $extension = pathinfo($file['file'], PATHINFO_EXTENSION);
                     $src = '';
                     if ($extension === 'docx') {
-                        $inputFile = BASE_PATH . '/public/upload/' . basename($result_file['path']);
+                        $inputFile = BASE_PATH . '/public/upload/' . basename($file['file']);
 
                         if (file_exists($inputFile)) {
                             require_once 'vendor/autoload.php';

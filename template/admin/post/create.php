@@ -4,7 +4,7 @@
 
 ?>
 
-
+    <script src="../../plugins/ckeditor/ckeditor.js"></script>
 
 <section class="pt-3 pb-1 mb-2 border-bottom">
     <h1 class="h5">Create Article</h1>
@@ -35,7 +35,7 @@
 
         <div class="form-group">
             <label for="images">Ảnh</label>
-            <input type="file" id="images" name="image_upload[]" multiple="multiple" class="form-control-file" required autofocus>
+            <input type="file" id="images" name="image_upload[]" multiple="multiple" class="form-control-file" >
         </div>
 
             <div class="form-group">
@@ -68,6 +68,11 @@
             <label for="body">Bài viết</label>
             <textarea class="form-control" id="body" name="body" placeholder="Bài viết ..." rows="5" required autofocus></textarea>
         </div>
+
+            <script>
+                CKEDITOR.replace('body');
+            </script>
+
             <div class="form-group">
                 <label for="author">Tác giả</label>
                 <textarea class="form-control" id="author" name="author" placeholder="Tác giả ..." rows="3" required autofocus></textarea>

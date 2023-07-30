@@ -31,7 +31,7 @@ class Home{
                                           INNER JOIN categories ON posts.cat_id = categories.id 
                                           INNER JOIN banners ON posts.id = banners.id_post 
                                           WHERE (1=1) AND categories.type IN (1,2,3)
-                                          AND banners.type = 1
+                                          AND banners.type = 0
                                           ORDER BY posts.created_at DESC ')->fetchAll();
 
 
