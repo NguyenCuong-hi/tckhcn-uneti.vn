@@ -40,7 +40,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                                 <?php echo date("d/m/Y", strtotime($datas['created_at'])); ?> |
                             </div>
                             <div>
-                                <a href="" style="font-weight: 500">Thông báo</a>
+                                <a href="<?= url('thongbao/chi-tiet/'.$id) ?>" style="font-weight: 500" > Thông báo</a>
                             </div>
                         </div>
 

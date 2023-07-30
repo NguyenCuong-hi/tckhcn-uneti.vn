@@ -166,6 +166,7 @@ use Database\DataBase;
                 font-weight: 400;
                 text-align: left;
                 height: max-content;
+                margin-left: 12px;
             }
          
 

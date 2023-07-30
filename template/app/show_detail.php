@@ -65,7 +65,23 @@ use PhpOffice\PhpWord\Writer\HTML;
                             $phpWord = IOFactory::load($inputFile);
                             $htmlWriter = new HTML($phpWord);
                             $outputFile = BASE_PATH . '/template/app/show-thong-bao-word.php';
+
+                            $css = '<style>
+                                     body {
+                                       background-color: #ffffff;
+                                     }
+                                    </style>';
+
                             $htmlWriter->save($outputFile);
+
+                            $htmlContent = file_get_contents($outputFile);
+
+                            $htmlContent = str_replace('</head>', $css . '</head>', $htmlContent);
+
+
+
+
+                            file_put_contents($outputFile, $htmlContent);
 
                             require_once 'show-thong-bao-word.php';
                         } else {
@@ -87,7 +103,7 @@ use PhpOffice\PhpWord\Writer\HTML;
                     </div>
                 </div>
                 <p style="font-size: 15px;" class="embed_download"><a href="
-                <?= url($result_file['path']) ?>" download="">Download File </a>
+                <?= url($file['file']) ?>" download="">Download File </a>
                 </p>
             </div>
 

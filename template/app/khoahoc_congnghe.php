@@ -39,7 +39,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
     /* Kiểu mặc định của thanh tìm kiếm */
     .search-bar {
       width: 100%;
-      height: 30px;
+      height: 25px;
   
    
     }

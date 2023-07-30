@@ -168,7 +168,7 @@
             <li>
                 <a href="?per_page=<?= $item_per_page ?> &page=<?= $next_page ?>">
                     <div class="next">
-                        tiếp
+                        Tiếp
                         <i class="fa fa-chevron-right"></i>
 
                     </div>
