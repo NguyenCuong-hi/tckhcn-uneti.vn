@@ -3,6 +3,10 @@
 </html>
 <?php
 require_once(BASE_PATH . '/template/app/layouts/header.php');
+require 'vendor/autoload.php';
+use PhpOffice\PhpWord\IOFactory;
+use PhpOffice\PhpWord\Writer\PDF\DomPDF;
+use PhpOffice\PhpWord\Shared\ZipArchive;
 ?>
 <style>
     .phongto {
@@ -55,24 +59,34 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
             <?php endforeach; ?>
 
 
-            <div  class="suanh2" style="position: relative;  background-color: #D1D1D1;">
+            <?php foreach ($result_file as $file): ?>
+            <div  class="suanh2" style="position: relative;  background-color: #D1D1D1; margin-top: 10px">
                 <div class="phongto" style="position: absolute; top: 0; right: 0;">
                 </div>
-                <?php if (empty($result_file) || !file_exists($result_file['file'])): ?>
+                <?php if (empty($file) || !file_exists($file['file'])): ?>
                     <p style="text-align: center; justify-content: center">Không có bài viết để hiển thị</p>
                 <?php else : ?>
 
-                <?php $extension = pathinfo($result_file['file'], PATHINFO_EXTENSION);
+                <?php $extension = pathinfo($file['file'], PATHINFO_EXTENSION);
                 $src = '';
                     if($extension === 'docx'){
-
-                        $src = 'https://docs.google.com/viewer?embedded=true&url='. url($result_file['file']);
+                        $src = ' https://view.officeapps.live.com/op/view.aspx?src='. url($file['file']);
                     }
                     if($extension === 'pdf'){
 
-                        $src = url($result_file['file']);
+                        $src = url($file['file']);
+
                     }
                 ?>
+                    <script type="text/javascript" src="jquery.min.js"></script>
+                    <script type="text/javascript" src="jquery.gdocsviewer.min.js"></script>
+                    <script type="text/javascript">
+                        $(document).ready(function (){
+                            $('iframe').gdocsViewer({width: 600, height:700});
+                            $('').gdocsViewer();
+                        });
+                    </script>
+
                     <iframe loading="lazy" src="<?=$src?>"
                             style="width: 100%; height: 100%; border: none;">
                     </iframe>
@@ -80,9 +94,10 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                 <?php endif; ?>
 
             </div>
-            <p style="font-size: 15px;" class="embed_download"><a href="<?=url($result_file['file']) ?>"
-                    download="">Download File </a>
-            </p>
+
+
+            <?php endforeach; ?>
+
         </div>
 
         <div>

@@ -1,8 +1,68 @@
 
 
 <style>
+.modal-4 a,
+.modal-4 div {
+    margin: 0 0.3vw;
+    padding: 0;
+    width: 2.6vw;
+    height: 2.5vh;
+    line-height: 2.5vh;
+    border-radius: 0; /* Loại bỏ hình tròn */
+    background-color: #3498DB;
+    font-size: 1vw;
+    color: #ffffff;
+}
+@media screen and (min-width: 768px) {
+    .modal-4 a,
+.modal-4 div {
+    margin: 0 0.3vw;
+    padding: 0;
+    width: 2.6vw;
+    height: 4vh;
+    line-height: 4vh;
+    border-radius: 0; /* Loại bỏ hình tròn */
+    background-color: #3498DB;
+    font-size: 1vw;
+    color: #ffffff;
+}
 
-    .modal-4 a {
+}
+/* CSS cho cả hai nút prev và next */
+.modal-4 div.prev,
+.modal-4 div.next {
+  background-color: #3498DB;
+  width: 5vw;
+  height: 2.5vh;
+}
+
+/* Bo tròn phía trái cho nút prev */
+.modal-4 div.prev {
+  border-radius: 50px 0 0 50px;
+}
+
+/* Bo tròn phía phải cho nút next */
+.modal-4 div.next {
+  border-radius: 0 50px 50px 0;
+}
+
+/* Media query khi chiều rộng màn hình lớn hơn hoặc bằng 768px */
+@media screen and (min-width: 768px) {
+  .modal-4 div.prev,
+  .modal-4 div.next {
+    height: 4vh;
+  }
+}
+
+.modal-4 div:hover {
+    background-color: #CDCD00;
+}
+
+.modal-4 div.active,
+.modal-4 div:active {
+    background-color: #003333;
+}
+    /* .modal-4 a {
         margin: 0 5px;
         padding: 0;
         width: 30px;
@@ -11,7 +71,7 @@
         -moz-border-radius: 100%;
         -webkit-border-radius: 100%;
         border-radius: 100%;
-        /* background-color: #3498DB; */
+      
         font-size: 18px;
         color: #ffffff;
     }
@@ -52,7 +112,7 @@
 
     .modal-4 div.active, .modal-4 div:active {
         background-color: #003333;
-    }
+    } */
 </style>
 
 <div style="text-align: center; justify-content:center; display:flex; margin:20px 0;">
