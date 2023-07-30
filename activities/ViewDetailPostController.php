@@ -19,18 +19,28 @@ class ViewDetailPostController
                         INNER JOIN categories ON categories.id = posts.cat_id
                         WHERE posts.id = ? ';
 
-        $qFile = 'SELECT * FROM file WHERE file.id_post = ?';
-        $result_file = $db->select($qSql_getFile, [$id])->fetch();
-        $getFileExcute = $db ->select($qFile, [$id])->fetchAll();
+        $qFile = 'SELECT file.*, categories.type FROM file 
+                    INNER JOIN  categories ON categories.id = file.cat_id 
+                    WHERE file.id_post = ?';
+        $result_file = $db->select($qFile, [$id])->fetchAll();
 
 
 
-
-        if ($result_file['type'] == 1 || $result_file['type'] == 2 || $result_file['type'] == 3) {
-            require_once(BASE_PATH . '/template/app/show_detail_post.php');
+        if (isset($result_file)) {
+            foreach ($result_file as $file) {
+                if (isset($file['type']) == 1 || isset($file['type']) == 2 || $file['type'] == 3) {
+                    require_once(BASE_PATH . '/template/app/show_detail_post.php');
+                } else {
+                    require_once(BASE_PATH . '/template/app/show_detail.php');
+                }
+            }
         } else {
-            require_once(BASE_PATH . '/template/app/show_detail.php');
+            echo "No data found.";
         }
+
+
+
+
 
 //        $db = new DataBase();
 //        $result_image = $db->select('SELECT  banners.* FROM banners WHERE id_post = ? ', [$id])->fetchAll();

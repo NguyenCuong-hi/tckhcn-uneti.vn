@@ -12,11 +12,7 @@ use Database\DataBase;
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon-->
 <!--    <link rel="shortcut icon" href="--><?php //= asset($setting['icon']) ?><!--">-->
-    <!-- Meta Description -->
-<!--    <meta name="description" content="--><?php //= $setting['description'] ?><!--">-->
-    <!-- Meta Keyword -->
-<!--    <meta name="keywords" content="--><?php //= $setting['keywords'] ?><!--">-->
-    <!-- meta character set -->
+
     <meta charset="UTF-8">
     <!-- Site Title -->
 <!--    <title>--><?php //= $setting['title'] ?><!--</title>-->
@@ -33,6 +29,9 @@ use Database\DataBase;
     <link rel="stylesheet" href="<?= asset('public/app/css/owl.carousel.css') ?>">
     <link rel="stylesheet" href="<?= asset('public/app/css/jquery-ui.css') ?>">
     <link rel="stylesheet" href="<?= asset('public/app/css/main2.css') ?>">
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery.gdocsviewer.min.js"></script>
 </head>
 
 <body style="background-color:#E6E6E6; ">

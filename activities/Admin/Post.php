@@ -4,6 +4,9 @@ namespace Admin;
 
 use Database\DataBase;
 use Admin\Banner;
+use PhpOffice\PhpWord\IOFactory;
+use PhpOffice\PhpWord\Writer\HTML;
+use PhpOffice\PhpWord\Writer\PDF\DomPDF;
 
 class Post extends Admin
 {
@@ -48,13 +51,10 @@ class Post extends Admin
         $db = new DataBase();
 
 
-        $fields = ['title', 'summary', 'body', 'user_id', 'cat_id', 'published_at', 'author_name', 'file'];
-        $values = [$_POST['title'], $_POST['summary'], $_POST['body'], 1 , $_POST['cat_id'], $_POST['published_at'], $_POST['author'], $file_path_db];
+        $fields = ['title', 'summary', 'body', 'user_id', 'cat_id', 'published_at', 'author_name'];
+        $values = [$_POST['title'], $_POST['summary'], $_POST['body'], 1 , $_POST['cat_id'], $_POST['published_at'], $_POST['author']];
         $id_posts = $db->insert_post('posts',$fields, $values);
 
-
-        $fields_file=[];
-        $value_file = [];
 
 
         if(isset($_FILES['file_upload'])){
@@ -76,7 +76,6 @@ class Post extends Admin
                     $timestamp_micro = str_replace('.', '', $timestamp_micro);
                     $extension = explode('/', $type_file_item[$i])[1];
                     $file_upload_name = date("Y-m-d-H-i-s-", time()) . $timestamp_micro . '.' . $extension;
-
                     if ($extension !== 'pdf') {
                         $validFileName = str_replace('.vnd.openxmlformats-officedocument.wordprocessingml.document', '.docx', $file_upload_name);
                         $name_file = date("Y-m-d-H-i-s-", time()) . $timestamp_micro . $validFileName;
@@ -93,17 +92,16 @@ class Post extends Admin
                         if(move_uploaded_file($temp_file, $file_full_path))
                         {
                             $file_path_db = $file_full_path;
-                            $fields_file = ['name','path', 'id_post'];
-                            $value_file = [$numItem, $file_path_db, $id_posts];
-
+                            $fields_file = ['file', 'id_post', 'cat_id'];
+                            $value_file = [$file_full_path, $id_posts, $_POST['cat_id']];
+                            $ufile = $db->insert('file',$fields_file,$value_file);
                         }
                     }
-
 
                 }
             }
         }
-        $ufile = $db->insert('file',$fields_file,$value_file);
+
 
         if ($request['cat_id'] != null) {
             if(isset($_FILES['image_upload'])){
