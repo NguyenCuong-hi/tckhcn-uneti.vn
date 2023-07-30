@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8" />
 <title>PHPWord</title>
-<meta name="author" content="Pham" />
+<meta name="author" content="Duong Anh Van" />
 <style>
 * {font-family: Arial; font-size: 11pt;}
 a.NoteRef {text-decoration: none;}
@@ -12,9 +12,16 @@ hr {height: 1px; padding: 0; margin: 1em 0; border: 0; border-top: 1px solid #CC
 table {border: 1px solid black; border-spacing: 0px; width : 100%;}
 td {border: 1px solid black;}
 .Normal {margin-bottom: 8pt;}
-.Emphasis {font-style: italic;}
-.List Paragraph {margin-top: 0; margin-bottom: 0;}
-.Normal (Web) {font-family: 'Times New Roman'; font-size: 12pt;}
+h1 {font-family: 'Arial'; font-size: 16pt; font-weight: bold;}
+h3 {font-family: '.VnTimeH'; font-size: 14pt; font-weight: bold;}
+h4 {font-family: '.VnTimeH'; font-size: 11pt; font-weight: bold;}
+.Heading 1 Char {font-family: 'Arial'; font-size: 16pt; font-weight: bold;}
+.Heading 3 Char {font-family: '.VnTimeH'; font-size: 14pt; font-weight: bold;}
+.Heading 4 Char {font-family: '.VnTimeH'; font-weight: bold;}
+.Normal (Web) {font-size: 12pt;}
+.Body Text {margin-bottom: 6pt;}
+.Body Text Char {font-family: 'Times New Roman'; font-size: 10pt;}
+.Table Paragraph {font-size: 11pt;}
 </style>
 <style>
                                      body {
@@ -22,197 +29,1175 @@ td {border: 1px solid black;}
                                      }
                                     </style></head>
 <body>
-<p style="margin-bottom: 0pt;"><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000; font-style: italic;"> </span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000; font-style: italic;">Lời nói đầu</span></p>
-<p style="margin-bottom: 0pt;"><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000; font-style: italic;">Ngày nay, công nghệ thông tin đang ngày càng phát triển khắp mọi nơi trên mọi lĩnh vực. Ngành công nghệ thông tin đang ngày càng chứng minh được tầm ảnh hưởng quan trọng của nó trên tất cả mọi ngành nghề trên toàn thế giới. Đối với Việt Nam, tuy công nghệ thông tin mới chỉ phát triển trong vòng vài năm trở lại đây và đang từng bước phát triển nhưng những bước phát triển đó đã cho thấy Việt Nam là nước có tiềm năng về lĩnh vưc công nghệ thông tin, trong đó phát triển hệ thống thông tin đang là thế mạnh của đất nước. Hệ thống </span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000; font-style: italic;">trang web</span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000; font-style: italic;"> giúp cho công việc quản lý</span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000; font-style: italic;">, bán hàng</span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000; font-style: italic;"> được dễ dàng hơn, nâng cao hiệu quả, tiết kiệm thời gian và gia tăng sản xuất, qua đó chúng ta có thể dễ dàng quản lý được những gì đang xảy ra trong công ty, cửa hàng, doanh nghiệp hơn. </span></p>
-<p style="margin-bottom: 0pt;"><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000; font-style: italic;">Qua thời gian khảo sát </span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000; font-style: italic;">một số các cửa hàng bán đồ décor nhà ở, em thấy đa phần là họ sẽ bán hàng trược tiếp tại cửa hàng của họ, qua đó thì sẽ không tiếp cận được nhiều khách hàng, từ đó lượng khách hàng mua đã ít, nay lại càng ít hơn vì sự bùng nổ của mạng Internet. Bây giờ, ngồi ở nhà cũng có thể mua được hàng nên việc trực tiếp ra cửa hàng là rất hạn chế trong hoàn cảnh hiện nay là dịch bệnh và ô nhiễm môi trường. Và </span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000; font-style: italic;">em nhận thấy </span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000; font-style: italic;">sở hữu một trang thương mại điện </span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000; font-style: italic;">sự mong muốn</span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000; font-style: italic;"> của nhiều cửa hàng </span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000; font-style: italic;">muốn chuyển hình thức từ bán offline sang bán hàng online</span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000; font-style: italic;">. Bởi hầu</span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000; font-style: italic;"> hết hiện nay lượng người đặt hàng online ngày càng tăng vì sự tiện lợi và nhanh chóng của nó</span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000; font-style: italic;">. Vì thế mà </span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000; font-style: italic;">sử dụng trang thương mại điện tử để bán hàng là hết sức cần thiết</span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000; font-style: italic;">. </span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000; font-style: italic;">Chính vì lẽ đó nên em đã thiết kế ra một trang thương mại điện tử để bán đồ decord nhà ở thông qua những khảo sát em đã thu thấp</span></p>
+<p style="text-align: right; margin-top: 0; margin-bottom: 0;"><span style="font-size: 13pt; font-weight: bold; font-style: italic;">Phụ lục số 1:</span></p>
+<table style="table-layout: fixed;">
+<tr>
+<td>
+<h4>BỘ CÔNG THƯƠNG</h4>
+<p style="text-align: center; margin-bottom: 0pt;"><span style="font-size: 13pt; font-weight: bold;">TRƯỜNG ĐẠI HỌC</span></p>
+<p style="text-align: center; margin-bottom: 0pt;"><span style="font-size: 13pt; font-weight: bold;"> KINH TẾ -</span><span style="font-size: 13pt; font-weight: bold;"></span><span style="font-size: 13pt; font-weight: bold;"> </span><span style="font-size: 13pt; font-weight: bold;">KỸ THUẬT CÔNG NGHIỆP</span></p>
+</td>
+<td>
+<h3>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</h3>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 13pt; font-weight: bold;">Độc lập - Tự do - Hạnh phúc</span></p>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 13pt;"></span><span style="font-size: 13pt;"> </span></p>
+</td>
+</tr>
+</table>
+<h1></h1>
+<h1>PHIẾU ĐÁNH GIÁ KẾT QUẢ RÈN LUYỆN</h1>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 12pt; font-style: italic;">(Kèm theo QĐ số: 644</span><span style="font-size: 12pt; font-style: italic;">/QĐ-ĐHKTKTCN ngày</span><span style="font-size: 12pt; font-style: italic;"> 01 </span><span style="font-size: 12pt; font-style: italic;">tháng 1</span><span style="font-size: 12pt; font-style: italic;">2</span><span style="font-size: 12pt; font-style: italic;"> năm 2020 của Hiệu trưởng</span></p>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 12pt; font-style: italic;">Trường Đại học Kinh tế - Kỹ thuật Công nghiệp)</span></p>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 13pt; font-style: italic;">Học kỳ:</span><span style="font-size: 13pt; font-style: italic;"> </span><span style="font-size: 13pt; font-style: italic;">………</span>	<span style="font-size: 13pt; font-style: italic;">Năm học: 20</span><span style="font-size: 13pt; font-style: italic;">…. – 20……</span></p>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 13pt;">Họ và tên sinh viên:</span>			<span style="font-size: 13pt;">Ngày sinh:</span><span style="font-size: 13pt;"> </span></p>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 13pt;">Mã SV:</span><span style="font-size: 13pt;"> </span><span style="font-size: 13pt;">………</span>		<span style="font-size: 13pt;">Lớp:</span><span style="font-size: 13pt;"> </span><span style="font-size: 13pt;"> </span><span style="font-size: 13pt;">DHTI14A2CL</span></p>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 13pt;">Khoa:</span><span style="font-size: 13pt;"> </span><span style="font-size: 13pt;">……</span><span style="font-size: 13pt;">CNTT</span><span style="font-size: 13pt;">…………</span>	<span style="font-size: 13pt;"> Cơ sở:</span><span style="font-size: 13pt;">..</span><span style="font-size: 13pt;">…</span><span style="font-size: 13pt;">Lĩnh Nam</span><span style="font-size: 13pt;">……...</span></p>
 <p>&nbsp;</p>
-<p style="margin-bottom: 0pt;"><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000;">Chúng em chân thành cảm ơn cô </span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000;">Điền Thị Hồng Hà</span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000;"> đã giúp đỡ em thực hiện báo cáo </span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000; font-style: italic;">đồ án </span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000;">này. </span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000;">V</span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000;">à chúng em cũng rất mong sự góp ý giúp đỡ từ phía cô để bài làm của chúng em được hoàn thiện hơn.</span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000;">  </span></p>
+<table style="table-layout: fixed;">
+<tr>
+<td rowspan="2">
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold;">TT</span></p>
+<p>&nbsp;</p>
+</td>
+<td rowspan="2">
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold;">Nội dung đáng giá</span></p>
+<p>&nbsp;</p>
+</td>
+<td rowspan="2">
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold;">Điểm</span></p>
+<p>&nbsp;</p>
+</td>
+<td colspan="2">
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold;">Điểm đánh giá của</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold;">SV</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold;">Lớp</span></p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold;">A</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold;">Điểm rèn luyện mặc định của sinh viên trong học kỳ</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold;">70</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold;">70</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold;">B</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold;">Điểm rèn luyện được cộng trong kỳ </span><span style="font-size: 11pt; font-style: italic;">(điểm cộng/lần, hoạt động,…)</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold; font-style: italic;">I</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Điểm cộng về ý thức tham gia học tập</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">1</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Đạt kết quả học tập từ 7,0 trở lên </span><span style="font-size: 11pt; font-style: italic;">(theo thang điểm 10):</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">-</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">Đạt điểm trung bình học tập trên 9,0</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">5</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">-</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">Đạt điểm trung bình học tập từ 8,0 đến  9,0</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">3</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">3</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">-</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">Đạt điểm trung bình học tập từ 7,0 đến  8,0</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">2</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">2</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Có tinh thần cố gắng vượt khó, vươn lên trong học tập</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">2</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">3</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Tham gia các CLB học thuật, hoạt động NCKH, các cuộc thi khởi nghiệp sáng </span><span style="font-size: 11pt;">tạo; thi học sinh giỏi;… do Nhà</span><span style="font-size: 11pt;"> trường tổ chức hoặc được cử tham gia</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">2</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">2</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">4</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Có thành tích khác:…………………………………………………………………</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">2</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold; font-style: italic;">II</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Điểm cộng về ý thức chấp hành nội quy, quy chế, quy định trong</span><span style="font-size: 11pt; font-weight: bold; font-style: italic;"> nhà</span><span style="font-size: 11pt; font-weight: bold; font-style: italic;"> trường</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">5</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Có các hành động tích cực trên các trang mạng xã hội phù hợp với chủ trương của Nhà trường, Nhà nước được tập thể ghi nhận</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">5</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">6</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Tham gia tích cực các hoạt động lao động công ích, giữ gìn an ninh trật tự góp phần xây dựng cho sự phát triển của Nhà trường</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">3</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">7</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Tham gia thực tập tăng cường năng lực nghề nghiệp tại các doanh nghiệp; các buổi hội thảo, khóa đào tạo kỹ năng mềm về hướng nghiệp, tư vấn giới thiệu việc làm,..</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">2</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">2</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">8</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Tham gia hoạt động khác:…………………………………………………………</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">2</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold; font-style: italic;">III</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Điểm cộng về ý thức tham gia các hoạt động chính trị, xã hội, văn hóa, văn nghệ, thể thao, phòng chống tội phạm và các tệ nạn xã hội</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">9</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Được tham dự lớp học nhận thức về Đảng, được kết nạp Đảng, là Đảng viên hoàn thành tốt nhiệm vụ, Đoàn viên, Hội viên ưu tú,…</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">3</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">10</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Tham gia tích cực các hoạt động chính trị, xã hội, văn hóa, văn nghệ, thể thao của Nhà trường, khoa, lớp phát động và tổ chức</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">3</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">11</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Tham gia các hoạt động tình nguyện</span><span style="font-size: 11pt;">, hiến máu nhân đạo, công tác xã hội; tham gia tuyên truyền, phòng chống tội phạm và các tệ nạn xã hội</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">3</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">12</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Tham gia hoạt động trong các CLB do Đoàn thanh niên, Hội sinh viên tổ chức</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">2</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">13</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Tham gia hoạt động khác:…………………………………………………………</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">2</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold; font-style: italic;">IV</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Điểm cộng về ý thức công dân trong quan hệ cộng đồng</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">1</span><span style="font-size: 11pt;">4</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Tích cực tham gia tuyên truyền các chủ trương, đường lối, chính sách của Đảng và pháp luật của Nhà nước</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">3</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">1</span><span style="font-size: 11pt;">5</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Tích cực tham gia các hoạt động giữ gìn an ninh trật tự, an toàn xã hội, các hoạt động tìm hiểu pháp luật</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">2</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">16</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Có thành tích khác:…………………………………………………………………</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">2</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold; font-style: italic;">V</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0pt; margin-bottom: 0pt;"><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Điểm cộng về ý thức và kết quả khi tham gia công tác cán bộ lớp, các đoàn thể, tổ chức trong Nhà trường hoặc sinh viên đạt được thành tích đặc biệt trong học tập, rèn luyện</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">1</span><span style="font-size: 11pt;">7</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;">Lớp trưởng, Bí thư chi đoàn, Chi hội trưởng HSV, Chủ nhiệm các câu lạc bộ, tổ đội trong Nhà trường hoàn thành nhiệm vụ</p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">5</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">1</span><span style="font-size: 11pt;">8</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;">Lớp phó, Phó bí thư chi đoàn, Chi hội phó HSV, Phó chủ nhiệm các câu lạc bộ, tổ đội trong Nhà trường hoàn thành nhiệm vụ</p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">3</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">1</span><span style="font-size: 11pt;">9</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;">Tổ trưởng, cán sự bộ môn, ủy viên BCH chi đoàn hoàn thành nhiệm vụ</p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">2</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">2</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">20</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;">Được khen thưởng hoặc đạt giải trong học tập và các hoạt động phong trào</p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">3</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">21</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Có thành tích khác:…………………………………………………………………</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">2</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold;">C</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold;">Điểm rèn luyện bị trừ trong kỳ </span><span style="font-size: 11pt; font-style: italic;">(điểm trừ/lần vi phạm, buổi,…)</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold; font-style: italic;">I</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Điểm trừ về ý thức học tập</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">1</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Vi phạm quy chế thi, kiểm tra</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">4</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">2</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Thi lại môn học, học phần</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">2</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">3</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Vi phạm thời gian học tập, thiếu ý thức trong học tập</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">-</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">Nghỉ học không có lý do</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">2</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">-</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">Đi học muộn, trốn tiết, bỏ giờ,..</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">1</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">4</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Vi phạm khác:……………………………………………..………………………</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">2</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold; font-style: italic;">II</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Điểm trừ về ý thức chấp hành </span><span style="font-size: 11pt; font-weight: bold; font-style: italic;">nội quy, quy chế, quy định trong</span><span style="font-size: 11pt; font-weight: bold; font-style: italic;"> nhà</span><span style="font-size: 11pt; font-weight: bold; font-style: italic;"> trường</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">5</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Đi học hộ hoặc nhờ người khác đi học hộ</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">5</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">6</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Không đóng học phí đúng thời hạn</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">5</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">7</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Không khai báo, chấp hành các quy định về nội, ngoại trú; Không nộp bài thu hoạch, bản cam kết,…theo quy định</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">3</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">8</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Không tham gia BHYT theo quy định</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">3</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">9</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Vi phạm các nội quy, quy định của Nhà trường:</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">-</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">Sử</span><span style="font-size: 11pt; font-style: italic;"> dụng trang phục không phù hợp </span><span style="font-size: 11pt; font-style: italic;">khi đến trường, trong lớp học</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">2</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">-</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">Hút thuốc lá, ăn quà trong lớp, trong giờ học</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">2</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">-</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">Sử dụng điện thoại, thiết bị nghe nhìn,… trong giờ học</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">2</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">-</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">Không đeo thẻ sinh viên khi đến trường, trong lớp học</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">2</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">-</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">Không có ý thức giữ gìn vệ sinh lớp học, bỏ rác không đúng nơi quy định</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">2</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">10</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Vi phạm khác:………………………………………..……………………………</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">2</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold; font-style: italic;">III</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Điểm trừ về ý thức và kết quả tham gia các hoạt động chính trị, xã hội, văn hóa, văn nghệ, thể thao, phòng chống các tệ nạn xã hội</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">11</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Vi phạm các quy định về an toàn giao thông, tệ nạn xã hội, các quy định về đời sống văn hóa, các trò chơi có nội dung không lành mạnh,…</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">5</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">1</span><span style="font-size: 11pt;">2</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Không tham gia học tập “Tuần sinh hoạt công dân HSSV” đầu năm học</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">3</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">13</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Vi phạm khác:………………..……………………………………………………</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">2</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold; font-style: italic;">IV</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Điểm trừ về ý thức công dân trong quan hệ với cộng cộng đồng</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">1</span><span style="font-size: 11pt;">4</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Vi phạm chủ trương, đường lối, chính sách của Đảng, pháp luật của Nhà nước</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">5</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">1</span><span style="font-size: 11pt;">5</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Có hành vi gây mất đoàn kết, mất an ninh trật tự, an toàn xã hội trong trường, lớp và nơi cư trú</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">5</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">16</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Vi phạm khác:……………………………..………………………………………</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">2</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold; font-style: italic;">V</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Điểm trừ về ý thức và kết quả tham gia công tác cán bộ lớp, các đoàn thể, tổ chức trong nhà trường</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">1</span><span style="font-size: 11pt;">7</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Báo cáo không trung thực, có hành vi bao che cho vi phạm của sinh viên trong lớp</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">5</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">1</span><span style="font-size: 11pt;">8</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Cán bộ lớp, cán bộ Đoàn, cán bộ Hội sinh viên chưa hoàn thành nhiệm vụ</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">2</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">1</span><span style="font-size: 11pt;">9</span></p>
+</td>
+<td>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">Vi phạm khác:………………………………………………………………………</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt;">2</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold; font-style: italic;">D</span></p>
+</td>
+<td>
+<p style="margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Tổng điểm rèn luyện của sinh viên trong học kỳ: D = A + B - C</span></p>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">(Nếu tổng điểm sinh viên đạt được &gt; 100 điểm thì quy về mức 100)</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold; font-style: italic;">100</span></p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+<td>
+<p>&nbsp;</p>
+</td>
+</tr>
+</table>
+<p style="text-align: right; margin-top: 5.4pt;"><span style="font-style: italic;">Hà Nội, ngày 27</span><span style="font-style: italic;"> tháng</span><span style="font-style: italic;"> 12 năm 2021</span></p>
+<table style="table-layout: auto;">
+<tr>
+<td>
+<p style="text-align: center; margin-top: 5.4pt;"><span style="font-weight: bold;">Cố </span><span style="font-weight: bold;">vấn</span><span style="font-weight: bold;"> </span><span style="font-weight: bold;">học</span><span style="font-weight: bold;"> </span><span style="font-weight: bold;">tập</span></p>
+<p style="text-align: center; margin-top: 5.4pt;"><span style="font-size: 11pt; font-style: italic;">(Ký, ghi </span><span style="font-size: 11pt; font-style: italic;">rõ</span><span style="font-size: 11pt; font-style: italic;"> </span><span style="font-size: 11pt; font-style: italic;">họ</span><span style="font-size: 11pt; font-style: italic;"> </span><span style="font-size: 11pt; font-style: italic;">tên)</span></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p style="margin-bottom: 0pt;"><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000;"> </span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000;">Em x</span><span style="font-family: 'Times New Roman'; font-size: 13pt; color: #000000;">in chân thành cảm ơn!!!!  </span></p>
 <p>&nbsp;</p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt; font-weight: bold;">Giới thiệu bài toàn</span></p>
-
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 13pt;">Ngày nay, Công nghệ thông tin nói chung và internet nói riêng đang thực sự bùng nổ và phát triển khắp mọi nơi và trên mọi lĩnh vực. </span><span style="font-size: 13pt; color: #000000;">Ngành thương mại điện tử đang ngày càng chứng minh được tầm ảnh hưởng quan trọng của nó trên tất cả mọi ngành nghề trên toàn thế giới. Đối với Việt Nam, </span><span style="font-size: 13pt; color: #000000;">tuy ngành thương mại điện tử </span><span style="font-size: 13pt; color: #000000;">mới chỉ phát triển trong vòng vài năm trở lại đây và đang từng bước phát triển nhưng những bước phát triển đó đã cho thấy Việt Nam là một trong những nước có tiềm năng về lĩnh vực</span><span style="font-size: 13pt; color: #000000;"> thương mại điện tử</span><span style="font-size: 13pt; color: #000000;">, trong đó phát triển </span><span style="font-size: 13pt; color: #000000;">các trang thương mại điện tử</span><span style="font-size: 13pt; color: #000000;"> đang là thế mạnh của đất nước. </span><span style="font-size: 13pt; color: #000000;">Các trang website bán hàng</span><span style="font-size: 13pt; color: #000000;"> không chỉ giúp cho </span><span style="font-size: 13pt; color: #000000;">việc mua sắm trở lên</span><span style="font-size: 13pt; color: #000000;"> dễ dàng hơn,</span><span style="font-size: 13pt; color: #000000;"> mà còn giúp tiếp cận nhiều khách hàng trong cùng một, qua đó giúp cho các doanh nghiệp, cửa hàng kinh doanh có thêm doanh thu bán hàng, từ đó có thể phát triển lớn hơn.</span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 13pt; color: #000000;">Khảo sát hiện trạng hiện nay, em nhận thấy nhiều cửa hàng bán đồ décor vẫn còn áp dụng những kiểu bán cũ, lượng khách tiếp cận đến của hàng không nhiều vì hiện nay </span><span style="font-size: 13pt; color: #000000;">lượng lớn khách hàng đang chuyển hướng mua hàng trực tuyến. Qua đó </span><span style="font-size: 13pt; color: #000000;">nhiều cửa hàng cũng muốn thay đổi hình thức kinh doanh sang bán hàng online, nhưng họ lại không biết quy trình tổng quát để phát triển 1 website bán hàng online như nào, vậy nên từ đó trang thương mại điện tử bán hàng décor ra đời để giải quyết vấn đề đó. </span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 13pt; color: #000000;">Với mục đích xây dựng một trang thương mại điện tử bán hàng décor chất lượng, khoa học và thân thiện, trang web phải đảm bảo những yêu cầu sau:</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-size: 13pt; color: #000000;">Đầu tiên là phần giao diện của trang phải thiết kế đơn giản nhưng người sử dụng vẫn cảm thấy dễ thao tác.</span></p>
-
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-size: 13pt;">Có các mẫu sản phẩm với đầu đủ kích thước, mẫu mã để khách hàng có thể so sánh cũng như lựa chọn.</span></p>
-
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-size: 13pt;">Phải hiển thị được thông tin chi tiết của các sản phẩm khi khách hàng kích vào.</span></p>
-
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-size: 13pt;">Khi khách hàng mua hàng thì cần phải xin thông tin đầy đủ của khách hàng.</span></p>
-
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-size: 13pt;">Có phần quản trị của admin với trang web.</span></p>
-
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-size: 13pt;">Có phần login authentication</span></p>
-
+</td>
+<td>
+<p style="text-align: center; margin-top: 5.4pt;"><span style="font-weight: bold;">Lớp</span><span style="font-weight: bold;"> </span><span style="font-weight: bold;">trưởng</span></p>
+<p style="text-align: center; margin-top: 5.4pt;"><span style="font-size: 11pt; font-style: italic;">(Ký, ghi </span><span style="font-size: 11pt; font-style: italic;">rõ</span><span style="font-size: 11pt; font-style: italic;"> </span><span style="font-size: 11pt; font-style: italic;">họ</span><span style="font-size: 11pt; font-style: italic;"> </span><span style="font-size: 11pt; font-style: italic;">tên)</span></p>
+</td>
+<td>
+<p style="text-align: center; margin-top: 5.4pt;"><span style="font-weight: bold;">Sinh viên</span></p>
+<p style="text-align: center; margin-top: 5.4pt;"><span style="font-size: 11pt; font-style: italic;">(Ký, ghi rõ họ tên)</span></p>
 <p>&nbsp;</p>
-<p style="text-align: center; margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 13pt;">Tổng quan đề tài</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-size: 13pt;">Lý do chọn đề tài</span></p>
-
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 13pt;">Ngày nay internet đã trở thành dịch vụ phổ biến và thiết yếu ảnh hưởng sâu rộng tới thói quen, sinh hoạt, giải trí </span></p>
+</td>
+</tr>
+</table>
 <p>&nbsp;</p>
-<p>&nbsp;</p>
-<p style="text-align: center; margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt; font-weight: bold;">CHƯƠNG 2: </span><span style="font-size: 14pt; font-weight: bold;">CƠ SỞ LÝ THUYẾ</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-size: 14pt; font-weight: bold;">NGÔN NGỮ </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-size: 14pt; font-weight: bold;">HTML</span></p>
-
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-size: 14pt;">Khái niệm: Ngôn ngữ HTML, (HyperText Markup Language - ngôn ngữ siêu văn bản) là một trong các loại ngôn ngữ được sử dụng trong lập trình web.Khi truy cập một trang web cụ thể là click vào các đường link, sẽ được dẫn tới nhiều trang các nhau, và các trang này được gọi là một tài liệu HTML (tập tin HTML)</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-size: 14pt;">.</span></p>
-
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt;">Một trang HTML như vậy được cầu thành bởi nhiều phần tử HTML nhỏ. và được quy định bằng các thẻ tag,có thể phân biệt một trang web được viết ngôn ngữ HTML hay PHP thông qua đường link của nó. Ở cuối các trang HTML thường hay có đuôi là .HTML hoặc .HTM  </span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt;">HTML là ngôn ngữ lập trình web được đánh giá là đơn giản, Mọi trang. web, mọi trình duyệt web đều có thể hiển thị tốt ngôn ngữ HTML, </span><span style="font-size: 14pt;">Hiện nay, phiên bản mới nhất của HTML là HTML 5 với nhiều tính năng tốt và chất lượng. hơn so với các phiên bản HTML cũ. </span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt;"> -Vai trò  &#039;HTML là một loại ngôn ngữ đánh dấu siêu văn bản, thể nên các chức năng của HTML cũng xoay quanh yếu tổ này. Cụ thể, HTML giúp cầu thành các cầu. trúc cơ bản trên một website (chia khung sườn, bố cục các thành phản trang &#039;web) và góp phản hỗ trợ khai báo các tập tin kĩ thuật số như video, nhạc, hình ảnh.  </span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt;">Dù website được xây dựng như thể nào, trên nên tảng nào thì website cũng. cẳn đến sự hỗ trợ của HTML, dù ít dù nhiều. Đồi với các lập trình viên hay nhà phát triển web, họ đều phải học HTML như một loại ngôn ngữ cơ bản trước khi bắt tay vào thiết kế trang web nào. </span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt;">-T</span><span style="font-size: 14pt;">ác dụng:  </span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt;">Điều khiển hình thức và nội dung của trang.  Xuất bản các tả iệu trực tuyến và truy xuất thông tỉn trực tuyến bằng cách sử dụng các liên kết được chèn vào tài liệu htm</span><span style="font-size: 14pt;">l.</span><span style="font-size: 14pt;">  </span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt;">Tạo các biểu mẫu trực tuyến để thu thập thông tin về người dùng, quản lý các giao dịch.</span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt;">Chèn các đối tượng như audio clip, video clip, các thành phần ActiveX,</span><span style="font-size: 14pt;"> </span><span style="font-size: 14pt;">Flash và các Java Applet vào tài</span><span style="font-size: 14pt;"> liệu html.</span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt;"> </span>		<span style="font-size: 14pt;">-</span><span style="font-size: 14pt;">Một số thẻ trong HTMI</span><span style="font-size: 14pt;">  </span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt;">Các trang HTML được quy định bằng các thẻ tap, Những thẻ này được chứa.</span><span style="font-size: 14pt;"> </span><span style="font-size: 14pt;">trong các dấu ngoặc đơn dạng: &lt;tên thê&gt;. Trừ một vải thể đặc biệt, hầu hết các</span><span style="font-size: 14pt;"> </span><span style="font-size: 14pt;">thẻ cơ bản đều có các thẻ đồng tương ứng. Ví dụ, thẻ &lt;html&gt; có thẻ đồng tương</span><span style="font-size: 14pt;"> </span><span style="font-size: 14pt;">lứng là &lt;/htmb&gt;, thẻ &lt;body&gt; có thẻ đóng tương ứng là &lt;/body&gt;</span><span style="font-size: 14pt;">  </span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt;">Cầu trúc của 1 tài liệu hìnl gồm:</span><span style="font-size: 14pt;"> </span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt;"> </span><span style="font-size: 14pt;">Phần html: </span><span style="font-size: 14pt;">Mọi tài liệu html phải bắt đầu bằng thẻ </span><span style="font-size: 14pt;">mở html</span><span style="font-size: 14pt;">&lt;htm</span><span style="font-size: 14pt;">l</span><span style="font-size: 14pt;">&gt; và kết</span><span style="font-size: 14pt;"> </span><span style="font-size: 14pt;">thúc bằng thẻ </span><span style="font-size: 14pt;">đóng</span><span style="font-size: 14pt;"> &lt;/himl&gt;</span><span style="font-size: 14pt;"> </span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt;"> </span><span style="font-size: 14pt;">&lt;html&gt;..... &lt;htmP&gt;</span><span style="font-size: 14pt;"> </span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt;"> </span><span style="font-size: 14pt;">Thẻ hinnl báo cho trình duyệt biết nội dung giữa hai thẻ này là một tài liệu</span><span style="font-size: 14pt;"> html</span><span style="font-size: 14pt;">: </span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt;">+ </span><span style="font-size: 14pt;">Phần tiêu đ</span><span style="font-size: 14pt;">ề: </span><span style="font-size: 14pt;">Phần tiêu đ</span><span style="font-size: 14pt;">ề</span><span style="font-size: 14pt;"> bắt đầu bằng thẻ &lt;head&gt; và kết thúc bởi thẻ</span><span style="font-size: 14pt;"> </span><span style="font-size: 14pt;">&lt;ihead&gt;, Phẫn này chứa tiêu đề mà được hiển thị trên thanh điều hướng cũa</span><span style="font-size: 14pt;"> </span><span style="font-size: 14pt;">trang Web. Tiêu để nằm trong thẻ title, bắt đầu bằng thẻ &lt;title&gt; và kết thúc là</span><span style="font-size: 14pt;"> </span><span style="font-size: 14pt;">thẻ &lt;/title&gt;.</span><span style="font-size: 14pt;"> </span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt;"> </span><span style="font-size: 14pt;">Tiêu đề là phần khá quan trọng, Khi người dùng tìm kiếm thông tỉn, tiêu</span><span style="font-size: 14pt;"> </span><span style="font-size: 14pt;">đề của trang Web cung cắp từ khóa chính yếu cho việc tìm kiếm.</span><span style="font-size: 14pt;"> </span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt;">+ Phần thân: phần này nằm sau phân tiêu đề, Phẫn thân bao gồm văn bản, hình</span><span style="font-size: 14pt;"> </span><span style="font-size: 14pt;">ảnh và các liên kết mà người dùng muốn hiển thị trên trang web của mình, Phần</span><span style="font-size: 14pt;"> </span><span style="font-size: 14pt;">thân bắt đầu bằng thẻ &lt;body&gt; và kết thúc bằng thẻ &lt;/body&gt;</span><span style="font-size: 14pt;"> </span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt;"> </span><span style="font-size: 14pt;">-Ưu điểm</span><span style="font-size: 14pt;">:</span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt;">  </span><span style="font-size: 14pt;">+ Ngôn ngữ được sử dụng rộng lớn này có rắt nhiều nguằn tải nguyên hỗ trợ</span><span style="font-size: 14pt;"> </span><span style="font-size: 14pt;">và cộng đồng sử dụng cực lớn.</span><span style="font-size: 14pt;">  </span><span style="font-size: 14pt;">1</span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt;">+ Sử dụng mượt mà trên hầu hết mọi trình duyệt.</span><span style="font-size: 14pt;">  </span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt;">+ Có quá trình học đơn giản và trực tiếp.</span><span style="font-size: 14pt;">  </span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt;">+ Mã nguồn mở và hoàn toàn miễn phí.</span><span style="font-size: 14pt;"> </span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt;">+ Markup gọn gàng và đồng nhất.</span><span style="font-size: 14pt;">  </span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt;">+ Chuẩn chính của web được vận hành bởi World Wide Web Consortium</span><span style="font-size: 14pt;"> </span><span style="font-size: 14pt;">(W3</span><span style="font-size: 14pt;">C</span><span style="font-size: 14pt;">).</span><span style="font-size: 14pt;">  </span></p>
-<p style="margin-top: 0pt; margin-bottom: 8pt;"><span style="font-size: 14pt;">+ Dễ dàng tích hợp với các ngôn ngữ backend như PHP</span><span style="font-size: 14pt;"> và N</span><span style="font-size: 14pt;">ode,js</span><span style="font-size: 14pt;">. </span><span style="font-size: 14pt; font-weight: bold;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Nhược điểm: </span></p>
-
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+ Được dùng chủ yếu cho web tĩnh, Đồi với các tính năng động, người dùng cần sử dụng JavaScript hoặc ngôn ngữ backend bên thứ 3 như PHP,  </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+ HTML có thể thực thi một số logic nhất định cho người dùng. Vì vậy, hầu hết các trang đều cần được tạo riêng biệt, kể cả khi HTML sử dụng cùng các yếu tổ, như là headers hay footers  </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+ Một số trình duyệt chậm hỗ trợ tính năng mới..  </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+ Khó kiểm soát cảnh thực thi của trình duyệt (ví dụ, những trình duyệt cũ. không render được ta</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">g</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> mới)</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">1.2 </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">NGÔN NGỮ CSS  </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">-</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">Khái niệm:  </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">C</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">S</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">S là </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">công cụ</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> tạo phong cách cho trang web — Cascading Style Sheet language. CSS dùng để tạo phong cách và định kiểu cho những yếu tố được viết dưới dạng ngôn ngữ đánh dẫu, như là HTML. CSS có thể điều khiển định dạng của nhiều trang web cùng lúc để tiết kiệm công sức cho người viết web. CSS phân biệt cách hiển thị của trang web với nội dung chính của trang bằng. cách điều khiển bồ cục, màu sắc, và font chữ.  </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">CSS được phát triển bởi W3C vào năm 1996, vì một lý do đơn giản. HTML, không được thiết kế để gắn tag để giúp định dạng trang web, Người dùng chỉ có thể dùng HTML để “đánh dấu” lên site</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">.</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt; background: yellow;">Những tag như &lt;font&gt; được rà mắt trong HTML phiên</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> bản 3.2, gây rắt nhiều rắc rỗi cho lập trình viên</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> Vì website có nhiều font khác nhau, mẫu nên và phong cách khác nhau. Để viết lại code cho trang web là cả một quá trình. dài, cực nhọc. Vì vậy, CSS được tạo bởi W3C là để giải quyết vấn đề này.  </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">M</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">ố</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">i tương quan giữa HTML và CSS rất mật thiết. HTML là ngôn ngữ markup. (nền tảng của site) và CSS định hình phong cách (tắt cả những gì tạo nên giao diện website), chúng là không thể tách rời.  </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">CSS về lý thuyết không có cũng được, nhưng khi đồ website sẽ không chỉ là  trang chứa văn bản mà không có gì khác.  </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">-Ưu điểm:  </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Trước khi sử dụng CSS, tắt cả những phong cách của CSS cần được đính kêm vào trong HTML markup. Có nghĩa là người dùng cần tách ra để xác định các thành phần như background, font </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">c</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">olors</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">.</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">CSS giúp người dùng định kiểu mọi thứ trên một le khác, người dùng có.thể tạo phong cách trước rồi sau đó tích hợp file CSS lên trên cùng của file</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">HTML.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">Việc này giúp HTML markup rõ ràng và dễ quản lý hơn nhiều.</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Tóm lại</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">,</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> với CSS người dùng không cần lặp lại các mô tả cho từng thanh</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">phần.CSS tiết kiệm thời gian, làm code ngắn lại đề người dùng có thể kiểm soát.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">lỗi dễ đàng hơn.</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">CS</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">S</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> giúp người dùng có nhiều styles trên một trang web HTML, vì vậy, khả</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">năng điều chỉnh trang gần như vô bạn.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">-</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">Cách hoạt động của CSS </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Selector sẽ tr</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">ỏ</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> về yếu tổ HTML người dùng cần muốn tạo phong cách. Block.khai báo sẽ bao gồm một hay nhiều khai báo cách nhau bởi dầu chắm phầy,</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">Mỗi khai báo bao gồm một tên CSS và giá trị, cách nhẫu bởi dầu 2 chắm. Khai</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">báo CSS luôn kết thúc bằng dầu chẩm phản, và block khai báo được đặt trong</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">dấu ngoặc nhọn.</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">Đây là một ví dụ:</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">&lt;syle&gt;</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">P</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">Color: blue;</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Text-weight : blod;</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">}</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">&lt;styl&gt;</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span>	<span style="font-family: 'Times New Roman'; font-size: 14pt;">-Học CSS cần:</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Hành trang th</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">ứ</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> nhất mà người dùng nên có là một kiến thức về HTML,</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">HTML không thật sự cần thiết nếu người dùng chỉ dùng CSS đề trình bày cho</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">một trang HTML có sẵn (như làm skin cho blog chẳng bạn), nhưng người đùng</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">vẫn cần biết ÿ nghĩa một số thẻ HTML, HTML sẽ có ích khi người dùng viết</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">(CS. Tuy nhiên, nếu người dùng muốn tự thiết kể, trình bày một trang web của.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">riêng mình thì tùy theo quy mô trang web, người dùng cần phải học thêm cả</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">HTML, XHMTL, Javaseript và một số ngôn ngữ lập trình web khác.</span></p>
-<p>&nbsp;</p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Hành trang thứ hai chính là một trình soạn thảo văn bản để người dùng có.</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">thể viết mã CSS. Ở đây, Người dùng nên sử dụng một trình soạn thảo đơn giản</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">như Notepad, Wordpad trong Windows hay Pico trong Linux, Simple Text</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">trong M</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">a</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">c.</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Một trong những ứng dụng trên sẽ giúp người dùng chắc là code là của mình.</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">và không có bất kỳ một sự can thiệt nào từ chương trình như khi dùng</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">DreamWeaver, FrontPage, Golive,</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">…</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">NGÔN NGỮ JAVASCRIPT </span></p>
-
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">-</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">Khái niệm : </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">JavaScript là một ngôn ngữ lập trình website, được tích hợp và nhúng trong</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">HTML giúp website sống động hơn. JavaScript cho phép kiểm soát các hành</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">  </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">vi của trang web tốt hơn so với khi chỉ sử dụng mỗi HTML.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">JavaScript là ngôn ngữ lập trình được hỗ trợ hầu như trên tắt cả các trình duyệt</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">như Firefox, Chrome, ... thậm chí các trình duyệt trên thiết bị dĩ động.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">-Lợi ích của</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> việc dùng javascrip</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">JavaScript được ứng dụng rất nhiều trong việc tạo dựng website.Là một.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">ngôn ngữ lập trình phố biến sử dụng trên 92% nền tảng website hiện</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">nay, JavaSeript đã thể hiện vai trò quan trọng với lĩnh vực này, Tâm quan trọng</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">của JavaScript thể hiện qua các thao tác, công dụng như</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+ Triển khỏi tập lệnh phía máy khách.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Nhờ Javascript, các lập trình viên có thể đễ dàng viết tập lệnh phía máy</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">khách, tích hợp các tập lệnh một cách liền mạch vào HTML, cho phép website</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">tương tác, trả lời người dùng ngay lập tức và tạo ra giao diện hiển thị phong.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">phú hơn</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">.</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">+ Viết mã phía máy chủ</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Các lập trình viên có thể viết mã phía máy chủ bằng JavaScript</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">+ Đơn giản hóa phải triển ứng dụng web phức tạp</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Javascript cho phép các nhà phát triển đơn giản hóa thành phần của ứng</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">dụng, qua đó đơn giản hóa việc phát triển các ứng dụng web phức tạp.</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+ Thiết</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">  </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">kế web responsive</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">J</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">avaSeript cho phép thiết kế web responsive ~ tối ưu trên cả máy tính và</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">thiết bị dĩ động chỉ với một bộ mã.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p>&nbsp;</p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+ Google AMP</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Để tham gia vào dự án Tăng tốc trang di động (AMP) của Google, các lập</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">trình viên phải sứ dụng ngôn ngữ lập trình JavaS</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">c</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">ript.</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">+ Nhiều bộ chuyển đổi.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Mặc dù thiếu một số tính năng phức tạp được cung cắp bởi các ngôn ngữ</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">lập trình hiện đại như Java và C#, JavaScript vẫn có thể đễ dàng mở rộng</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">bằng cách sử dụng các bộ chuyển đỗi như CoffeeSeript, TypeSeript,</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">DukeSeript và Vaadin</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">.</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">-Đặc điểm của javaseript:</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Là ngôn ngữ lập trình bậc cao (high-level) giống như:</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">C(C+-+Java,Python, Ruby.... JavaSeript rắt gần với ngôn ngữ tự nhiên của</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">con người, Trong ngôn ngữ lập trình bậc thắp (low-level) như: Assembly... sẽ</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">gần với máy tính hơn.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Là ngôn ngữ lập trình động (dynamie programming language); như</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">Python. Ruby, Perl.... Chúng được tối ưu hóa nhằm nâng cao hiệu </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">suất </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">lập trình viên. Trong khi ngôn ngữ lập trình tĩnh (staie proframming</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">language): như C,C+,.... lại được tối ưu hóa để nâng cao hiệu suất cho phần.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">cứng máy tính.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">  </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">cho</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">L</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">à</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> ngôn ngữ lớp trình kịch bản (sorioting hnginge): nghĩa R không cần</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">biên dịch (compile) hay liên kết (linked) giống như ngôn ngữ lập trình biên</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">dịch (C/C+=,Java.....) mà JavaScript sẽ được dịch tại thời điểm chạy.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Là ngôn ngữ dựa trên đồi tượng (object-based): tức JavaScript gần giống</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">như ngôn ngữ lập trình hướng đối tượng, ngoại trừ JavaScript không hỗ trợ</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">tính kế thừa và đa hình.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">L</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">à</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> ngôn ngữ dựa trên nguyên mẫu (protolype-bosed): là một kiểu của lập</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">trình hướng đối tượng trong đó các hành vi của đồi tượng được sử dụng lại..</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span>	<span style="font-family: 'Times New Roman'; font-size: 14pt;">-</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">Ứng dụng của javascript</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">JavaScript cùng với HTML, CSS trở thành ngôn ngữ không thể thiếu đối</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">với website</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">.</span></p>
-<p style="margin-top: 0; margin-bottom: 0;">	<span style="font-family: 'Times New Roman'; font-size: 14pt;">Javascrip có thể sử dụng phía server với framework: Node.js</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Một số database sử dung JavaScrip như là kịch bản và là ngôn ngữ </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">query: MongoDB, CouchDB.</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Javasrip có thể sùng để xây dựng ứng dụng Desktop với framework: Electron. Những ứng dụng nổi tiếng có thể kể đến là Atom, Visual Studio code, GitKraken, Wordpress.com,…</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Để xây dụng ứng dụng điện thoại đa nên tảng ( Android, IOS) có thể dùng: React-native.</span></p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">1.4 NGÔN NGỮ PHP</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span>	<span style="font-family: 'Times New Roman'; font-size: 14pt;">-Khái niệm : là một ngôn ngữ lập trình kịch bản được chạy ở phía server.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">nhằm sinh ra mã html trên client. PHP đã trải qua rất nhiều phiên bản và được</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">tối ưu hóa cho các ứng dụng web, với cách viết mã rõ răng, tốc độ nhanh, dễ.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">học nên PHP đã trở thành một ngôn ngữ lập trình web rắt phổ biến vả được ưa.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">chuộng</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">-</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">Ưu điểm:</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> Cấu trúc của PHP</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">PHP có cấu trúc cực kỳ đơn giản. Đây là điểm rất thu hút đối với những</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">  </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">người dùng mới bắt đầu công việc lập trình viên. Người dùng sẽ không mắt quá</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">nhiều thời gian để tìm hiểu và học một cách thành thạo. Bởi thể đây luôn là một</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">lu điểm, khiến php là ngôn ngữ lập trình được thu hút hơn rắt nhiều các ngôn.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">ngữ lập trình khác, đặc biệt là những người yêu thích về công nghệ thông tin.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+ Cộng đồng hỗ trợ mạnh mẽ</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Nguồn thư viện mà php tạo ra vô cùng phong phú. Khi gặp bắt kỳ một thắc</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">mắc hay vần đề nào đó, người dùng có thể tìm kiếm nguồn tải liệu này. Trong</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">trường hợp gặp khó khăn, hãy cân nhắc đến việc tìm kiếm sự hỗ trợ đến từ cộng.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">đồng PHP, người dùng sẽ được hỗ trợ một cách đắc lực nhất</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">.</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+ Cơ hội việc làm lớn</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Hiện nay có rắt nhiều công ty sử dụng ngôn ngữ lập trình php để phát triển</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">ứng dụng web. Thực tế này sẽ mở ra cơ hội việc làm rất lớn cho những người</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">đam mê theo đuổi phd, mức lương liên quan sẽ là một con số khiển người</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> dùng đáng kinh ngạc.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">igoài ra, sự hỗ trợ của php sẽ giúp người dùng xử lý</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">không chỉ làm giới hạn trong một công ty.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+ Tiềm năng phát triển trong tương lại</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Giới công nghệ đã nhìn ra một tương laï vô cũng tươi sáng của ngôn ngữ lập</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">trình php. Trong tương lại, php sẽ còn phát triển mạnh mẽ hơn nữa, có nhiều</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">ứng dụng hơn nữa để khẳng định được vị trí của mình, luôn nằm trong top ngôn</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">ngữ lập trình đếm sử dụng nhắt trong giới công nghệ thông tin.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">-</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">Nhược điểm:</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+ PHP có sự hạn chế về cầu trúc ngữ pháp. Đây là nhược điểm được nhắc đến</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">bằng đầu và người dùng đễ dàng có thể quan sắt được. Bởi vì php không được.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">thiết kế gọn gàng, cũng như đẹp mắ</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">t</span><span style="font-family: 'Times New Roman'; font-size: 14pt;">,</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">giống như ngôn ngữ lập trình khác,</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+ PHP chỉ hoạt động và sử dụng được trên các ứng dụng web. Đây là hạn chế</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">tồn tại vô cùng lớn. Do vậy một số công ty khi một phát triển và nhân rộng hơn</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">nữa ra trong quá trình lập trình, hẳu hết họ sẽ không chọn ngôn ngữ lập trình</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">PHP.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Tuy nhiên nếu xét về tổng thể thì php là ngôn ngữ lập trình rắt đáng sử</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">dụng. Những người mới tiếp xúc với lập trình có thể lựa chọn php làm công cụ,</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">trước kh sử dụng thành thạo và chuyên sang một ngôn ngữ lập trình phức tạp,</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">hơn.</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">1.5 HỆ QUẦN TRỊ CƠ SỞ DỮ LIỆU MYSQL</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">-Khái niệm: MySQL là chương trình dùng để quản lý hệ thống cơ sở dữ</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">liệu (CSDL), trong đó CSDL là một bệ thẳng lưu trữ thông tín được sắp xếp rõ.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">rằng, phân lớp ngăn nắp những thông tin mà mình lưu trữ. Vì thể, người dùng</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">có thể truy cập dữ liệu một cách thuận lợi, nhanh chóng. MySQL hỗ trợ đa số.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">các ngôn ngữ lập trình. Chính vì thế mà mã nguồn mở phỗ biến nhất hiện nay</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">là</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">WordPress đã sử dụng MySQL làm cơ sở dữ liệu mặc định.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">-Đặc điểm của hệ quản trị CSDL MySQL:</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">+ Khả năng mở rộng và tính linh hoạt</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Máy chủ CSDL MySQL đáp ứng nhiều tính năng linh hoạt, MySQL có sức</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">chứa để xử lý các ứng dụng được nhúng sâu với 1MB dung lượng để chạy kho.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">dữ liệu không lồ lên đến hàng terabytes thông tin. Đặc tính đáng chú ý của.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">MySQL là sự linh hoạt về flatform với tắt cả các phiên bản của Windows, Unix</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">và Linux đang được hỗ trợ. Đương nhiên, tính chắt mã nguồn mở của MySQL</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">cho phép tùy biến theo ý muốn để thêm các yêu cầu phù hợp cho database</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">serer.</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+Hiệu năng cao:</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Với kiến trúc storage-engine cho phép các chuyên gia CSDL cấu hình máy</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">chủ cơ sở dữ liệu MySQL đặc trưng cho các ứng dụng chuyên biệt. Dù ứng.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">dụng là website dung lượng lớn phục vụ hàng triệu người/ngày hay hệ thống</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">xử lý giao dịch tốc độ cao thì MySQL đều đáp ứng được khả năng xử lý khắt</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">khe của mọi hệ thống. Với những tiện ích tải tốc độ cao, cơ chỗ xử lý nâng cao.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">khác và đặc biệt bộ nhớ caches,MySQL đưa ra tắt cả các tính năng cần có cho</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">bệ thống doanh nghiệp khó tính hiện nay.</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+Tính sẵn sàng cao:</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">MySQL đảm bảo sự tin cậy và có thể sử dụng ngay. MySQL đưa ra nhiều</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">tùy chọn có thể “mì ăn liền” ngay từ cầu hình tái tạo chủtớ tốc độ cao, để các</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">nhà phân phối thứ 3 có thể đưa ra những điều hướng có thể dùng ngay duy nhắt</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">cho server cơ sở dữ liệu MySQL.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+Hỗ trợ giao dịch mạnh mẽ:</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">MySQL, đưa ra một trong số những cngine giao dịch cơ sở dữ liệu tốt nhất</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">trên thị trường, Các đặc trưng bao gồm, khóa mức dòng không hạn chế, hỗ trợ</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">giao dịch ACID hoàn thiện, khả năng giao dịch được phân loại và hỗ trợ giao</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">dịch đa dạng (muli-version) mà người đọc không bao giờ cản trở cho người</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">viết và ngược lại. Dữ liệu được đảm bảo trong suốt quá trình sever có hiệu lực,</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">các mức giao dịch độc lập được chuyên môn hóa, khi phát hiện có lỗi khóa chết</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">ngay tức thì</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+Điểm mạnh của Web và Data Warehouse:</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">MySQL với điểm mạnh là cho phép xử lý ở tốc độ cao, hỗ trợ các tính năng</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">chuyên dụng cho website.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">MySQL là nơi cho các website trao đổi thường xuyên bởi MySQL có.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">engine xử lý tốc độ cao, khả năng chèn dữ liệu cực nhanh và hỗ trợ mạnh các</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">chức năng chuyên dụng của web. Các tính năng này cũng được sử dụng cho.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">môi trường lưu dữ liệu mà MySQL tăng cường đền hàng teratybe cho các </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">server.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">đơn, Những tính năng khác như chỉ số băm, bảng nhớ chính, bảng lưu trữ và</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">cây B đã được gói lại để giảm các yêu cầu lưu trữ tới 80%. Vì thể, MySQL là</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">sự lựa chọn tốt nhắt cho cả ứng dụng web và các ứng dụng của doanh nghiệp.</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+Bảo vệ dữ liệu mạnh mẽ:</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">cho phép tùy biến theo ý muốn để thêm các yêu cầu phù hợp cho database</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">serer.</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+Hiệu năng cao:</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Với kiến trúc storage-engine cho phép các chuyên gia CSDL cấu hình máy</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">chủ cơ sở dữ liệu MySQL đặc trưng cho các ứng dụng chuyên biệt. Dù ứng.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">dụng là website dung lượng lớn phục vụ hàng triệu người/ngày hay hệ thống</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">xử lý giao dịch tốc độ cao thì MySQL đều đáp ứng được khả năng xử lý khắt</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">khe của mọi hệ thống. Với những tiện ích tải tốc độ cao, cơ chỗ xử lý nâng cao.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">khác và đặc biệt bộ nhớ caches,MySQL đưa ra tắt cả các tính năng cần có cho</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">bệ thống doanh nghiệp khó tính hiện nay.</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+Tính sẵn sàng cao:</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span>	<span style="font-family: 'Times New Roman'; font-size: 14pt;">MySQL đảm bảo sự tin cậy và có thể sử dụng ngay. MySQL đưa ra nhiều</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">tùy chọn có thể “mì ăn liền” ngay từ cầu hình tái tạo chủtớ tốc độ cao, để các</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">nhà phân phối thứ 3 có thể đưa ra những điều hướng có thể dùng ngay duy nhắt</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">cho server cơ sở dữ liệu MySQL.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+Hỗ trợ giao dịch mạnh mẽ:</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">MySQL, đưa ra một trong số những cngine giao dịch cơ sở dữ liệu tốt nhất</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">trên thị trường, Các đặc trưng bao gồm, khóa mức dòng không hạn chế, hỗ trợ</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">giao dịch ACID hoàn thiện, khả năng giao dịch được phân loại và hỗ trợ giao</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">dịch đa dạng (muli-version) mà người đọc không bao giờ cản trở cho người</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">viết và ngược lại. Dữ liệu được đảm bảo trong suốt quá trình sever có hiệu lực,</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">các mức giao dịch độc lập được chuyên môn hóa, khi phát hiện có lỗi khóa chết</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">ngay tức thì</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+Điểm mạnh của Web và Data Warehouse:</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">MySQL với điểm mạnh là cho phép xử lý ở tốc độ cao, hỗ trợ các tính năng</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">chuyên dụng cho website.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">MySQL là nơi cho các website trao đổi thường xuyên bởi MySQL có.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">engine xử lý tốc độ cao, khả năng chèn dữ liệu cực nhanh và hỗ trợ mạnh các</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">chức năng chuyên dụng của web. Các tính năng này cũng được sử dụng cho.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">môi trường lưu dữ liệu mà MySQL tăng cường đền hàng teratybe cho các server.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">đơn, Những tính năng khác như chỉ số băm, bảng nhớ chính, bảng lưu trữ và</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">cây B đã được gói lại để giảm các yêu cầu lưu trữ tới 80%. Vì thể, MySQL là</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">sự lựa chọn tốt nhắt cho cả ứng dụng web và các ứng dụng của doanh nghiệp.</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+Bảo vệ dữ liệu mạnh mẽ:</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Việc quan trọng của các doanh nghiệp là bảo mật dữ liệu, MySQL tích hợp.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">các tính năng bảo mặt an toàn tuyện đồ lệc xác nhận truy cập CSDL,</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">MySQL trang bị các kỹ thuật mạnh, chỉ có người dùng sử dụng đã được xác</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">nhận mới truy cập được vào CSDL, SHH và SSL cũng được hỗ trợ để đảm bảo</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">kết nối an toàn và báo mật. Tiện ích backup và recovery cung cấp bởi MySQL</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">và các hãng phần mềm thứ 3 cho phép backup logie và vật lý cũng như reoovery</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">toàn bộ hoặc tại một thời điểm.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+ Pháp triển ứng dụng toàn diện:</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">MySQL trở thành CSDL mã nguồn mở phỏ biến nhất hiện nay một phần là</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">do cung cắp hỗ trợ hỗn hợp cho bắt cứ sự phát triển ứng dụng nào cần. Trong</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">CSDL, hỗ trợ có thể được tìm thầy trong các trigger, stored procsdure,</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">cursoryiew,ANSI-standard SQI....MySQL cũng cung cắp các bộ kết nối như:</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">DBC,ODBC,.... để tắt cả các form của ứng dụng sử dụng MySQL như một</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">server quản lí dữ liệu được đề xuất hàng đầu.</span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+ Quân lý dễ dàng</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Cài đặt MySQL khá nhanh trung bình từ khi download đến khi cài đặt xong.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">chí mắt chưa đầy 15 phút, Khi đã cài đặt tính năng quản lý như tự khởi động</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">lại, tự động mở rộng không gian và cầu hình động sẵn sàng cho người quản trị</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">&#039;CSDL bắt đầu làm việc. MySQL cung cắp toàn bộ công cụ quán trị CSDL bắt</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">đầu làm việc.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">+ Chỉ phí sở hữu thắp nhất:</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span></p>
-<p style="margin-top: 0; margin-bottom: 0;"><span style="font-family: 'Times New Roman'; font-size: 14pt;">Sử dụng MySQL cho các dự án, doanh nghiệp đều nhận thầy sự tiết</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">chỉ phí đáng kể, Người dùng MySQL cũng không mắt nhiều thời gian để sửa.</span><span style="font-family: 'Times New Roman'; font-size: 14pt;"> </span><span style="font-family: 'Times New Roman'; font-size: 14pt;">chữa hoặc vấn đề thời gian chất</span></p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Lưu ý</span><span style="font-size: 11pt; font-style: italic;">: </span></p>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">- Sinh viên có kết quả học tập loại </span><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Xuất sắc</span><span style="font-size: 11pt; font-style: italic;">, </span><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Giỏi</span><span style="font-size: 11pt; font-style: italic;"> không có các vi phạm trong học kỳ; Sinh viên tiêu biểu có nhiều thành tích đóng góp cho các phong trào và sự phát triển của Nhà trường, được các đơn vị trong và ngoài trường xác nhận và đề nghị: Được xét điểm rèn luyện loại </span><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Xuất sắc</span><span style="font-size: 11pt; font-style: italic;">, </span><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Tốt</span><span style="font-size: 11pt; font-style: italic;"> tương ứng kết quả học tập hoặc thành tích được ghi nhận;</span></p>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">- Sinh viên bị kỷ luật mức khiển trách tron</span><span style="font-size: 11pt; font-style: italic;">i</span><span style="font-size: 11pt; font-style: italic;">g học kỳ: Xếp điểm rèn luyện không quá loại </span><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Khá</span><span style="font-size: 11pt; font-style: italic;">;</span></p>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">- Sinh viên bị kỷ luật mức cảnh cáo trong học kỳ: Xếp điểm rèn luyện không quá loại </span><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Trung bình</span><span style="font-size: 11pt; font-style: italic;">;</span></p>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">- Sinh viên nộp phiếu đánh giá rèn luyện nhưng không tham gia họp xét</span><span style="font-size: 11pt; font-style: italic;"> nếu không có lý do chính đáng</span><span style="font-size: 11pt; font-style: italic;"> sẽ bị </span><span style="font-size: 11pt; font-weight: bold; font-style: italic;">hạ một bậc</span><span style="font-size: 11pt; font-style: italic;"> đánh giá điểm rèn luyện;</span></p>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">- Sinh viên không nộp Phiếu đánh giá điểm rèn luyện: Xếp loại </span><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Kém</span><span style="font-size: 11pt; font-style: italic;">;</span></p>
+<p style="text-align: justify; margin-top: 0; margin-bottom: 0;"><span style="font-size: 11pt; font-style: italic;">- Sinh viên đang trong quá trình bị đình chỉ học tập: </span><span style="font-size: 11pt; font-weight: bold; font-style: italic;">Không đánh giá.</span></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 </body>
