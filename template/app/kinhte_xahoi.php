@@ -8,6 +8,53 @@ use App\SocioEconomicController;
 require_once(BASE_PATH . '/template/app/layouts/header.php');
 
 ?>
+<style>
+  .btntimkiem{
+        margin-left: 3px;
+         background-color: #ddd; 
+         border: none;
+                            
+         height: 3vh;  
+         border-radius: 4px; 
+         font-size: 1.1vw;
+         width: 9.2vw;
+
+    }
+    .btntimkiem:hover{
+        background-color: #ccc; 
+        cursor: pointer;
+    }
+    @media screen and (min-width: 768px) {
+        .btntimkiem{
+        margin-left: 3px;
+         background-color: #ddd; 
+         border: none;
+                        
+         height: 4vh;  
+         border-radius: 4px; 
+         font-size: 1.1vw;
+         width: 6vw;
+
+    }
+
+}
+    /* Kiểu mặc định của thanh tìm kiếm */
+    .search-bar {
+      width: 100%;
+      height: 30px;
+  
+   
+    }
+
+    /* Kiểu khi màn hình có chiều rộng nhỏ hơn 600px */
+    @media (max-width: 600px) {
+      .search-bar {
+        height: 15px;
+   
+        
+      }
+    }
+</style>
 
 <div class="body_getdata" style="display: flex;  margin-top: 30px; margin-right: 32px">
     <?php require_once(BASE_PATH . '/template/app/layouts/menuleft.php') ?>
@@ -17,14 +64,13 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
         <div style="width: 100%; display: flex; justify-content: center">
             <form method="GET" action="<?= url('kinhtexahoi') ?>"
                   style="display: flex; margin-right: 8px ; width: 100%;">
-                <div style="display: flex; align-items: center; width: 80%;">
+                <div style="display: flex; align-items: center; width: 50%;">
                     <div style="font-size: 16px; margin-right: 8px; display: flex;
                     flex-direction: column ; width: 100%">
-                        <input type="text" name="keyword"
-                               style="padding-left: 8px ; width: 100%; margin: 1px 3px;"/>
+                         <input  class="search-bar" type="text" name="keyword"
+                                />
                         <button type="submit"
-                                style=" margin-left: 3px; background-color: #ddd; border: none;
-                             height: 5vh;   border-radius: 4px; font-size: 1.1vw; width: 9.2vw;">
+                        class = "btntimkiem">
                             Tìm kiếm
                         </button>
                     </div>
@@ -48,7 +94,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
         <?php foreach ($data as $datas): ?>
             <div>
                 <div style="font-size: 1.1vw; font-weight: 500; border-bottom: 2px dotted red;
-                border-left: 2px solid rgb(241,243,244); padding-left: 30px;">
+                border-left: 2px solid rgb(241,243,244);padding-left: 3vw; padding-top: 1vw;">
                     <span>
                         <?php $id = $datas['id'] ?>
                         <a style=" font-weight: 600;  font-size: 1.3vw" href="<?= url('ktxh/chi-tiet/' . $id) ?>">
