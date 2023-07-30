@@ -126,19 +126,24 @@ class Post extends Admin
 
                         $imageTemp = $tmp_names[$i];
                         $image_full_path = $imagePath . $imageName;
+
+                        if($numfiles !== 1){
+                            $fields_img = ['image', 'type' , 'id_post'];
+                            $value_img = [$image_full_path, 1 ,$id_posts];
+                            $banner = $db->insert('banners',$fields_img,$value_img);
+                        }
+                        else{
+                            $fields_img = ['image', 'id_post'];
+                            $value_img = [$image_full_path, $id_posts];
+                            $banner = $db->insert('banners',$fields_img,$value_img);
+                        }
+
+
                         if(is_uploaded_file($imageTemp))
                         {
                             if(move_uploaded_file($imageTemp, $image_full_path))
                             {
-                                if($numfiles <= 1){
-                                    $fields_img = ['image', 'type' , 'id_post'];
-                                    $value_img = [$image_full_path, 1 ,$id_posts];
-                                }
-                                else{
-                                    $fields_img = ['image', 'id_post'];
-                                    $value_img = [$image_full_path, $id_posts];
-                                }
-                                $banner = $db->insert('banners',$fields_img,$value_img);
+
                             }
                         }
                     }
