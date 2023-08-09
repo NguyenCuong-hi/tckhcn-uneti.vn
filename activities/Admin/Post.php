@@ -75,10 +75,11 @@ class Post extends Admin
                     $timestamp_micro = microtime(true);
                     $timestamp_micro = str_replace('.', '', $timestamp_micro);
                     $extension = explode('/', $type_file_item[$i])[1];
+                    $file_name = $name_file_item[$i];
                     $file_upload_name = date("Y-m-d-H-i-s-", time()) . $timestamp_micro . '.' . $extension;
                     if ($extension !== 'pdf') {
                         $validFileName = str_replace('.vnd.openxmlformats-officedocument.wordprocessingml.document', '.docx', $file_upload_name);
-                        $name_file = date("Y-m-d-H-i-s-", time()) . $timestamp_micro . $validFileName;
+                        $name_file = date("Y-m-d-H-i-s-", time()) . $validFileName;
 
                     }
                     else{
@@ -92,8 +93,8 @@ class Post extends Admin
                         if(move_uploaded_file($temp_file, $file_full_path))
                         {
                             $file_path_db = $file_full_path;
-                            $fields_file = ['file', 'id_post', 'cat_id'];
-                            $value_file = [$file_full_path, $id_posts, $_POST['cat_id']];
+                            $fields_file = ['file', 'id_post', 'cat_id', 'name'];
+                            $value_file = [$file_full_path, $id_posts, $_POST['cat_id'], $file_name];
                             $ufile = $db->insert('file',$fields_file,$value_file);
                         }
                     }
@@ -165,21 +166,116 @@ class Post extends Admin
 
         public function update($request, $id)
         {
-                $realTimestamp = substr($request['published_at'], 0, 10);
-                $request['published_at'] = date("Y-m-d H:i:s", (int)$realTimestamp);
-                $db = new Database();
-                if ($request['cat_id'] != null) {
-                        if ($request['image']['tmp_name'] != null) {
-                                $post = $db->select("SELECT * FROM posts WHERE id = ?", [$id])->fetch();
-                                $this->removeImage($post['image']);
-                                $request['image'] = $this->saveImage($request['image'], 'post-image');
-                        } else {
-                                unset($request['image']);
+            $realTimestamp = substr($request['published_at'], 0, 10);
+            $request['published_at'] = date("Y-m-d H:i:s", (int) $realTimestamp);
+
+            $imagePath = './public/' . 'post-image' . '/';
+            $filePath =  './public/upload'. '/';
+            $file_path_db = '';
+            $db = new DataBase();
+
+
+            $fields = ['title', 'summary', 'body', 'user_id', 'cat_id', 'published_at', 'author_name'];
+            $values = [$_POST['title'], $_POST['summary'], $_POST['body'], 1 , $_POST['cat_id'], $_POST['published_at'], $_POST['author']];
+            $id_posts = $db->update('posts',$id,$fields, $values);
+
+
+
+            if(isset($_FILES['file_upload'])){
+                $up_file_ = $_FILES['file_upload'];
+                $name_file_item      = $up_file_['name'];
+                $type_file_item      = $up_file_['type'];
+                $tmp_names_file  = $up_file_['tmp_name'];
+                $errors     = $up_file_['error'];
+                $sizes      = $up_file_['size'];
+
+                $numberItems = count($name_file_item);
+                $numItem = 0;
+
+                for ($i = 0; $i < $numberItems; $i++) {
+                    if ($errors[$i] == 0) {
+                        $numItem++;
+
+                        $timestamp_micro = microtime(true);
+                        $timestamp_micro = str_replace('.', '', $timestamp_micro);
+                        $extension = explode('/', $type_file_item[$i])[1];
+                        $file_upload_name = date("Y-m-d-H-i-s-", time()) . $timestamp_micro . '.' . $extension;
+                        if ($extension !== 'pdf') {
+                            $validFileName = str_replace('.vnd.openxmlformats-officedocument.wordprocessingml.document', '.docx', $file_upload_name);
+                            $name_file = date("Y-m-d-H-i-s-", time()) . $validFileName;
                         }
-                        $request = array_merge($request, ['user_id' => 1]);
-                        $db->update('posts', $id, array_keys($request), $request);
-                        $this->redirect('admin/post');
+                        else{
+                            $name_file = date("Y-m-d-H-i-s-")  . $timestamp_micro .'.' . explode('/', $type_file_item[$i])[1];
+                        }
+
+                        $temp_file = $tmp_names_file[$i];
+                        $file_full_path = $filePath . $name_file;
+                        if(is_uploaded_file($temp_file))
+                        {
+                            if(move_uploaded_file($temp_file, $file_full_path))
+                            {
+                                $file_path_db = $file_full_path;
+                                $fields_file = ['file', 'id_post', 'cat_id', 'name'];
+                                $value_file = [$file_full_path, $id_posts, $_POST['cat_id'], $name_file_item];
+                                $ufile = $db->update_by_id_post('file',$id,$fields_file,$value_file);
+                            }
+                        }
+
+                    }
                 }
+            }
+
+
+            if ($request['cat_id'] != null) {
+                if(isset($_FILES['image_upload'])){
+                    $files = $_FILES['image_upload'];
+                    $names      = $files['name'];
+                    $types      = $files['type'];
+                    $tmp_names  = $files['tmp_name'];
+                    $errors     = $files['error'];
+                    $sizes      = $files['size'];
+
+                    $numitems = count($names);
+                    $numfiles = 0;
+
+                    for ($i = 0; $i < $numitems; $i++) {
+                        if ($errors[$i] == 0) {
+                            $numfiles++;
+
+                            $micro_timestamp = microtime(true);
+                            $micro_timestamp = str_replace('.', '', $micro_timestamp);
+                            $extension = explode('/', $types[$i])[1];
+                            $imageName = date("Y-m-d-H-i-s-", time()) . $micro_timestamp . '.' . $extension;
+
+                            $imageTemp = $tmp_names[$i];
+                            $image_full_path = $imagePath . $imageName;
+
+                            if($numfiles !== 1){
+                                $fields_img = ['image', 'type' , 'id_post'];
+                                $value_img = [$image_full_path, 1 ,$id_posts];
+                                $banner = $db->update_by_id_post('banners',$id,$fields_img,$value_img);
+                            }
+                            else{
+                                $fields_img = ['image', 'id_post'];
+                                $value_img = [$image_full_path, $id_posts];
+                                $banner = $db->update_by_id_post('banners',$fields_img,$value_img);
+                            }
+
+
+                            if(is_uploaded_file($imageTemp))
+                            {
+                                if(move_uploaded_file($imageTemp, $image_full_path))
+                                {
+
+                                }
+                            }
+                        }
+                    }
+                    $this->redirect('admin/post');
+                }
+            } else {
+                $this->redirect('admin/post');
+            }
         }
 
     public function delete($id)

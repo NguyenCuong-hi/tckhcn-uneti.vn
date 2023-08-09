@@ -251,7 +251,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                     <div class="image-item">
                         <?php $id = $datas['id'] ?>
                         <a href="<?= url('khcn/chi-tiet/' . $id) ?>">
-                            <img class="image" src="<?php echo $datas['image'] ?>" alt="Nhà xuất bản 1">
+                            <img class="image" src="<?php echo $datas['image'] ?>" alt="Nhà xuất bản">
                         </a>
 
                     </div>
@@ -270,79 +270,26 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 </div>
 <script>
     const imageContainer = document.querySelector('.image-container');
-    let isMouseDown = false;
-    let startX = 0;
-    let scrollLeft = 0;
+    let isScrollingLeft = false;
+    const scrollSpeed = 2;
 
-    function autoScroll() {
-        const maxScrollLeft = imageContainer.scrollWidth - imageContainer.clientWidth;
-        if (imageContainer.scrollLeft >= maxScrollLeft) {
-            imageContainer.scrollLeft = 0;
-        } else {
-            imageContainer.scrollLeft += 1;
+    function autoScrollLeft() {
+        if (isScrollingLeft) {
+            imageContainer.scrollLeft -= scrollSpeed;
+            requestAnimationFrame(autoScrollLeft);
         }
     }
 
-
-    setInterval(autoScroll, 3000); 
-
-    imageContainer.addEventListener('mousedown', (e) => {
-        isMouseDown = true;
-        startX = e.pageX - imageContainer.offsetLeft;
-        scrollLeft = imageContainer.scrollLeft;
+    imageContainer.addEventListener('mouseover', () => {
+        isScrollingLeft = true;
+        autoScrollLeft();
     });
 
-    imageContainer.addEventListener('mouseleave', () => {
-        isMouseDown = false;
+    imageContainer.addEventListener('mouseout', () => {
+        isScrollingLeft = false;
     });
-
-    imageContainer.addEventListener('mouseup', () => {
-        isMouseDown = false;
-    });
-
-    imageContainer.addEventListener('mousemove', (e) => {
-        if (!isMouseDown) return;
-        e.preventDefault();
-        const x = e.pageX - imageContainer.offsetLeft;
-        const walk = (x - startX) * 2;
-        imageContainer.scrollLeft = scrollLeft - walk;
-    });
-
-
-document.getElementById('scrollLeftBtn').addEventListener('click', () => {
-    const scrollAmount = imageContainer.clientWidth * 1; 
-    imageContainer.scrollLeft -= scrollAmount;
-
-
-    if (imageContainer.scrollLeft <= 0) {
-        const maxScrollLeft = imageContainer.scrollWidth - imageContainer.clientWidth;
-        imageContainer.scrollLeft = maxScrollLeft;
-    }
-});
-
-
-const imageItems = document.querySelectorAll('.image-item');
-let totalImageWidth = 0;
-imageItems.forEach((item) => {
-    totalImageWidth += item.offsetWidth;
-});
-
-const containerWidth = imageContainer.offsetWidth;
-const maxScrollLeft = totalImageWidth - containerWidth;
-
-
-document.getElementById('scrollRightBtn').addEventListener('click', () => {
-    const scrollAmount = imageContainer.clientWidth * 1; 
-    imageContainer.scrollLeft += scrollAmount;
-
-  
-    if (imageContainer.scrollLeft >= maxScrollLeft) {
-    
-        imageContainer.scrollLeft = 0;
-    }
-});
- 
 </script>
+
 
 <!-- start footer Area -->
 <?php

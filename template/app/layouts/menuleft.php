@@ -8,12 +8,9 @@ use Database\DataBase;
 
 <div>
     <!-- Mobile Specific Meta -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
     <!-- Favicon-->
-<!--    <link rel="shortcut icon" href="--><?php //=asset($setting['icon'])?><!--">-->
-<!--     Meta Description -->
-<!--    <meta name="description" content="--><?php //=$setting['description']?><!--">-->
-<!--    < Meta Keyword -->
+
 <!--    <meta name="keywords" content="--><?php //=$setting['keywords']?><!--">-->
     <!-- meta character set -->
     <meta charset="UTF-8">
@@ -99,7 +96,7 @@ use Database\DataBase;
             font-size: medium;
             text-transform: uppercase;
             font-size: 1vw;
-                        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
         }
 
 }
@@ -111,7 +108,7 @@ use Database\DataBase;
     <div class="menu_left">
         <a href="<?= url('/')?>">Trang chủ</a>
         <a href="<?= url('khoahoccongnghe')?>">Khoa học - công nghệ</a>
-        <a href="<?= url('kinhtexahoi')?>">Kinh tế- xã hội</a>
+        <a href="<?= url('kinhtexahoi')?>">Kinh tế - xã hội</a>
         <a href="<?= url('diendankhoahoc')?>">Diễn đàn khoa học</a>
         <a href="<?= url('thongtintraodoi')?>">Thông tin trao đổi</a>
         <a href="<?= url('lienhe')?>">Liên hệ</a>

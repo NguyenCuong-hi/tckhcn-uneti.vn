@@ -1,29 +1,4 @@
--- phpMyAdmin SQL Dump
--- version 5.2.1
--- https://www.phpmyadmin.net/
---
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 30, 2023 lúc 08:15 PM
--- Phiên bản máy phục vụ: 10.4.28-MariaDB
--- Phiên bản PHP: 8.2.4
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Cơ sở dữ liệu: `khcn-uneti`
---
-CREATE DATABASE IF NOT EXISTS `khcn-uneti` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `khcn-uneti`;
-
--- --------------------------------------------------------
 
 --
 -- Cấu trúc bảng cho bảng `author`

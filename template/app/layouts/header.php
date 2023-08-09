@@ -153,7 +153,7 @@ use Database\DataBase;
                 /* box-sizing: border-box; */
                 justify-content: center;
                 border-top: 2px #9b3333 solid;
-                height: 5vh;
+                height: 8vh;
                 /* white-space: nowrap; */
             }
 

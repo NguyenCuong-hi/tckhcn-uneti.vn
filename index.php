@@ -55,6 +55,7 @@ require_once "activities/NoticeController.php";
 require_once "activities/SendPostToAdmin.php";
 require_once "activities/EventController.php";
 require_once "activities/ViewDetailPostController.php";
+require_once "activities/ViewPost.php";
 
 //helpers
 
@@ -304,6 +305,7 @@ uri('/sukien/chi-tiet/{id}', 'App\ViewDetailPostController', 'index');
 uri('/thongbao/chi-tiet/{id}', 'App\ViewDetailPostController', 'index');
 uri('/gioithieu/chi-tiet/{id}', 'App\ViewDetailPostController', 'index');
 
+uri('/chi-tiet/bai-dang/{id}', 'App\ViewPost', 'index');
 
 echo '404 - not found';
 exit;

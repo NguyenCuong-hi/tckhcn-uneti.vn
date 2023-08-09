@@ -49,7 +49,7 @@ require_once(BASE_PATH . '/template/admin/layouts/head-tag.php')
                 <th>Người đăng</th>
                 <th>Mã danh mục</th>
                 <th>Ảnh</th>
-                <th>Setting</th>
+                <th >Setting</th>
             </tr>
         </thead>
         <tbody>

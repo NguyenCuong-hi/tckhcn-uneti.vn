@@ -109,6 +109,31 @@ class DataBase extends PDO
 
     }
 
+    public function update_by_id_post($tableName, $id, $fields, $values)
+    {
+        $sql = "UPDATE " . $tableName . " SET ";
+        foreach (array_combine($fields, $values) as $field => $value) {
+            if ($value) {
+                $sql .= $field . ' = ?, ';
+            } else {
+                $sql .= $field . ' = NULL, ';
+            }
+        }
+        $sql .= " updated_at = now()";
+        $sql .= " WHERE id_post = ?";
+
+        try {
+
+            $statement = $this->connection->prepare($sql);
+            $statement->execute(array_merge(array_filter(array_values($values)), [$id]));
+            return true;
+        } catch (Exception $e) {
+            echo 'error ' . $e->getMessage();
+            return false;
+        }
+
+    }
+
     // delete('users', 2)
     public function delete($tableName, $id)
     {

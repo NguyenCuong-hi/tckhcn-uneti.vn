@@ -58,61 +58,43 @@ use PhpOffice\PhpWord\Shared\ZipArchive;
                 </div>
             <?php endforeach; ?>
 
+        </div>
 
-            <?php foreach ($result_file as $file): ?>
-            <div  class="suanh2" style="position: relative;  background-color: #D1D1D1; margin-top: 10px">
-                <div class="phongto" style="position: absolute; top: 0; right: 0;">
-                </div>
-                <?php if (empty($file) || !file_exists($file['file'])): ?>
-                    <p style="text-align: center; justify-content: center">Không có bài viết để hiển thị</p>
-                <?php else : ?>
+        <h> DANH MỤC BÀI VIẾT </h>
+        <table class="table tab-content">
 
-                <?php $extension = pathinfo($file['file'], PATHINFO_EXTENSION);
-                $src = '';
-                    if($extension === 'docx'){
-                        $src = ' https://view.officeapps.live.com/op/view.aspx?src='. url($file['file']);
-                    }
-                    if($extension === 'pdf'){
 
-                        $src = url($file['file']);
-
-                    }
+            <tbody>
+            <?php
+            $counter = 1;
+            foreach ($result_file as $file):
+                $id = $file['id'];
                 ?>
-                    <script type="text/javascript" src="jquery.min.js"></script>
-                    <script type="text/javascript" src="jquery.gdocsviewer.min.js"></script>
-                    <script type="text/javascript">
-                        $(document).ready(function (){
-                            $('iframe').gdocsViewer({width: 600, height:700});
-                            $('').gdocsViewer();
-                        });
-                    </script>
-
-                    <iframe loading="lazy" src="<?=$src?>"
-                            style="width: 100%; height: 100%; border: none;">
-                    </iframe>
-
-                <?php endif; ?>
-
-            </div>
-
-
-            <?php endforeach; ?>
-
-        </div>
-
-        <div>
-
-        </div>
-    </div>
-    <div class="img_lienket" style="width: 15%; text-align: center; margin-top: 2vh;" >
-        <H4 style="font-size: 1.1vw; color: #155fa2; font-family: 'Times New Roman', Times, serif; "> LIÊN KẾT
-            WEBSITE</H4>
-            <img style="width: 100%" src="<?=url('./public/banner-image/bo-cong-thuong.png')?>">
-        <img style="width: 100%" src="<?=url('./public/banner-image/DHKTKTCN.png')?>">
-        <img style="width: 100%" src="<?=url('./public/banner-image/khcn.png')?>">
-
+                <tr>
+                    <td style="font-weight: normal; font-size: 1.17em">
+                        <?php echo $counter ; ?>.
+                    </td>
+                    <td class="font-weight-bold f-left" >
+                        <a href="<?= url('chi-tiet/bai-dang/' . $id) ?>">
+                            <?php
+                            $file_name = pathinfo($file['name'], PATHINFO_FILENAME);
+                            echo $file_name;
+                            ?>
+                        </a>
+                    </td>
+                </tr>
+                <?php
+                $counter++;
+            endforeach;
+            ?>
+            </tbody>
+        </table>
 
     </div>
+
+    <?php
+    require_once(BASE_PATH . '/template/app/layouts/banner-right.php');
+    ?>
 
 
 
