@@ -126,14 +126,13 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 ?>
 
 
-<div class="body_getdata" style="display: flex;  margin-top: 3vh; margin-right: 3.2vh">
+<div class="body_getdata" style="display: flex;  margin-top: 6vh; margin-right: 3.2vh">
     <?php require_once(BASE_PATH . '/template/app/layouts/menuleft.php') ?>
 
-    <!-- _________________________________________________________________________________ -->
     <div style="width: 62%; margin: 0; padding: 4px; box-sizing: border-box">
         <div style="display: flex; flex: 1; justify-content: space-between">
             <!-- Cột giới thiệu -->
-            <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 33%; flex-grow: 1;">
+            <div class="card-panel" style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 33%; flex-grow: 1;">
 
                 <a style="text-decoration: none" href="<?= url('gioithieu') ?>">
                     <h3
@@ -213,7 +212,6 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
     <?php require_once(BASE_PATH . '/template/app/layouts/banner-right.php') ?>
 
 </div>
-<!-- _________________________________________________________________________________ -->
 <div>
     <div style="margin-left: 3%; margin-top: 2vh;">
         <h3 style="text-align: left;  color: #0C548A;font-weight: 700; font-size: 1.7vw;">Các số đã xuất bản</h3>
@@ -257,31 +255,9 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
         </div>
     </div>
-    <!-- <button id="scrollLeftBtn">&#10094;</button>
-        <button id="scrollRightBtn">&#10095;</button> -->
-
 
 </div>
 <script>
-    // const imageContainer = document.querySelector('.image-container');
-    // let isScrollingLeft = false;
-    // const scrollSpeed = 2;
-
-    // function autoScrollLeft() {
-    //     if (isScrollingLeft) {
-    //         imageContainer.scrollLeft -= scrollSpeed;
-    //         requestAnimationFrame(autoScrollLeft);
-    //     }
-    // }
-
-    // imageContainer.addEventListener('mouseover', () => {
-    //     isScrollingLeft = true;
-    //     autoScrollLeft();
-    // });
-
-    // imageContainer.addEventListener('mouseout', () => {
-    //     isScrollingLeft = false;
-    // });
     const scrollLeftBtn = document.getElementById("scrollLeftBtn");
     const scrollRightBtn = document.getElementById("scrollRightBtn");
     const imageContainer = document.querySelector(".image-container");

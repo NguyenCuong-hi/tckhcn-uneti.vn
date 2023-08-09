@@ -1,4 +1,6 @@
 <html>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
 </html>
 <?php
@@ -39,8 +41,49 @@ use PhpOffice\PhpWord\Shared\ZipArchive;
      }
 }
 
+    .entry_post{
+        width: 80%;
+        float: left;
+        clear: both;
+        background: #f2f2f2;
+        border: 1px solid #e4e4e4;
+        min-height: 22px;
+        padding: 0 10px;
+        margin-top: 5px;
+        margin-bottom: 13px;
+    }
+    .entry_time{
+        float: left;
+        display: inline-block;
+        margin-top: 9px;
+        box-sizing: border-box;
+    }
+    .time_sg{
+        font-size: 13px;
+        color: #888;
+        display: inline-block;
+        margin-right: 10px;
+        box-sizing: border-box;
+    }
+    .sg_view{
+        font-size: 13px;
+        color: #888;
+        display: inline-block;
+        box-sizing: border-box;
+    }
+
+    .sigle_title{
+        font-size: 25px;
+        color: #245d7c;
+        padding-bottom: 10px;
+        float: left;
+    }
+
+    .title{
+        width: 80%;
+    }
 </style>
-<div class="body_getdata" style="display: flex; margin-top: 30px; margin-right: 32px">
+<div class="body_getdata" style="display: flex; margin-top: 50px; margin-right: 32px; margin-bottom: 75px">
 
     <?php require_once(BASE_PATH . '/template/app/layouts/menuleft.php') ?>
 
@@ -48,6 +91,23 @@ use PhpOffice\PhpWord\Shared\ZipArchive;
 
     <div style="width: 62%; margin: 0; padding: 4px; box-sizing: border-box">
         <div style="display: flex; flex-direction: column; align-items: center;">
+
+            <div class="title" >
+                <h1 class="sigle_title"> <?= $post['title'] ?> </h1>
+            </div>
+
+            <div class="entry_post" style="width: 80%">
+
+                <div class="entry_time">
+                    <?php $datetimeString = $post['published_at'];
+                    $datetime = new DateTime($datetimeString);
+                    $dateOnly = $datetime->format("d-m-Y");
+                    ?>
+                        <time class="time_sg bi bi-calendar"><i></i> Ngày đăng: <?=$dateOnly?></time>
+                        <span class="sg_view bi bi-eye"><i></i> Lượt xem: <?=$post['view']?></span>
+                </div>
+
+            </div>
 
 
             <?php
@@ -58,37 +118,51 @@ use PhpOffice\PhpWord\Shared\ZipArchive;
                 </div>
             <?php endforeach; ?>
 
+
+
+        </div>
+        <div style="align-items: flex-end; font-family: 'Times New Roman'; font-style: italic">
+            Nguồn đăng : <?= $post['author_name'] ?>
         </div>
 
-        <h> DANH MỤC BÀI VIẾT </h>
-        <table class="table tab-content">
 
 
-            <tbody>
-            <?php
-            $counter = 1;
-            foreach ($result_file as $file):
-                $id = $file['id'];
-                ?>
-                <tr>
-                    <td style="font-weight: normal; font-size: 1.17em">
-                        <?php echo $counter ; ?>.
-                    </td>
-                    <td class="font-weight-bold f-left" >
-                        <a href="<?= url('chi-tiet/bai-dang/' . $id) ?>">
-                            <?php
-                            $file_name = pathinfo($file['name'], PATHINFO_FILENAME);
-                            echo $file_name;
-                            ?>
-                        </a>
-                    </td>
-                </tr>
+        <div>
+            <h> DANH MỤC BÀI VIẾT</h>
+            <table class="table tab-content">
+
+
+                <tbody>
                 <?php
-                $counter++;
-            endforeach;
-            ?>
-            </tbody>
-        </table>
+                $counter = 1;
+                foreach ($result_file as $file):
+                    $id = $file['id'];
+                    ?>
+                    <tr>
+                        <td style="font-weight: normal; font-size: 1.17em">
+                            <?php echo $counter; ?>.
+                        </td>
+                        <td class="font-weight-bold f-left">
+                            <a href="<?= url('chi-tiet/bai-dang/' . $id) ?>">
+                                <?php
+                                $file_name = pathinfo($file['name'], PATHINFO_FILENAME);
+                                echo $file_name;
+                                ?>
+                            </a>
+                        </td>
+                    </tr>
+                    <?php
+                    $counter++;
+                endforeach;
+                ?>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div>
+
+        </div>
 
     </div>
 

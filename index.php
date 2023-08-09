@@ -56,6 +56,7 @@ require_once "activities/SendPostToAdmin.php";
 require_once "activities/EventController.php";
 require_once "activities/ViewDetailPostController.php";
 require_once "activities/ViewPost.php";
+require_once "activities/Admin/File.php";
 
 //helpers
 
@@ -229,6 +230,15 @@ uri('admin/post/delete/{id}', 'Admin\Post', 'delete');
 uri('admin/post/breaking-news/{id}', 'Admin\Post', 'breakingNews');
 uri('admin/post/selected/{id}', 'Admin\Post', 'selected');
 uri('admin/post/search', 'Admin\Post', 'search');
+
+
+// file
+uri('admin/file', 'Admin\File', 'index');
+uri('admin/file/create', 'Admin\File', 'create');
+uri('admin/file/store', 'Admin\File', 'store', "POST");
+uri('admin/file/edit/{id}', 'Admin\File', 'edit');
+uri('admin/file/update/{id}', 'Admin\File', 'update', "POST");
+uri('admin/file/delete/{id}', 'Admin\File', 'delete');
 
 // banners
 

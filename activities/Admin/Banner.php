@@ -66,9 +66,16 @@ class Banner extends Admin{
         public function delete($id)
         {
                 $db = new DataBase();
-                $banner = $db->select('SELECT * FROM banners WHERE id = ?;', [$id])->fetch();
-                $this->removeImage($banner['image']);
-                $db->delete('banners', $id);
-                $this->redirectBack();
+
+                if ($id != 308 && $id != 309 && $id != 317 && $id != 318 && $id != 319) {
+                    $banner = $db->select('SELECT * FROM banners WHERE id = ?;', [$id])->fetch();
+                    $this->removeImage($banner['image']);
+                    $db->delete('banners', $id);
+                    $this->redirectBack();
+                } else {
+                    echo "Cannot delete this record.";
+                    $this->redirectBack();
+                }
+
         }
 }

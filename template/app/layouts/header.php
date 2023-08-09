@@ -2,6 +2,9 @@
 
 use Database\DataBase;
 
+$db = new DataBase();
+$img_banner = $db->select(' SELECT * FROM banners WHERE id = 318 ')->fetch();
+
 ?>
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
@@ -153,7 +156,7 @@ use Database\DataBase;
                 /* box-sizing: border-box; */
                 justify-content: center;
                 border-top: 2px #9b3333 solid;
-                height: 8vh;
+                height: 5vh;
                 /* white-space: nowrap; */
             }
 
@@ -162,7 +165,7 @@ use Database\DataBase;
                 font-size: 1.15vw;
                 width: 15%;
                
-                font-family: Arial, Helvetica, sans-serif;
+                font-family: "Times New Roman", Helvetica, sans-serif;
                 font-weight: 400;
                 text-align: left;
                 height: max-content;
@@ -204,7 +207,7 @@ use Database\DataBase;
 
         <div class="banner">
 
-            <img src="<?=url('./public/banner-image/banner_new.jpg')?>" alt="Banner"/>
+            <img src="<?=url($img_banner['image'])?>" alt="Banner"/>
 
         </div>
 
@@ -221,7 +224,7 @@ use Database\DataBase;
         <div class="footer">
            
 
-            <div class="current-date" id="date">
+            <div class="current-date " id="date">
                 <p>
                 <script>
                     var daysOfWeek = ['Chủ Nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'];

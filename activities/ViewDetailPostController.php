@@ -20,7 +20,14 @@ class ViewDetailPostController
                     WHERE file.id_post = ?';
         $result_file = $db->select($qFile, [$id])->fetchAll();
 
+        $strPost = ' SELECT * FROM posts WHERE id = ? ';
+        $post = $db->select($strPost, [$id])->fetch();
 
+
+        $countView = $post['view'] + 1;
+        $view  = ['view'];
+        $count = [$countView];
+        $coutn = $db->update('posts', $id, $view, $count);
 
         if (isset($result_file)) {
             foreach ($result_file as $file) {
@@ -34,6 +41,8 @@ class ViewDetailPostController
         } else {
             echo "No data found.";
         }
+
+
 
 
     }

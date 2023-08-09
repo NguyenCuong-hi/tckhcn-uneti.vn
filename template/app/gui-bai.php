@@ -54,7 +54,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
 ?>
 
-<div class="body_getdata" style="display: flex;  margin-top: 30px; margin-right: 32px">
+<div class="body_getdata" style="display: flex;  margin-top: 45px; margin-right: 32px">
     <?php require_once(BASE_PATH . '/template/app/layouts/menuleft.php') ?>
 
     <div class="body_data" style="width: 62%; display: flex;  flex-direction: column;

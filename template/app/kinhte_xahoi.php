@@ -56,7 +56,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
     }
 </style>
 
-<div class="body_getdata" style="display: flex;  margin-top: 30px; margin-right: 32px">
+<div class="body_getdata" style="display: flex;  margin-top: 45px; margin-right: 32px">
     <?php require_once(BASE_PATH . '/template/app/layouts/menuleft.php') ?>
 
     <div class="body_data" style="width: 62%; display: flex;  flex-direction: column;
@@ -103,7 +103,13 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                     </span>
                     <div style=" margin-bottom: 8px">
                         <ul style="list-style-type: circle; margin-bottom: 8px">
-                            <li>Số tạp chí: <?php echo $datas['code_name'] ?></li>
+                            <?php $str = $datas['title'];
+                            $pos = strrpos($str, " ");
+                            if ($pos !== false) {
+                                $so = substr($str, $pos + 1);
+                            }
+                            ?>
+                            <li>Số tạp chí: <?php echo "Số " . $so; ?></li>
                             <li>Tác giả: <?php echo $datas['author_name'] ?></li>
                             <li>Tạp chí xuất bản: <?php echo $datas['cat_name'] ?></li>
                             <li>

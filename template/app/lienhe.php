@@ -8,7 +8,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
 <!--xu ly hien thi o day-->
 
-<div style="display: flex;  margin-top: 30px; margin-right: 32px">
+<div style="display: flex;  margin-top: 45px; margin-right: 32px">
 
     <?php
     require_once(BASE_PATH . '/template/app/layouts/menuleft.php');
