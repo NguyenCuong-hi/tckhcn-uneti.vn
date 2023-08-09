@@ -12,7 +12,7 @@ class ViewDetailPostController
     {
 
         $db = new DataBase();
-        $result_image = $db->select('SELECT  banners.* FROM banners WHERE id_post = ? ', [$id])->fetchAll();
+        $result_image = $db->select('SELECT banners.image FROM banners WHERE id_post = ? LIMIT 2', [$id])->fetchAll();
 
 
         $qFile = 'SELECT file.*, categories.type FROM file 

@@ -50,7 +50,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
     </style>
 
-    <div class="body_data" style="width: 62%;  padding: 4px; box-sizing: border-box">
+    <div class="body_data" style="width: 62%;  padding: 0 1.3vw 0 1vw; box-sizing: border-box">
         <div class="contact">
             <div class="contact-info">
                 <a style=" font-weight: 700; font-size: 1.7vw; color: #2b2bff"> THÔNG TIN LIÊN HỆ </a>
@@ -71,15 +71,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
     <!--    /////////////////////-->
 
 
-    <div class="img_lienket" style="width: 15%; text-align: center; margin-top: 2vh;" >
-        <H4 style="font-size: 1.1vw; color: #155fa2; font-family: 'Times New Roman', Times, serif; "> LIÊN KẾT
-            WEBSITE</H4>
-        <a href="https://moit.gov.vn/"><img style="width: 100%" src="./public/banner-image/bo-cong-thuong.png"> </a>
-        <a href="https://uneti.edu.vn/"><img style="width: 100%" src="./public/banner-image/DHKTKTCN.png"></a>
-        <a href=""><img style="width: 100%" src="./public/banner-image/khcn.png"></a>
-
-
-    </div>
+    <?php require_once(BASE_PATH . '/template/app/layouts/banner-right.php') ?>
 </div>
 
 

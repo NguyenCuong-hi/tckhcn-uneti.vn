@@ -11,24 +11,27 @@
     .image-item {
         flex: 0 0 180px;
         flex-basis: calc(20% - 11px);
-        margin-right: 32px;
+        margin-right: 3.2vw;
         scroll-snap-align: start;
     }
 
     .image {
-        margin:  3vh 0;
+       
+        margin: 1vh 0;
         width: 10vw;
         height: 13vh;
         cursor: pointer;
         transition: transform .2s ease-out;
         border-radius: 2.5%;
     }
-@media screen and (min-width: 768px) {
+
+    @media screen and (min-width: 768px) {
         .image {
             height: 28vh;
-  }
+        }
 
-}
+    }
+
     .image:hover {
         transform: scale(1.1);
     }
@@ -36,7 +39,7 @@
     .image-title {
         width: 180px;
         height: auto;
-        margin-bottom: 50px;
+        margin-bottom:4vh;
     }
 
     .image-container::-webkit-scrollbar {
@@ -51,81 +54,71 @@
     .image-container::-webkit-scrollbar-thumb:hover {
         background-color: #cccccc99;
     }
- 
-/* CSS for scrollLeftBtn and scrollRightBtn */
-#scrollLeftBtn,
-#scrollRightBtn {
-    background-color:#c0c0c000;
-    color: #DDDDDD;
-    font-size: 24px;
-    border: none;
-    padding: 0.8vh 0.5vw;
-    cursor: pointer;
-    outline: none;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
+
+    /* CSS for scrollLeftBtn and scrollRightBtn */
+    #scrollLeftBtn,
+    #scrollRightBtn {
+        background-color: #c0c0c000;
+        color: #DDDDDD;
+        font-size: 1.7vw;
+        border: none;
+        padding: 0.8vh 0.5vw;
+        cursor: pointer;
+        outline: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+
+    }
+
+    #scrollRightBtn:hover {
+
+        cursor: pointer;
+    
+
+    }
+
+    #scrollLeftBtn:hover {
+      
    
-}
+        cursor: pointer;
+       
 
-#scrollRightBtn:hover{
-    background-color: #C0C0C0;
-    color: white;
-    font-size: 24px;
-    border: none;
-    padding: 0.8vh 0.5vw;
-    cursor: pointer;
-    outline: none;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-   
-}
-#scrollLeftBtn:hover{
-    background-color: #C0C0C0;
-    color: white;
-    font-size: 24px;
-    border: none;
-    padding: 0.8vh 0.8vw;
-    cursor: pointer;
-    outline: none;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-}
-#scrollLeftBtn {
-    left: 0;
-    border-radius:  100% 100% 100% 100% ;
-}
+    }
 
-#scrollRightBtn {
-    right: 0;
-    border-radius:100% 100% 100% 100%;
-}
+    #scrollLeftBtn {
+        left: 0;
+        border-radius: 100% 100% 100% 100%;
+    }
 
-/* CSS for the parent div wrapping the .image-container and buttons */
-.image-container-parent {
-    position: relative;
-    display: flex;
-    align-items: center;
-    margin-left: 8%; /* Adjust the margin as needed */
-    margin-right: 6%; /* Adjust the margin as needed */
-    overflow: hidden; /* Hide the scroll buttons if not needed */
-}
+    #scrollRightBtn {
+        right: 0;
+        border-radius: 100% 100% 100% 100%;
+    }
 
-.image-container {
-    display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-}
+    /* CSS for the parent div wrapping the .image-container and buttons */
+    .image-container-parent {
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-left: 4%;
+        /* Adjust the margin as needed */
+        margin-right: 4%;
+        /* Adjust the margin as needed */
+        overflow: hidden;
+        /* Hide the scroll buttons if not needed */
+    }
 
-.image-item {
-    /* ... Your previous styles ... */
-}
+    .image-container {
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+    }
 
+    .image-item {
+        /* ... Your previous styles ... */
+    }
 </style>
 
 <?php
@@ -143,14 +136,14 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
             <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 33%; flex-grow: 1;">
 
                 <a style="text-decoration: none" href="<?= url('gioithieu') ?>">
-                    <h3 style="text-align: center; text-transform: uppercase; color: #3734EA;font-weight: 700; font-size: 1.8vw;">
+                    <h3
+                        style="text-align: center; text-transform: uppercase; color: #3734EA;font-weight: 700; font-size: 1.8vw;">
                         Giới thiệu</h3>
 
                     <div style=" margin-bottom: 7vh; display: flex; justify-content: center; align-items: center;">
 
                         <img style="border-radius: 5px; width:100%;max-width: 200px;max-height: 121px;"
-                             src="./public/banner-image/gioithieu.png"
-                             alt="Giới thiệu">
+                            src="./public/banner-image/gioithieu.png" alt="Giới thiệu">
                     </div>
                 </a>
 
@@ -159,15 +152,15 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
             <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 33%; flex-grow: 1;">
 
                 <a style="text-decoration: none" href="<?= url('thongbao') ?>">
-                    <h3 style="text-align: center; text-transform: uppercase; color:#3734EA;font-weight: 700; font-size: 1.8vw;">
+                    <h3
+                        style="text-align: center; text-transform: uppercase; color:#3734EA;font-weight: 700; font-size: 1.8vw;">
                         Thông báo</h3>
 
 
                     <div style=" margin-bottom: 7vh; display: flex; justify-content: center; align-items: center;">
                         <a href="<?= url("thongbao") ?>">
                             <img style="border-radius: 5px;width:100%; max-width: 200px;max-height: 121px;"
-                                 src="./public/banner-image/thong-bao.png"
-                                 alt="Giới thiệu">
+                                src="./public/banner-image/thong-bao.png" alt="Giới thiệu">
                         </a>
 
                     </div>
@@ -178,13 +171,14 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
             <!-- Cột sự kiện -->
             <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 33%; flex-grow: 1;">
                 <a style="text-decoration: none" href="#">
-                    <h3 style="text-align: center; text-transform: uppercase; color: #3734EA;font-weight: 700; font-size: 1.8vw; ">
+                    <h3
+                        style="text-align: center; text-transform: uppercase; color: #3734EA;font-weight: 700; font-size: 1.8vw; ">
                         Sự kiện</h3>
                     <div style=" margin-bottom: 7vh; display: flex; justify-content: center; align-items: center;">
 
                         <a href="<?= url('sukien') ?>">
                             <img style="border-radius: 5px;width:100%;max-width: 200px;max-height: 121px;"
-                                 src="./public/banner-image/sukien.png" alt="Giới thiệu">
+                                src="./public/banner-image/sukien.png" alt="Giới thiệu">
                         </a>
 
                     </div>
@@ -194,14 +188,14 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
         </div>
         <div style="display: flex; flex: 1; justify-content: space-between">
             <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">
-                <h3 style="text-align: center; text-transform: uppercase; color: #0C548A;font-weight: 700; font-size: 1.8vw;">
+                <h3
+                    style="text-align: center; text-transform: uppercase; color: #0C548A;font-weight: 700; font-size: 1.8vw;">
                     Gửi bài</h3>
 
                 <div style=" margin-bottom: 7vh; display: flex; justify-content: center; align-items: center;">
                     <a href="<?= url("guibai") ?>">
                         <img style="border-radius: 5px;width:100%;max-width: 200p;max-height:  121px;"
-                             src="./public/banner-image/guibai.png"
-                             alt="Giới thiệu">
+                            src="./public/banner-image/guibai.png" alt="Giới thiệu">
                     </a>
 
 
@@ -216,16 +210,8 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
         </div>
     </div>
+    <?php require_once(BASE_PATH . '/template/app/layouts/banner-right.php') ?>
 
-    <div class="img_lienket" style="width: 15%; text-align: center; margin-top: 2vh;" >
-        <H4 style="font-size: 1.1vw; color: #155fa2; font-family: 'Times New Roman', Times, serif; "> LIÊN KẾT
-            WEBSITE</H4>
-        <a href="https://moit.gov.vn/"><img style="width: 100%" src="./public/banner-image/bo-cong-thuong.png"> </a>
-        <a href="https://uneti.edu.vn/"><img style="width: 100%" src="./public/banner-image/DHKTKTCN.png"></a>
-        <a href=""><img style="width: 100%" src="./public/banner-image/khcn.png"></a>
-
-
-    </div>
 </div>
 <!-- _________________________________________________________________________________ -->
 <div>
@@ -242,51 +228,100 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
     margin-right: -20px;
    
     margin-bottom: 50px;">
+            <div class="image-container-parent">
+                <button id="scrollLeftBtn">&#10094;</button>
+                <div class="image-container-parent">
 
-<div class="image-container-parent">
-    <button id="scrollLeftBtn">&#10094;</button>
-    <div class="image-container">
 
-                <?php foreach ($posts as $datas): ?>
-                    <div class="image-item">
-                        <?php $id = $datas['id'] ?>
-                        <a href="<?= url('khcn/chi-tiet/' . $id) ?>">
-                            <img class="image" src="<?php echo $datas['image'] ?>" alt="Nhà xuất bản">
-                        </a>
+
+
+                    <div class="image-container">
+
+                        <?php foreach ($posts as $datas): ?>
+                            <div class="image-item">
+                                <?php $id = $datas['id'] ?>
+                                <a href="<?= url('khcn/chi-tiet/' . $id) ?>">
+                                    <img class="image" src="<?php echo $datas['image'] ?>" alt="Nhà xuất bản">
+                                     <p  style="font-size:1vw;color: #000000;"><?= $datas['title']?></p>
+                                </a>
+                   
+
+                            </div>
+                        <?php endforeach; ?>
 
                     </div>
-                <?php endforeach; ?>
-              
+
                 </div>
-    <button id="scrollRightBtn">&#10095;</button>
-</div>
+                <button id="scrollRightBtn">&#10095;</button>
+            </div>
 
         </div>
     </div>
     <!-- <button id="scrollLeftBtn">&#10094;</button>
         <button id="scrollRightBtn">&#10095;</button> -->
-       
-   
+
+
 </div>
 <script>
-    const imageContainer = document.querySelector('.image-container');
-    let isScrollingLeft = false;
-    const scrollSpeed = 2;
+    // const imageContainer = document.querySelector('.image-container');
+    // let isScrollingLeft = false;
+    // const scrollSpeed = 2;
 
-    function autoScrollLeft() {
-        if (isScrollingLeft) {
-            imageContainer.scrollLeft -= scrollSpeed;
-            requestAnimationFrame(autoScrollLeft);
+    // function autoScrollLeft() {
+    //     if (isScrollingLeft) {
+    //         imageContainer.scrollLeft -= scrollSpeed;
+    //         requestAnimationFrame(autoScrollLeft);
+    //     }
+    // }
+
+    // imageContainer.addEventListener('mouseover', () => {
+    //     isScrollingLeft = true;
+    //     autoScrollLeft();
+    // });
+
+    // imageContainer.addEventListener('mouseout', () => {
+    //     isScrollingLeft = false;
+    // });
+    const scrollLeftBtn = document.getElementById("scrollLeftBtn");
+    const scrollRightBtn = document.getElementById("scrollRightBtn");
+    const imageContainer = document.querySelector(".image-container");
+
+    const scrollAmount = 300; 
+    const autoScrollInterval = 2500;
+    let currentPosition = 0;
+
+    const scrollToPosition = (position) => {
+        if (position < 0) {
+            position = imageContainer.scrollWidth - imageContainer.clientWidth;
+        } else if (position > imageContainer.scrollWidth - imageContainer.clientWidth) {
+            position = 0;
         }
-    }
+        imageContainer.scrollTo({ left: position, behavior: 'smooth' });
+        currentPosition = position;
+    };
 
-    imageContainer.addEventListener('mouseover', () => {
-        isScrollingLeft = true;
-        autoScrollLeft();
+    scrollLeftBtn.addEventListener("click", () => {
+        scrollToPosition(currentPosition - scrollAmount);
     });
 
-    imageContainer.addEventListener('mouseout', () => {
-        isScrollingLeft = false;
+    scrollRightBtn.addEventListener("click", () => {
+        scrollToPosition(currentPosition + scrollAmount);
+    });
+
+    const autoScroll = () => {
+        scrollToPosition(currentPosition + scrollAmount);
+    };
+
+    let autoScrollTimer = setInterval(autoScroll, autoScrollInterval);
+
+  
+    imageContainer.addEventListener("mouseenter", () => {
+        clearInterval(autoScrollTimer);
+    });
+
+   
+    imageContainer.addEventListener("mouseleave", () => {
+        autoScrollTimer = setInterval(autoScroll, autoScrollInterval);
     });
 </script>
 

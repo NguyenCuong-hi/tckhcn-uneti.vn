@@ -7,7 +7,7 @@ use Database\DataBase;
 <style>
     .footer-area {
         /*background-image: url("public/banner-image/banner_khcn_footer_.jpg");*/
-        padding: 25px 0;
+        padding: 1vh 0;
         color: aliceblue;
         margin-top: 1vh;
         /* position: fixed;
@@ -45,18 +45,21 @@ use Database\DataBase;
     }
 
     .footer-area p {
-        font-size: 0.9vw;
-        margin-bottom: 10px;
+        font-size: 0.8vw;
+        margin-bottom: 0;
         font-weight: 500;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
 
     .footer-area h3 {
-        font-size: 1.3vw;
+        font-size: 1vw;
         font-weight: bold;
-        margin-bottom: 10px;
-        text-transform: uppercase;
+        margin-bottom: 0;
+       
 
+    }
+    .footer-area span{
+        font-size: 1vw;
     }
 
     .footer-area h4 {
@@ -83,54 +86,62 @@ use Database\DataBase;
         margin-bottom: 0;
     }
     .imgfooter{
-        width:70%; 
-        height:10vh;
+        width:95%; 
+        height:5vh;
+        border-radius: 15%;
     }
     @media screen and (min-width: 768px) {
         .imgfooter{
-            width:70%; 
-        height:30vh;
+            width:90%; 
+        height:20vh;
     }
     .footer-area img {
-        width: 4vw;
-        height: 100%;
+        width: 4.5vw;
+        height: 44%;
         margin-right: 1vw;
     }
 }
 </style>
 <footer class="footer-area section-gap" style="background-image: url('https://png.pngtree.com/background/20210710/original/pngtree-blue-technology-web-banner-picture-image_1038231.jpg'); background-size: cover; background-repeat: no-repeat">
     <div style="width: 100%; display: flex; ">
-
-        <div style="width:65%; margin-left: 5%; ">
-            <div style=" display: flex;">
-                <div>
+  <div>
                     <img src="<?=url('./public/banner-image/logo.png')?>" alt="">
                 </div>
+        <div style="width:80%; ">
+        
+            <div style=" display: flex;">
+              
                 <div>
+                    <div style="border-bottom: 0.3vw solid #fff;" >
                     <p style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                        <span style="text-transform: uppercase; font-weight: 700; margin-right: 10px;">Tạp chí khóa học & công nghệ trường Đại học Kinh tế - Kỹ thuật Công nghiệp</span>
-                    <hr style="margin: 0;">
-                    <i style="margin-right: 10px;">University of Economics - Technology for Industries</i>
+                        <span style="text-transform: uppercase; font-weight: 700; margin-right: 10px;">Tạp chí khóa học & công nghệ trường Đại học Kinh tế - Kỹ thuật Công nghiệp</span> </p>
+                   </div>
+                   <p style="font-weight: 700;margin-right: 10px;">JOURNAL OF SCIENCE & TECHNOLOGY UNIVERSITY OF ECONOMICS - TECHNOLOGY FOR INDUSTRIES
                     </p>
                 </div>
             </div>
-            <div style="margin-top: 2vh;" >
-
-                <p>Cơ quan chủ quản: Trường Đại học Kinh tế - Kỹ thuật Công nghiệp</p>
-                <p>Giấy phép hoạt động số: xxx/GP-BTTTT ngày dd-mm-2022</p>
+            <div style=" display:flex;" >
+                <div  style="width:45%;">
+                      <p>Cơ quan chủ quản: Trường Đại học Kinh tế - Kỹ thuật Công nghiệp</p>
+                <p>Giấy phép hoạt động số: 193/GP-BTTTT ngày 02-06-2023</p>
                 <p>Cơ quan cấp phép: Bộ Thông tin và Truyền thông</p>
                 <p>Copyright © 2022 Trường Đại học Kinh tế - Kỹ thuật Công nghiệp</p>
-            </div>
-        </div>
-        <div style=" width:35%;margin-left: 4%;">
-            <h3>Thông tin liên hệ</h3>
-            <p>Địa chỉ: Phòng 402 - Nhà HA.11, Trường Đại học Kinh tế - Kỹ thuật Công nghiệp, Số 218
+                </div>
+
+              <div style="width:55%;">
+                 <h3>Thông tin liên hệ</h3>
+            <p> Phòng 402 - Nhà HA.11, Trường Đại học Kinh tế - Kỹ thuật Công nghiệp, Số 218
                 Lĩnh Nam, Hoàng Mai, Hà Nội.
 
             </p>
-            <p>Số diện thoại: 086.6472407</p>
+            <p>Số diện thoại: 024.36321493</p>
             <p>Email: tapchikhcn@uneti.edu.vn</p>
-            <h4>Bản đồ chỉ dẫn</h4>
+              </div>
+            </div>
+        </div>
+        <div style=" width:20%;">
+           
+            
             <div>
 
 <iframe class = "imgfooter" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.3077152215537!2d105.8736443747645!3d20.980298780656934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135afd765487289%3A0x21bd5839ba683d5f!2zVHLGsOG7nW5nIMSQ4bqhaSBI4buNYyBLaW5oIFThur8gLSBL4bu5IFRodeG6rXQgQ8O0bmcgTmdoaeG7h3A!5e0!3m2!1svi!2s!4v1689386949867!5m2!1svi!2s"

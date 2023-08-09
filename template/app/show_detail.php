@@ -43,9 +43,9 @@ use PhpOffice\PhpWord\Writer\HTML;
     <?php require_once(BASE_PATH . '/template/app/layouts/menuleft.php') ?>
 
 
-    <div style="width: 62%; margin: 0; padding: 4px; box-sizing: border-box">
+    <div style="width: 62%; margin: 0; padding: 1vh 3vw 1vh 2.3vw; box-sizing: border-box; ">
         <div style="display: flex; flex-direction: column; align-items: center;">
-            <div class="suanh2" style="position: relative;  background-color: #D1D1D1;">
+            <div class="suanh2" style="position: relative;  background-color: #fffff;">
                 <div class="phongto" style="position: absolute; top: 0; right: 0;">
                 </div>
                 <?php if (empty($file) || !file_exists($file['file'])): ?>
@@ -111,14 +111,7 @@ use PhpOffice\PhpWord\Writer\HTML;
     </div>
 
 
-    <div class="img_lienket" style="width: 15%; text-align: center; margin-top: 2vh;">
-        <H4 style="font-size: 1.1vw; color: #155fa2; font-family: 'Times New Roman', Times, serif; "> LIÊN KẾT
-            WEBSITE</H4>
-        <img style="width: 100%" src="<?= url('./public/banner-image/bo-cong-thuong.png') ?>">
-        <img style="width: 100%" src="<?= url('./public/banner-image/DHKTKTCN.png') ?>">
-        <img style="width: 100%" src="<?= url('./public/banner-image/khcn.png') ?>">
-
-    </div>
+    <?php require_once(BASE_PATH . '/template/app/layouts/banner-right.php') ?>
 
 </div>
 
