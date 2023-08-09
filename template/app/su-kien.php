@@ -61,14 +61,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
     </div>
 
-    <div class="img_lienket" style="width: 15%; ">
-        <H4 style="font-size: 1.1vw; color: #155fa2; font-family: 'Times New Roman', Times, serif; "> LIÊN KẾT
-            WEBSITE</H4>
-        <img style="width: 100%" src="./public/banner-image/bo-cong-thuong.png">
-        <img style="width: 100%" src="./public/banner-image/DHKTKTCN.png">
-        <img style="width: 100%" src="./public/banner-image/khcn.png">
-
-    </div>
+    <?php require_once(BASE_PATH . '/template/app/layouts/banner-right.php') ?>
 
 </div>
 

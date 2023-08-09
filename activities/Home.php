@@ -27,7 +27,7 @@ class Home{
 
                 $mostCommentsPosts =$db->select('SELECT posts.*, (SELECT COUNT(*) FROM comments WHERE comments.post_id = posts.id) AS comments_count, (SELECT username FROM users WHERE users.id = posts.user_id) AS username, (SELECT name FROM categories WHERE categories.id = posts.cat_id) AS category FROM posts  ORDER BY comments_count DESC LIMIT 0, 4')->fetchAll();
 
-                $posts = $db->select('SELECT posts.id, posts.cat_id , banners.image FROM posts  
+                $posts = $db->select('SELECT posts.id, posts.cat_id , banners.image, posts.title FROM posts  
                                           INNER JOIN categories ON posts.cat_id = categories.id 
                                           INNER JOIN banners ON posts.id = banners.id_post 
                                           WHERE (1=1) AND categories.type IN (1,2,3)

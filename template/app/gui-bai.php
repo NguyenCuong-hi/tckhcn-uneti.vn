@@ -35,9 +35,11 @@
     }
 
     input[type="submit"] {
-        background-color: #299be4;
+        width: 20%;
+        background-color: #2487C8;
         color: white;
         cursor: pointer;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     }
 
     input[type="submit"]:hover {
@@ -70,23 +72,17 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
                 <label for="content">Nội dung:</label>
                 <textarea id="content" name="message" rows="4" cols="50" placeholder="Nhập tên tác giả" required></textarea>
-
-                <input  class="input_" type="submit" name="submit" value="Submit">
+                <div style="margin: 2vh 0; text-align: center;" >
+                    <input  class="input_" type="submit" name="submit" value="Submit">
+                </div>
+                
             </form>
         </div>
 
 
     </div>
+    <?php require_once(BASE_PATH . '/template/app/layouts/banner-right.php') ?>
 
-    <div class="img_lienket" style="width: 15%; text-align: center; margin-top: 2vh;" >
-        <H4 style="font-size: 1.1vw; color: #155fa2; font-family: 'Times New Roman', Times, serif; "> LIÊN KẾT
-            WEBSITE</H4>
-        <a href="https://moit.gov.vn/"><img style="width: 100%" src="./public/banner-image/bo-cong-thuong.png"> </a>
-        <a href="https://uneti.edu.vn/"><img style="width: 100%" src="./public/banner-image/DHKTKTCN.png"></a>
-        <a href=""><img style="width: 100%" src="./public/banner-image/khcn.png"></a>
-
-
-    </div>
 
 </div>
 

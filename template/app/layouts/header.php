@@ -159,7 +159,7 @@ use Database\DataBase;
 
             .current-date {
                 color: black;
-                font-size: 0.8vw;
+                font-size: 1.15vw;
                 width: 15%;
                
                 font-family: Arial, Helvetica, sans-serif;
@@ -173,7 +173,7 @@ use Database\DataBase;
             .title-head {
                 color: #9C1A1A;
                 line-height: 37px;
-                font-size: 0.9vw;
+                font-size: 1.2vw;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 font-weight: 700;
                 text-align: center;
@@ -191,7 +191,7 @@ use Database\DataBase;
 
             .search-input input {
                 color: black;
-                font-size: 1vw;
+                font-size: 0.95vw;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 font-weight: bold;
                 border-radius: 5px;
