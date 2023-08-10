@@ -1,4 +1,6 @@
 <html>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
 </html>
 <?php
@@ -93,7 +95,7 @@ require 'vendor/autoload.php';
     <div style="width: 62%; margin: 0; padding: 4px; box-sizing: border-box">
         <div style="display: flex; flex-direction: column; align-items: center;">
             <div class="title">
-                <h1 class="sigle_title"> <?= $post['title'] ?> </h1>
+                <h1 class="sigle_title"> <?=$post['title'] ?> </h1>
             </div>
 
             <div class="entry_post" style="width: 80%">
@@ -136,7 +138,7 @@ require 'vendor/autoload.php';
 <!--                    </script>-->
                     <iframe src="../../plugins/web/viewer.html?file=<?=$src?>"
                             style="width: 100%; height: 100%; border: none;"></iframe>
-
+                    
 <!--                    <iframe src="--><?php //= url($result_file['file'])?><!--"-->
 <!--                            style="width: 100%; height: 100%; border: none;">-->
 <!--                    </iframe>-->
