@@ -120,25 +120,26 @@ require 'vendor/autoload.php';
                 $src = '';
                 if ($extension === 'docx') {
                     $src = ' https://view.officeapps.live.com/op/view.aspx?src=' . url($result_file['file']);
-                    echo "<p> 2 </p>";
                 }
                 if ($extension === 'pdf') {
 
-                    $src = ' https://docs.google.com/gview?url=' . url($result_file['file']). '&embedded=true';
-                    echo "<p> 1 </p>";
+                    $src = url($result_file['file']);
                 }
                 ?>
+                    <script type="text/javascript" src="jquery.min.js"></script>
+                    <script type="text/javascript" src="jquery.gdocsviewer.min.js"></script>
+<!--                    <script type="text/javascript">-->
+<!--                        $(document).ready(function () {-->
+<!--                            $('iframe').gdocsViewer({width: 600, height: 700});-->
+<!--                            $('').gdocsViewer();-->
+<!--                        });-->
+<!--                    </script>-->
+                    <iframe src="../../plugins/web/viewer.html?file=<?=$src?>"
+                            style="width: 100%; height: 100%; border: none;"></iframe>
 
-                    <script type="text/javascript">
-                        $(document).ready(function () {
-                            $('iframe').gdocsViewer({width: 600, height: 700});
-                            $('').gdocsViewer();
-                        });
-                    </script>
-
-                    <iframe src="<?= url($src)?>"
-                            style="width: 100%; height: 100%; border: none;">
-                    </iframe>
+<!--                    <iframe src="--><?php //= url($result_file['file'])?><!--"-->
+<!--                            style="width: 100%; height: 100%; border: none;">-->
+<!--                    </iframe>-->
 
                 <?php endif; ?>
 
