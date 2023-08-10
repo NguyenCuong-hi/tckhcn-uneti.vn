@@ -120,15 +120,15 @@ require 'vendor/autoload.php';
                 $src = '';
                 if ($extension === 'docx') {
                     $src = ' https://view.officeapps.live.com/op/view.aspx?src=' . url($result_file['file']);
+                    echo "<p> 2 </p>";
                 }
                 if ($extension === 'pdf') {
 
                     $src = ' https://docs.google.com/gview?url=' . url($result_file['file']). '&embedded=true';
-
+                    echo "<p> 1 </p>";
                 }
                 ?>
-                    <script type="text/javascript" src="jquery.min.js"></script>
-                    <script type="text/javascript" src="jquery.gdocsviewer.min.js"></script>
+
                     <script type="text/javascript">
                         $(document).ready(function () {
                             $('iframe').gdocsViewer({width: 600, height: 700});
@@ -136,7 +136,7 @@ require 'vendor/autoload.php';
                         });
                     </script>
 
-                    <iframe loading="lazy" src="<?=$src?>"
+                    <iframe src="<?= url($src)?>"
                             style="width: 100%; height: 100%; border: none;">
                     </iframe>
 

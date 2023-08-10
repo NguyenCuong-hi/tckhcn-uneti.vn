@@ -32,7 +32,6 @@ $img_banner = $db->select(' SELECT * FROM banners WHERE id = 318 ')->fetch();
     <link rel="stylesheet" href="<?= asset('public/app/css/owl.carousel.css') ?>">
     <link rel="stylesheet" href="<?= asset('public/app/css/jquery-ui.css') ?>">
     <link rel="stylesheet" href="<?= asset('public/app/css/main2.css') ?>">
-
     <script type="text/javascript" src="jquery.min.js"></script>
     <script type="text/javascript" src="jquery.gdocsviewer.min.js"></script>
 </head>
