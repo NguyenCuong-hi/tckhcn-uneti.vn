@@ -143,7 +143,7 @@ use PhpOffice\PhpWord\Shared\ZipArchive;
                             <?php echo $counter; ?>.
                         </td>
                         <td class="font-weight-bold f-left">
-                            <a href="<?= url('chi-tiet/bai-dang/' . $id) ?>">
+                            <a style="color: #1a3f5e;" href="<?= url('chi-tiet/bai-dang/' . $id) ?>">
                                 <?php
                                 $file_name = pathinfo($file['name'], PATHINFO_FILENAME);
                                 echo $file_name;

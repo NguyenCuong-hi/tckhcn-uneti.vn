@@ -7,10 +7,6 @@ require 'vendor/autoload.php';
 
 ?>
 
-<script src="../../plugins/ViewerJS/compatibility.js"></script>
-<script src="../../plugins/ViewerJS/jquery.js"></script>
-<script src="../../plugins/ViewerJS/viewer.js"></script>
-<link rel="stylesheet" type="text/css" href="../../plugins/ViewerJS/viewer.css">
 
 <style>
     .phongto {
@@ -114,10 +110,8 @@ require 'vendor/autoload.php';
             </div>
 
             <div class="suanh2" style="position: relative;  background-color: #D1D1D1; margin-top: 10px">
-
                 <div class="phongto" style="position: absolute; top: 0; right: 0;">
                 </div>
-
                 <?php if (empty($result_file) || !file_exists($result_file['file'])): ?>
                     <p style="text-align: center; justify-content: center">Không có bài viết để hiển thị</p>
                 <?php else : ?>
@@ -129,7 +123,7 @@ require 'vendor/autoload.php';
                 }
                 if ($extension === 'pdf') {
 
-                    $src = url($result_file['file']);
+                    $src = ' https://docs.google.com/gview?url=' . url($result_file['file']). '&embedded=true';
 
                 }
                 ?>
@@ -142,7 +136,7 @@ require 'vendor/autoload.php';
                         });
                     </script>
 
-                    <iframe loading="lazy" src="<?= $src ?>"
+                    <iframe loading="lazy" src="<?=$src?>"
                             style="width: 100%; height: 100%; border: none;">
                     </iframe>
 

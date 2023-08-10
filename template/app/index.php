@@ -136,7 +136,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
                 <a style="text-decoration: none" href="<?= url('gioithieu') ?>">
                     <h3
-                        style="text-align: center; text-transform: uppercase; color: #3734EA;font-weight: 700; font-size: 1.8vw;">
+                        style="text-align: center; text-transform: uppercase; color: #0C548A;font-weight: 700; font-size: 1.8vw;">
                         Giới thiệu</h3>
 
                     <div style=" margin-bottom: 7vh; display: flex; justify-content: center; align-items: center;">
@@ -152,14 +152,14 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
                 <a style="text-decoration: none" href="<?= url('thongbao') ?>">
                     <h3
-                        style="text-align: center; text-transform: uppercase; color:#3734EA;font-weight: 700; font-size: 1.8vw;">
+                        style="text-align: center; text-transform: uppercase; color:#0C548A;font-weight: 700; font-size: 1.8vw;">
                         Thông báo</h3>
 
 
                     <div style=" margin-bottom: 7vh; display: flex; justify-content: center; align-items: center;">
                         <a href="<?= url("thongbao") ?>">
                             <img style="border-radius: 5px;width:100%; max-width: 200px;max-height: 121px;"
-                                src="./public/banner-image/thong-bao.png" alt="Giới thiệu">
+                                src="./public/banner-image/thong-bao.png" alt="Thong bao">
                         </a>
 
                     </div>
@@ -171,7 +171,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
             <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 33%; flex-grow: 1;">
                 <a style="text-decoration: none" href="#">
                     <h3
-                        style="text-align: center; text-transform: uppercase; color: #3734EA;font-weight: 700; font-size: 1.8vw; ">
+                        style="text-align: center; text-transform: uppercase; color: #0C548A;font-weight: 700; font-size: 1.8vw; ">
                         Sự kiện</h3>
                     <div style=" margin-bottom: 7vh; display: flex; justify-content: center; align-items: center;">
 
@@ -187,18 +187,17 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
         </div>
         <div style="display: flex; flex: 1; justify-content: space-between">
             <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">
-                <h3
-                    style="text-align: center; text-transform: uppercase; color: #0C548A;font-weight: 700; font-size: 1.8vw;">
-                    Gửi bài</h3>
 
-                <div style=" margin-bottom: 7vh; display: flex; justify-content: center; align-items: center;">
-                    <a href="<?= url("guibai") ?>">
-                        <img style="border-radius: 5px;width:100%;max-width: 200p;max-height:  121px;"
-                            src="./public/banner-image/guibai.png" alt="Giới thiệu">
-                    </a>
+                    <h3
+                            style="text-align: center; text-transform: uppercase; color: #0C548A;font-weight: 700; font-size: 1.8vw;">
+                        Góp ý</h3>
 
-
-                </div>
+                    <div style=" margin-bottom: 7vh; display: flex; justify-content: center; align-items: center;">
+                        <a id="openPopup" href="<?= url("gopy") ?>">
+                            <img style="border-radius: 5px;width:100%;max-width: 200px;max-height:  121px;"
+                                 src="./public/banner-image/guibai.png" alt="Giới thiệu">
+                        </a>
+                    </div>
 
             </div>
             <div style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 100%;">
@@ -242,7 +241,6 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
                                     <img class="image" src="<?php echo $datas['image'] ?>" alt="Nhà xuất bản">
                                      <p  style="font-size:1vw;color: #000000;"><?= $datas['title']?></p>
                                 </a>
-                   
 
                             </div>
                         <?php endforeach; ?>

@@ -57,6 +57,7 @@ require_once "activities/EventController.php";
 require_once "activities/ViewDetailPostController.php";
 require_once "activities/ViewPost.php";
 require_once "activities/Admin/File.php";
+require_once "activities/EmailBy.php";
 
 //helpers
 
@@ -314,6 +315,7 @@ uri('/ddkh/chi-tiet/{id}', 'App\ViewDetailPostController', 'index');
 uri('/sukien/chi-tiet/{id}', 'App\ViewDetailPostController', 'index');
 uri('/thongbao/chi-tiet/{id}', 'App\ViewDetailPostController', 'index');
 uri('/gioithieu/chi-tiet/{id}', 'App\ViewDetailPostController', 'index');
+uri('/gopy', 'App\EmailBy', 'index');
 
 uri('/chi-tiet/bai-dang/{id}', 'App\ViewPost', 'index');
 
