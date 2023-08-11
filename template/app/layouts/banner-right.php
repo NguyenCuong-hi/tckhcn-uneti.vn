@@ -75,9 +75,9 @@ $tuyensinh = $db->select('SELECT * FROM banners WHERE id = 317 ')->fetch();
             WEBSITE </H4 >
     <div class="author-guide">
         <h3 class="guide-title">Hướng dẫn dành cho tác giả</h3>
-        <a href="#" class="guide-link">Hướng dẫn gửi bài</a>
-        <a href="#" class="guide-link">Liên hệ tạp chí</a>
-        <a href="#" class="guide-link">Mẫu quy cách bài viết</a>
+        <a href="<?=url("thongtintraodoi")?>" class="guide-link">Hướng dẫn gửi bài</a>
+        <a href="https://phongkhcn.uneti.edu.vn/vi/contact/" class="guide-link">Liên hệ tạp chí</a>
+        <a href="<?= url("thongtintraodoi") ?>" class="guide-link">Mẫu quy cách bài viết</a>
         <a href="#" class="guide-link" style="">Đạo đức và công bố thông tin khi xuất bản</a>
 
         <a href="<?= url("guibai") ?>"><button style="border-radius: 0.1vw" class="send-button">Gửi bài viết</button></a>
@@ -85,7 +85,7 @@ $tuyensinh = $db->select('SELECT * FROM banners WHERE id = 317 ')->fetch();
 
 
     <!--    <a href="--><?php //= $guibai['url'] ?><!--"><img  class=" img-responsive img-fluid " style="width: 100%" src="--><?php //= url($guibai['image']) ?><!--"></a>-->
-    <a href="<?= $bocongthuong['url'] ?>"><img class=" img-responsive" style="width: 103%" src="<?= url($bocongthuong['image']) ?>"></a>
-    <a href="<?= $truongdaihoc['url'] ?>"><img class=" img-responsive" style="width: 103%" src="<?= url($truongdaihoc['image']) ?>"></a>
-    <a href="<?= $tuyensinh['url'] ?>"> <img class=" img-fluid img-responsive" style="width: 103%" src="<?= url($tuyensinh['image']) ?>"> </a>
+    <a href="<?= $bocongthuong['url'] ?>"><img class=" img-responsive" style="width: 102%" src="<?= url($bocongthuong['image']) ?>"></a>
+    <a href="<?= $truongdaihoc['url'] ?>"><img class=" img-responsive" style="width: 101%" src="<?= url($truongdaihoc['image']) ?>"></a>
+    <a href="<?= $tuyensinh['url'] ?>"> <img class=" img-fluid img-responsive" style="width: 12.26vw; height: 17.18vh ;border: 2.3px solid #93b6c8; " src="<?= url($tuyensinh['image']) ?>"> </a>
     </div >
