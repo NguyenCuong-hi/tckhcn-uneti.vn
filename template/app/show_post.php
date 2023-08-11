@@ -136,8 +136,10 @@ require 'vendor/autoload.php';
 <!--                            $('').gdocsViewer();-->
 <!--                        });-->
 <!--                    </script>-->
-                    <iframe src="../../plugins/web/viewer.html?file=<?=$src?>"
-                            style="width: 100%; height: 100%; border: none;"></iframe>
+<!--                    <iframe src="../../plugins/web/viewer.html?file=--><?php //=$src?><!--"-->
+<!--                            style="width: 100%; height: 100%; border: none;"></iframe>-->
+
+                    <embed type="application/pdf" src="<?=$src?>" style="width: 100%; height: 100%; border: none;">
                     
 <!--                    <iframe src="--><?php //= url($result_file['file'])?><!--"-->
 <!--                            style="width: 100%; height: 100%; border: none;">-->
