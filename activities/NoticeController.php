@@ -22,7 +22,7 @@ class NoticeController
         $query = 'SELECT posts.*, banners.image as banner_img FROM posts
 					 INNER JOIN categories ON posts.cat_id = categories.id
                      INNER JOIN banners ON posts.id = banners.id_post 
-					 WHERE (1=1) AND categories.type = 4 AND banners.type = 0 ';
+					 WHERE (1=1) AND categories.type = 4 AND banners.type = 0  ';
 
         $query .= 'ORDER BY posts.created_at DESC 
 					 LIMIT ' . $item_per_page . ' OFFSET ' . $off_set . '

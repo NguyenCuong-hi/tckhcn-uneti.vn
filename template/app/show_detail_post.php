@@ -113,7 +113,7 @@ use PhpOffice\PhpWord\Shared\ZipArchive;
             <?php
             foreach ($result_image as $item):
                 ?>
-                <div  style="width: 80%;border: 1px solid #D1D1D1; justify-content: center; margin-bottom: 70px;">
+                <div  style="width: 80%;border: 1px solid #D1D1D1; justify-content: center; margin-bottom: 18px;">
                     <img class="suanh"  src="<?= url($item['image']) ?> " alt="">
                 </div>
             <?php endforeach; ?>
@@ -121,8 +121,8 @@ use PhpOffice\PhpWord\Shared\ZipArchive;
 
 
         </div>
-        <div style="align-items: flex-end; font-family: 'Times New Roman'; font-style: italic">
-            Nguồn đăng : <?= $post['author_name'] ?>
+        <div style="align-items: flex-end; font-family: 'Times New Roman'; font-style: italic; margin-bottom: 20px;">
+            <b style="font-family: 'Times New Roman'; font-style: italic;">Nguồn đăng</b> : Ban biên tập tạp chí
         </div>
 
 

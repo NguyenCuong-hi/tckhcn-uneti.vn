@@ -37,7 +37,7 @@ class SendPostToAdmin
 
         if (isset($_POST['submit'])) {
             // Đường dẫn thư mục lưu trữ file tải lên
-            $target_dir = "uploads/file_uploads/";
+            $target_dir = "public/upload/";
 
             // Tạo tên file mới dựa trên thời gian để tránh trùng lặp
             $target_file =  basename($_FILES["fileToUpload"]["name"]);

@@ -132,7 +132,8 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
     <div style="width: 62%; margin: 0; padding: 4px; box-sizing: border-box">
         <div style="display: flex; flex: 1; justify-content: space-between">
             <!-- Cột giới thiệu -->
-            <div class="card-panel" style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 33%; flex-grow: 1;">
+            <div class="card-panel" style="background-color: #ffffff; padding: 8px; border-radius: 8px; width: 33%; flex-grow: 1; transform: translateY(-2px) rotateX(8deg) rotateY(3deg); transition: transform 0.3s ease;
+                text-transform: uppercase;">
 
                 <a style="text-decoration: none" href="<?= url('gioithieu') ?>">
                     <h3

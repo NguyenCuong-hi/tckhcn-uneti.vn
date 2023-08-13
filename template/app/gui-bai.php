@@ -63,7 +63,7 @@ require_once(BASE_PATH . '/template/app/layouts/header.php');
 
 
             <form action="<?= url("guibai/post") ?>" method="post" enctype="multipart/form-data">
-                <label for="email">Email của bạn</label>
+                <label for="email">Email tác giả</label>
                 <input class="input_" type="email" id="email" name="email"  required>
                 
 

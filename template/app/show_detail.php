@@ -78,16 +78,21 @@ use PhpOffice\PhpWord\Writer\HTML;
 
                             $htmlContent = str_replace('</head>', $css . '</head>', $htmlContent);
 
-
-
-
                             file_put_contents($outputFile, $htmlContent);
 
                             require_once 'show-thong-bao-word.php';
                         } else {
                             echo "Không tìm thấy tệp .docx";
                         }
-                    } else {
+                    }
+                    else if ($extension === 'pdf'){
+
+                        $src = url($file['file']);
+                        ?>
+                        <iframe src="<?=url($file['file'])?>"></iframe>
+                            <?php
+                    }
+                    else {
                         foreach ($result_image as $item):
                             ?>
                             <div style="width: 80%;border: 1px solid #D1D1D1; justify-content: center; margin-bottom: 70px;">
@@ -98,13 +103,13 @@ use PhpOffice\PhpWord\Writer\HTML;
                 <?php endif; ?>
 
 
-                <div style="position: relative; width: 80%; height: 650px; background-color: #D1D1D1;">
-                    <div class="phongto" style="position: absolute; top: 0; right: 0;">
-                    </div>
-                </div>
-                <p style="font-size: 15px;" class="embed_download"><a href="
-                <?= url($file['file']) ?>" download="">Download File </a>
-                </p>
+<!--                <div style="position: relative; width: 80%; height: 650px; background-color: #D1D1D1;">-->
+<!--                    <div class="phongto" style="position: absolute; top: 0; right: 0;">-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <p style="font-size: 15px;" class="embed_download"><a href="-->
+<!--                --><?php //= url($file['file']) ?><!--" download="">Download File </a>-->
+<!--                </p>-->
             </div>
 
         </div>
